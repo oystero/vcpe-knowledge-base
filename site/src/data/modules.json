@@ -1,0 +1,98 @@
+[
+  {
+    "id": "00",
+    "name": "基础概念",
+    "icon": "📚",
+    "description": "VC/PE 行业核心概念与框架",
+    "folder": "00-基础概念",
+    "count": 5
+  },
+  {
+    "id": "01",
+    "name": "投资流程",
+    "icon": "🔄",
+    "description": "从项目发现到交割的完整流程",
+    "folder": "01-投资流程",
+    "count": 5
+  },
+  {
+    "id": "02",
+    "name": "估值方法",
+    "icon": "💵",
+    "description": "企业估值的核心方法论",
+    "folder": "02-估值方法",
+    "count": 5
+  },
+  {
+    "id": "03",
+    "name": "法律与条款",
+    "icon": "📜",
+    "description": "投资协议与法律保护条款",
+    "folder": "03-法律与条款",
+    "count": 5
+  },
+  {
+    "id": "04",
+    "name": "行业赛道",
+    "icon": "🏭",
+    "description": "重点行业分析与投资逻辑",
+    "folder": "04-行业赛道",
+    "count": 14
+  },
+  {
+    "id": "05",
+    "name": "尽职调查",
+    "icon": "🔍",
+    "description": "尽调方法论与清单",
+    "folder": "05-尽职调查",
+    "count": 5
+  },
+  {
+    "id": "06",
+    "name": "投后管理",
+    "icon": "🤝",
+    "description": "投后赋能与监控体系",
+    "folder": "06-投后管理",
+    "count": 4
+  },
+  {
+    "id": "07",
+    "name": "退出策略",
+    "icon": "🚪",
+    "description": "退出路径与回报实现",
+    "folder": "07-退出策略",
+    "count": 4
+  },
+  {
+    "id": "08",
+    "name": "中国VC/PE实务",
+    "icon": "🇨🇳",
+    "description": "本土化监管与实务要点",
+    "folder": "08-中国VC-PE实务",
+    "count": 5
+  },
+  {
+    "id": "09",
+    "name": "风险与组合",
+    "icon": "📊",
+    "description": "风险管理与组合构建",
+    "folder": "09-风险与组合",
+    "count": 4
+  },
+  {
+    "id": "10",
+    "name": "案例库",
+    "icon": "📖",
+    "description": "真实投资案例分析",
+    "folder": "10-案例库",
+    "count": 106
+  },
+  {
+    "id": "11",
+    "name": "工具与资源",
+    "icon": "🛠️",
+    "description": "实用工具与学习资源",
+    "folder": "11-工具与资源",
+    "count": 3
+  }
+]

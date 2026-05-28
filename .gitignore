@@ -1,0 +1,25 @@
+# dependencies
+site/node_modules/
+
+# build output
+site/dist/
+site/.astro/
+
+# environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+Thumbs.db:encryptable
+
+# Obsidian
+.obsidian/
+
+# Windows
+desktop.ini

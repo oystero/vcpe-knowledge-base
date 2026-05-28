@@ -1,0 +1,13 @@
+services:
+  - type: static_site
+    name: vcpe-knowledge-base
+    buildCommand: cd site && npm install && npm run build
+    staticPublishPath: site/dist
+    pullRequestPreviewsEnabled: true
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /_astro/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable

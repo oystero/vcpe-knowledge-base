@@ -1,0 +1,292 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  showSidebar?: boolean;
+  activeModule?: string;
+}
+
+const { title, description = 'VC/PE 投资知识库 - 面向投资实战的系统化知识框架', showSidebar = true, activeModule } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="zh-CN" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <meta name="generator" content={Astro.generator} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>{title} | VC/PE 投资知识库</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-gray-50 dark:bg-primary-950 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300">
+  <!-- Reading Progress Bar -->
+  <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-accent-500 to-accent-300 z-50 transition-all duration-150" style="width: 0%"></div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/80 dark:bg-primary-900/80 backdrop-blur-md border-b border-gray-200 dark:border-primary-800">
+    <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <a href="/" class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity">
+          <span class="text-2xl">💰</span>
+          <span class="hidden sm:inline">VC/PE 投资知识库</span>
+        </a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <!-- Search -->
+        <a href="/search/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          <span class="hidden md:inline">搜索...</span>
+          <kbd class="hidden md:inline px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-primary-700 rounded">Ctrl+K</kbd>
+        </a>
+
+        <!-- Graph -->
+        <a href="/graph/" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><circle cx="12" cy="12" r="2"/><path d="M8 6h8M6 8v8M18 8v8M8 18h8M8 8l4 4M16 8l-4 4M8 16l4-4M16 16l-4-4"/></svg>
+        </a>
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="切换主题">
+          <svg id="theme-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg>
+          <svg id="theme-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors lg:hidden">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="flex flex-1 max-w-screen-2xl mx-auto w-full">
+    <!-- Sidebar -->
+    {showSidebar && (
+      <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-30 w-72 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-primary-900 border-r border-gray-200 dark:border-primary-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300">
+        <nav class="p-4 space-y-1">
+          <a href="/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors", currentPath === "/" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+            <span>🏠</span> 首页
+          </a>
+          <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">模块导航</div>
+          <a href="/modules/00/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "00" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+            <span>📚</span> 00 基础概念
+          </a>
+          <a href="/modules/01/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "01" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+            <span>🔄</span> 01 投资流程
+          </a>
+          <a href="/modules/02/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "02" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+            <span>💵</span> 02 估值方法
+          </a>
+          <a href="/modules/03/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "03" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+            <span>📜</span> 03 法律与条款
+          </a>
+          <a href="/modules/04/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "04" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+            <span>🏭</span> 04 行业赛道
+          </a>
+          <a href="/modules/05/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "05" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+            <span>🔍</span> 05 尽职调查
+          </a>
+          <a href="/modules/06/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "06" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+            <span>🤝</span> 06 投后管理
+          </a>
+          <a href="/modules/07/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "07" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+            <span>🚪</span> 07 退出策略
+          </a>
+          <a href="/modules/08/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "08" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+            <span>🇨🇳</span> 08 中国VC/PE实务
+          </a>
+          <a href="/modules/09/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "09" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+            <span>📊</span> 09 风险与组合
+          </a>
+          <a href="/modules/10/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "10" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+            <span>📖</span> 10 案例库
+          </a>
+          <a href="/modules/11/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "11" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+            <span>🛠️</span> 11 工具与资源
+          </a>
+        </nav>
+      </aside>
+    )}
+
+    <!-- Main Content -->
+    <main class:list={["flex-1 min-w-0", showSidebar ? "lg:ml-0" : ""]}>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <slot />
+      </div>
+    </main>
+  </div>
+
+  <!-- Mobile sidebar overlay -->
+  <div id="sidebar-overlay" class="fixed inset-0 z-20 bg-black/50 hidden lg:hidden"></div>
+
+  <script>
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const lightIcon = document.getElementById('theme-light-icon');
+    const darkIcon = document.getElementById('theme-dark-icon');
+
+    function setTheme(dark: boolean) {
+      if (dark) {
+        document.documentElement.classList.add('dark');
+        lightIcon?.classList.add('hidden');
+        darkIcon?.classList.remove('hidden');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        lightIcon?.classList.remove('hidden');
+        darkIcon?.classList.add('hidden');
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    // Initialize theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      setTheme(false);
+    } else if (savedTheme === 'dark') {
+      setTheme(true);
+    } else {
+      setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
+    }
+
+    themeToggle?.addEventListener('click', () => {
+      setTheme(!document.documentElement.classList.contains('dark'));
+    });
+
+    // Mobile sidebar
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+
+    function toggleSidebar() {
+      sidebar?.classList.toggle('-translate-x-full');
+      overlay?.classList.toggle('hidden');
+    }
+
+    mobileMenuToggle?.addEventListener('click', toggleSidebar);
+    overlay?.addEventListener('click', toggleSidebar);
+
+    // Reading progress
+    const progressBar = document.getElementById('reading-progress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      if (progressBar) {
+        progressBar.style.width = `${Math.min(100, progress)}%`;
+      }
+    });
+
+    // Keyboard shortcut for search
+    document.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        window.location.href = '/search/';
+      }
+    });
+  </script>
+</body>
+</html>
+
+<style is:global>
+  /* Prose styling for markdown content */
+  .prose {
+    @apply leading-relaxed;
+  }
+  .prose h1 {
+    @apply text-3xl font-bold mt-8 mb-4 text-gray-900 dark:text-gray-100 border-b border-gray-200 dark:border-primary-800 pb-3;
+  }
+  .prose h2 {
+    @apply text-2xl font-bold mt-8 mb-3 text-gray-800 dark:text-gray-200;
+  }
+  .prose h3 {
+    @apply text-xl font-semibold mt-6 mb-2 text-gray-700 dark:text-gray-300;
+  }
+  .prose h4 {
+    @apply text-lg font-semibold mt-4 mb-2 text-gray-600 dark:text-gray-400;
+  }
+  .prose p {
+    @apply mb-4 text-gray-600 dark:text-gray-300;
+  }
+  .prose a {
+    @apply text-accent-600 dark:text-accent-400 hover:underline;
+  }
+  .prose strong {
+    @apply font-semibold text-gray-800 dark:text-gray-200;
+  }
+  .prose ul {
+    @apply list-disc list-inside mb-4 space-y-1 text-gray-600 dark:text-gray-300;
+  }
+  .prose ol {
+    @apply list-decimal list-inside mb-4 space-y-1 text-gray-600 dark:text-gray-300;
+  }
+  .prose li {
+    @apply ml-2;
+  }
+  .prose blockquote {
+    @apply border-l-4 border-accent-300 dark:border-accent-600 pl-4 my-4 italic text-gray-500 dark:text-gray-400;
+  }
+  .prose code {
+    @apply font-mono text-sm bg-gray-100 dark:bg-primary-800 px-1.5 py-0.5 rounded text-accent-700 dark:text-accent-300;
+  }
+  .prose pre {
+    @apply bg-gray-900 dark:bg-primary-950 text-gray-100 p-4 rounded-lg overflow-x-auto my-4 font-mono text-sm;
+  }
+  .prose pre code {
+    @apply bg-transparent p-0 text-inherit;
+  }
+  .prose hr {
+    @apply my-8 border-gray-200 dark:border-primary-800;
+  }
+  .prose img {
+    @apply max-w-full rounded-lg my-4;
+  }
+
+  /* Table styling */
+  .table-wrapper {
+    @apply overflow-x-auto my-4 rounded-lg border border-gray-200 dark:border-primary-800;
+  }
+  .prose table {
+    @apply w-full text-sm;
+  }
+  .prose thead {
+    @apply bg-gray-50 dark:bg-primary-900;
+  }
+  .prose th {
+    @apply px-4 py-3 text-left font-semibold text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-primary-700;
+  }
+  .prose td {
+    @apply px-4 py-3 text-gray-600 dark:text-gray-400 border-b border-gray-100 dark:border-primary-800;
+  }
+  .prose tbody tr:hover {
+    @apply bg-gray-50/50 dark:bg-primary-900/50;
+  }
+
+  /* Callout styling */
+  .callout {
+    @apply border-l-4 rounded-r-lg p-4 my-4;
+  }
+  .callout-title {
+    @apply font-semibold mb-1;
+  }
+  .callout-tip {
+    @apply border-green-400 bg-green-50 dark:bg-green-900/20;
+  }
+  .callout-info {
+    @apply border-blue-400 bg-blue-50 dark:bg-blue-900/20;
+  }
+  .callout-warning {
+    @apply border-yellow-400 bg-yellow-50 dark:bg-yellow-900/20;
+  }
+  .callout-danger {
+    @apply border-red-400 bg-red-50 dark:bg-red-900/20;
+  }
+  .callout-note {
+    @apply border-gray-400 bg-gray-50 dark:bg-gray-900/20;
+  }
+</style>

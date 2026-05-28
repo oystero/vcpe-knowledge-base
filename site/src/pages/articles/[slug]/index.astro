@@ -1,0 +1,146 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { articles, getArticleBySlug, getRelatedArticles, buildSlugMap } from '../../../utils/content';
+import { processWikilinks, processCallouts, markdownToHtml, formatDate, readingTime, formatWordCount } from '../../../utils/markdown';
+
+export function getStaticPaths() {
+  return articles.map(article => ({
+    params: { slug: article.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const article = getArticleBySlug(slug!);
+if (!article) return Astro.redirect('/');
+
+const slugMap = buildSlugMap();
+const related = getRelatedArticles(article, 5);
+
+// Process content
+let processedContent = article.content;
+// Remove the first H1 (already shown in header)
+processedContent = processedContent.replace(/^#\s+.+$/m, '');
+// Process wikilinks
+processedContent = processWikilinks(processedContent, slugMap);
+// Process callouts
+processedContent = processCallouts(processedContent);
+// Convert to HTML
+const htmlContent = markdownToHtml(processedContent);
+---
+
+<Layout title={article.title} activeModule={article.module}>
+  <!-- Breadcrumb -->
+  <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6 flex-wrap">
+    <a href="/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a>
+    <span>/</span>
+    <a href={`/modules/${article.module}/`} class="hover:text-accent-600 dark:hover:text-accent-400">{article.moduleName}</a>
+    <span>/</span>
+    <span class="text-gray-800 dark:text-gray-200 truncate">{article.title}</span>
+  </nav>
+
+  <article class="flex gap-8">
+    <!-- Article Content -->
+    <div class="flex-1 min-w-0">
+      <!-- Article Header -->
+      <header class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">{article.title}</h1>
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          <a href={`/modules/${article.module}/`} class="text-xs px-2.5 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 hover:bg-accent-200 dark:hover:bg-accent-900/50 transition-colors">
+            {article.moduleName}
+          </a>
+          {article.type === 'case-study' && (
+            <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300">
+              案例研究
+            </span>
+          )}
+          {article.tags.map(tag => (
+            <a href={`/search/?tag=${encodeURIComponent(tag)}`} class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors">
+              {tag}
+            </a>
+          ))}
+        </div>
+        <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+          <span>创建于 {formatDate(article.created)}</span>
+          {article.updated && article.updated !== article.created && (
+            <span>更新于 {formatDate(article.updated)}</span>
+          )}
+          <span>{formatWordCount(article.wordCount)}</span>
+          <span>约 {readingTime(article.wordCount)} 分钟阅读</span>
+        </div>
+      </header>
+
+      <!-- Article Body -->
+      <div class="prose" set:html={htmlContent} />
+
+      <!-- Related Articles -->
+      {related.length > 0 && (
+        <section class="mt-12 pt-8 border-t border-gray-200 dark:border-primary-800">
+          <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">📎 相关推荐</h2>
+          <div class="space-y-3">
+            {related.map(rel => (
+              <a href={`/articles/${rel.slug}/`} class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all">
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">{rel.moduleName}</div>
+                  <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm">
+                    {rel.title}
+                  </h3>
+                  {rel.excerpt && (
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">{rel.excerpt}</p>
+                  )}
+                </div>
+                <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+
+    <!-- Table of Contents (Desktop) -->
+    {article.headings.length > 0 && (
+      <aside class="hidden xl:block w-64 flex-shrink-0">
+        <div class="sticky top-20">
+          <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">目录</h3>
+          <nav class="space-y-1">
+            {article.headings.map(heading => (
+              <a
+                href={`#${heading.slug}`}
+                class:list={[
+                  'block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link',
+                  heading.level === 2 ? 'font-medium' : '',
+                  heading.level === 4 ? 'ml-6' : heading.level === 3 ? 'ml-3' : '',
+                ]}
+                data-heading={heading.slug}
+              >
+                {heading.text}
+              </a>
+            ))}
+          </nav>
+        </div>
+      </aside>
+    )}
+  </article>
+
+  <script>
+    // Highlight current heading in TOC
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          const id = entry.target.id;
+          const tocLink = document.querySelector(`.toc-link[data-heading="${id}"]`);
+          if (tocLink) {
+            if (entry.isIntersecting) {
+              document.querySelectorAll('.toc-link').forEach(l => l.classList.remove('text-accent-600', 'dark:text-accent-400'));
+              tocLink.classList.add('text-accent-600', 'dark:text-accent-400');
+            }
+          }
+        });
+      },
+      { rootMargin: '-80px 0px -80% 0px' }
+    );
+
+    document.querySelectorAll('.prose h2[id], .prose h3[id], .prose h4[id]').forEach(heading => {
+      observer.observe(heading);
+    });
+  </script>
+</Layout>
