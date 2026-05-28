@@ -11,10 +11,11 @@ export function getStaticPaths() {
 
 const { id } = Astro.params;
 const module = modules.find(m => m.id === id);
-if (!module) return Astro.redirect('/');
+if (!module) return Astro.redirect(import.meta.env.BASE_URL);
 
 const moduleArticles = getArticlesByModule(id);
 const tagCounts = getTagCounts();
+const base = import.meta.env.BASE_URL;
 
 // Group articles by subfolder if any
 const grouped: Record<string, typeof moduleArticles> = {};
@@ -29,7 +30,7 @@ for (const article of moduleArticles) {
 <Layout title={`${module.icon} ${module.name}`} activeModule={id}>
   <!-- Breadcrumb -->
   <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6">
-    <a href="/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a>
+    <a href={base} class="hover:text-accent-600 dark:hover:text-accent-400">首页</a>
     <span>/</span>
     <span class="text-gray-800 dark:text-gray-200">{module.name}</span>
   </nav>
@@ -54,7 +55,7 @@ for (const article of moduleArticles) {
       )}
       <div class="space-y-3">
         {arts.map(article => (
-          <a href={`/articles/${article.slug}/`} class="group flex items-start gap-4 bg-white dark:bg-primary-900 rounded-xl p-4 border border-gray-200 dark:border-primary-800 shadow-sm hover:shadow-md hover:border-accent-300 dark:hover:border-accent-600 transition-all duration-200">
+          <a href={`${base}articles/${article.slug}/`} class="group flex items-start gap-4 bg-white dark:bg-primary-900 rounded-xl p-4 border border-gray-200 dark:border-primary-800 shadow-sm hover:shadow-md hover:border-accent-300 dark:hover:border-accent-600 transition-all duration-200">
             <div class="flex-1 min-w-0">
               <div class="flex items-center gap-2 mb-1 flex-wrap">
                 {article.type === 'case-study' && (

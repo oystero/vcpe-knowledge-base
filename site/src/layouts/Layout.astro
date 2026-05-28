@@ -10,6 +10,7 @@ interface Props {
 
 const { title, description = 'VC/PE 投资知识库 - 面向投资实战的系统化知识框架', showSidebar = true, activeModule } = Astro.props;
 const currentPath = Astro.url.pathname;
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -19,7 +20,7 @@ const currentPath = Astro.url.pathname;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={description} />
   <meta name="generator" content={Astro.generator} />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
   <title>{title} | VC/PE 投资知识库</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,7 +34,7 @@ const currentPath = Astro.url.pathname;
   <header class="sticky top-0 z-40 bg-white/80 dark:bg-primary-900/80 backdrop-blur-md border-b border-gray-200 dark:border-primary-800">
     <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between">
       <div class="flex items-center gap-4">
-        <a href="/" class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity">
+        <a href={base} class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity">
           <span class="text-2xl">💰</span>
           <span class="hidden sm:inline">VC/PE 投资知识库</span>
         </a>
@@ -41,14 +42,14 @@ const currentPath = Astro.url.pathname;
 
       <div class="flex items-center gap-3">
         <!-- Search -->
-        <a href="/search/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索">
+        <a href={`${base}search/`} class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
           <span class="hidden md:inline">搜索...</span>
           <kbd class="hidden md:inline px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-primary-700 rounded">Ctrl+K</kbd>
         </a>
 
         <!-- Graph -->
-        <a href="/graph/" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱">
+        <a href={`${base}graph/`} class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><circle cx="12" cy="12" r="2"/><path d="M8 6h8M6 8v8M18 8v8M8 18h8M8 8l4 4M16 8l-4 4M8 16l4-4M16 16l-4-4"/></svg>
         </a>
 
@@ -71,44 +72,44 @@ const currentPath = Astro.url.pathname;
     {showSidebar && (
       <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-30 w-72 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-primary-900 border-r border-gray-200 dark:border-primary-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300">
         <nav class="p-4 space-y-1">
-          <a href="/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors", currentPath === "/" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+          <a href={base} class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors", currentPath === base ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
             <span>🏠</span> 首页
           </a>
           <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">模块导航</div>
-          <a href="/modules/00/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "00" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+          <a href={`${base}modules/00/`} class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "00" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
             <span>📚</span> 00 基础概念
           </a>
-          <a href="/modules/01/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "01" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+          <a href={`${base}modules/01/`} class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "01" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
             <span>🔄</span> 01 投资流程
           </a>
-          <a href="/modules/02/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "02" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+          <a href={`${base}modules/02/`} class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "02" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
             <span>💵</span> 02 估值方法
           </a>
-          <a href="/modules/03/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "03" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+          <a href={`${base}modules/03/`} class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "03" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
             <span>📜</span> 03 法律与条款
           </a>
-          <a href="/modules/04/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "04" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+          <a href={`${base}modules/04/`} class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "04" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
             <span>🏭</span> 04 行业赛道
           </a>
-          <a href="/modules/05/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "05" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+          <a href={`${base}modules/05/`} class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "05" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
             <span>🔍</span> 05 尽职调查
           </a>
-          <a href="/modules/06/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "06" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+          <a href={`${base}modules/06/`} class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "06" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
             <span>🤝</span> 06 投后管理
           </a>
-          <a href="/modules/07/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "07" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+          <a href={`${base}modules/07/`} class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "07" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
             <span>🚪</span> 07 退出策略
           </a>
-          <a href="/modules/08/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "08" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+          <a href={`${base}modules/08/`} class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "08" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
             <span>🇨🇳</span> 08 中国VC/PE实务
           </a>
-          <a href="/modules/09/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "09" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+          <a href={`${base}modules/09/`} class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "09" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
             <span>📊</span> 09 风险与组合
           </a>
-          <a href="/modules/10/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "10" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+          <a href={`${base}modules/10/`} class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "10" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
             <span>📖</span> 10 案例库
           </a>
-          <a href="/modules/11/" class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "11" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
+          <a href={`${base}modules/11/`} class:list={["flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors", activeModule === "11" ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400" : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"]}>
             <span>🛠️</span> 11 工具与资源
           </a>
         </nav>
@@ -188,7 +189,7 @@ const currentPath = Astro.url.pathname;
     document.addEventListener('keydown', (e) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
         e.preventDefault();
-        window.location.href = '/search/';
+        window.location.href = import.meta.env.BASE_URL + 'search/';
       }
     });
   </script>

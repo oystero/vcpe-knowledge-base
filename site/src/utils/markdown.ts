@@ -5,16 +5,17 @@ import MarkdownIt from 'markdown-it';
  * into standard markdown links.
  */
 export function processWikilinks(content: string, slugMap: Map<string, string>): string {
+  const base = import.meta.env.BASE_URL;
   return content.replace(
     /\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g,
     (_match, target, label) => {
       const display = label || target;
       const slug = slugMap.get(target);
       if (slug) {
-        return `[${display}](/articles/${slug}/)`;
+        return `[${display}](${base}articles/${slug}/)`;
       }
       // If we can't resolve the link, still make it clickable to search
-      return `[${display}](/search/?q=${encodeURIComponent(target)})`;
+      return `[${display}](${base}search/?q=${encodeURIComponent(target)})`;
     }
   );
 }

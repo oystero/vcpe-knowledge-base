@@ -11,7 +11,7 @@ export function getStaticPaths() {
 
 const { slug } = Astro.params;
 const article = getArticleBySlug(slug!);
-if (!article) return Astro.redirect('/');
+if (!article) return Astro.redirect(import.meta.env.BASE_URL);
 
 const slugMap = buildSlugMap();
 const related = getRelatedArticles(article, 5);
@@ -26,14 +26,15 @@ processedContent = processWikilinks(processedContent, slugMap);
 processedContent = processCallouts(processedContent);
 // Convert to HTML
 const htmlContent = markdownToHtml(processedContent);
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title={article.title} activeModule={article.module}>
   <!-- Breadcrumb -->
   <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6 flex-wrap">
-    <a href="/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a>
+    <a href={base} class="hover:text-accent-600 dark:hover:text-accent-400">首页</a>
     <span>/</span>
-    <a href={`/modules/${article.module}/`} class="hover:text-accent-600 dark:hover:text-accent-400">{article.moduleName}</a>
+    <a href={`${base}modules/${article.module}/`} class="hover:text-accent-600 dark:hover:text-accent-400">{article.moduleName}</a>
     <span>/</span>
     <span class="text-gray-800 dark:text-gray-200 truncate">{article.title}</span>
   </nav>
@@ -78,7 +79,7 @@ const htmlContent = markdownToHtml(processedContent);
           <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">📎 相关推荐</h2>
           <div class="space-y-3">
             {related.map(rel => (
-              <a href={`/articles/${rel.slug}/`} class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all">
+              <a href={`${base}articles/${rel.slug}/`} class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all">
                 <div class="flex-1 min-w-0">
                   <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">{rel.moduleName}</div>
                   <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm">
