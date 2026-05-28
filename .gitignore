@@ -1,8 +1,8 @@
 # dependencies
 site/node_modules/
 
-# build output
-site/dist/
+# build output (pre-built committed for static deployment)
+# site/dist/
 site/.astro/
 
 # environment

@@ -1,0 +1,499 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="VC/PE 投资知识库 - 面向投资实战的系统化知识框架"><meta name="generator" content="Astro v5.18.2"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>DPI与IRR解读 | VC/PE 投资知识库</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/index.D-0dJCf_.css"></head> <body class="bg-gray-50 dark:bg-primary-950 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300"> <!-- Reading Progress Bar --> <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-accent-500 to-accent-300 z-50 transition-all duration-150" style="width: 0%"></div> <!-- Header --> <header class="sticky top-0 z-40 bg-white/80 dark:bg-primary-900/80 backdrop-blur-md border-b border-gray-200 dark:border-primary-800"> <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between"> <div class="flex items-center gap-4"> <a href="/" class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity"> <span class="text-2xl">💰</span> <span class="hidden sm:inline">VC/PE 投资知识库</span> </a> </div> <div class="flex items-center gap-3"> <!-- Search --> <a href="/search/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> <span class="hidden md:inline">搜索...</span> <kbd class="hidden md:inline px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-primary-700 rounded">Ctrl+K</kbd> </a> <!-- Graph --> <a href="/graph/" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="12" cy="12" r="2"></circle><path d="M8 6h8M6 8v8M18 8v8M8 18h8M8 8l4 4M16 8l-4 4M8 16l4-4M16 16l-4-4"></path></svg> </a> <!-- Theme Toggle --> <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="切换主题"> <svg id="theme-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg> <svg id="theme-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> </button> <!-- Mobile Menu Toggle --> <button id="mobile-menu-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors lg:hidden"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> </button> </div> </div> </header> <div class="flex flex-1 max-w-screen-2xl mx-auto w-full"> <!-- Sidebar --> <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-30 w-72 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-primary-900 border-r border-gray-200 dark:border-primary-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300"> <nav class="p-4 space-y-1"> <a href="/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏠</span> 首页
+</a> <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">模块导航</div> <a href="/modules/00/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📚</span> 00 基础概念
+</a> <a href="/modules/01/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔄</span> 01 投资流程
+</a> <a href="/modules/02/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>💵</span> 02 估值方法
+</a> <a href="/modules/03/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📜</span> 03 法律与条款
+</a> <a href="/modules/04/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏭</span> 04 行业赛道
+</a> <a href="/modules/05/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔍</span> 05 尽职调查
+</a> <a href="/modules/06/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🤝</span> 06 投后管理
+</a> <a href="/modules/07/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🚪</span> 07 退出策略
+</a> <a href="/modules/08/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🇨🇳</span> 08 中国VC/PE实务
+</a> <a href="/modules/09/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400"> <span>📊</span> 09 风险与组合
+</a> <a href="/modules/10/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📖</span> 10 案例库
+</a> <a href="/modules/11/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🛠️</span> 11 工具与资源
+</a> </nav> </aside> <!-- Main Content --> <main class="flex-1 min-w-0 lg:ml-72"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">   <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6 flex-wrap"> <a href="/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a> <span>/</span> <a href="/modules/09/" class="hover:text-accent-600 dark:hover:text-accent-400">风险与组合</a> <span>/</span> <span class="text-gray-800 dark:text-gray-200 truncate">DPI与IRR解读</span> </nav> <article class="flex gap-8"> <!-- Article Content --> <div class="flex-1 min-w-0"> <!-- Article Header --> <header class="mb-8"> <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">DPI与IRR解读</h1> <div class="flex flex-wrap items-center gap-3 mb-4"> <a href="/modules/09/" class="text-xs px-2.5 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 hover:bg-accent-200 dark:hover:bg-accent-900/50 transition-colors"> 风险与组合 </a>  <a href="/search/?tag=vc-pe" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> vc-pe </a><a href="/search/?tag=%E4%B8%9A%E7%BB%A9%E6%8C%87%E6%A0%87" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 业绩指标 </a><a href="/search/?tag=%E7%BB%A9%E6%95%88%E8%AF%84%E4%BC%B0" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 绩效评估 </a><a href="/search/?tag=DPI" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> DPI </a><a href="/search/?tag=IRR" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> IRR </a> </div> <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400"> <span>创建于 2026/05/27</span>  <span>4707字</span> <span>约 12 分钟阅读</span> </div> </header> <!-- Article Body --> <div class="prose"><h2 id="概述">概述</h2>
+<p>DPI（Distribution to Paid-In）和IRR（Internal Rate of Return）是衡量VC/PE基金业绩的两个最核心指标，分别从&quot;现金回报&quot;和&quot;时间价值&quot;两个维度评估基金表现。理解这两个指标的定义、计算方法、适用场景及局限性，是LP评估GP能力、GP展示业绩的基础技能。正确解读这些指标对于投资决策和业绩沟通至关重要。</p>
+<h2 id="核心内容">核心内容</h2>
+<h3 id="一-核心业绩指标定义">一、核心业绩指标定义</h3>
+<h4 id="1-dpi-distribution-to-paid-in-已分配收益倍数">1. DPI（Distribution to Paid-In）已分配收益倍数</h4>
+<p><strong>定义</strong>：基金已分配给投资人的现金与投资人已缴入资本的比率</p>
+<p><strong>计算公式</strong>：
+$$DPI = \frac{已分配现金 + 已分配证券价值}{已缴入资本}$$</p>
+<p><strong>解读</strong>：</p>
+<ul>
+<li>DPI &lt; 1：投资人尚未收回全部本金</li>
+<li>DPI = 1：投资人刚好收回全部本金</li>
+<li>DPI &gt; 1：投资人已获得正向现金回报</li>
+<li>DPI = 2.0 表示投资人每投入1元已收回2元</li>
+</ul>
+<p><strong>特点</strong>：</p>
+<ul>
+<li>只计算已实现的现金分配</li>
+<li>不受账面估值影响</li>
+<li>是衡量基金&quot;真实回报&quot;的黄金标准</li>
+<li>在基金早期（前3-5年）通常较低</li>
+</ul>
+<h4 id="2-irr-internal-rate-of-return-内部收益率">2. IRR（Internal Rate of Return）内部收益率</h4>
+<p><strong>定义</strong>：使基金所有现金流（包括投入和分配）的净现值等于零的折现率</p>
+<p><strong>计算公式</strong>：
+$$\sum_{t=0}^{n} \frac{CF_t}{(1+IRR)^t} = 0$$</p>
+<p>其中：$CF_t$ = 第t期的现金流（投入为负，分配为正）</p>
+<p><strong>解读</strong>：</p>
+<ul>
+<li>IRR反映资金的年化回报率</li>
+<li>考虑了资金的时间价值</li>
+<li>IRR = 20% 表示资金年化增长20%</li>
+</ul>
+<p><strong>特点</strong>：</p>
+<ul>
+<li>考虑了时间价值</li>
+<li>可包含未实现投资的账面价值</li>
+<li>容易被短期高估值项目&quot;美化&quot;</li>
+<li>对现金流时点高度敏感</li>
+</ul>
+<h4 id="3-tvpi-total-value-to-paid-in-总价值倍数">3. TVPI（Total Value to Paid-In）总价值倍数</h4>
+<p><strong>定义</strong>：基金总价值（已分配 + 未分配）与已缴入资本的比率</p>
+<p><strong>计算公式</strong>：
+$$TVPI = \frac{已分配 + 未分配价值}{已缴入资本} = DPI + RVPI$$</p>
+<p><strong>解读</strong>：</p>
+<ul>
+<li>TVPI反映基金的总回报水平（含账面价值）</li>
+<li>在基金存续中期最具参考价值</li>
+<li>最终TVPI应等于DPI（基金结束时所有投资均已退出）</li>
+</ul>
+<h4 id="4-rvpi-residual-value-to-paid-in-未分配收益倍数">4. RVPI（Residual Value to Paid-In）未分配收益倍数</h4>
+<p><strong>定义</strong>：基金未分配价值与已缴入资本的比率</p>
+<p><strong>计算公式</strong>：
+$$RVPI = \frac{未分配价值}{已缴入资本} = TVPI - DPI$$</p>
+<p><strong>解读</strong>：</p>
+<ul>
+<li>RVPI反映账面未实现价值</li>
+<li>随着基金成熟应逐渐降低</li>
+<li>RVPI越高，说明基金越&quot;年轻&quot;</li>
+</ul>
+<h3 id="二-指标间的关系">二、指标间的关系</h3>
+<p><strong>基金生命周期中各指标的典型变化</strong></p>
+<pre><code>投资期（前3-4年）：
+  DPI: 0.0-0.3x  ← 少量早期退出
+  RVPI: 0.8-1.5x ← 大量账面增值
+  TVPI: 1.0-1.8x ← 以账面增值为主
+  IRR: 5-25%     ← 波动较大
+
+退出期（第5-8年）：
+  DPI: 0.5-1.5x  ← 退出逐步增加
+  RVPI: 0.5-1.0x ← 账面价值降低
+  TVPI: 1.5-2.5x ← 总回报逐步显现
+  IRR: 15-30%    ← 相对稳定
+
+基金后期（第8-10年）：
+  DPI: 1.5-3.0x  ← 大部分已退出
+  RVPI: 0.1-0.3x ← 仅剩少量未退出
+  TVPI: 1.8-3.0x ← 接近最终回报
+  IRR: 18-35%    ← 基本确定
+</code></pre>
+<p><strong>指标换算关系</strong></p>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>组合状态</th>
+<th>DPI</th>
+<th>RVPI</th>
+<th>TVPI</th>
+<th>解读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>早期基金</td>
+<td>0.2x</td>
+<td>1.3x</td>
+<td>1.5x</td>
+<td>账面回报尚可，现金回报不足</td>
+</tr>
+<tr>
+<td>中期基金</td>
+<td>1.0x</td>
+<td>1.0x</td>
+<td>2.0x</td>
+<td>已回本，账面还有1倍</td>
+</tr>
+<tr>
+<td>成熟基金</td>
+<td>2.5x</td>
+<td>0.2x</td>
+<td>2.7x</td>
+<td>大部分已退出，回报确定</td>
+</tr>
+</tbody>
+</table></div><h3 id="三-各指标的适用场景与局限性">三、各指标的适用场景与局限性</h3>
+<h4 id="dpi的适用场景">DPI的适用场景</h4>
+<p><strong>适用</strong>：</p>
+<ul>
+<li>评估基金的真实现金回报能力</li>
+<li>比较不同vintage year基金的实际表现</li>
+<li>LP的现金流规划和配置决策</li>
+</ul>
+<p><strong>局限</strong>：</p>
+<ul>
+<li>基金早期DPI普遍较低，难以判断</li>
+<li>不适合评估仍在投资期的基金</li>
+<li>无法反映基金的增值潜力</li>
+</ul>
+<h4 id="irr的适用场景">IRR的适用场景</h4>
+<p><strong>适用</strong>：</p>
+<ul>
+<li>评估资金的使用效率</li>
+<li>比较不同期限投资的回报水平</li>
+<li>与其他资产类别的回报对比</li>
+</ul>
+<p><strong>局限</strong>：</p>
+<ul>
+<li>容易被短期高估值&quot;美化&quot;</li>
+<li>对现金流时点高度敏感</li>
+<li>可能不代表可实现的回报水平</li>
+<li>早期高IRR可能无法持续</li>
+</ul>
+<p><strong>IRR&quot;陷阱&quot;案例</strong></p>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>场景</th>
+<th>投资时间</th>
+<th>投资金额</th>
+<th>退出金额</th>
+<th>退出时间</th>
+<th>IRR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>快进快出</td>
+<td>第1年</td>
+<td>1000万</td>
+<td>1500万</td>
+<td>第2年</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>长期持有</td>
+<td>第1年</td>
+<td>1000万</td>
+<td>3000万</td>
+<td>第5年</td>
+<td>25%</td>
+</tr>
+<tr>
+<td>延迟退出</td>
+<td>第1年</td>
+<td>1000万</td>
+<td>5000万</td>
+<td>第10年</td>
+<td>17%</td>
+</tr>
+</tbody>
+</table></div><p>虽然场景A的IRR最高（50%），但场景C的实际回报倍数最高（5x）</p>
+<h4 id="tvpi的适用场景">TVPI的适用场景</h4>
+<p><strong>适用</strong>：</p>
+<ul>
+<li>评估基金的总体回报水平</li>
+<li>基金中期的业绩跟踪</li>
+<li>同期基金的横向比较</li>
+</ul>
+<p><strong>局限</strong>：</p>
+<ul>
+<li>包含未实现的账面价值</li>
+<li>受估值方法和时机影响大</li>
+<li>可能高估实际可实现的回报</li>
+</ul>
+<h3 id="四-j-curve效应">四、J-Curve效应</h3>
+<p><strong>定义</strong>：VC/PE基金在投资初期通常表现为负回报，随后逐渐转正，形成&quot;J&quot;形曲线</p>
+<p><strong>J-Curve的形成原因</strong></p>
+<ol>
+<li><strong>费用消耗</strong>：管理费、设立费用在早期大量支出</li>
+<li><strong>投资期现金流</strong>：持续投入资本但尚无退出</li>
+<li><strong>估值滞后</strong>：新投资通常以成本价入账，未体现增值</li>
+<li><strong>退出时序</strong>：优质项目通常需要更长时间才能退出</li>
+</ol>
+<p><strong>J-Curve的时间特征</strong></p>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>基金年份</th>
+<th>典型净IRR</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第1年</td>
+<td>-20% ~ -30%</td>
+<td>设立费用、管理费</td>
+</tr>
+<tr>
+<td>第2年</td>
+<td>-15% ~ -20%</td>
+<td>持续投资、少量减值</td>
+</tr>
+<tr>
+<td>第3年</td>
+<td>-5% ~ 0%</td>
+<td>首批项目估值调整</td>
+</tr>
+<tr>
+<td>第4年</td>
+<td>0% ~ 10%</td>
+<td>部分项目增值显现</td>
+</tr>
+<tr>
+<td>第5年</td>
+<td>10% ~ 20%</td>
+<td>早期退出实现</td>
+</tr>
+<tr>
+<td>第6-8年</td>
+<td>15% ~ 30%</td>
+<td>大量退出、回报显现</td>
+</tr>
+<tr>
+<td>第9-10年</td>
+<td>18% ~ 35%</td>
+<td>最终回报确定</td>
+</tr>
+</tbody>
+</table></div><p><strong>缩短J-Curve的策略</strong></p>
+<ul>
+<li>选择有快速退出渠道的投资（如并购标的）</li>
+<li>适时进行基金重组（restructuring）</li>
+<li>加速投后价值提升，缩短退出周期</li>
+</ul>
+<h3 id="五-业绩基准-benchmark">五、业绩基准（Benchmark）</h3>
+<p><strong>全球主要业绩基准来源</strong></p>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>基准机构</th>
+<th>数据覆盖</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cambridge Associates</td>
+<td>全球最全面</td>
+<td>机构级标准</td>
+</tr>
+<tr>
+<td>Preqin</td>
+<td>全球PE/VC</td>
+<td>数据量大</td>
+</tr>
+<tr>
+<td>Burgiss</td>
+<td>机构LP数据</td>
+<td>真实基金现金流</td>
+</tr>
+<tr>
+<td>PitchBook</td>
+<td>美国为主</td>
+<td>实时更新</td>
+</tr>
+<tr>
+<td>清科/投中</td>
+<td>中国市场</td>
+<td>国内最权威</td>
+</tr>
+</tbody>
+</table></div><p><strong>业绩分位数标准（全球VC基金，10年期）</strong></p>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>分位数</th>
+<th>Net IRR</th>
+<th>Net TVPI</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Top 5%</td>
+<td>&gt;30%</td>
+<td>&gt;3.0x</td>
+<td>顶尖表现</td>
+</tr>
+<tr>
+<td>Top Quartile (25%)</td>
+<td>20-30%</td>
+<td>2.0-3.0x</td>
+<td>优秀</td>
+</tr>
+<tr>
+<td>Median (50%)</td>
+<td>12-20%</td>
+<td>1.5-2.0x</td>
+<td>中位数</td>
+</tr>
+<tr>
+<td>Bottom Quartile (75%)</td>
+<td>5-12%</td>
+<td>1.0-1.5x</td>
+<td>低于平均</td>
+</tr>
+<tr>
+<td>Bottom 10%</td>
+<td>&lt;5%</td>
+<td>&lt;1.0x</td>
+<td>表现不佳</td>
+</tr>
+</tbody>
+</table></div><p><strong>中国VC/PE业绩基准（参考值）</strong></p>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>分位数</th>
+<th>Net IRR</th>
+<th>Net TVPI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Top Quartile</td>
+<td>&gt;25%</td>
+<td>&gt;2.5x</td>
+</tr>
+<tr>
+<td>Median</td>
+<td>15-25%</td>
+<td>1.5-2.5x</td>
+</tr>
+<tr>
+<td>Bottom Quartile</td>
+<td>&lt;15%</td>
+<td>&lt;1.5x</td>
+</tr>
+</tbody>
+</table></div><h3 id="六-业绩指标的综合应用">六、业绩指标的综合应用</h3>
+<p><strong>评估基金的完整指标框架</strong></p>
+<pre><code>┌─────────────────────────────────────────────────────┐
+│                    基金业绩评估框架                    │
+├─────────────────────────────────────────────────────┤
+│  回报指标        │  风险指标        │  效率指标        │
+│  ├─ Net IRR      │  ├─ 最大回撤     │  ├─ 投资倍数     │
+│  ├─ DPI          │  ├─ 回报波动率   │  ├─ 资本使用率   │
+│  ├─ TVPI         │  ├─ 下行风险     │  ├─ 退出效率     │
+│  └─ Gross IRR    │  └─ 失败率       │  └─ 费用比率     │
+└─────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>多指标交叉验证</strong></p>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>基金表现</th>
+<th>IRR</th>
+<th>DPI</th>
+<th>TVPI</th>
+<th>解读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>优秀</td>
+<td>&gt;25%</td>
+<td>&gt;2.0x</td>
+<td>&gt;2.5x</td>
+<td>全方位优秀</td>
+</tr>
+<tr>
+<td>中等</td>
+<td>15-25%</td>
+<td>1.0-2.0x</td>
+<td>1.5-2.5x</td>
+<td>中规中矩</td>
+</tr>
+<tr>
+<td>需关注</td>
+<td>&gt;30%</td>
+<td>&lt;0.5x</td>
+<td>&gt;2.0x</td>
+<td>高IRR但现金回报不足</td>
+</tr>
+<tr>
+<td>风险信号</td>
+<td>&lt;10%</td>
+<td>&gt;1.5x</td>
+<td>&lt;1.5x</td>
+<td>现金回报尚可但增值有限</td>
+</tr>
+</tbody>
+</table></div><h2 id="关键术语">关键术语</h2>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>术语</th>
+<th>英文</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DPI</td>
+<td>Distribution to Paid-In</td>
+<td>已分配现金与已缴入资本的比率</td>
+</tr>
+<tr>
+<td>IRR</td>
+<td>Internal Rate of Return</td>
+<td>内部收益率，使净现值为零的折现率</td>
+</tr>
+<tr>
+<td>TVPI</td>
+<td>Total Value to Paid-In</td>
+<td>总价值（已分配+未分配）与已缴入资本的比率</td>
+</tr>
+<tr>
+<td>RVPI</td>
+<td>Residual Value to Paid-In</td>
+<td>未分配价值与已缴入资本的比率</td>
+</tr>
+<tr>
+<td>J-Curve</td>
+<td>J形曲线</td>
+<td>基金早期负回报后逐渐转正的曲线形态</td>
+</tr>
+<tr>
+<td>Vintage Year</td>
+<td>基金成立年份</td>
+<td>基金开始投资运作的年份</td>
+</tr>
+<tr>
+<td>Net IRR</td>
+<td>净内部收益率</td>
+<td>扣除费用后的内部收益率</td>
+</tr>
+<tr>
+<td>Gross IRR</td>
+<td>毛内部收益率</td>
+<td>未扣除费用的内部收益率</td>
+</tr>
+</tbody>
+</table></div><h2 id="实务要点">实务要点</h2>
+<ul>
+<li><strong>优先关注DPI</strong>：对于成熟基金（5年以上），DPI是评估真实回报的最重要指标</li>
+<li><strong>警惕高IRR陷阱</strong>：早期基金的高IRR可能由少数高估值项目驱动，不代表可实现回报</li>
+<li><strong>结合vintage year评估</strong>：不同市场环境成立的基金，业绩基准应有所调整</li>
+<li><strong>关注费用影响</strong>：比较Net IRR和Gross IRR的差异，评估费用结构的合理性</li>
+<li><strong>建立长期跟踪机制</strong>：定期更新基金业绩数据，观察J-Curve的演变</li>
+</ul>
+<h2 id="常见误区">常见误区</h2>
+<ul>
+<li><strong>过度依赖IRR</strong>：IRR容易被短期高估值美化，尤其在基金早期可能产生误导</li>
+<li><strong>忽视DPI的重要性</strong>：很多LP过分关注账面回报，忽视了现金回报才是最终目标</li>
+<li><strong>跨vintage year直接比较</strong>：不同市场环境下成立的基金，简单比较指标没有意义</li>
+</ul>
+<h2 id="参考来源">参考来源</h2>
+<ul>
+<li>Kaplan, S. &amp; Schoar, A. “Private Equity Performance: Returns, Persistence, and Capital Flows” (2005)</li>
+<li>Cambridge Associates, “Private Equity and Venture Capital Index”</li>
+<li>ILPA, “Reporting Guidelines”</li>
+<li>Burgiss, “Private Capital Performance Data”</li>
+</ul>
+<h2 id="相关主题">相关主题</h2>
+<ul>
+<li><a href="/articles/%E6%8A%95%E8%B5%84%E7%BB%84%E5%90%88%E6%9E%84%E5%BB%BA/">投资组合构建</a> 如何构建高回报的投资组合</li>
+<li><a href="/articles/%E5%88%86%E6%95%A3%E5%8C%96%E7%AD%96%E7%95%A5/">分散化策略</a> 降低组合风险的方法论</li>
+<li><a href="/articles/%E5%B8%B8%E8%A7%81%E9%A3%8E%E9%99%A9%E7%B1%BB%E5%9E%8B/">常见风险类型</a> 识别和管理组合中的各类风险</li>
+<li><a href="/search/?q=%E5%9F%BA%E9%87%91%E8%AE%BE%E7%AB%8B%E4%B8%8E%E6%9E%B6%E6%9E%84">基金设立与架构</a> 基金结构对业绩指标的影响</li>
+<li><a href="/search/?q=%E9%80%80%E5%87%BA%E7%AD%96%E7%95%A5%E4%B8%8E%E8%B7%AF%E5%BE%84">退出策略与路径</a> 影响DPI的关键因素</li>
+</ul>
+</div> <!-- Related Articles --> <section class="mt-12 pt-8 border-t border-gray-200 dark:border-primary-800"> <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">📎 相关推荐</h2> <div class="space-y-3"> <a href="/articles/分散化策略/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">风险与组合</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 分散化策略 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">不同投资阶段的风险收益特征差异显著：</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/常见风险类型/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">风险与组合</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 常见风险类型 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">定义：由宏观经济环境、市场周期、行业趋势变化导致的投资损失风险</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/投资组合构建/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">风险与组合</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 投资组合构建 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">VC/PE领域的组合构建与公开市场投资有本质区别：</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/案例-成长-中芯国际/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 中芯国际 — 中国大陆芯片制造龙头，战略级半导体投资 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">中芯国际采用&quot;晶圆代工+先进制程追赶+成熟制程放量&quot;的商业模式：</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/案例-成长-京东物流/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 京东物流 — 从京东内部物流到独立上市的供应链巨头 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">京东物流采用&quot;仓配一体化+供应链服务+技术驱动&quot;的商业模式：</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a> </div> </section> </div> <!-- Table of Contents (Desktop) --> <aside class="hidden xl:block w-64 flex-shrink-0"> <div class="sticky top-20"> <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">目录</h3> <nav class="space-y-1"> <a href="#概述" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="概述"> 概述 </a><a href="#核心内容" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="核心内容"> 核心内容 </a><a href="#一-核心业绩指标定义" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="一-核心业绩指标定义"> 一、核心业绩指标定义 </a><a href="#1-dpi-distribution-to-paid-in-已分配收益倍数" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="1-dpi-distribution-to-paid-in-已分配收益倍数"> 1. DPI（Distribution to Paid-In）已分配收益倍数 </a><a href="#2-irr-internal-rate-of-return-内部收益率" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="2-irr-internal-rate-of-return-内部收益率"> 2. IRR（Internal Rate of Return）内部收益率 </a><a href="#3-tvpi-total-value-to-paid-in-总价值倍数" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="3-tvpi-total-value-to-paid-in-总价值倍数"> 3. TVPI（Total Value to Paid-In）总价值倍数 </a><a href="#4-rvpi-residual-value-to-paid-in-未分配收益倍数" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="4-rvpi-residual-value-to-paid-in-未分配收益倍数"> 4. RVPI（Residual Value to Paid-In）未分配收益倍数 </a><a href="#二-指标间的关系" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="二-指标间的关系"> 二、指标间的关系 </a><a href="#三-各指标的适用场景与局限性" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="三-各指标的适用场景与局限性"> 三、各指标的适用场景与局限性 </a><a href="#dpi的适用场景" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="dpi的适用场景"> DPI的适用场景 </a><a href="#irr的适用场景" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="irr的适用场景"> IRR的适用场景 </a><a href="#tvpi的适用场景" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="tvpi的适用场景"> TVPI的适用场景 </a><a href="#四-j-curve效应" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="四-j-curve效应"> 四、J-Curve效应 </a><a href="#五-业绩基准-benchmark" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="五-业绩基准-benchmark"> 五、业绩基准（Benchmark） </a><a href="#六-业绩指标的综合应用" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="六-业绩指标的综合应用"> 六、业绩指标的综合应用 </a><a href="#关键术语" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键术语"> 关键术语 </a><a href="#实务要点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="实务要点"> 实务要点 </a><a href="#常见误区" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="常见误区"> 常见误区 </a><a href="#参考来源" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="参考来源"> 参考来源 </a><a href="#相关主题" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="相关主题"> 相关主题 </a> </nav> </div> </aside> </article> <script type="module">const n=new IntersectionObserver(e=>{e.forEach(t=>{const o=t.target.id,c=document.querySelector(`.toc-link[data-heading="${o}"]`);c&&t.isIntersecting&&(document.querySelectorAll(".toc-link").forEach(r=>r.classList.remove("text-accent-600","dark:text-accent-400")),c.classList.add("text-accent-600","dark:text-accent-400"))})},{rootMargin:"-80px 0px -80% 0px"});document.querySelectorAll(".prose h2[id], .prose h3[id], .prose h4[id]").forEach(e=>{n.observe(e)});</script>  </div> </main> </div> <!-- Mobile sidebar overlay --> <div id="sidebar-overlay" class="fixed inset-0 z-20 bg-black/50 hidden lg:hidden"></div> <script type="module">const m=document.getElementById("theme-toggle"),o=document.getElementById("theme-light-icon"),d=document.getElementById("theme-dark-icon");function t(e){e?(document.documentElement.classList.add("dark"),o?.classList.add("hidden"),d?.classList.remove("hidden"),localStorage.setItem("theme","dark")):(document.documentElement.classList.remove("dark"),o?.classList.remove("hidden"),d?.classList.add("hidden"),localStorage.setItem("theme","light"))}const s=localStorage.getItem("theme");t(s==="light"?!1:s==="dark"?!0:window.matchMedia("(prefers-color-scheme: dark)").matches);m?.addEventListener("click",()=>{t(!document.documentElement.classList.contains("dark"))});const r=document.getElementById("mobile-menu-toggle"),g=document.getElementById("sidebar"),l=document.getElementById("sidebar-overlay");function i(){g?.classList.toggle("-translate-x-full"),l?.classList.toggle("hidden")}r?.addEventListener("click",i);l?.addEventListener("click",i);const c=document.getElementById("reading-progress");window.addEventListener("scroll",()=>{const e=window.scrollY,n=document.documentElement.scrollHeight-window.innerHeight,a=n>0?e/n*100:0;c&&(c.style.width=`${Math.min(100,a)}%`)});document.addEventListener("keydown",e=>{(e.ctrlKey||e.metaKey)&&e.key==="k"&&(e.preventDefault(),window.location.href="/search/")});</script> </body> </html> 

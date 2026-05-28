@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="VC/PE 投资知识库 - 面向投资实战的系统化知识框架"><meta name="generator" content="Astro v5.18.2"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>人工智能 | VC/PE 投资知识库</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/index.D-0dJCf_.css"></head> <body class="bg-gray-50 dark:bg-primary-950 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300"> <!-- Reading Progress Bar --> <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-accent-500 to-accent-300 z-50 transition-all duration-150" style="width: 0%"></div> <!-- Header --> <header class="sticky top-0 z-40 bg-white/80 dark:bg-primary-900/80 backdrop-blur-md border-b border-gray-200 dark:border-primary-800"> <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between"> <div class="flex items-center gap-4"> <a href="/" class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity"> <span class="text-2xl">💰</span> <span class="hidden sm:inline">VC/PE 投资知识库</span> </a> </div> <div class="flex items-center gap-3"> <!-- Search --> <a href="/search/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> <span class="hidden md:inline">搜索...</span> <kbd class="hidden md:inline px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-primary-700 rounded">Ctrl+K</kbd> </a> <!-- Graph --> <a href="/graph/" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="12" cy="12" r="2"></circle><path d="M8 6h8M6 8v8M18 8v8M8 18h8M8 8l4 4M16 8l-4 4M8 16l4-4M16 16l-4-4"></path></svg> </a> <!-- Theme Toggle --> <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="切换主题"> <svg id="theme-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg> <svg id="theme-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> </button> <!-- Mobile Menu Toggle --> <button id="mobile-menu-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors lg:hidden"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> </button> </div> </div> </header> <div class="flex flex-1 max-w-screen-2xl mx-auto w-full"> <!-- Sidebar --> <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-30 w-72 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-primary-900 border-r border-gray-200 dark:border-primary-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300"> <nav class="p-4 space-y-1"> <a href="/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏠</span> 首页
+</a> <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">模块导航</div> <a href="/modules/00/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📚</span> 00 基础概念
+</a> <a href="/modules/01/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔄</span> 01 投资流程
+</a> <a href="/modules/02/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>💵</span> 02 估值方法
+</a> <a href="/modules/03/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📜</span> 03 法律与条款
+</a> <a href="/modules/04/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400"> <span>🏭</span> 04 行业赛道
+</a> <a href="/modules/05/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔍</span> 05 尽职调查
+</a> <a href="/modules/06/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🤝</span> 06 投后管理
+</a> <a href="/modules/07/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🚪</span> 07 退出策略
+</a> <a href="/modules/08/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🇨🇳</span> 08 中国VC/PE实务
+</a> <a href="/modules/09/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📊</span> 09 风险与组合
+</a> <a href="/modules/10/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📖</span> 10 案例库
+</a> <a href="/modules/11/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🛠️</span> 11 工具与资源
+</a> </nav> </aside> <!-- Main Content --> <main class="flex-1 min-w-0 lg:ml-72"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">   <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6 flex-wrap"> <a href="/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a> <span>/</span> <a href="/modules/04/" class="hover:text-accent-600 dark:hover:text-accent-400">行业赛道</a> <span>/</span> <span class="text-gray-800 dark:text-gray-200 truncate">人工智能</span> </nav> <article class="flex gap-8"> <!-- Article Content --> <div class="flex-1 min-w-0"> <!-- Article Header --> <header class="mb-8"> <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">人工智能</h1> <div class="flex flex-wrap items-center gap-3 mb-4"> <a href="/modules/04/" class="text-xs px-2.5 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 hover:bg-accent-200 dark:hover:bg-accent-900/50 transition-colors"> 行业赛道 </a>  <a href="/search/?tag=vc-pe" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> vc-pe </a><a href="/search/?tag=%E8%A1%8C%E4%B8%9A%E8%B5%9B%E9%81%93" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 行业赛道 </a><a href="/search/?tag=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 人工智能 </a><a href="/search/?tag=%E5%A4%A7%E6%A8%A1%E5%9E%8B" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 大模型 </a><a href="/search/?tag=AI%E5%BA%94%E7%94%A8" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> AI应用 </a><a href="/search/?tag=%E7%AE%97%E5%8A%9B" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 算力 </a> </div> <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400"> <span>创建于 2026/05/27</span>  <span>2583字</span> <span>约 7 分钟阅读</span> </div> </header> <!-- Article Body --> <div class="prose"><h2 id="概述">概述</h2>
+<p>人工智能（AI）是当前全球科技投资最热门的赛道，以GPT系列为代表的大语言模型（LLM）开启了AI的新纪元。AI产业链涵盖算力基础设施、基础模型、中间层工具和应用层。中国AI产业在应用创新方面具有优势，但在基础模型和高端算力方面面临&quot;卡脖子&quot;挑战。2023-2025年是AI投资的高峰期，大量资本涌入大模型和AI应用赛道。</p>
+<h2 id="行业概况">行业概况</h2>
+<ul>
+<li><strong>全球市场规模</strong>：2025年全球AI市场规模约5000亿美元，CAGR超30%</li>
+<li><strong>中国市场规模</strong>：2025年中国AI产业规模约8000亿人民币，AI大模型市场约500亿</li>
+<li><strong>产业链结构</strong>：
+<ul>
+<li><strong>基础设施层</strong>：AI芯片（GPU/TPU）、服务器、数据中心、云计算（英伟达、华为昇腾、寒武纪）</li>
+<li><strong>模型层</strong>：基础大模型（OpenAI、智谱AI、百度文心、阿里通义、字节豆包）</li>
+<li><strong>中间层</strong>：模型微调、RAG、向量数据库、AI Agent框架（LangChain、Dify）</li>
+<li><strong>应用层</strong>：AI助手、AI编程、AI营销、AI医疗、AI金融等垂直应用</li>
+</ul>
+</li>
+<li><strong>主要玩家</strong>：
+<ul>
+<li>大模型：智谱AI、月之暗面（Kimi）、百川智能、MiniMax、零一万物</li>
+<li>AI应用：百度（文心一言）、阿里（通义千问）、字节（豆包）</li>
+<li>AI芯片：寒武纪、海光信息、壁仞科技</li>
+<li>AI基础设施：商汤科技、第四范式、云从科技</li>
+</ul>
+</li>
+</ul>
+<h2 id="投资逻辑">投资逻辑</h2>
+<ul>
+<li><strong>为什么值得投</strong>：
+<ul>
+<li>AI是继互联网、移动互联网之后的第三波技术革命</li>
+<li>大模型能力快速提升，AI应用场景持续扩展</li>
+<li>中国拥有丰富的应用场景和数据优势</li>
+<li>企业级AI应用（如AI客服、AI编程、AI营销）已开始商业化</li>
+</ul>
+</li>
+<li><strong>核心驱动力</strong>：
+<ul>
+<li>大模型能力的指数级提升（Scaling Law）</li>
+<li>算力成本持续下降</li>
+<li>企业降本增效的强烈需求</li>
+<li>政策支持（新一代人工智能发展规划）</li>
+</ul>
+</li>
+<li><strong>关键成功因素</strong>：
+<ul>
+<li>模型能力（参数规模、训练数据质量、推理效率）</li>
+<li>场景理解与产品化能力</li>
+<li>算力资源获取能力</li>
+<li>商业化变现能力</li>
+</ul>
+</li>
+</ul>
+<h2 id="估值特点">估值特点</h2>
+<ul>
+<li><strong>常用估值方法</strong>：
+<ul>
+<li><strong>可比公司法</strong>：参考OpenAI、Anthropic等全球头部AI公司的估值</li>
+<li><strong>PS（Price/Sales）</strong>：适用于已有收入但未盈利的AI公司</li>
+<li><strong>用户价值法</strong>：单用户价值 x 用户数</li>
+<li><strong>技术资产估值</strong>：模型参数量、训练数据量、算力储备</li>
+</ul>
+</li>
+<li><strong>关键指标</strong>：
+<ul>
+<li><strong>模型参数量</strong>：衡量模型规模的基础指标</li>
+<li><strong>Benchmark表现</strong>：MMLU、HumanEval、SuperCLUE等评测分数</li>
+<li><strong>API调用量/MAU</strong>：应用层的用户活跃度</li>
+<li><strong>ARR</strong>：企业级AI应用的经常性收入</li>
+<li><strong>推理成本</strong>：每百万token的计算成本</li>
+</ul>
+</li>
+<li><strong>估值区间参考</strong>：
+<ul>
+<li>大模型公司（Pre-revenue）：10-100亿美元（参考OpenAI的3000亿美元估值）</li>
+<li>AI应用公司：PS 15-40x</li>
+<li>AI芯片公司：PS 20-50x</li>
+<li>AI基础设施：PS 10-25x</li>
+</ul>
+</li>
+</ul>
+<h2 id="尽调要点">尽调要点</h2>
+<ul>
+<li><strong>该行业特有的尽调关注点</strong>：
+<ul>
+<li>模型技术实力：自研能力 vs 调用开源模型</li>
+<li>算力资源：GPU储备、训练成本、推理成本</li>
+<li>数据优势：独有数据源、数据飞轮效应</li>
+<li>商业化路径：To B vs To C，付费意愿验证</li>
+<li>团队背景：核心技术人员的学术与产业背景</li>
+<li>合规风险：内容安全、数据安全、算法备案</li>
+</ul>
+</li>
+<li><strong>常见红旗信号</strong>：
+<ul>
+<li>过度依赖开源模型，缺乏核心自研能力</li>
+<li>模型能力无明显差异化</li>
+<li>商业化路径不清晰，长期烧钱无造血能力</li>
+<li>核心技术人员流失</li>
+<li>合规风险（内容安全、数据安全）</li>
+</ul>
+</li>
+</ul>
+<h2 id="典型案例">典型案例</h2>
+<ul>
+<li><strong>商汤科技（<a href="http://0020.HK">0020.HK</a>）</strong>：
+<ul>
+<li>中国AI视觉龙头，2021年港股上市</li>
+<li>上市后持续亏损，2022年创始人汤晓鸥去世，公司战略调整</li>
+<li>2023年后转向大模型与AI基础设施（大装置）</li>
+<li>投资启示：AI公司商业化是最大挑战，技术领先不等于商业成功</li>
+</ul>
+</li>
+<li><strong>智谱AI</strong>：
+<ul>
+<li>中国大模型创业公司代表，清华系背景</li>
+<li>2024年估值超100亿人民币，获得多轮大额融资</li>
+<li>产品包括ChatGLM系列模型、智谱清言应用</li>
+<li>投资启示：大模型创业需要持续巨额资金支持，赢者通吃的行业特征明显</li>
+</ul>
+</li>
+</ul>
+<h2 id="风险与挑战">风险与挑战</h2>
+<ul>
+<li><strong>行业特有风险</strong>：
+<ul>
+<li>技术迭代风险：模型能力可能快速被超越</li>
+<li>商业化不确定性：AI应用的付费意愿和商业模式仍在探索</li>
+<li>人才竞争：核心AI人才稀缺，薪资成本高</li>
+<li>开源模型冲击：开源模型能力提升可能削弱闭源模型的壁垒</li>
+</ul>
+</li>
+<li><strong>政策风险</strong>：
+<ul>
+<li>算力出口管制：美国对华GPU出口限制影响训练能力</li>
+<li>内容安全监管：生成式AI内容管理办法</li>
+<li>算法备案与合规要求</li>
+</ul>
+</li>
+<li><strong>技术迭代风险</strong>：
+<ul>
+<li>Scaling Law可能遇到瓶颈</li>
+<li>新架构（如Transformer替代方案）可能出现</li>
+<li>多模态、Agent等新范式的发展不确定性</li>
+</ul>
+</li>
+</ul>
+<h2 id="关键术语">关键术语</h2>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>术语</th>
+<th>英文</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>大语言模型</td>
+<td>LLM (Large Language Model)</td>
+<td>参数量达数十亿至万亿级的语言模型，如GPT、Claude</td>
+</tr>
+<tr>
+<td>提示工程</td>
+<td>Prompt Engineering</td>
+<td>设计输入提示以引导大模型输出期望结果的技术</td>
+</tr>
+<tr>
+<td>RAG</td>
+<td>Retrieval-Augmented Generation</td>
+<td>检索增强生成，结合外部知识库提升模型回答准确性</td>
+</tr>
+<tr>
+<td>AI Agent</td>
+<td>智能体</td>
+<td>能够自主规划、使用工具、完成复杂任务的AI系统</td>
+</tr>
+<tr>
+<td>Scaling Law</td>
+<td>规模定律</td>
+<td>模型性能随参数量、数据量、算力增加而持续提升的规律</td>
+</tr>
+<tr>
+<td>Token</td>
+<td>词元</td>
+<td>大模型处理文本的基本单位，中文约1.5-2个字符为一个token</td>
+</tr>
+<tr>
+<td>Fine-tuning</td>
+<td>微调</td>
+<td>在预训练模型基础上用特定数据进行二次训练</td>
+</tr>
+<tr>
+<td>推理</td>
+<td>Inference</td>
+<td>模型训练完成后，使用模型进行预测/生成的过程</td>
+</tr>
+<tr>
+<td>GPU</td>
+<td>Graphics Processing Unit</td>
+<td>图形处理器，当前AI训练和推理的核心算力硬件</td>
+</tr>
+</tbody>
+</table></div><h2 id="参考来源">参考来源</h2>
+<ul>
+<li>中国信息通信研究院《人工智能发展白皮书》</li>
+<li>甲子光年《中国AI大模型产业研究报告》</li>
+<li>斯坦福大学《AI Index Report》</li>
+<li>a16z《AI Canon》</li>
+</ul>
+<h2 id="相关主题">相关主题</h2>
+<ul>
+<li><a href="/articles/saas%E4%B8%8E%E4%BC%81%E4%B8%9A%E6%9C%8D%E5%8A%A1/">SaaS与企业服务</a> AI对SaaS产品的赋能与颠覆</li>
+<li><a href="/articles/%E7%94%9F%E7%89%A9%E7%A7%91%E6%8A%80%E4%B8%8E%E5%8C%BB%E7%96%97/">生物科技与医疗</a> AI制药与AI医疗影像</li>
+<li><a href="/articles/%E9%87%91%E8%9E%8D%E7%A7%91%E6%8A%80/">金融科技</a> AI在金融风控与投研中的应用</li>
+<li><a href="/articles/%E6%96%B0%E8%83%BD%E6%BA%90%E4%B8%8E%E7%A2%B3%E4%B8%AD%E5%92%8C/">新能源与碳中和</a> AI在能源管理与电网调度中的应用</li>
+</ul>
+</div> <!-- Related Articles --> <section class="mt-12 pt-8 border-t border-gray-200 dark:border-primary-800"> <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">📎 相关推荐</h2> <div class="space-y-3"> <a href="/articles/saas与企业服务/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">行业赛道</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> SaaS与企业服务 </h3>  </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/新能源与碳中和/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">行业赛道</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 新能源与碳中和 </h3>  </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/生物科技与医疗/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">行业赛道</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 生物科技与医疗 </h3>  </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/金融科技/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">行业赛道</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 金融科技 </h3>  </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/消费与零售/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">行业赛道</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 消费与零售 </h3>  </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a> </div> </section> </div> <!-- Table of Contents (Desktop) --> <aside class="hidden xl:block w-64 flex-shrink-0"> <div class="sticky top-20"> <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">目录</h3> <nav class="space-y-1"> <a href="#概述" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="概述"> 概述 </a><a href="#行业概况" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="行业概况"> 行业概况 </a><a href="#投资逻辑" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="投资逻辑"> 投资逻辑 </a><a href="#估值特点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="估值特点"> 估值特点 </a><a href="#尽调要点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="尽调要点"> 尽调要点 </a><a href="#典型案例" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="典型案例"> 典型案例 </a><a href="#风险与挑战" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="风险与挑战"> 风险与挑战 </a><a href="#关键术语" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键术语"> 关键术语 </a><a href="#参考来源" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="参考来源"> 参考来源 </a><a href="#相关主题" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="相关主题"> 相关主题 </a> </nav> </div> </aside> </article> <script type="module">const n=new IntersectionObserver(e=>{e.forEach(t=>{const o=t.target.id,c=document.querySelector(`.toc-link[data-heading="${o}"]`);c&&t.isIntersecting&&(document.querySelectorAll(".toc-link").forEach(r=>r.classList.remove("text-accent-600","dark:text-accent-400")),c.classList.add("text-accent-600","dark:text-accent-400"))})},{rootMargin:"-80px 0px -80% 0px"});document.querySelectorAll(".prose h2[id], .prose h3[id], .prose h4[id]").forEach(e=>{n.observe(e)});</script>  </div> </main> </div> <!-- Mobile sidebar overlay --> <div id="sidebar-overlay" class="fixed inset-0 z-20 bg-black/50 hidden lg:hidden"></div> <script type="module">const m=document.getElementById("theme-toggle"),o=document.getElementById("theme-light-icon"),d=document.getElementById("theme-dark-icon");function t(e){e?(document.documentElement.classList.add("dark"),o?.classList.add("hidden"),d?.classList.remove("hidden"),localStorage.setItem("theme","dark")):(document.documentElement.classList.remove("dark"),o?.classList.remove("hidden"),d?.classList.add("hidden"),localStorage.setItem("theme","light"))}const s=localStorage.getItem("theme");t(s==="light"?!1:s==="dark"?!0:window.matchMedia("(prefers-color-scheme: dark)").matches);m?.addEventListener("click",()=>{t(!document.documentElement.classList.contains("dark"))});const r=document.getElementById("mobile-menu-toggle"),g=document.getElementById("sidebar"),l=document.getElementById("sidebar-overlay");function i(){g?.classList.toggle("-translate-x-full"),l?.classList.toggle("hidden")}r?.addEventListener("click",i);l?.addEventListener("click",i);const c=document.getElementById("reading-progress");window.addEventListener("scroll",()=>{const e=window.scrollY,n=document.documentElement.scrollHeight-window.innerHeight,a=n>0?e/n*100:0;c&&(c.style.width=`${Math.min(100,a)}%`)});document.addEventListener("keydown",e=>{(e.ctrlKey||e.metaKey)&&e.key==="k"&&(e.preventDefault(),window.location.href="/search/")});</script> </body> </html> 

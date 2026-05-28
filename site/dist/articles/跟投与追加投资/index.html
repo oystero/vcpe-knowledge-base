@@ -1,0 +1,349 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="VC/PE 投资知识库 - 面向投资实战的系统化知识框架"><meta name="generator" content="Astro v5.18.2"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>跟投与追加投资 | VC/PE 投资知识库</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/index.D-0dJCf_.css"></head> <body class="bg-gray-50 dark:bg-primary-950 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300"> <!-- Reading Progress Bar --> <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-accent-500 to-accent-300 z-50 transition-all duration-150" style="width: 0%"></div> <!-- Header --> <header class="sticky top-0 z-40 bg-white/80 dark:bg-primary-900/80 backdrop-blur-md border-b border-gray-200 dark:border-primary-800"> <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between"> <div class="flex items-center gap-4"> <a href="/" class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity"> <span class="text-2xl">💰</span> <span class="hidden sm:inline">VC/PE 投资知识库</span> </a> </div> <div class="flex items-center gap-3"> <!-- Search --> <a href="/search/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> <span class="hidden md:inline">搜索...</span> <kbd class="hidden md:inline px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-primary-700 rounded">Ctrl+K</kbd> </a> <!-- Graph --> <a href="/graph/" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="12" cy="12" r="2"></circle><path d="M8 6h8M6 8v8M18 8v8M8 18h8M8 8l4 4M16 8l-4 4M8 16l4-4M16 16l-4-4"></path></svg> </a> <!-- Theme Toggle --> <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="切换主题"> <svg id="theme-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg> <svg id="theme-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> </button> <!-- Mobile Menu Toggle --> <button id="mobile-menu-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors lg:hidden"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> </button> </div> </div> </header> <div class="flex flex-1 max-w-screen-2xl mx-auto w-full"> <!-- Sidebar --> <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-30 w-72 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-primary-900 border-r border-gray-200 dark:border-primary-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300"> <nav class="p-4 space-y-1"> <a href="/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏠</span> 首页
+</a> <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">模块导航</div> <a href="/modules/00/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📚</span> 00 基础概念
+</a> <a href="/modules/01/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔄</span> 01 投资流程
+</a> <a href="/modules/02/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>💵</span> 02 估值方法
+</a> <a href="/modules/03/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📜</span> 03 法律与条款
+</a> <a href="/modules/04/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏭</span> 04 行业赛道
+</a> <a href="/modules/05/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔍</span> 05 尽职调查
+</a> <a href="/modules/06/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400"> <span>🤝</span> 06 投后管理
+</a> <a href="/modules/07/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🚪</span> 07 退出策略
+</a> <a href="/modules/08/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🇨🇳</span> 08 中国VC/PE实务
+</a> <a href="/modules/09/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📊</span> 09 风险与组合
+</a> <a href="/modules/10/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📖</span> 10 案例库
+</a> <a href="/modules/11/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🛠️</span> 11 工具与资源
+</a> </nav> </aside> <!-- Main Content --> <main class="flex-1 min-w-0 lg:ml-72"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">   <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6 flex-wrap"> <a href="/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a> <span>/</span> <a href="/modules/06/" class="hover:text-accent-600 dark:hover:text-accent-400">投后管理</a> <span>/</span> <span class="text-gray-800 dark:text-gray-200 truncate">跟投与追加投资</span> </nav> <article class="flex gap-8"> <!-- Article Content --> <div class="flex-1 min-w-0"> <!-- Article Header --> <header class="mb-8"> <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">跟投与追加投资</h1> <div class="flex flex-wrap items-center gap-3 mb-4"> <a href="/modules/06/" class="text-xs px-2.5 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 hover:bg-accent-200 dark:hover:bg-accent-900/50 transition-colors"> 投后管理 </a>  <a href="/search/?tag=vc-pe" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> vc-pe </a><a href="/search/?tag=%E6%8A%95%E5%90%8E%E7%AE%A1%E7%90%86" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 投后管理 </a><a href="/search/?tag=%E8%B7%9F%E6%8A%95%E6%9D%83" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 跟投权 </a><a href="/search/?tag=%E8%BF%BD%E5%8A%A0%E6%8A%95%E8%B5%84" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 追加投资 </a><a href="/search/?tag=Pro-rata" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> Pro-rata </a> </div> <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400"> <span>创建于 2026/05/27</span>  <span>3729字</span> <span>约 10 分钟阅读</span> </div> </header> <!-- Article Body --> <div class="prose"><h2 id="概述">概述</h2>
+<p>跟投与追加投资是VC/PE投资人在被投企业后续融资轮次中，按照约定权利或自主决策增加投资的行为。跟投权（Pro-rata Rights）是保护投资人持股比例不被稀释的核心条款，而追加投资则是基于企业表现的主动投资决策。合理的跟投与追加策略能显著提升基金回报倍数。</p>
+<h2 id="核心内容">核心内容</h2>
+<h3 id="一-跟投权-pro-rata-rights">一、跟投权（Pro-rata Rights）</h3>
+<h4 id="1-基本定义">1. 基本定义</h4>
+<p>跟投权是指投资人在被投企业后续融资轮次中，有权按其当前持股比例认购新发行股份的权利。这一权利确保投资人在企业成长过程中不被稀释。</p>
+<h4 id="2-跟投权的类型">2. 跟投权的类型</h4>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>类型</th>
+<th>说明</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标准跟投权（Standard Pro-rata）</td>
+<td>按当前持股比例认购新股份</td>
+<td>所有轮次的后续融资</td>
+</tr>
+<tr>
+<td>超额跟投权（Super Pro-rata）</td>
+<td>有权认购超过当前持股比例的新股份</td>
+<td>早期投资人对高增长企业</td>
+</tr>
+<tr>
+<td>受限跟投权（Capped Pro-rata）</td>
+<td>跟投比例有上限限制</td>
+<td>创始人希望限制单个投资人的持股比例</td>
+</tr>
+<tr>
+<td>优先跟投权（Priority Pro-rata）</td>
+<td>在其他投资人之前优先认购</td>
+<td>重要战略投资人</td>
+</tr>
+</tbody>
+</table></div><h4 id="3-跟投权的行使流程">3. 跟投权的行使流程</h4>
+<pre><code>1. 企业通知：企业启动新一轮融资时，书面通知有跟投权的投资人
+   ↓
+2. 信息披露：提供融资条款（估值、金额、新投资人等）
+   ↓
+3. 行权决定：投资人在约定期限内（通常15-30天）决定是否行使跟投权
+   ↓
+4. 签署协议：行权后签署增资协议和股东协议
+   ↓
+5. 资金缴付：按约定时间完成投资款支付
+   ↓
+6. 工商变更：完成股权变更登记
+</code></pre>
+<h4 id="4-跟投权的限制与例外">4. 跟投权的限制与例外</h4>
+<ul>
+<li><strong>反稀释条款配合</strong>：跟投权通常与反稀释条款配合使用，当触发反稀释调整时，跟投权的行使基数也会相应调整</li>
+<li><strong>Pay-to-Play条款</strong>：部分条款要求投资人必须行使跟投权才能保留优先权，不行权则优先股转为普通股</li>
+<li><strong>时间窗口限制</strong>：跟投权的行使通常有时间限制（如30天），逾期视为放弃</li>
+<li><strong>最低投资金额</strong>：部分条款设定跟投的最低投资金额门槛</li>
+</ul>
+<h3 id="二-追加投资触发条件">二、追加投资触发条件</h3>
+<h4 id="1-基于企业表现的触发">1. 基于企业表现的触发</h4>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>触发条件</th>
+<th>说明</th>
+<th>典型场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>业绩超预期</td>
+<td>KPI大幅超过投资时的预期</td>
+<td>收入增速超预期2倍以上</td>
+</tr>
+<tr>
+<td>里程碑达成</td>
+<td>关键业务里程碑实现</td>
+<td>获得重大客户、产品上线、临床获批</td>
+</tr>
+<tr>
+<td>市场窗口机会</td>
+<td>行业出现重大利好</td>
+<td>政策支持、技术突破、竞争对手退出</td>
+</tr>
+<tr>
+<td>竞争格局变化</td>
+<td>需要追加资金巩固市场地位</td>
+<td>竞争对手融资、价格战</td>
+</tr>
+</tbody>
+</table></div><h4 id="2-基于企业需求的触发">2. 基于企业需求的触发</h4>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>触发条件</th>
+<th>说明</th>
+<th>典型场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>后续融资轮次</td>
+<td>企业启动新一轮融资</td>
+<td>B轮、C轮融资</td>
+</tr>
+<tr>
+<td>并购机会</td>
+<td>企业需要资金进行收购</td>
+<td>收购竞争对手或上下游企业</td>
+</tr>
+<tr>
+<td>流动性需求</td>
+<td>企业面临短期资金压力</td>
+<td>现金跑道&lt;6个月</td>
+</tr>
+<tr>
+<td>战略转型</td>
+<td>企业需要资金支持战略转型</td>
+<td>进入新市场、新产品线</td>
+</tr>
+</tbody>
+</table></div><h3 id="三-后续轮次参与策略">三、后续轮次参与策略</h3>
+<h4 id="1-参与程度决策框架">1. 参与程度决策框架</h4>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>企业表现</th>
+<th>估值增长</th>
+<th>建议策略</th>
+<th>预期影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>超预期</td>
+<td>合理</td>
+<td>全额跟投+争取超额跟投</td>
+<td>提升基金回报倍数</td>
+</tr>
+<tr>
+<td>符合预期</td>
+<td>合理</td>
+<td>标准跟投</td>
+<td>维持持股比例</td>
+</tr>
+<tr>
+<td>符合预期</td>
+<td>偏高</td>
+<td>部分跟投或放弃</td>
+<td>评估性价比</td>
+</tr>
+<tr>
+<td>低于预期</td>
+<td>偏高</td>
+<td>放弃跟投，考虑退出</td>
+<td>避免&quot;沉没成本&quot;陷阱</td>
+</tr>
+<tr>
+<td>低于预期</td>
+<td>合理或偏低</td>
+<td>评估后决定，可能追加</td>
+<td>如果基本面健康，可能是抄底机会</td>
+</tr>
+</tbody>
+</table></div><h4 id="2-估值评估要点">2. 估值评估要点</h4>
+<ul>
+<li><strong>相对估值法</strong>：本轮估值与上轮估值的倍数关系是否合理</li>
+<li><strong>可比公司法</strong>：与同行业上市公司或近期融资案例的估值对比</li>
+<li><strong>财务指标支撑</strong>：收入/利润增长是否能支撑估值增长</li>
+<li><strong>市场情绪判断</strong>：当前市场环境下的估值合理性</li>
+</ul>
+<h3 id="四-跟投的法律结构">四、跟投的法律结构</h3>
+<h4 id="1-直接跟投">1. 直接跟投</h4>
+<ul>
+<li><strong>结构</strong>：基金直接以自身名义参与后续轮次投资</li>
+<li><strong>优点</strong>：结构简单，税务清晰</li>
+<li><strong>缺点</strong>：受基金投资限制条款约束（如单一项目投资上限）</li>
+</ul>
+<h4 id="2-通过关联基金跟投">2. 通过关联基金跟投</h4>
+<ul>
+<li><strong>结构</strong>：通过GP管理的其他基金或平行基金参与</li>
+<li><strong>优点</strong>：规避单一基金的投资限制</li>
+<li><strong>缺点</strong>：需要管理利益冲突，信息披露要求高</li>
+</ul>
+<h4 id="3-通过spv跟投">3. 通过SPV跟投</h4>
+<ul>
+<li><strong>结构</strong>：设立特殊目的载体（SPV）集中跟投</li>
+<li><strong>优点</strong>：灵活管理，便于向LP分配跟投机会</li>
+<li><strong>缺点</strong>：增加管理成本和法律复杂性</li>
+</ul>
+<h4 id="4-gp-管理团队跟投">4. GP/管理团队跟投</h4>
+<ul>
+<li><strong>结构</strong>：GP或管理团队以自有资金跟投</li>
+<li><strong>优点</strong>：体现GP与LP利益绑定，增强LP信心</li>
+<li><strong>缺点</strong>：需要解决利益冲突和信息披露问题</li>
+</ul>
+<h3 id="五-spv的使用">五、SPV的使用</h3>
+<h4 id="1-spv在跟投中的应用场景">1. SPV在跟投中的应用场景</h4>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>场景</th>
+<th>说明</th>
+<th>典型结构</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>超额跟投</td>
+<td>基金额度不足时通过SPV追加</td>
+<td>有限合伙SPV</td>
+</tr>
+<tr>
+<td>LP共同投资</td>
+<td>向LP提供跟投机会</td>
+<td>共投SPV</td>
+</tr>
+<tr>
+<td>团队跟投</td>
+<td>GP团队以自有资金参与</td>
+<td>个人SPV或合伙SPV</td>
+</tr>
+<tr>
+<td>联合投资</td>
+<td>与其他基金/投资人联合</td>
+<td>联合投资SPV</td>
+</tr>
+</tbody>
+</table></div><h4 id="2-spv设立要点">2. SPV设立要点</h4>
+<ul>
+<li><strong>法律形式</strong>：通常采用有限合伙企业形式</li>
+<li><strong>管理费与Carry</strong>：SPV通常收取较低的管理费（0-1%）和收益分成（0-10%）</li>
+<li><strong>投资门槛</strong>：LP参与SPV通常有最低投资金额要求（如100万-500万元）</li>
+<li><strong>信息披露</strong>：向参与SPV的LP披露投资标的、条款、风险等信息</li>
+<li><strong>税务考虑</strong>：SPV的税务穿透性、LP的税务申报义务</li>
+</ul>
+<h3 id="六-中国市场的特殊考量">六、中国市场的特殊考量</h3>
+<h4 id="1-基金业协会备案要求">1. 基金业协会备案要求</h4>
+<ul>
+<li>跟投交易需在中基协系统中进行信息披露</li>
+<li>关联交易需要在基金合同中事先约定或获得LP同意</li>
+<li>GP跟投需要遵守利益冲突管理规定</li>
+</ul>
+<h4 id="2-外汇管制影响">2. 外汇管制影响</h4>
+<ul>
+<li>涉及境外架构企业的跟投，需要考虑外汇登记和资金出境限制</li>
+<li>红筹架构下的跟投可能涉及37号文登记</li>
+</ul>
+<h4 id="3-上市公司跟投限制">3. 上市公司跟投限制</h4>
+<ul>
+<li>如果被投企业已上市或即将上市，跟投需要遵守证券法关于内幕交易和短线交易的规定</li>
+<li>Pre-IPO阶段的跟投需要关注锁定期要求</li>
+</ul>
+<h2 id="关键术语">关键术语</h2>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>术语</th>
+<th>英文</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>跟投权</td>
+<td>Pro-rata Rights</td>
+<td>投资人按当前持股比例认购后续融资新股份的权利</td>
+</tr>
+<tr>
+<td>超额跟投权</td>
+<td>Super Pro-rata Rights</td>
+<td>有权认购超过当前持股比例的新股份</td>
+</tr>
+<tr>
+<td>Pay-to-Play</td>
+<td>—</td>
+<td>要求投资人必须参与后续融资才能保留优先权的条款</td>
+</tr>
+<tr>
+<td>SPV</td>
+<td>Special Purpose Vehicle</td>
+<td>特殊目的载体，用于特定投资目的的法律实体</td>
+</tr>
+<tr>
+<td>共同投资</td>
+<td>Co-Investment</td>
+<td>LP直接参与GP推荐的投资项目</td>
+</tr>
+<tr>
+<td>反稀释</td>
+<td>Anti-dilution</td>
+<td>保护投资人持股比例不被稀释的条款</td>
+</tr>
+<tr>
+<td>后续轮次</td>
+<td>Follow-on Round</td>
+<td>被投企业完成的后续融资轮次</td>
+</tr>
+<tr>
+<td>领投方</td>
+<td>Lead Investor</td>
+<td>在融资轮次中投资金额最大、主导条款谈判的投资人</td>
+</tr>
+</tbody>
+</table></div><h2 id="实务要点">实务要点</h2>
+<ul>
+<li><strong>在Term Sheet中明确跟投权</strong>：跟投权应在投资协议签署时就明确约定，包括跟投比例、行权期限、通知方式等。事后协商往往处于被动地位</li>
+<li><strong>建立跟投决策机制</strong>：对于每一轮跟投机会，应进行独立的投资决策分析，而非自动跟投。评估估值合理性、企业基本面、基金剩余资金等因素</li>
+<li><strong>管理利益冲突</strong>：当多个基金同时持有被投企业股权时，跟投决策可能涉及利益冲突。应建立明确的利益冲突管理政策和决策流程</li>
+<li><strong>预留跟投资金</strong>：基金应预留一定比例的资金用于后续跟投，通常为基金规模的20-30%。过度投资于新项目可能导致后续跟投资金不足</li>
+<li><strong>利用跟投创造LP价值</strong>：将跟投机会作为LP增值服务的一部分，通过共同投资（Co-investment）增强LP关系</li>
+</ul>
+<h2 id="常见误区">常见误区</h2>
+<ul>
+<li><strong>盲目跟投</strong>：因为已经投入了沉没成本而不加分析地继续跟投，导致在表现不佳的项目上持续投入。每个跟投决策都应基于独立的投资判断</li>
+<li><strong>忽视估值性价比</strong>：只关注企业基本面而不评估估值合理性。估值过高的跟投可能稀释整体回报，即使企业本身表现良好</li>
+<li><strong>跟投资金管理不当</strong>：未预留足够的跟投资金，导致在最有价值的后续轮次中无法充分参与。应在基金设立时就规划好跟投资金预算</li>
+</ul>
+<h2 id="参考来源">参考来源</h2>
+<ul>
+<li>NVCA Model Stock Purchase Agreement</li>
+<li>中国证券投资基金业协会《私募投资基金合同指引》</li>
+<li>《中华人民共和国合伙企业法》</li>
+<li>Institutional Investor “Co-Investment Survey”</li>
+</ul>
+<h2 id="相关主题">相关主题</h2>
+<ul>
+<li><a href="/articles/%E6%8A%95%E8%B5%84%E6%9D%A1%E6%AC%BE%E6%B8%85%E5%8D%95-term-sheet/">投资条款清单-Term-Sheet</a> — 跟投权通常在Term Sheet中约定</li>
+<li><a href="/articles/%E5%8F%8D%E7%A8%80%E9%87%8A%E6%9D%A1%E6%AC%BE/">反稀释条款</a> — 跟投权与反稀释条款配合使用</li>
+<li><a href="/articles/pre-money%E4%B8%8Epost-money/">Pre-Money与Post-Money</a> — 后续轮次估值是跟投决策的核心考量</li>
+<li><a href="/articles/%E5%A2%9E%E5%80%BC%E6%9C%8D%E5%8A%A1%E4%B8%8E%E8%B5%84%E6%BA%90%E5%AF%B9%E6%8E%A5/">增值服务与资源对接</a> — 跟投机会可作为LP增值服务</li>
+<li><a href="/articles/%E5%9F%BA%E9%87%91%E6%9E%B6%E6%9E%84%E4%B8%8E%E6%B3%95%E5%BE%8B%E5%AE%9E%E4%BD%93/">基金架构与法律实体</a> — SPV的法律结构设计</li>
+<li><a href="/articles/%E7%AE%A1%E7%90%86%E8%B4%B9%E4%B8%8E%E6%94%B6%E7%9B%8A%E5%88%86%E9%85%8D/">管理费与收益分配</a> — 跟投的管理费和收益分配安排</li>
+<li><a href="/articles/lp%E4%B8%8Egp%E5%85%B3%E7%B3%BB/">LP与GP关系</a> — 跟投决策中的LP关系管理</li>
+</ul>
+</div> <!-- Related Articles --> <section class="mt-12 pt-8 border-t border-gray-200 dark:border-primary-800"> <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">📎 相关推荐</h2> <div class="space-y-3"> <a href="/articles/增值服务与资源对接/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">投后管理</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 增值服务与资源对接 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">LP在选择GP时，增值服务能力是重要的评估维度：</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/基金架构与法律实体/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">基础概念</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 基金架构与法律实体 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">有限合伙制是全球 VC/PE 行业最主流的基金架构。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/管理费与收益分配/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">基础概念</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 管理费与收益分配 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">管理费是 LP 为覆盖基金运营成本而支付给 GP 的固定费用。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/kpi监控体系/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">投后管理</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> KPI监控体系 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">- 现金跑道（Cash Runway） = 当前现金余额/月均现金消耗
+  - 健康水平：至少12个月
+  - 预警阈值：低于6个月需立即采取行动
+  - 行动触发：低于3个月应启动紧急融资或成本削减</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/董事会治理/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">投后管理</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 董事会治理 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">权利：
+- 信息知情权：定期获取财务报告、经营数据
+- 提案权：就重大事项向董事会提出议案
+- 表决权：对普通决议和特别决议进行投票
+- 现场检查权：走访公司、查阅账簿</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a> </div> </section> </div> <!-- Table of Contents (Desktop) --> <aside class="hidden xl:block w-64 flex-shrink-0"> <div class="sticky top-20"> <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">目录</h3> <nav class="space-y-1"> <a href="#概述" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="概述"> 概述 </a><a href="#核心内容" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="核心内容"> 核心内容 </a><a href="#一-跟投权-pro-rata-rights" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="一-跟投权-pro-rata-rights"> 一、跟投权（Pro-rata Rights） </a><a href="#1-基本定义" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="1-基本定义"> 1. 基本定义 </a><a href="#2-跟投权的类型" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="2-跟投权的类型"> 2. 跟投权的类型 </a><a href="#3-跟投权的行使流程" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="3-跟投权的行使流程"> 3. 跟投权的行使流程 </a><a href="#4-跟投权的限制与例外" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="4-跟投权的限制与例外"> 4. 跟投权的限制与例外 </a><a href="#二-追加投资触发条件" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="二-追加投资触发条件"> 二、追加投资触发条件 </a><a href="#1-基于企业表现的触发" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="1-基于企业表现的触发"> 1. 基于企业表现的触发 </a><a href="#2-基于企业需求的触发" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="2-基于企业需求的触发"> 2. 基于企业需求的触发 </a><a href="#三-后续轮次参与策略" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="三-后续轮次参与策略"> 三、后续轮次参与策略 </a><a href="#1-参与程度决策框架" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="1-参与程度决策框架"> 1. 参与程度决策框架 </a><a href="#2-估值评估要点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="2-估值评估要点"> 2. 估值评估要点 </a><a href="#四-跟投的法律结构" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="四-跟投的法律结构"> 四、跟投的法律结构 </a><a href="#1-直接跟投" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="1-直接跟投"> 1. 直接跟投 </a><a href="#2-通过关联基金跟投" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="2-通过关联基金跟投"> 2. 通过关联基金跟投 </a><a href="#3-通过spv跟投" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="3-通过spv跟投"> 3. 通过SPV跟投 </a><a href="#4-gp-管理团队跟投" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="4-gp-管理团队跟投"> 4. GP/管理团队跟投 </a><a href="#五-spv的使用" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="五-spv的使用"> 五、SPV的使用 </a><a href="#1-spv在跟投中的应用场景" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="1-spv在跟投中的应用场景"> 1. SPV在跟投中的应用场景 </a><a href="#2-spv设立要点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="2-spv设立要点"> 2. SPV设立要点 </a><a href="#六-中国市场的特殊考量" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="六-中国市场的特殊考量"> 六、中国市场的特殊考量 </a><a href="#1-基金业协会备案要求" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="1-基金业协会备案要求"> 1. 基金业协会备案要求 </a><a href="#2-外汇管制影响" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="2-外汇管制影响"> 2. 外汇管制影响 </a><a href="#3-上市公司跟投限制" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="3-上市公司跟投限制"> 3. 上市公司跟投限制 </a><a href="#关键术语" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键术语"> 关键术语 </a><a href="#实务要点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="实务要点"> 实务要点 </a><a href="#常见误区" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="常见误区"> 常见误区 </a><a href="#参考来源" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="参考来源"> 参考来源 </a><a href="#相关主题" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="相关主题"> 相关主题 </a> </nav> </div> </aside> </article> <script type="module">const n=new IntersectionObserver(e=>{e.forEach(t=>{const o=t.target.id,c=document.querySelector(`.toc-link[data-heading="${o}"]`);c&&t.isIntersecting&&(document.querySelectorAll(".toc-link").forEach(r=>r.classList.remove("text-accent-600","dark:text-accent-400")),c.classList.add("text-accent-600","dark:text-accent-400"))})},{rootMargin:"-80px 0px -80% 0px"});document.querySelectorAll(".prose h2[id], .prose h3[id], .prose h4[id]").forEach(e=>{n.observe(e)});</script>  </div> </main> </div> <!-- Mobile sidebar overlay --> <div id="sidebar-overlay" class="fixed inset-0 z-20 bg-black/50 hidden lg:hidden"></div> <script type="module">const m=document.getElementById("theme-toggle"),o=document.getElementById("theme-light-icon"),d=document.getElementById("theme-dark-icon");function t(e){e?(document.documentElement.classList.add("dark"),o?.classList.add("hidden"),d?.classList.remove("hidden"),localStorage.setItem("theme","dark")):(document.documentElement.classList.remove("dark"),o?.classList.remove("hidden"),d?.classList.add("hidden"),localStorage.setItem("theme","light"))}const s=localStorage.getItem("theme");t(s==="light"?!1:s==="dark"?!0:window.matchMedia("(prefers-color-scheme: dark)").matches);m?.addEventListener("click",()=>{t(!document.documentElement.classList.contains("dark"))});const r=document.getElementById("mobile-menu-toggle"),g=document.getElementById("sidebar"),l=document.getElementById("sidebar-overlay");function i(){g?.classList.toggle("-translate-x-full"),l?.classList.toggle("hidden")}r?.addEventListener("click",i);l?.addEventListener("click",i);const c=document.getElementById("reading-progress");window.addEventListener("scroll",()=>{const e=window.scrollY,n=document.documentElement.scrollHeight-window.innerHeight,a=n>0?e/n*100:0;c&&(c.style.width=`${Math.min(100,a)}%`)});document.addEventListener("keydown",e=>{(e.ctrlKey||e.metaKey)&&e.key==="k"&&(e.preventDefault(),window.location.href="/search/")});</script> </body> </html> 

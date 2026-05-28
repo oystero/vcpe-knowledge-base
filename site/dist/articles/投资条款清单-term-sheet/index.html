@@ -1,0 +1,356 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="VC/PE 投资知识库 - 面向投资实战的系统化知识框架"><meta name="generator" content="Astro v5.18.2"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>投资条款清单（Term Sheet） | VC/PE 投资知识库</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/index.D-0dJCf_.css"></head> <body class="bg-gray-50 dark:bg-primary-950 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300"> <!-- Reading Progress Bar --> <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-accent-500 to-accent-300 z-50 transition-all duration-150" style="width: 0%"></div> <!-- Header --> <header class="sticky top-0 z-40 bg-white/80 dark:bg-primary-900/80 backdrop-blur-md border-b border-gray-200 dark:border-primary-800"> <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between"> <div class="flex items-center gap-4"> <a href="/" class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity"> <span class="text-2xl">💰</span> <span class="hidden sm:inline">VC/PE 投资知识库</span> </a> </div> <div class="flex items-center gap-3"> <!-- Search --> <a href="/search/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> <span class="hidden md:inline">搜索...</span> <kbd class="hidden md:inline px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-primary-700 rounded">Ctrl+K</kbd> </a> <!-- Graph --> <a href="/graph/" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="12" cy="12" r="2"></circle><path d="M8 6h8M6 8v8M18 8v8M8 18h8M8 8l4 4M16 8l-4 4M8 16l4-4M16 16l-4-4"></path></svg> </a> <!-- Theme Toggle --> <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="切换主题"> <svg id="theme-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg> <svg id="theme-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> </button> <!-- Mobile Menu Toggle --> <button id="mobile-menu-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors lg:hidden"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> </button> </div> </div> </header> <div class="flex flex-1 max-w-screen-2xl mx-auto w-full"> <!-- Sidebar --> <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-30 w-72 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-primary-900 border-r border-gray-200 dark:border-primary-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300"> <nav class="p-4 space-y-1"> <a href="/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏠</span> 首页
+</a> <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">模块导航</div> <a href="/modules/00/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400"> <span>📚</span> 00 基础概念
+</a> <a href="/modules/01/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔄</span> 01 投资流程
+</a> <a href="/modules/02/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>💵</span> 02 估值方法
+</a> <a href="/modules/03/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📜</span> 03 法律与条款
+</a> <a href="/modules/04/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏭</span> 04 行业赛道
+</a> <a href="/modules/05/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔍</span> 05 尽职调查
+</a> <a href="/modules/06/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🤝</span> 06 投后管理
+</a> <a href="/modules/07/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🚪</span> 07 退出策略
+</a> <a href="/modules/08/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🇨🇳</span> 08 中国VC/PE实务
+</a> <a href="/modules/09/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📊</span> 09 风险与组合
+</a> <a href="/modules/10/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📖</span> 10 案例库
+</a> <a href="/modules/11/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🛠️</span> 11 工具与资源
+</a> </nav> </aside> <!-- Main Content --> <main class="flex-1 min-w-0 lg:ml-72"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">   <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6 flex-wrap"> <a href="/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a> <span>/</span> <a href="/modules/00/" class="hover:text-accent-600 dark:hover:text-accent-400">基础概念</a> <span>/</span> <span class="text-gray-800 dark:text-gray-200 truncate">投资条款清单（Term Sheet）</span> </nav> <article class="flex gap-8"> <!-- Article Content --> <div class="flex-1 min-w-0"> <!-- Article Header --> <header class="mb-8"> <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">投资条款清单（Term Sheet）</h1> <div class="flex flex-wrap items-center gap-3 mb-4"> <a href="/modules/00/" class="text-xs px-2.5 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 hover:bg-accent-200 dark:hover:bg-accent-900/50 transition-colors"> 基础概念 </a>  <a href="/search/?tag=vc-pe" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> vc-pe </a><a href="/search/?tag=Term-Sheet" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> Term-Sheet </a><a href="/search/?tag=%E6%8A%95%E8%B5%84%E6%9D%A1%E6%AC%BE" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 投资条款 </a><a href="/search/?tag=%E8%B0%88%E5%88%A4" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 谈判 </a><a href="/search/?tag=%E8%82%A1%E6%9D%83%E6%8A%95%E8%B5%84" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 股权投资 </a> </div> <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400"> <span>创建于 2026/05/27</span>  <span>3751字</span> <span>约 10 分钟阅读</span> </div> </header> <!-- Article Body --> <div class="prose"><h2 id="概述">概述</h2>
+<p>Term Sheet（投资条款清单）是 VC/PE 投资中投资方与被投企业之间就投资条件达成的意向性文件。虽然大部分条款不具法律约束力（Non-Binding），但它是整个交易的基础框架，决定了投资的经济条款和治理安排。理解 Term Sheet 的核心条款是每位投资从业者和创业者的必备技能。</p>
+<h2 id="核心内容">核心内容</h2>
+<h3 id="term-sheet-的法律性质">Term Sheet 的法律性质</h3>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>条款类型</th>
+<th>法律约束力</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>估值与投资金额</td>
+<td>无约束力</td>
+<td>签署正式协议前可协商调整</td>
+</tr>
+<tr>
+<td>股东权利条款</td>
+<td>无约束力</td>
+<td>以最终股东协议为准</td>
+</tr>
+<tr>
+<td>保密条款</td>
+<td><strong>有约束力</strong></td>
+<td>签署即生效</td>
+</tr>
+<tr>
+<td>排他条款</td>
+<td><strong>有约束力</strong></td>
+<td>签署后一定期限内不得与第三方洽谈</td>
+</tr>
+<tr>
+<td>费用承担</td>
+<td><strong>有约束力</strong></td>
+<td>通常约定交易费用由被投企业承担</td>
+</tr>
+</tbody>
+</table></div><h3 id="核心经济条款">核心经济条款</h3>
+<h4 id="1-投资金额与估值">1. 投资金额与估值</h4>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>概念</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pre-Money Valuation</td>
+<td>投资前企业估值</td>
+<td>1 亿元</td>
+</tr>
+<tr>
+<td>Post-Money Valuation</td>
+<td>投资后企业估值 = Pre-Money + 投资额</td>
+<td>1.3 亿元（投资 3,000 万）</td>
+</tr>
+<tr>
+<td>投资金额</td>
+<td>本轮投资总额</td>
+<td>3,000 万元</td>
+</tr>
+<tr>
+<td>持股比例</td>
+<td>投资额 / Post-Money</td>
+<td>3,000 万 / 1.3 亿 = 23.1%</td>
+</tr>
+</tbody>
+</table></div><h4 id="2-优先清算权-liquidation-preference">2. 优先清算权（Liquidation Preference）</h4>
+<p>这是 VC/PE 投资中最重要的保护性条款之一。</p>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>类型</th>
+<th>说明</th>
+<th>对投资人的保护</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1x Non-Participating（1倍不参与型）</td>
+<td>退出时取回 1x 投资本金 <strong>或</strong> 按持股比例分配，取较高者</td>
+<td>中等保护</td>
+</tr>
+<tr>
+<td>1x Participating（1倍参与型）</td>
+<td>先取回 1x 本金，<strong>再</strong> 按持股比例分配剩余</td>
+<td>高度保护（对创始人不利）</td>
+</tr>
+<tr>
+<td>1x Participating with Cap（带上限参与型）</td>
+<td>参与分配，但总回报不超过约定上限（如 3x）</td>
+<td>平衡方案</td>
+</tr>
+</tbody>
+</table></div><p><strong>实务案例：</strong></p>
+<ul>
+<li>投资 1,000 万，持股 20%，企业以 3,000 万退出</li>
+<li><strong>Non-Participating：</strong> 比较 1x（1,000 万）vs 20% x 3,000 万（600 万），取 1,000 万</li>
+<li><strong>Participating：</strong> 1,000 万 + 20% x (3,000 万 - 1,000 万) = 1,000 万 + 400 万 = 1,400 万</li>
+</ul>
+<h4 id="3-反稀释保护-anti-dilution-protection">3. 反稀释保护（Anti-Dilution Protection）</h4>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>类型</th>
+<th>计算方式</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Full Ratchet（完全棘轮）</td>
+<td>按最低一轮价格重新计算转换价格</td>
+<td>对投资人保护最强，对创始人最不利</td>
+</tr>
+<tr>
+<td>Broad-Based Weighted Average（广义加权平均）</td>
+<td>综合考虑新发行股数和价格进行调整</td>
+<td>行业标准，较平衡</td>
+</tr>
+<tr>
+<td>Narrow-Based Weighted Average（狭义加权平均）</td>
+<td>与 Broad-Based 类似，但计算基数更窄</td>
+<td>折中方案</td>
+</tr>
+</tbody>
+</table></div><p><strong>行业趋势：</strong> Broad-Based Weighted Average 是目前最主流的反稀释条款，Full Ratchet 已较少使用。</p>
+<h3 id="核心治理条款">核心治理条款</h3>
+<h4 id="4-董事会构成">4. 董事会构成</h4>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>典型安排</th>
+<th>早期（A轮）</th>
+<th>成长期（C轮+）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>创始人/管理层</td>
+<td>2 席</td>
+<td>2-3 席</td>
+</tr>
+<tr>
+<td>优先股投资人</td>
+<td>1 席</td>
+<td>1-2 席</td>
+</tr>
+<tr>
+<td>独立董事</td>
+<td>0-1 席</td>
+<td>1-2 席</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td>3-4 席</td>
+<td>5-7 席</td>
+</tr>
+</tbody>
+</table></div><h4 id="5-保护性条款-protective-provisions">5. 保护性条款（Protective Provisions）</h4>
+<p>投资人（优先股）通常对以下事项拥有否决权：</p>
+<ul>
+<li>修改公司章程或 LPA 中影响投资人权利的条款</li>
+<li>发行新证券（特别是优先于或等同于当前优先股的证券）</li>
+<li>进行超过一定金额的关联交易</li>
+<li>分红或回购股权</li>
+<li>超出预算的重大资本支出</li>
+<li>出售或清算公司</li>
+<li>变更主营业务</li>
+</ul>
+<h4 id="6-优先购买权与共同出售权">6. 优先购买权与共同出售权</h4>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>条款</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>优先购买权（Right of First Refusal, ROFR）</td>
+<td>创始人/其他股东转让股权时，投资人有权优先购买</td>
+</tr>
+<tr>
+<td>共同出售权（Co-Sale / Tag-Along）</td>
+<td>创始人出售股权时，投资人有权按比例一同出售</td>
+</tr>
+<tr>
+<td>拖售权（Drag-Along）</td>
+<td>满足一定条件时，多数股东有权强制少数股东一同出售</td>
+</tr>
+</tbody>
+</table></div><h4 id="7-其他重要条款">7. 其他重要条款</h4>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>条款</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>优先认购权（Pro-Rata Right）</td>
+<td>投资人在后续融资轮次中按比例认购的权利</td>
+</tr>
+<tr>
+<td>跟投权（Right to Invest More）</td>
+<td>投资人在本轮中可追加投资的权利</td>
+</tr>
+<tr>
+<td>信息权（Information Rights）</td>
+<td>要求企业提供定期财务报告和运营数据的权利</td>
+</tr>
+<tr>
+<td>锁定期（Lock-up）</td>
+<td>创始人股权的锁定期限（通常 4 年，含 1 年 Cliff）</td>
+</tr>
+<tr>
+<td>竞业限制（Non-Compete）</td>
+<td>创始人在职期间及离职后一定期限内的竞业限制</td>
+</tr>
+<tr>
+<td>知识产权归属（IP Assignment）</td>
+<td>确保公司拥有创始人开发的所有相关 IP</td>
+</tr>
+</tbody>
+</table></div><h3 id="vc-vs-pe-term-sheet-差异">VC vs PE Term Sheet 差异</h3>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>维度</th>
+<th>VC（风险投资）</th>
+<th>PE（私募股权）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主要条款工具</td>
+<td>优先股条款（Preferred Stock）</td>
+<td>股东协议 + 增资协议</td>
+</tr>
+<tr>
+<td>估值方法</td>
+<td>相对估值（PS/Revenue Multiple）</td>
+<td>DCF、可比公司、可比交易</td>
+</tr>
+<tr>
+<td>保护性条款</td>
+<td>优先股保护条款</td>
+<td>对赌协议、回购条款</td>
+</tr>
+<tr>
+<td>特有条款</td>
+<td>领售权、反稀释</td>
+<td>对赌（VAM）、优先清算</td>
+</tr>
+</tbody>
+</table></div><h2 id="关键术语">关键术语</h2>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>术语</th>
+<th>英文</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>投资条款清单</td>
+<td>Term Sheet / Letter of Intent</td>
+<td>投资方与被投方就投资条件达成的意向性文件</td>
+</tr>
+<tr>
+<td>投前估值</td>
+<td>Pre-Money Valuation</td>
+<td>投资前企业的估值</td>
+</tr>
+<tr>
+<td>投后估值</td>
+<td>Post-Money Valuation</td>
+<td>投资完成后的企业估值</td>
+</tr>
+<tr>
+<td>优先清算权</td>
+<td>Liquidation Preference</td>
+<td>优先股在清算/退出时优先于普通股获得分配的权利</td>
+</tr>
+<tr>
+<td>反稀释保护</td>
+<td>Anti-Dilution Protection</td>
+<td>保护投资人免受后续低价融资稀释的条款</td>
+</tr>
+<tr>
+<td>保护性条款</td>
+<td>Protective Provisions</td>
+<td>投资人对重大事项的否决权</td>
+</tr>
+<tr>
+<td>拖售权</td>
+<td>Drag-Along Right</td>
+<td>多数股东强制少数股东一同出售的权利</td>
+</tr>
+<tr>
+<td>对赌协议</td>
+<td>VAM (Valuation Adjustment Mechanism)</td>
+<td>基于未来业绩调整估值或股权比例的协议</td>
+</tr>
+</tbody>
+</table></div><h2 id="实务要点">实务要点</h2>
+<ul>
+<li><strong>Term Sheet 是谈判的起点而非终点：</strong> 不要在 Term Sheet 阶段就试图锁定所有细节，重点是核心经济条款和治理安排，细节留给正式协议</li>
+<li><strong>估值不是越高越好：</strong> 过高的估值会导致后续融资困难（Down Round 风险）和创始人过度稀释，合理估值比&quot;最高估值&quot;更重要</li>
+<li><strong>优先清算权要关注&quot;退出倍数&quot;：</strong> 在企业以较低价格退出时，1x Non-Participating vs 1x Participating 的差异可能是创始人拿到钱和拿不到钱的区别</li>
+<li><strong>注意关联交易条款的范围：</strong> 合理定义关联交易的范围和审批流程，过宽的定义会影响企业正常运营</li>
+<li><strong>投资人的领售权应有限制：</strong> Drag-Along 应设定最低退出价格或最低回报门槛，防止投资人在企业低点强制退出</li>
+</ul>
+<h2 id="常见误区">常见误区</h2>
+<ul>
+<li><strong>将 Term Sheet 当作最终协议：</strong> Term Sheet 大部分条款不具法律约束力，在 DD 发现重大问题后估值和条款都有可能调整，创业者不应过早宣布融资完成</li>
+<li><strong>忽视保护性条款的累积效应：</strong> 单看每一条保护性条款似乎合理，但当多轮投资人各自拥有否决权时，可能导致公司重大决策难以推进，应在后续轮次中协调统一</li>
+<li><strong>创始人忽视竞业限制和锁定期条款：</strong> 这些条款看似&quot;标准&quot;，但可能在创始人离职或想做新业务时产生重大限制，应在签署前仔细评估</li>
+</ul>
+<h2 id="参考来源">参考来源</h2>
+<ul>
+<li>Wasserman, N. <em>The Founder’s Dilemmas</em>. Princeton University Press, 2012.</li>
+<li>Gompers, P. et al. <em>Venture Capital, Private Equity, and the Financing of Entrepreneurship</em>. Wiley, 2016.</li>
+<li>Cooley LLP. <em>Cooley GO Term Sheet Generator</em>, 2024.</li>
+<li>NVCA (National Venture Capital Association). <em>Model Legal Documents</em>, 2023.</li>
+<li>Y Combinator. <em>SAFE (Simple Agreement for Future Equity) Primer</em>, 2024.</li>
+</ul>
+<h2 id="相关主题">相关主题</h2>
+<ul>
+<li><a href="/articles/lp%E4%B8%8Egp%E5%85%B3%E7%B3%BB/">LP与GP关系</a> — GP 在投资决策中代表 LP 行使权利</li>
+<li><a href="/articles/%E5%B0%BD%E8%81%8C%E8%B0%83%E6%9F%A5%E6%A1%86%E6%9E%B6/">尽职调查框架</a> — Term Sheet 签署后的 DD 流程</li>
+<li><a href="/articles/%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96%E6%B5%81%E7%A8%8B/">投资决策流程</a> — Term Sheet 签署前的投决流程</li>
+<li><a href="/articles/%E4%BA%A4%E5%89%B2%E4%B8%8E%E5%B7%A5%E5%95%86%E5%8F%98%E6%9B%B4/">交割与工商变更</a> — Term Sheet 签署后的交割执行</li>
+</ul>
+</div> <!-- Related Articles --> <section class="mt-12 pt-8 border-t border-gray-200 dark:border-primary-800"> <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">📎 相关推荐</h2> <div class="space-y-3"> <a href="/articles/交割与工商变更/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">投资流程</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 交割与工商变更 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">CP 是交割前必须满足的前提条件，保护投资人免受签约到交割期间的风险变化。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/尽职调查框架/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">投资流程</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 尽职调查框架 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">核心关注点：</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/投资决策流程/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">投资流程</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 投资决策流程 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">IC 的规模：
+- 早期 VC：通常 3-5 人
+- 成长期 VC/PE：通常 5-7 人
+- 大型 PE：通常 7-10 人，可能设多个分委员会</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/估值谈判与博弈/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">估值方法</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 估值谈判与博弈 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">心理机制：
+- 先报价的一方通常会设定谈判的&quot;锚点&quot;，后续讨论围绕这个锚点展开
+- 创始人先报高估值 → 谈判结果往往高于投资人预期
+- 投资人先报低估值 → 谈判结果往往低于创始人预期</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/lp与gp关系/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">基础概念</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> LP 与 GP 关系 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">GP 的权利：
+- 投资决策的全部自主权（投资/退出/估值）
+- 收取管理费（Management Fee）和业绩报酬（Carried Interest）
+- 选择被投企业董事席位
+- 决定基金的投资策略与行业方向</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a> </div> </section> </div> <!-- Table of Contents (Desktop) --> <aside class="hidden xl:block w-64 flex-shrink-0"> <div class="sticky top-20"> <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">目录</h3> <nav class="space-y-1"> <a href="#概述" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="概述"> 概述 </a><a href="#核心内容" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="核心内容"> 核心内容 </a><a href="#term-sheet-的法律性质" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="term-sheet-的法律性质"> Term Sheet 的法律性质 </a><a href="#核心经济条款" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="核心经济条款"> 核心经济条款 </a><a href="#1-投资金额与估值" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="1-投资金额与估值"> 1. 投资金额与估值 </a><a href="#2-优先清算权-liquidation-preference" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="2-优先清算权-liquidation-preference"> 2. 优先清算权（Liquidation Preference） </a><a href="#3-反稀释保护-anti-dilution-protection" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="3-反稀释保护-anti-dilution-protection"> 3. 反稀释保护（Anti-Dilution Protection） </a><a href="#核心治理条款" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="核心治理条款"> 核心治理条款 </a><a href="#4-董事会构成" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="4-董事会构成"> 4. 董事会构成 </a><a href="#5-保护性条款-protective-provisions" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="5-保护性条款-protective-provisions"> 5. 保护性条款（Protective Provisions） </a><a href="#6-优先购买权与共同出售权" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="6-优先购买权与共同出售权"> 6. 优先购买权与共同出售权 </a><a href="#7-其他重要条款" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="7-其他重要条款"> 7. 其他重要条款 </a><a href="#vc-vs-pe-term-sheet-差异" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="vc-vs-pe-term-sheet-差异"> VC vs PE Term Sheet 差异 </a><a href="#关键术语" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键术语"> 关键术语 </a><a href="#实务要点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="实务要点"> 实务要点 </a><a href="#常见误区" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="常见误区"> 常见误区 </a><a href="#参考来源" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="参考来源"> 参考来源 </a><a href="#相关主题" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="相关主题"> 相关主题 </a> </nav> </div> </aside> </article> <script type="module">const n=new IntersectionObserver(e=>{e.forEach(t=>{const o=t.target.id,c=document.querySelector(`.toc-link[data-heading="${o}"]`);c&&t.isIntersecting&&(document.querySelectorAll(".toc-link").forEach(r=>r.classList.remove("text-accent-600","dark:text-accent-400")),c.classList.add("text-accent-600","dark:text-accent-400"))})},{rootMargin:"-80px 0px -80% 0px"});document.querySelectorAll(".prose h2[id], .prose h3[id], .prose h4[id]").forEach(e=>{n.observe(e)});</script>  </div> </main> </div> <!-- Mobile sidebar overlay --> <div id="sidebar-overlay" class="fixed inset-0 z-20 bg-black/50 hidden lg:hidden"></div> <script type="module">const m=document.getElementById("theme-toggle"),o=document.getElementById("theme-light-icon"),d=document.getElementById("theme-dark-icon");function t(e){e?(document.documentElement.classList.add("dark"),o?.classList.add("hidden"),d?.classList.remove("hidden"),localStorage.setItem("theme","dark")):(document.documentElement.classList.remove("dark"),o?.classList.remove("hidden"),d?.classList.add("hidden"),localStorage.setItem("theme","light"))}const s=localStorage.getItem("theme");t(s==="light"?!1:s==="dark"?!0:window.matchMedia("(prefers-color-scheme: dark)").matches);m?.addEventListener("click",()=>{t(!document.documentElement.classList.contains("dark"))});const r=document.getElementById("mobile-menu-toggle"),g=document.getElementById("sidebar"),l=document.getElementById("sidebar-overlay");function i(){g?.classList.toggle("-translate-x-full"),l?.classList.toggle("hidden")}r?.addEventListener("click",i);l?.addEventListener("click",i);const c=document.getElementById("reading-progress");window.addEventListener("scroll",()=>{const e=window.scrollY,n=document.documentElement.scrollHeight-window.innerHeight,a=n>0?e/n*100:0;c&&(c.style.width=`${Math.min(100,a)}%`)});document.addEventListener("keydown",e=>{(e.ctrlKey||e.metaKey)&&e.key==="k"&&(e.preventDefault(),window.location.href="/search/")});</script> </body> </html> 

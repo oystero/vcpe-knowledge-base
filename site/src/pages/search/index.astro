@@ -4,6 +4,21 @@ import { articles, getTagCounts } from '../../utils/content';
 import { formatWordCount, readingTime, formatDate } from '../../utils/markdown';
 
 const tagCounts = getTagCounts();
+
+// Prepare search data as JSON string for client-side usage
+const searchData = articles.map(a => ({
+  id: a.id,
+  title: a.title,
+  excerpt: a.excerpt,
+  slug: a.slug,
+  module: a.module,
+  moduleName: a.moduleName,
+  tags: a.tags,
+  wordCount: a.wordCount,
+  created: a.created,
+  updated: a.updated,
+  content: a.content.slice(0, 2000),
+}));
 ---
 
 <Layout title="搜索" showSidebar={false}>
@@ -46,9 +61,7 @@ const tagCounts = getTagCounts();
     </div>
 
     <!-- Search Results -->
-    <div id="search-results" class="space-y-3">
-      <!-- Results will be populated by JS -->
-    </div>
+    <div id="search-results" class="space-y-3"></div>
 
     <!-- Initial State -->
     <div id="initial-state" class="text-center py-12">
@@ -58,136 +71,127 @@ const tagCounts = getTagCounts();
     </div>
   </div>
 
-  <script define:vars={{ articlesData: articles.map(a => ({
-    id: a.id,
-    title: a.title,
-    excerpt: a.excerpt,
-    slug: a.slug,
-    module: a.module,
-    moduleName: a.moduleName,
-    tags: a.tags,
-    wordCount: a.wordCount,
-    created: a.created,
-    updated: a.updated,
-    content: a.content.slice(0, 2000),
-  })) }}>
-    import Fuse from 'fuse.js';
+  <!-- Embed search data as JSON -->
+  <script is:inline type="application/json" id="search-data" set:html={JSON.stringify(searchData)} />
 
-    const fuse = new Fuse(articlesData, {
-      keys: [
-        { name: 'title', weight: 0.4 },
-        { name: 'tags', weight: 0.2 },
-        { name: 'excerpt', weight: 0.2 },
-        { name: 'content', weight: 0.2 },
-      ],
-      threshold: 0.4,
-      includeScore: true,
-      ignoreLocation: true,
-      minMatchCharLength: 2,
-    });
+  <!-- Load Fuse.js from CDN -->
+  <script is:inline src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
 
-    const searchInput = document.getElementById('search-input');
-    const resultsContainer = document.getElementById('search-results');
-    const resultsCount = document.getElementById('results-count');
-    const countNum = document.getElementById('count-num');
-    const initialState = document.getElementById('initial-state');
-    const tagButtons = document.querySelectorAll('.tag-btn');
-    let activeTag = '';
-
-    // Check URL params
-    const urlParams = new URLSearchParams(window.location.search);
-    const queryParam = urlParams.get('q');
-    const tagParam = urlParams.get('tag');
-    if (queryParam) {
-      searchInput.value = queryParam;
-      performSearch(queryParam);
-    }
-    if (tagParam) {
-      activeTag = tagParam;
-      document.querySelector(`[data-tag="${tagParam}"]`)?.classList.add('bg-accent-100', 'dark:bg-accent-900/30', 'border-accent-300', 'dark:border-accent-600', 'text-accent-700', 'dark:text-accent-300');
-      performSearch(searchInput.value);
-    }
-
-    searchInput?.addEventListener('input', (e) => {
-      const query = e.target.value.trim();
-      if (query.length === 0 && !activeTag) {
-        resultsContainer.innerHTML = '';
-        resultsCount.classList.add('hidden');
-        initialState.classList.remove('hidden');
-        return;
-      }
-      performSearch(query);
-    });
-
-    tagButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const tag = btn.dataset.tag;
-        if (activeTag === tag) {
-          activeTag = '';
-          btn.classList.remove('bg-accent-100', 'dark:bg-accent-900/30', 'border-accent-300', 'dark:border-accent-600', 'text-accent-700', 'dark:text-accent-300');
-        } else {
-          tagButtons.forEach(b => b.classList.remove('bg-accent-100', 'dark:bg-accent-900/30', 'border-accent-300', 'dark:border-accent-600', 'text-accent-700', 'dark:text-accent-300'));
-          activeTag = tag;
-          btn.classList.add('bg-accent-100', 'dark:bg-accent-900/30', 'border-accent-300', 'dark:border-accent-600', 'text-accent-700', 'dark:text-accent-300');
-        }
-        performSearch(searchInput.value.trim());
+  <!-- Search logic -->
+  <script is:inline>
+    (function() {
+      const dataEl = document.getElementById('search-data');
+      if (!dataEl) return;
+      const articlesData = JSON.parse(dataEl.textContent);
+      const fuse = new Fuse(articlesData, {
+        keys: [
+          { name: 'title', weight: 0.4 },
+          { name: 'tags', weight: 0.2 },
+          { name: 'excerpt', weight: 0.2 },
+          { name: 'content', weight: 0.2 },
+        ],
+        threshold: 0.4,
+        includeScore: true,
+        ignoreLocation: true,
+        minMatchCharLength: 2,
       });
-    });
 
-    function performSearch(query) {
-      let results;
-
-      if (query.length > 0) {
-        results = fuse.search(query).map(r => r.item);
-      } else {
-        results = articlesData;
-      }
-
-      if (activeTag) {
-        results = results.filter(r => r.tags.includes(activeTag));
-      }
-
-      initialState.classList.add('hidden');
-      resultsCount.classList.remove('hidden');
-      countNum.textContent = results.length;
-
-      if (results.length === 0) {
-        resultsContainer.innerHTML = `
-          <div class="text-center py-12">
-            <p class="text-4xl mb-4">😕</p>
-            <p class="text-gray-500 dark:text-gray-400">未找到匹配的文章</p>
-            <p class="text-sm text-gray-400 dark:text-gray-500 mt-2">试试其他关键词或标签</p>
-          </div>
-        `;
-        return;
-      }
+      const searchInput = document.getElementById('search-input');
+      const resultsContainer = document.getElementById('search-results');
+      const resultsCount = document.getElementById('results-count');
+      const countNum = document.getElementById('count-num');
+      const initialState = document.getElementById('initial-state');
+      const tagButtons = document.querySelectorAll('.tag-btn');
+      let activeTag = '';
 
       function formatWC(count) {
         return count >= 10000 ? (count / 10000).toFixed(1) + '万字' : count + '字';
       }
 
-      function formatDate(d) {
+      function formatDateStr(d) {
         if (!d) return '';
-        try { return new Date(d).toLocaleDateString('zh-CN'); } catch { return d; }
+        try { return new Date(d).toLocaleDateString('zh-CN'); } catch(e) { return d; }
       }
 
-      resultsContainer.innerHTML = results.map(r => `
-        <a href="/articles/${r.slug}/" class="group flex items-start gap-4 bg-white dark:bg-primary-900 rounded-xl p-4 border border-gray-200 dark:border-primary-800 shadow-sm hover:shadow-md hover:border-accent-300 dark:hover:border-accent-600 transition-all duration-200">
-          <div class="flex-1 min-w-0">
-            <div class="flex items-center gap-2 mb-1 flex-wrap">
-              <span class="text-xs px-2 py-0.5 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300">${r.moduleName}</span>
-              ${r.tags.slice(0, 3).map(t => `<span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400">${t}</span>`).join('')}
-            </div>
-            <h3 class="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors">${r.title}</h3>
-            ${r.excerpt ? `<p class="text-sm text-gray-500 dark:text-gray-400 mt-1 line-clamp-2">${r.excerpt}</p>` : ''}
-            <div class="flex items-center gap-4 mt-2 text-xs text-gray-400 dark:text-gray-500">
-              <span>${formatDate(r.updated || r.created)}</span>
-              <span>${formatWC(r.wordCount)}</span>
-            </div>
-          </div>
-          <svg class="w-5 h-5 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-      `).join('');
-    }
+      function renderResults(results) {
+        if (results.length === 0) {
+          resultsContainer.innerHTML = '<div class="text-center py-12"><p class="text-4xl mb-4">😕</p><p class="text-gray-500 dark:text-gray-400">未找到匹配的文章</p><p class="text-sm text-gray-400 dark:text-gray-500 mt-2">试试其他关键词或标签</p></div>';
+          return;
+        }
+        resultsContainer.innerHTML = results.map(r =>
+          '<a href="/articles/' + r.slug + '/" class="group flex items-start gap-4 bg-white dark:bg-primary-900 rounded-xl p-4 border border-gray-200 dark:border-primary-800 shadow-sm hover:shadow-md hover:border-accent-300 dark:hover:border-accent-600 transition-all duration-200">' +
+          '<div class="flex-1 min-w-0">' +
+          '<div class="flex items-center gap-2 mb-1 flex-wrap">' +
+          '<span class="text-xs px-2 py-0.5 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300">' + r.moduleName + '</span>' +
+          r.tags.slice(0, 3).map(function(t) { return '<span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400">' + t + '</span>'; }).join('') +
+          '</div>' +
+          '<h3 class="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors">' + r.title + '</h3>' +
+          (r.excerpt ? '<p class="text-sm text-gray-500 dark:text-gray-400 mt-1 line-clamp-2">' + r.excerpt + '</p>' : '') +
+          '<div class="flex items-center gap-4 mt-2 text-xs text-gray-400 dark:text-gray-500">' +
+          '<span>' + formatDateStr(r.updated || r.created) + '</span>' +
+          '<span>' + formatWC(r.wordCount) + '</span>' +
+          '</div></div>' +
+          '<svg class="w-5 h-5 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>' +
+          '</a>'
+        ).join('');
+      }
+
+      function performSearch(query) {
+        var results;
+        if (query.length > 0) {
+          results = fuse.search(query).map(function(r) { return r.item; });
+        } else {
+          results = articlesData;
+        }
+        if (activeTag) {
+          results = results.filter(function(r) { return r.tags.includes(activeTag); });
+        }
+        initialState.classList.add('hidden');
+        resultsCount.classList.remove('hidden');
+        countNum.textContent = results.length;
+        renderResults(results);
+      }
+
+      // URL params
+      var urlParams = new URLSearchParams(window.location.search);
+      var queryParam = urlParams.get('q');
+      var tagParam = urlParams.get('tag');
+      if (queryParam) {
+        searchInput.value = queryParam;
+        performSearch(queryParam);
+      }
+      if (tagParam) {
+        activeTag = tagParam;
+        var tagBtn = document.querySelector('[data-tag="' + tagParam + '"]');
+        if (tagBtn) tagBtn.classList.add('bg-accent-100', 'dark:bg-accent-900/30', 'border-accent-300', 'dark:border-accent-600', 'text-accent-700', 'dark:text-accent-300');
+        performSearch(searchInput.value);
+      }
+
+      searchInput.addEventListener('input', function(e) {
+        var q = e.target.value.trim();
+        if (q.length === 0 && !activeTag) {
+          resultsContainer.innerHTML = '';
+          resultsCount.classList.add('hidden');
+          initialState.classList.remove('hidden');
+          return;
+        }
+        performSearch(q);
+      });
+
+      tagButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var tag = btn.dataset.tag;
+          if (activeTag === tag) {
+            activeTag = '';
+            btn.classList.remove('bg-accent-100', 'dark:bg-accent-900/30', 'border-accent-300', 'dark:border-accent-600', 'text-accent-700', 'dark:text-accent-300');
+          } else {
+            tagButtons.forEach(function(b) { b.classList.remove('bg-accent-100', 'dark:bg-accent-900/30', 'border-accent-300', 'dark:border-accent-600', 'text-accent-700', 'dark:text-accent-300'); });
+            activeTag = tag;
+            btn.classList.add('bg-accent-100', 'dark:bg-accent-900/30', 'border-accent-300', 'dark:border-accent-600', 'text-accent-700', 'dark:text-accent-300');
+          }
+          performSearch(searchInput.value.trim());
+        });
+      });
+    })();
   </script>
 </Layout>

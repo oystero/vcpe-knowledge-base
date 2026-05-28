@@ -1,5 +1,5 @@
-# build output
-dist/
+# build output (pre-built for static deployment)
+# dist/
 .astro/
 
 # dependencies

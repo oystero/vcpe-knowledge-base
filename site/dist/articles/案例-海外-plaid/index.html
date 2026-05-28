@@ -1,0 +1,398 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="VC/PE 投资知识库 - 面向投资实战的系统化知识框架"><meta name="generator" content="Astro v5.18.2"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>Plaid — 连接金融世界的&quot;管道&quot;公司 | VC/PE 投资知识库</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/index.D-0dJCf_.css"></head> <body class="bg-gray-50 dark:bg-primary-950 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300"> <!-- Reading Progress Bar --> <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-accent-500 to-accent-300 z-50 transition-all duration-150" style="width: 0%"></div> <!-- Header --> <header class="sticky top-0 z-40 bg-white/80 dark:bg-primary-900/80 backdrop-blur-md border-b border-gray-200 dark:border-primary-800"> <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between"> <div class="flex items-center gap-4"> <a href="/" class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity"> <span class="text-2xl">💰</span> <span class="hidden sm:inline">VC/PE 投资知识库</span> </a> </div> <div class="flex items-center gap-3"> <!-- Search --> <a href="/search/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> <span class="hidden md:inline">搜索...</span> <kbd class="hidden md:inline px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-primary-700 rounded">Ctrl+K</kbd> </a> <!-- Graph --> <a href="/graph/" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="12" cy="12" r="2"></circle><path d="M8 6h8M6 8v8M18 8v8M8 18h8M8 8l4 4M16 8l-4 4M8 16l4-4M16 16l-4-4"></path></svg> </a> <!-- Theme Toggle --> <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="切换主题"> <svg id="theme-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg> <svg id="theme-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> </button> <!-- Mobile Menu Toggle --> <button id="mobile-menu-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors lg:hidden"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> </button> </div> </div> </header> <div class="flex flex-1 max-w-screen-2xl mx-auto w-full"> <!-- Sidebar --> <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-30 w-72 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-primary-900 border-r border-gray-200 dark:border-primary-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300"> <nav class="p-4 space-y-1"> <a href="/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏠</span> 首页
+</a> <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">模块导航</div> <a href="/modules/00/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📚</span> 00 基础概念
+</a> <a href="/modules/01/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔄</span> 01 投资流程
+</a> <a href="/modules/02/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>💵</span> 02 估值方法
+</a> <a href="/modules/03/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📜</span> 03 法律与条款
+</a> <a href="/modules/04/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏭</span> 04 行业赛道
+</a> <a href="/modules/05/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔍</span> 05 尽职调查
+</a> <a href="/modules/06/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🤝</span> 06 投后管理
+</a> <a href="/modules/07/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🚪</span> 07 退出策略
+</a> <a href="/modules/08/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🇨🇳</span> 08 中国VC/PE实务
+</a> <a href="/modules/09/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📊</span> 09 风险与组合
+</a> <a href="/modules/10/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400"> <span>📖</span> 10 案例库
+</a> <a href="/modules/11/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🛠️</span> 11 工具与资源
+</a> </nav> </aside> <!-- Main Content --> <main class="flex-1 min-w-0 lg:ml-72"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">   <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6 flex-wrap"> <a href="/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a> <span>/</span> <a href="/modules/10/" class="hover:text-accent-600 dark:hover:text-accent-400">案例库</a> <span>/</span> <span class="text-gray-800 dark:text-gray-200 truncate">Plaid — 连接金融世界的&quot;管道&quot;公司</span> </nav> <article class="flex gap-8"> <!-- Article Content --> <div class="flex-1 min-w-0"> <!-- Article Header --> <header class="mb-8"> <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Plaid — 连接金融世界的&quot;管道&quot;公司</h1> <div class="flex flex-wrap items-center gap-3 mb-4"> <a href="/modules/10/" class="text-xs px-2.5 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 hover:bg-accent-200 dark:hover:bg-accent-900/50 transition-colors"> 案例库 </a> <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300">
+案例研究
+</span> <a href="/search/?tag=vc-pe" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> vc-pe </a><a href="/search/?tag=%E6%A1%88%E4%BE%8B" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 案例 </a><a href="/search/?tag=%E6%88%90%E5%8A%9F" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 成功 </a><a href="/search/?tag=%E6%B5%B7%E5%A4%96" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 海外 </a><a href="/search/?tag=%E9%87%91%E8%9E%8D%E7%A7%91%E6%8A%80" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 金融科技 </a><a href="/search/?tag=%E5%BC%80%E6%94%BE%E9%93%B6%E8%A1%8C" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 开放银行 </a><a href="/search/?tag=%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 基础设施 </a> </div> <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400"> <span>创建于 2026/05/28</span>  <span>5025字</span> <span>约 13 分钟阅读</span> </div> </header> <!-- Article Body --> <div class="prose"><h2 id="基本信息">基本信息</h2>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>公司全称</td>
+<td>Plaid Inc.</td>
+</tr>
+<tr>
+<td>成立时间</td>
+<td>2013年</td>
+</tr>
+<tr>
+<td>总部</td>
+<td>美国加州旧金山</td>
+</tr>
+<tr>
+<td>创始人</td>
+<td>Zach Perret、William Hockey</td>
+</tr>
+<tr>
+<td>核心业务</td>
+<td>金融数据API、银行账户连接、支付验证</td>
+</tr>
+<tr>
+<td>所属赛道</td>
+<td>金融科技 / 开放银行 / 基础设施</td>
+</tr>
+<tr>
+<td>当前状态</td>
+<td>未上市，估值$134亿（2021年），曾获Visa $53亿收购要约（后因监管取消）</td>
+</tr>
+</tbody>
+</table></div><h2 id="融资历程">融资历程</h2>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>轮次</th>
+<th>时间</th>
+<th>金额</th>
+<th>估值</th>
+<th>领投方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>种子轮</td>
+<td>2013年</td>
+<td>$290万</td>
+<td>未披露</td>
+<td>Spark Capital</td>
+</tr>
+<tr>
+<td>Series A</td>
+<td>2014年</td>
+<td>$1,300万</td>
+<td>未披露</td>
+<td>New Enterprise Associates（NEA）</td>
+</tr>
+<tr>
+<td>Series B</td>
+<td>2016年</td>
+<td>$4,400万</td>
+<td>未披露</td>
+<td>Goldman Sachs</td>
+</tr>
+<tr>
+<td>Series C</td>
+<td>2018年</td>
+<td>$2.5亿</td>
+<td>~$26.5亿</td>
+<td>Altimeter Capital</td>
+</tr>
+<tr>
+<td>Series D</td>
+<td>2020年12月</td>
+<td>未披露</td>
+<td>~$134亿</td>
+<td>多家机构</td>
+</tr>
+</tbody>
+</table></div><h2 id="商业模式">商业模式</h2>
+<p>Plaid的商业模式是<strong>金融数据基础设施即服务</strong>，通过提供API帮助金融科技应用连接用户的银行账户，实现数据获取和支付验证。</p>
+<p><strong>核心产品：金融数据API</strong>。Plaid的核心产品是一套API，允许金融科技应用安全地连接用户的银行账户。通过Plaid，用户可以在Venmo、Robinhood、Coinbase等应用中轻松连接银行账户，进行资金转移和数据获取。</p>
+<p><strong>差异化价值</strong>：</p>
+<ul>
+<li><strong>广泛的银行覆盖</strong>：连接超过12,000家金融机构</li>
+<li><strong>安全性</strong>：银行级别的安全标准和合规性</li>
+<li><strong>开发者体验</strong>：简洁的API和丰富的文档</li>
+<li><strong>数据丰富性</strong>：账户余额、交易历史、身份验证等多维度数据</li>
+</ul>
+<p><strong>收入模式</strong>：Plaid按API调用次数收费。主要产品包括：</p>
+<ul>
+<li><strong>Plaid Link</strong>：用户界面组件，简化银行账户连接流程</li>
+<li><strong>Plaid Transactions</strong>：交易数据获取</li>
+<li><strong>Plaid Auth</strong>：账户认证和支付验证</li>
+<li><strong>Plaid Identity</strong>：身份验证</li>
+<li>2021年收入约$3-5亿</li>
+</ul>
+<h2 id="投资逻辑">投资逻辑</h2>
+<p><strong>Spark Capital（种子轮，2013年）</strong>：Spark Capital是Plaid最早的投资人。其投资逻辑是：</p>
+<ol>
+<li><strong>开放银行的趋势</strong>。全球金融业正在从封闭走向开放，银行数据的可访问性将催生大量新的金融应用。</li>
+<li><strong>基础设施的价值</strong>。Plaid不是面向消费者的金融应用，而是<strong>金融基础设施</strong>——连接银行和金融科技应用的&quot;管道&quot;。基础设施类公司虽然不直接面向消费者，但往往是生态中最有价值的环节。</li>
+<li><strong>创始团队</strong>。Zach Perret和William Hockey都是前Bain咨询顾问，具备深厚的金融行业知识和技术背景。</li>
+</ol>
+<p><strong>Goldman Sachs（Series B，2016年）</strong>：Goldman Sachs的投资是<strong>战略合作</strong>——作为传统银行，Goldman需要了解金融科技的发展趋势，同时Plaid的基础设施能力可以为Goldman的数字化转型提供支持。</p>
+<p><strong>Altimeter Capital（Series C，2018年）</strong>：Altimeter领投$2.5亿，估值$26.5亿。Altimeter的投资逻辑是Plaid已经成为<strong>金融科技生态系统的基础设施</strong>——几乎所有主流金融科技应用都依赖Plaid连接银行账户。</p>
+<h2 id="关键转折点">关键转折点</h2>
+<ol>
+<li>
+<p><strong>2013年：产品开发</strong>。Zach Perret和William Hockey开发了Plaid的第一个产品——银行账户连接API。</p>
+</li>
+<li>
+<p><strong>2014-2015年：获得早期客户</strong>。Plaid获得了Venmo、Robinhood等早期客户，证明了产品的市场价值。</p>
+</li>
+<li>
+<p><strong>2018年：快速增长</strong>。随着金融科技行业的爆发，Plaid的客户数量和收入大幅增长。</p>
+</li>
+<li>
+<p><strong>2020年1月：Visa $53亿收购要约</strong>。Visa宣布以$53亿收购Plaid，但这一收购引发了美国司法部的反垄断诉讼。</p>
+</li>
+<li>
+<p><strong>2021年1月：收购案取消</strong>。由于美国司法部的反垄断诉讼，Visa被迫取消收购。Plaid获得$53亿的&quot;分手费&quot;（注：实际未确认此金额，有报道称取消后未支付分手费）。</p>
+</li>
+<li>
+<p><strong>2021年：$134亿估值</strong>。在收购案取消后，Plaid以$134亿估值完成新一轮融资，估值大幅增长。</p>
+</li>
+</ol>
+<h2 id="退出-结局">退出/结局</h2>
+<p>Plaid目前仍为未上市公司。</p>
+<p><strong>投资人回报（截至2021年估值$134亿）</strong>：</p>
+<ul>
+<li><strong>Spark Capital</strong>：种子轮投资$290万，回报估计超过<strong>500倍</strong>。</li>
+<li><strong>NEA</strong>：Series A投资$1,300万，回报约<strong>50倍</strong>。</li>
+<li><strong>Goldman Sachs</strong>：Series B投资$4,400万，回报约<strong>15倍</strong>。</li>
+<li><strong>Altimeter Capital</strong>：Series C投资$2.5亿，回报约<strong>5倍</strong>。</li>
+</ul>
+<h2 id="投资人复盘">投资人复盘</h2>
+<p>Plaid案例的核心启示是<strong>金融基础设施的&quot;管道&quot;价值和监管对退出策略的影响</strong>。</p>
+<p><strong>核心教训</strong>：</p>
+<ol>
+<li>
+<p><strong>基础设施的隐形价值</strong>。Plaid不直接面向消费者，但它是连接银行和金融科技应用的<strong>关键基础设施</strong>。这种&quot;管道&quot;公司虽然不为大众所知，但往往是生态系统中最有价值的环节。</p>
+</li>
+<li>
+<p><strong>开放银行的趋势</strong>。Plaid的成功验证了<strong>开放银行</strong>的趋势——银行数据的可访问性将催生大量新的金融应用。这一趋势在全球范围内正在加速。</p>
+</li>
+<li>
+<p><strong>监管风险的现实</strong>。Visa收购案因反垄断监管而取消，这一事件对金融科技领域的M&amp;A退出策略产生了深远影响。<strong>大型收购作为退出路径的风险正在增加</strong>。</p>
+</li>
+<li>
+<p><strong>网络效应的建立</strong>。Plaid连接了超过12,000家金融机构和数千个金融科技应用，这种<strong>双边网络效应</strong>使得竞争对手难以复制。</p>
+</li>
+</ol>
+<h2 id="估值演变分析">估值演变分析</h2>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>阶段</th>
+<th>时间</th>
+<th>估值</th>
+<th>估值方法</th>
+<th>估值驱动因素</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>种子轮</td>
+<td>2013年</td>
+<td>未披露</td>
+<td>创始人评估</td>
+<td>金融数据API的概念</td>
+</tr>
+<tr>
+<td>Series A</td>
+<td>2014年</td>
+<td>未披露</td>
+<td>可比交易法</td>
+<td>早期客户验证</td>
+</tr>
+<tr>
+<td>Series B</td>
+<td>2016年</td>
+<td>未披露</td>
+<td>收入倍数法</td>
+<td>金融科技行业增长</td>
+</tr>
+<tr>
+<td>Series C</td>
+<td>2018年</td>
+<td>~$26.5亿</td>
+<td>收入倍数法</td>
+<td>金融科技爆发</td>
+</tr>
+<tr>
+<td>Series D</td>
+<td>2020年</td>
+<td>~$134亿</td>
+<td>收入倍数法</td>
+<td>Visa收购要约后的估值重估</td>
+</tr>
+</tbody>
+</table></div><p><strong>估值方法演变</strong>：Plaid的估值演变体现了<strong>金融基础设施公司的估值逻辑</strong>。早期以<strong>技术可行性和市场潜力</strong>为估值基础，中期以<strong>客户增长和收入</strong>为核心指标，后期以<strong>平台生态和战略价值</strong>为估值依据。</p>
+<p><strong>估值特点</strong>：Plaid的估值从2018年的$26.5亿飙升至2020年的$134亿，增长了5倍。这一速度反映了<strong>开放银行趋势</strong>对金融科技基础设施市场的巨大推动。</p>
+<blockquote>
+<p>链接：<a href="/articles/%E9%A3%8E%E9%99%A9%E6%8A%95%E8%B5%84%E6%B3%95/">风险投资法</a>、<a href="/articles/pre-money%E4%B8%8Epost-money/">Pre-Money与Post-Money</a>、<a href="/articles/%E5%8F%AF%E6%AF%94%E5%85%AC%E5%8F%B8%E6%B3%95/">可比公司法</a></p>
+</blockquote>
+<h2 id="关键条款分析">关键条款分析</h2>
+<p><strong>Spark Capital种子轮条款（2013年）</strong>：</p>
+<ul>
+<li><strong>投资结构</strong>：可转换优先股</li>
+<li><strong>优先清算权</strong>：1x非参与型优先清算权</li>
+<li><strong>反稀释条款</strong>：加权平均反稀释保护</li>
+<li><strong>特殊安排</strong>：Spark Capital作为最早的投资人，提供了早期支持</li>
+</ul>
+<p><strong>NEA Series A条款（2014年）</strong>：</p>
+<ul>
+<li><strong>投资结构</strong>：可转换优先股（Series A Preferred Stock）</li>
+<li><strong>优先清算权</strong>：1x非参与型优先清算权</li>
+<li><strong>反稀释条款</strong>：加权平均反稀释保护</li>
+<li><strong>董事会席位</strong>：NEA获得一个董事会席位</li>
+</ul>
+<p><strong>Goldman Sachs Series B条款（2016年）</strong>：</p>
+<ul>
+<li><strong>投资结构</strong>：可转换优先股</li>
+<li><strong>战略合作条款</strong>：Goldman Sachs获得Plaid技术的优先使用权</li>
+<li><strong>信息权</strong>：Goldman Sachs有权获取Plaid的业务数据</li>
+</ul>
+<p><strong>Visa收购案条款（2020年）</strong>：</p>
+<ul>
+<li><strong>收购价格</strong>：$53亿</li>
+<li><strong>反垄断审查</strong>：美国司法部的反垄断诉讼导致收购取消</li>
+<li><strong>分手费</strong>：实际未确认是否支付分手费</li>
+</ul>
+<blockquote>
+<p>链接：<a href="/articles/%E6%8A%95%E8%B5%84%E6%9D%A1%E6%AC%BE%E6%B8%85%E5%8D%95-term-sheet/">投资条款清单-Term-Sheet</a>、<a href="/articles/%E5%8F%8D%E7%A8%80%E9%87%8A%E6%9D%A1%E6%AC%BE/">反稀释条款</a>、<a href="/articles/%E4%BC%98%E5%85%88%E6%B8%85%E7%AE%97%E6%9D%83/">优先清算权</a></p>
+</blockquote>
+<h2 id="退出回报分析">退出回报分析</h2>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>投资人</th>
+<th>轮次</th>
+<th>投资额</th>
+<th>当前价值（估值$134亿）</th>
+<th>回报倍数</th>
+<th>DPI</th>
+<th>IRR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spark Capital</td>
+<td>种子轮</td>
+<td>$290万</td>
+<td>~$14.5亿</td>
+<td>500x</td>
+<td>纸面</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>NEA</td>
+<td>Series A</td>
+<td>$1,300万</td>
+<td>~$6.7亿</td>
+<td>50x</td>
+<td>纸面</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Goldman Sachs</td>
+<td>Series B</td>
+<td>$4,400万</td>
+<td>~$6.7亿</td>
+<td>15x</td>
+<td>纸面</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Altimeter Capital</td>
+<td>Series C</td>
+<td>$2.5亿</td>
+<td>~$6.7亿</td>
+<td>2.7x</td>
+<td>纸面</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table></div><p><strong>DPI vs 纸面回报</strong>：</p>
+<ul>
+<li><strong>Plaid仍为未上市公司</strong>：所有投资人的回报均为纸面回报，尚未实现DPI</li>
+<li><strong>Visa收购案取消</strong>：Visa收购案因反垄断监管而取消，这一事件对金融科技领域的M&amp;A退出策略产生了深远影响</li>
+<li><strong>IPO预期</strong>：Plaid被认为是最有可能在2026-2027年进行IPO的金融科技基础设施公司</li>
+</ul>
+<p><strong>关键教训</strong>：Plaid案例说明，<strong>金融基础设施公司的投资回报周期相对较长</strong>。从2013年成立到2026年，Plaid经历了13年。这一周期需要<strong>超长期耐心资本</strong>的支持，也说明了<strong>开放银行基础设施</strong>的长期价值。</p>
+<blockquote>
+<p>链接：<a href="/articles/ipo%E8%B7%AF%E5%BE%84/">IPO路径</a>、<a href="/articles/dpi%E4%B8%8Eirr%E8%A7%A3%E8%AF%BB/">DPI与IRR解读</a></p>
+</blockquote>
+<h2 id="中美对比">中美对比</h2>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>维度</th>
+<th>Plaid</th>
+<th>蚂蚁集团/京东科技</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>成立时间</td>
+<td>2013年</td>
+<td>蚂蚁2004年/京东科技2013年</td>
+</tr>
+<tr>
+<td>估值</td>
+<td>$134亿</td>
+<td>蚂蚁~$800亿</td>
+</tr>
+<tr>
+<td>核心市场</td>
+<td>全球</td>
+<td>中国</td>
+</tr>
+<tr>
+<td>核心产品</td>
+<td>金融数据API</td>
+<td>支付+金融科技平台</td>
+</tr>
+<tr>
+<td>商业模式</td>
+<td>API调用收费</td>
+<td>金融服务收入</td>
+</tr>
+<tr>
+<td>客户类型</td>
+<td>金融科技应用</td>
+<td>消费者/商家/金融机构</td>
+</tr>
+<tr>
+<td>IPO状态</td>
+<td>未上市</td>
+<td>蚂蚁曾计划IPO后暂缓</td>
+</tr>
+</tbody>
+</table></div><p><strong>核心差异</strong>：</p>
+<ol>
+<li><strong>商业模式</strong>：Plaid以API调用收费为主，蚂蚁集团以金融服务收入为主。这一差异导致了收入结构的根本性不同</li>
+<li><strong>客户类型</strong>：Plaid以金融科技应用为客户，蚂蚁集团以消费者和商家为客户</li>
+<li><strong>监管环境</strong>：蚂蚁集团面临中国金融监管的严格审查，Plaid在美国的监管环境相对宽松</li>
+<li><strong>估值逻辑</strong>：Plaid的估值基于API调用量和客户数量，蚂蚁集团的估值基于金融服务收入和用户规模</li>
+</ol>
+<blockquote>
+<p>链接：<a href="/search/?q=%E6%A1%88%E4%BE%8B-%E4%B8%AD%E5%9B%BD-%E8%9A%82%E8%9A%81%E9%9B%86%E5%9B%A2">案例-中国-蚂蚁集团</a>、<a href="/search/?q=%E5%BC%80%E6%94%BE%E9%93%B6%E8%A1%8C%E5%AF%B9%E6%AF%94">开放银行对比</a>、<a href="/search/?q=%E9%87%91%E8%9E%8D%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E6%8A%95%E8%B5%84">金融基础设施投资</a></p>
+</blockquote>
+<h2 id="行业赛道关联">行业赛道关联</h2>
+<p>Plaid所在的金融数据基础设施/开放银行赛道是金融科技的核心基础设施。以下为相关深度研报：</p>
+<ul>
+<li><a href="/search/?q=%E5%BC%80%E6%94%BE%E9%93%B6%E8%A1%8C%E8%A1%8C%E4%B8%9A%E7%A0%94%E6%8A%A5">开放银行行业研报</a> — 全球开放银行市场规模、政策环境、技术趋势</li>
+<li><a href="/search/?q=%E9%87%91%E8%9E%8D%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E8%A1%8C%E4%B8%9A%E7%A0%94%E6%8A%A5">金融基础设施行业研报</a> — 金融数据API的市场规模和增长趋势</li>
+<li><a href="/search/?q=%E9%87%91%E8%9E%8D%E7%A7%91%E6%8A%80%E8%A1%8C%E4%B8%9A%E7%A0%94%E6%8A%A5">金融科技行业研报</a> — 金融科技各细分赛道的投资机会</li>
+<li><a href="/search/?q=%E7%9B%91%E7%AE%A1%E7%A7%91%E6%8A%80%E8%A1%8C%E4%B8%9A%E7%A0%94%E6%8A%A5">监管科技行业研报</a> — 金融监管对金融科技的影响</li>
+</ul>
+<h2 id="参考来源">参考来源</h2>
+<ul>
+<li>Plaid官方融资信息</li>
+<li>Spark Capital投资组合</li>
+<li>Crunchbase Plaid融资历史</li>
+<li>Bloomberg Visa-Plaid收购案报道</li>
+</ul>
+<h2 id="相关主题">相关主题</h2>
+<ul>
+<li><a href="/articles/%E6%A1%88%E4%BE%8B-%E6%B5%B7%E5%A4%96-stripe/">案例-海外-Stripe</a> — 同为金融科技基础设施公司</li>
+<li><a href="/articles/%E6%A1%88%E4%BE%8B-%E6%B5%B7%E5%A4%96-brex/">案例-海外-Brex</a> — 金融科技领域的新贵</li>
+<li><a href="/search/?q=%E5%BC%80%E6%94%BE%E9%93%B6%E8%A1%8C">开放银行</a> — Plaid所处的核心赛道</li>
+<li><a href="/search/?q=%E9%87%91%E8%9E%8D%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD">金融基础设施</a> — Plaid的商业模式核心</li>
+<li><a href="/search/?q=%E6%A1%88%E4%BE%8B-%E4%B8%AD%E5%9B%BD-%E8%9A%82%E8%9A%81%E9%9B%86%E5%9B%A2">案例-中国-蚂蚁集团</a> — 中国金融科技平台的代表</li>
+<li><a href="/search/?q=%E6%A1%88%E4%BE%8B-%E4%B8%AD%E5%9B%BD-%E5%90%8C%E7%9B%BE%E7%A7%91%E6%8A%80">案例-中国-同盾科技</a> — 中国金融数据服务的代表</li>
+<li><a href="/search/?q=API%E7%BB%8F%E6%B5%8E">API经济</a> — Plaid商业模式的核心特征</li>
+<li><a href="/search/?q=%E7%9B%91%E7%AE%A1%E9%A3%8E%E9%99%A9%E5%AF%B9%E9%80%80%E5%87%BA%E7%9A%84%E5%BD%B1%E5%93%8D">监管风险对退出的影响</a> — Visa收购案的教训</li>
+<li><a href="/search/?q=%E5%8F%8C%E8%BE%B9%E7%BD%91%E7%BB%9C%E6%95%88%E5%BA%94">双边网络效应</a> — Plaid的竞争壁垒</li>
+</ul>
+</div> <!-- Related Articles --> <section class="mt-12 pt-8 border-t border-gray-200 dark:border-primary-800"> <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">📎 相关推荐</h2> <div class="space-y-3"> <a href="/articles/案例-海外-brex/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> Brex — 重新定义企业金融的硅谷新贵 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Brex的商业模式是企业金融平台，通过提供企业信用卡、支出管理和银行服务，帮助初创公司和科技企业管理财务。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/案例-海外-stripe/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> Stripe — 七行代码改变支付行业的金融科技传奇 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Stripe的商业模式是支付基础设施即服务（Payments Infrastructure as a Service）。通过提供简洁易用的API，Stripe使任何开发者都能在几分钟内将支付功能集成到网站或应用中。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/案例-海外-airbnb/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> Airbnb — 共享经济的典范与信任平台的奇迹 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Airbnb的商业模式是双边市场平台，连接有闲置房源的房东和寻找住宿的旅行者，通过交易佣金获取收入。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/案例-海外-amazon/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> Amazon — 从网上书店到全球云计算霸主 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Amazon的商业模式经历了从在线书店到万货商店再到科技平台的三次重大转型。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/案例-海外-anthropic/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> Anthropic — AI安全先行者的$3,800亿估值之路 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Anthropic的商业模式是AI模型即服务（AI Model as a Service），通过API和订阅制向企业和消费者提供AI能力。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a> </div> </section> </div> <!-- Table of Contents (Desktop) --> <aside class="hidden xl:block w-64 flex-shrink-0"> <div class="sticky top-20"> <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">目录</h3> <nav class="space-y-1"> <a href="#基本信息" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="基本信息"> 基本信息 </a><a href="#融资历程" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="融资历程"> 融资历程 </a><a href="#商业模式" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="商业模式"> 商业模式 </a><a href="#投资逻辑" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="投资逻辑"> 投资逻辑 </a><a href="#关键转折点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键转折点"> 关键转折点 </a><a href="#退出-结局" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="退出-结局"> 退出/结局 </a><a href="#投资人复盘" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="投资人复盘"> 投资人复盘 </a><a href="#估值演变分析" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="估值演变分析"> 估值演变分析 </a><a href="#关键条款分析" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键条款分析"> 关键条款分析 </a><a href="#退出回报分析" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="退出回报分析"> 退出回报分析 </a><a href="#中美对比" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="中美对比"> 中美对比 </a><a href="#行业赛道关联" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="行业赛道关联"> 行业赛道关联 </a><a href="#参考来源" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="参考来源"> 参考来源 </a><a href="#相关主题" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="相关主题"> 相关主题 </a> </nav> </div> </aside> </article> <script type="module">const n=new IntersectionObserver(e=>{e.forEach(t=>{const o=t.target.id,c=document.querySelector(`.toc-link[data-heading="${o}"]`);c&&t.isIntersecting&&(document.querySelectorAll(".toc-link").forEach(r=>r.classList.remove("text-accent-600","dark:text-accent-400")),c.classList.add("text-accent-600","dark:text-accent-400"))})},{rootMargin:"-80px 0px -80% 0px"});document.querySelectorAll(".prose h2[id], .prose h3[id], .prose h4[id]").forEach(e=>{n.observe(e)});</script>  </div> </main> </div> <!-- Mobile sidebar overlay --> <div id="sidebar-overlay" class="fixed inset-0 z-20 bg-black/50 hidden lg:hidden"></div> <script type="module">const m=document.getElementById("theme-toggle"),o=document.getElementById("theme-light-icon"),d=document.getElementById("theme-dark-icon");function t(e){e?(document.documentElement.classList.add("dark"),o?.classList.add("hidden"),d?.classList.remove("hidden"),localStorage.setItem("theme","dark")):(document.documentElement.classList.remove("dark"),o?.classList.remove("hidden"),d?.classList.add("hidden"),localStorage.setItem("theme","light"))}const s=localStorage.getItem("theme");t(s==="light"?!1:s==="dark"?!0:window.matchMedia("(prefers-color-scheme: dark)").matches);m?.addEventListener("click",()=>{t(!document.documentElement.classList.contains("dark"))});const r=document.getElementById("mobile-menu-toggle"),g=document.getElementById("sidebar"),l=document.getElementById("sidebar-overlay");function i(){g?.classList.toggle("-translate-x-full"),l?.classList.toggle("hidden")}r?.addEventListener("click",i);l?.addEventListener("click",i);const c=document.getElementById("reading-progress");window.addEventListener("scroll",()=>{const e=window.scrollY,n=document.documentElement.scrollHeight-window.innerHeight,a=n>0?e/n*100:0;c&&(c.style.width=`${Math.min(100,a)}%`)});document.addEventListener("keydown",e=>{(e.ctrlKey||e.metaKey)&&e.key==="k"&&(e.preventDefault(),window.location.href="/search/")});</script> </body> </html> 

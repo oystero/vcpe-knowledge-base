@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="VC/PE 投资知识库 - 面向投资实战的系统化知识框架"><meta name="generator" content="Astro v5.18.2"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>对赌协议（VAM） | VC/PE 投资知识库</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/index.D-0dJCf_.css"></head> <body class="bg-gray-50 dark:bg-primary-950 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300"> <!-- Reading Progress Bar --> <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-accent-500 to-accent-300 z-50 transition-all duration-150" style="width: 0%"></div> <!-- Header --> <header class="sticky top-0 z-40 bg-white/80 dark:bg-primary-900/80 backdrop-blur-md border-b border-gray-200 dark:border-primary-800"> <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between"> <div class="flex items-center gap-4"> <a href="/" class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity"> <span class="text-2xl">💰</span> <span class="hidden sm:inline">VC/PE 投资知识库</span> </a> </div> <div class="flex items-center gap-3"> <!-- Search --> <a href="/search/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> <span class="hidden md:inline">搜索...</span> <kbd class="hidden md:inline px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-primary-700 rounded">Ctrl+K</kbd> </a> <!-- Graph --> <a href="/graph/" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="12" cy="12" r="2"></circle><path d="M8 6h8M6 8v8M18 8v8M8 18h8M8 8l4 4M16 8l-4 4M8 16l4-4M16 16l-4-4"></path></svg> </a> <!-- Theme Toggle --> <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="切换主题"> <svg id="theme-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg> <svg id="theme-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> </button> <!-- Mobile Menu Toggle --> <button id="mobile-menu-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors lg:hidden"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> </button> </div> </div> </header> <div class="flex flex-1 max-w-screen-2xl mx-auto w-full"> <!-- Sidebar --> <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-30 w-72 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-primary-900 border-r border-gray-200 dark:border-primary-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300"> <nav class="p-4 space-y-1"> <a href="/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏠</span> 首页
+</a> <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">模块导航</div> <a href="/modules/00/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📚</span> 00 基础概念
+</a> <a href="/modules/01/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔄</span> 01 投资流程
+</a> <a href="/modules/02/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>💵</span> 02 估值方法
+</a> <a href="/modules/03/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400"> <span>📜</span> 03 法律与条款
+</a> <a href="/modules/04/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏭</span> 04 行业赛道
+</a> <a href="/modules/05/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔍</span> 05 尽职调查
+</a> <a href="/modules/06/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🤝</span> 06 投后管理
+</a> <a href="/modules/07/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🚪</span> 07 退出策略
+</a> <a href="/modules/08/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🇨🇳</span> 08 中国VC/PE实务
+</a> <a href="/modules/09/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📊</span> 09 风险与组合
+</a> <a href="/modules/10/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📖</span> 10 案例库
+</a> <a href="/modules/11/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🛠️</span> 11 工具与资源
+</a> </nav> </aside> <!-- Main Content --> <main class="flex-1 min-w-0 lg:ml-72"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">   <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6 flex-wrap"> <a href="/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a> <span>/</span> <a href="/modules/03/" class="hover:text-accent-600 dark:hover:text-accent-400">法律与条款</a> <span>/</span> <span class="text-gray-800 dark:text-gray-200 truncate">对赌协议（VAM）</span> </nav> <article class="flex gap-8"> <!-- Article Content --> <div class="flex-1 min-w-0"> <!-- Article Header --> <header class="mb-8"> <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">对赌协议（VAM）</h1> <div class="flex flex-wrap items-center gap-3 mb-4"> <a href="/modules/03/" class="text-xs px-2.5 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 hover:bg-accent-200 dark:hover:bg-accent-900/50 transition-colors"> 法律与条款 </a>  <a href="/search/?tag=vc-pe" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> vc-pe </a><a href="/search/?tag=%E6%B3%95%E5%BE%8B%E6%9D%A1%E6%AC%BE" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 法律条款 </a><a href="/search/?tag=%E5%AF%B9%E8%B5%8C%E5%8D%8F%E8%AE%AE" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 对赌协议 </a><a href="/search/?tag=VAM" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> VAM </a><a href="/search/?tag=%E4%BC%B0%E5%80%BC%E8%B0%83%E6%95%B4" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 估值调整 </a> </div> <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400"> <span>创建于 2026/05/27</span>  <span>3070字</span> <span>约 8 分钟阅读</span> </div> </header> <!-- Article Body --> <div class="prose"><h2 id="概述">概述</h2>
+<p>对赌协议，正式名称为估值调整机制（Valuation Adjustment Mechanism, VAM），是 VC/PE 投资中用于弥合投资人与融资方之间估值分歧的法律安排。它通过对未来不确定事项设定条件，约定在条件达成或未达时对投资价格进行调整。在中国 PE/VC 实践中，对赌协议是最具争议也最广泛使用的投资条款之一，其司法效力经历了从&quot;全面否定&quot;到&quot;有条件认可&quot;的演变。</p>
+<h2 id="核心内容">核心内容</h2>
+<h3 id="对赌协议的主要类型">对赌协议的主要类型</h3>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>类型</th>
+<th>触发条件</th>
+<th>补偿方式</th>
+<th>常见场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>业绩对赌（盈利补偿）</td>
+<td>净利润/营收未达承诺</td>
+<td>股份补偿或现金补偿</td>
+<td>PE 投资成熟企业</td>
+</tr>
+<tr>
+<td>上市对赌</td>
+<td>未在约定期限内完成IPO</td>
+<td>回购股份（投资额+利息）</td>
+<td>Pre-IPO 投资</td>
+</tr>
+<tr>
+<td>里程碑对赌</td>
+<td>产品获批/收入突破等</td>
+<td>估值调整或追加投资</td>
+<td>医药、科技企业</td>
+</tr>
+<tr>
+<td>反向对赌</td>
+<td>业绩超预期</td>
+<td>投资人让渡部分股权</td>
+<td>激励型安排</td>
+</tr>
+<tr>
+<td>综合对赌</td>
+<td>多重条件组合</td>
+<td>多种补偿方式组合</td>
+<td>复杂交易</td>
+</tr>
+</tbody>
+</table></div><h3 id="触发条件设计">触发条件设计</h3>
+<p><strong>业绩指标选择：</strong></p>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>指标</th>
+<th>优势</th>
+<th>劣势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>净利润</td>
+<td>直观反映盈利能力</td>
+<td>可通过会计手段调节</td>
+</tr>
+<tr>
+<td>营收</td>
+<td>不易操纵</td>
+<td>不反映盈利能力</td>
+</tr>
+<tr>
+<td>EBITDA</td>
+<td>排除资本结构影响</td>
+<td>计算口径可能有争议</td>
+</tr>
+<tr>
+<td>经营性现金流</td>
+<td>最难操纵</td>
+<td>波动性大</td>
+</tr>
+<tr>
+<td>非财务指标</td>
+<td>产品获批、用户数等</td>
+<td>难以量化补偿金额</td>
+</tr>
+</tbody>
+</table></div><p><strong>关键设计要素：</strong></p>
+<ul>
+<li>承诺期间：通常 2-4 年，与基金存续期匹配</li>
+<li>承诺金额：基于管理层预测的 80%-90% 设定（留有安全边际）</li>
+<li>考核频率：通常按年度考核，部分按季度</li>
+<li>补偿上限：通常不超过投资金额的 100%-150%</li>
+</ul>
+<h3 id="补偿机制计算">补偿机制计算</h3>
+<p><strong>1. 现金补偿模式：</strong></p>
+<pre><code>补偿金额 = 投资额 × (1 - 实际利润/承诺利润)
+</code></pre>
+<p><strong>2. 股份补偿模式：</strong></p>
+<pre><code>应回购股份数 = 投资额 × (1 - 实际利润/承诺利润) / 回购价格
+回购价格 = 投资额 / 原获得股份数 或 约定价格
+</code></pre>
+<p><strong>3. 回购模式（上市失败触发）：</strong></p>
+<pre><code>回购金额 = 投资额 × (1 + 回购利率)^n
+回购利率：通常 8%-15%（单利或复利）
+</code></pre>
+<h3 id="中国司法实践-里程碑式判例">中国司法实践：里程碑式判例</h3>
+<h4 id="海富案-最高人民法院-2012-民提字第11号">海富案（最高人民法院，(2012)民提字第11号）</h4>
+<p><strong>案件背景：</strong></p>
+<ul>
+<li>2007年，苏州海富投资以2000万元增资甘肃世恒（一家生产型企业）</li>
+<li>对赌条款：若2008年净利润低于3000万元，世恒需补偿海富</li>
+<li>实际净利润：约2.7万元</li>
+</ul>
+<p><strong>判决结果与规则：</strong></p>
+<ul>
+<li>投资人与<strong>目标公司</strong>的对赌条款 → <strong>无效</strong>（损害公司及债权人利益）</li>
+<li>投资人与<strong>股东/实际控制人</strong>的对赌条款 → <strong>有效</strong>（当事人真实意思表示）</li>
+</ul>
+<p><strong>确立的规则：</strong></p>
+<blockquote>
+<p>投资方与目标公司的对赌协议因损害公司及债权人利益而无效；投资方与目标公司股东之间的对赌协议，如无其他无效事由，应认定有效。</p>
+</blockquote>
+<h4 id="华工案-江苏省高级人民法院-2019-苏民再62号">华工案（江苏省高级人民法院，(2019)苏民再62号）</h4>
+<p><strong>案件背景：</strong></p>
+<ul>
+<li>华工创投投资扬州锻压机床公司</li>
+<li>约定目标公司若未在规定时间内上市，需回购股份</li>
+<li>二审认定回购条款有效，但目标公司主张无效</li>
+</ul>
+<p><strong>判决结果与规则：</strong></p>
+<ul>
+<li>在满足<strong>资本维持原则</strong>和<strong>不损害债权人利益</strong>的前提下，目标公司的回购义务可以有效</li>
+<li>但需审查是否履行了法定的<strong>减资程序</strong></li>
+<li>实际执行需配合公司法下的减资决议程序</li>
+</ul>
+<p><strong>华工案的进步意义：</strong></p>
+<ul>
+<li>放宽了海富案的严格限制</li>
+<li>引入了&quot;资本维持原则审查+减资程序&quot;的判断标准</li>
+<li>但仍要求实质审查，非一概认可</li>
+</ul>
+<h4 id="2019年-九民纪要-的最新规则">2019年《九民纪要》的最新规则</h4>
+<p><strong>最高人民法院《全国法院民商事审判工作会议纪要》（2019年11月）：</strong></p>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>情形</th>
+<th>效力</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>与目标公司对赌（回购）</td>
+<td>原则有效，但需审查减资程序</td>
+<td>未完成减资程序的，法院不支持实际履行</td>
+</tr>
+<tr>
+<td>与目标公司对赌（金钱补偿）</td>
+<td>原则有效，但需审查是否有利润可分配</td>
+<td>无利润则不支持补偿</td>
+</tr>
+<tr>
+<td>与股东/实控人对赌</td>
+<td>有效</td>
+<td>原则不变</td>
+</tr>
+</tbody>
+</table></div><h3 id="对赌条款的实务要点">对赌条款的实务要点</h3>
+<p><strong>投资人视角的保护设计：</strong></p>
+<ol>
+<li>优先与创始人/实控人签订对赌，而非目标公司</li>
+<li>对赌指标应多维度（净利润+营收+非财务指标）</li>
+<li>设置补偿上限和下限，避免过度惩罚</li>
+<li>约定争议解决条款（仲裁优于诉讼）</li>
+</ol>
+<p><strong>创始人视角的风险防控：</strong></p>
+<ol>
+<li>承诺金额应保守，留有安全边际（建议取管理层预测的70%-80%）</li>
+<li>要求设置&quot;上限条款&quot;（Cap），限制最大补偿金额</li>
+<li>争取&quot;阶梯式补偿&quot;（而非线性补偿），减少微小偏差的惩罚</li>
+<li>避免&quot;无限连带责任&quot;，将对赌义务限定在特定资产范围内</li>
+</ol>
+<h2 id="关键术语">关键术语</h2>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>术语</th>
+<th>英文</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>估值调整机制</td>
+<td>Valuation Adjustment Mechanism (VAM)</td>
+<td>基于未来不确定事项对投资估值进行事后调整的合约安排</td>
+</tr>
+<tr>
+<td>业绩承诺</td>
+<td>Performance Commitment / Profit Guarantee</td>
+<td>融资方对未来财务业绩的承诺</td>
+</tr>
+<tr>
+<td>股份补偿</td>
+<td>Share Compensation</td>
+<td>以退还或调整股份的方式进行估值补偿</td>
+</tr>
+<tr>
+<td>现金补偿</td>
+<td>Cash Compensation</td>
+<td>以现金方式进行估值补偿</td>
+</tr>
+<tr>
+<td>回购权</td>
+<td>Redemption Right / Put Option</td>
+<td>投资人在特定条件下要求融资方回购其股份的权利</td>
+</tr>
+<tr>
+<td>资本维持原则</td>
+<td>Capital Maintenance Principle</td>
+<td>公司法要求公司维持与注册资本相当的资产，保护债权人利益</td>
+</tr>
+<tr>
+<td>九民纪要</td>
+<td>Minutes of the National Courts’ Civil and Commercial Trial Work Conference</td>
+<td>最高人民法院2019年发布的审判指导文件</td>
+</tr>
+</tbody>
+</table></div><h2 id="实务要点">实务要点</h2>
+<ul>
+<li><strong>对赌的可执行性是核心</strong>：条款写得再漂亮，如果目标公司无力补偿、创始人无力回购，就是一纸空文；尽调时需评估补偿方的实际偿付能力</li>
+<li><strong>中国法下对目标公司对赌要特别谨慎</strong>：海富案和九民纪要的规则意味着，与目标公司的对赌虽然可能有效，但执行受减资程序制约</li>
+<li><strong>注意税务影响</strong>：对赌补偿可能涉及所得税（视为股权转让所得或偶发所得），各地税务处理不统一</li>
+<li><strong>对赌期间的信息权</strong>：应约定投资人对被投企业的知情权和检查权，以便监控业绩完成情况</li>
+<li><strong>仲裁条款的选择</strong>：对赌争议建议约定仲裁而非诉讼，仲裁保密性强、效率高</li>
+</ul>
+<h2 id="常见误区">常见误区</h2>
+<ul>
+<li><strong>“与公司签对赌无效”</strong>：海富案后很多人认为与目标公司的对赌一律无效，但九民纪要已修正为&quot;原则有效，需审查减资/利润&quot;</li>
+<li><strong>对赌只保护投资人</strong>：反向对赌（业绩超预期时奖励创始人）是公平的对赌设计，应积极争取</li>
+<li><strong>忽视对赌的长期关系影响</strong>：过度苛刻的对赌条款可能导致创始人行为扭曲（如短期利润导向、推迟研发投入），损害企业长期价值</li>
+</ul>
+<h2 id="参考来源">参考来源</h2>
+<ul>
+<li>最高人民法院 (2012)民提字第11号（海富投资案）</li>
+<li>江苏省高级人民法院 (2019)苏民再62号（华工案）</li>
+<li>最高人民法院《全国法院民商事审判工作会议纪要》(法〔2019〕254号)</li>
+<li>刘俊海, “对赌协议的法律效力与司法规制”, 《法学研究》, 2020</li>
+<li>刘燕, “对赌协议与公司法资本管制”, 《中外法学》, 2020</li>
+<li>中国证券投资基金业协会, 《私募投资基金合同指引》</li>
+</ul>
+<h2 id="相关主题">相关主题</h2>
+<ul>
+<li><a href="/articles/%E4%BC%B0%E5%80%BC%E8%B0%88%E5%88%A4%E4%B8%8E%E5%8D%9A%E5%BC%88/">估值谈判与博弈</a> 对赌是估值谈判的核心工具</li>
+<li><a href="/articles/%E5%8F%8D%E7%A8%80%E9%87%8A%E6%9D%A1%E6%AC%BE/">反稀释条款</a> 估值下调时的另一种保护机制</li>
+<li><a href="/articles/%E4%BC%98%E5%85%88%E6%B8%85%E7%AE%97%E6%9D%83/">优先清算权</a> 退出时的利益分配保障</li>
+<li><a href="/articles/%E8%82%A1%E4%B8%9C%E5%8D%8F%E8%AE%AE%E6%A0%B8%E5%BF%83%E6%9D%A1%E6%AC%BE/">股东协议核心条款</a> 对赌条款嵌入股东协议的框架</li>
+</ul>
+</div> <!-- Related Articles --> <section class="mt-12 pt-8 border-t border-gray-200 dark:border-primary-800"> <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">📎 相关推荐</h2> <div class="space-y-3"> <a href="/articles/股东协议核心条款/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">法律与条款</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 股东协议核心条款 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">机制：
+- 现有股东拟向第三方转让股份时，其他股东有权在同等条件下优先购买
+- 目的是维护现有股东的持股比例，防止引入不受欢迎的新股东</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/估值谈判与博弈/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">估值方法</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 估值谈判与博弈 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">心理机制：
+- 先报价的一方通常会设定谈判的&quot;锚点&quot;，后续讨论围绕这个锚点展开
+- 创始人先报高估值 → 谈判结果往往高于投资人预期
+- 投资人先报低估值 → 谈判结果往往低于创始人预期</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/优先清算权/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">法律与条款</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 优先清算权（Liquidation Preference） </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">优先清算权 = 优先倍数 + 参与权类型</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/反稀释条款/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">法律与条款</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 反稀释条款（Anti-Dilution Protection） </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">机制：
+- 转换价格直接调整为后续轮次的发行价格
+- 无论后续轮次的发行数量多少，均以最低价格为准</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/董事会席位与一票否决/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">法律与条款</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 董事会席位与一票否决权 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">典型董事会构成：</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a> </div> </section> </div> <!-- Table of Contents (Desktop) --> <aside class="hidden xl:block w-64 flex-shrink-0"> <div class="sticky top-20"> <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">目录</h3> <nav class="space-y-1"> <a href="#概述" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="概述"> 概述 </a><a href="#核心内容" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="核心内容"> 核心内容 </a><a href="#对赌协议的主要类型" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="对赌协议的主要类型"> 对赌协议的主要类型 </a><a href="#触发条件设计" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="触发条件设计"> 触发条件设计 </a><a href="#补偿机制计算" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="补偿机制计算"> 补偿机制计算 </a><a href="#中国司法实践-里程碑式判例" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="中国司法实践-里程碑式判例"> 中国司法实践：里程碑式判例 </a><a href="#海富案-最高人民法院-2012-民提字第11号" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="海富案-最高人民法院-2012-民提字第11号"> 海富案（最高人民法院，(2012)民提字第11号） </a><a href="#华工案-江苏省高级人民法院-2019-苏民再62号" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="华工案-江苏省高级人民法院-2019-苏民再62号"> 华工案（江苏省高级人民法院，(2019)苏民再62号） </a><a href="#2019年-九民纪要-的最新规则" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="2019年-九民纪要-的最新规则"> 2019年《九民纪要》的最新规则 </a><a href="#对赌条款的实务要点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="对赌条款的实务要点"> 对赌条款的实务要点 </a><a href="#关键术语" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键术语"> 关键术语 </a><a href="#实务要点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="实务要点"> 实务要点 </a><a href="#常见误区" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="常见误区"> 常见误区 </a><a href="#参考来源" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="参考来源"> 参考来源 </a><a href="#相关主题" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="相关主题"> 相关主题 </a> </nav> </div> </aside> </article> <script type="module">const n=new IntersectionObserver(e=>{e.forEach(t=>{const o=t.target.id,c=document.querySelector(`.toc-link[data-heading="${o}"]`);c&&t.isIntersecting&&(document.querySelectorAll(".toc-link").forEach(r=>r.classList.remove("text-accent-600","dark:text-accent-400")),c.classList.add("text-accent-600","dark:text-accent-400"))})},{rootMargin:"-80px 0px -80% 0px"});document.querySelectorAll(".prose h2[id], .prose h3[id], .prose h4[id]").forEach(e=>{n.observe(e)});</script>  </div> </main> </div> <!-- Mobile sidebar overlay --> <div id="sidebar-overlay" class="fixed inset-0 z-20 bg-black/50 hidden lg:hidden"></div> <script type="module">const m=document.getElementById("theme-toggle"),o=document.getElementById("theme-light-icon"),d=document.getElementById("theme-dark-icon");function t(e){e?(document.documentElement.classList.add("dark"),o?.classList.add("hidden"),d?.classList.remove("hidden"),localStorage.setItem("theme","dark")):(document.documentElement.classList.remove("dark"),o?.classList.remove("hidden"),d?.classList.add("hidden"),localStorage.setItem("theme","light"))}const s=localStorage.getItem("theme");t(s==="light"?!1:s==="dark"?!0:window.matchMedia("(prefers-color-scheme: dark)").matches);m?.addEventListener("click",()=>{t(!document.documentElement.classList.contains("dark"))});const r=document.getElementById("mobile-menu-toggle"),g=document.getElementById("sidebar"),l=document.getElementById("sidebar-overlay");function i(){g?.classList.toggle("-translate-x-full"),l?.classList.toggle("hidden")}r?.addEventListener("click",i);l?.addEventListener("click",i);const c=document.getElementById("reading-progress");window.addEventListener("scroll",()=>{const e=window.scrollY,n=document.documentElement.scrollHeight-window.innerHeight,a=n>0?e/n*100:0;c&&(c.style.width=`${Math.min(100,a)}%`)});document.addEventListener("keydown",e=>{(e.ctrlKey||e.metaKey)&&e.key==="k"&&(e.preventDefault(),window.location.href="/search/")});</script> </body> </html> 

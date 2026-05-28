@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="VC/PE 投资知识库 - 面向投资实战的系统化知识框架"><meta name="generator" content="Astro v5.18.2"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>现金流折现法（DCF） | VC/PE 投资知识库</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/index.D-0dJCf_.css"></head> <body class="bg-gray-50 dark:bg-primary-950 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300"> <!-- Reading Progress Bar --> <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-accent-500 to-accent-300 z-50 transition-all duration-150" style="width: 0%"></div> <!-- Header --> <header class="sticky top-0 z-40 bg-white/80 dark:bg-primary-900/80 backdrop-blur-md border-b border-gray-200 dark:border-primary-800"> <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between"> <div class="flex items-center gap-4"> <a href="/" class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity"> <span class="text-2xl">💰</span> <span class="hidden sm:inline">VC/PE 投资知识库</span> </a> </div> <div class="flex items-center gap-3"> <!-- Search --> <a href="/search/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> <span class="hidden md:inline">搜索...</span> <kbd class="hidden md:inline px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-primary-700 rounded">Ctrl+K</kbd> </a> <!-- Graph --> <a href="/graph/" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="12" cy="12" r="2"></circle><path d="M8 6h8M6 8v8M18 8v8M8 18h8M8 8l4 4M16 8l-4 4M8 16l4-4M16 16l-4-4"></path></svg> </a> <!-- Theme Toggle --> <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="切换主题"> <svg id="theme-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg> <svg id="theme-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> </button> <!-- Mobile Menu Toggle --> <button id="mobile-menu-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors lg:hidden"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> </button> </div> </div> </header> <div class="flex flex-1 max-w-screen-2xl mx-auto w-full"> <!-- Sidebar --> <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-30 w-72 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-primary-900 border-r border-gray-200 dark:border-primary-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300"> <nav class="p-4 space-y-1"> <a href="/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏠</span> 首页
+</a> <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">模块导航</div> <a href="/modules/00/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📚</span> 00 基础概念
+</a> <a href="/modules/01/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔄</span> 01 投资流程
+</a> <a href="/modules/02/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400"> <span>💵</span> 02 估值方法
+</a> <a href="/modules/03/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📜</span> 03 法律与条款
+</a> <a href="/modules/04/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏭</span> 04 行业赛道
+</a> <a href="/modules/05/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔍</span> 05 尽职调查
+</a> <a href="/modules/06/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🤝</span> 06 投后管理
+</a> <a href="/modules/07/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🚪</span> 07 退出策略
+</a> <a href="/modules/08/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🇨🇳</span> 08 中国VC/PE实务
+</a> <a href="/modules/09/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📊</span> 09 风险与组合
+</a> <a href="/modules/10/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📖</span> 10 案例库
+</a> <a href="/modules/11/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🛠️</span> 11 工具与资源
+</a> </nav> </aside> <!-- Main Content --> <main class="flex-1 min-w-0 lg:ml-72"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">   <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6 flex-wrap"> <a href="/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a> <span>/</span> <a href="/modules/02/" class="hover:text-accent-600 dark:hover:text-accent-400">估值方法</a> <span>/</span> <span class="text-gray-800 dark:text-gray-200 truncate">现金流折现法（DCF）</span> </nav> <article class="flex gap-8"> <!-- Article Content --> <div class="flex-1 min-w-0"> <!-- Article Header --> <header class="mb-8"> <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">现金流折现法（DCF）</h1> <div class="flex flex-wrap items-center gap-3 mb-4"> <a href="/modules/02/" class="text-xs px-2.5 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 hover:bg-accent-200 dark:hover:bg-accent-900/50 transition-colors"> 估值方法 </a>  <a href="/search/?tag=vc-pe" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> vc-pe </a><a href="/search/?tag=%E4%BC%B0%E5%80%BC%E6%96%B9%E6%B3%95" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 估值方法 </a><a href="/search/?tag=DCF" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> DCF </a><a href="/search/?tag=%E7%8E%B0%E9%87%91%E6%B5%81%E6%8A%98%E7%8E%B0" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 现金流折现 </a> </div> <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400"> <span>创建于 2026/05/27</span>  <span>2357字</span> <span>约 6 分钟阅读</span> </div> </header> <!-- Article Body --> <div class="prose"><h2 id="概述">概述</h2>
+<p>现金流折现法（Discounted Cash Flow, DCF）是通过预测企业未来自由现金流并将其折现到当前时点来估算企业内在价值的方法。它是理论上最严谨的估值方法之一，被广泛应用于成熟企业的估值，但在VC/PE投资中常作为交叉验证工具使用。</p>
+<h2 id="核心内容">核心内容</h2>
+<h3 id="dcf-基本原理">DCF 基本原理</h3>
+<p>企业价值 = 未来各期自由现金流的现值之和 + 终值的现值</p>
+<p><strong>公式：</strong>
+$$V = \sum_{t=1}^{n} \frac{FCF_t}{(1+r)^t} + \frac{TV}{(1+r)^n}$$</p>
+<p>其中：</p>
+<ul>
+<li>$FCF_t$ = 第 t 年的自由现金流（Free Cash Flow）</li>
+<li>$r$ = 折现率（通常为 WACC）</li>
+<li>$TV$ = 终值（Terminal Value）</li>
+<li>$n$ = 预测期年数（通常 5-10 年）</li>
+</ul>
+<h3 id="wacc-加权平均资本成本-计算">WACC（加权平均资本成本）计算</h3>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>组成部分</th>
+<th>计算方式</th>
+<th>典型范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>股权成本（Ke）</td>
+<td>CAPM模型：Rf + β×(Rm-Rf)</td>
+<td>8%-15%</td>
+</tr>
+<tr>
+<td>债务成本（Kd）</td>
+<td>债务利率×(1-税率)</td>
+<td>3%-8%</td>
+</tr>
+<tr>
+<td>权益权重（We）</td>
+<td>权益/(权益+债务)</td>
+<td>60%-100%</td>
+</tr>
+<tr>
+<td>债务权重（Wd）</td>
+<td>债务/(权益+债务)</td>
+<td>0%-40%</td>
+</tr>
+</tbody>
+</table></div><p><strong>WACC = We × Ke + Wd × Kd</strong></p>
+<h3 id="终值估算方法">终值估算方法</h3>
+<ol>
+<li>
+<p><strong>永续增长法（Gordon Growth Model）</strong></p>
+<ul>
+<li>TV = FCF_n × (1+g) / (r-g)</li>
+<li>g 为永续增长率，通常取 GDP 增速（2%-3%）</li>
+<li>敏感性高：g 从 2% 变为 3%，终值可增加 50% 以上</li>
+</ul>
+</li>
+<li>
+<p><strong>退出乘数法（Exit Multiple）</strong></p>
+<ul>
+<li>TV = 财务指标 × 退出乘数（如 EV/EBITDA）</li>
+<li>基于可比公司在预测期末的预期估值水平</li>
+<li>更贴近市场实际，PE 行业更常用</li>
+</ul>
+</li>
+</ol>
+<h3 id="预测期现金流估算">预测期现金流估算</h3>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>预测项目</th>
+<th>估算基础</th>
+<th>注意事项</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营收增长</td>
+<td>行业增速、市场份额</td>
+<td>区分有机增长与并购增长</td>
+</tr>
+<tr>
+<td>EBITDA利润率</td>
+<td>历史趋势、同业对标</td>
+<td>注意规模效应的体现时点</td>
+</tr>
+<tr>
+<td>资本支出（CapEx）</td>
+<td>维护性 vs 扩张性</td>
+<td>增长期企业 CapEx 占比高</td>
+</tr>
+<tr>
+<td>营运资本变动</td>
+<td>营收增速、周转率</td>
+<td>注意季节性波动</td>
+</tr>
+<tr>
+<td>税率</td>
+<td>法定税率、优惠税率</td>
+<td>高新技术企业15%、小微企业等</td>
+</tr>
+</tbody>
+</table></div><h3 id="dcf-在-vc-pe-中的变体应用">DCF 在 VC/PE 中的变体应用</h3>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>场景</th>
+<th>变体</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VC 早期投资</td>
+<td>目标回报倒推法</td>
+<td>以目标 IRR 倒推可接受的当前估值</td>
+</tr>
+<tr>
+<td>PE 成熟期投资</td>
+<td>LBO 模型</td>
+<td>基于杠杆收购的现金流分析</td>
+</tr>
+<tr>
+<td>Pre-IPO 投资</td>
+<td>情景分析法</td>
+<td>考虑不同退出路径的加权估值</td>
+</tr>
+<tr>
+<td>困境投资</td>
+<td>APV 模型</td>
+<td>将税盾价值单独计算</td>
+</tr>
+</tbody>
+</table></div><h2 id="关键术语">关键术语</h2>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>术语</th>
+<th>英文</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>自由现金流</td>
+<td>Free Cash Flow (FCF)</td>
+<td>企业经营活动产生的、在满足再投资需求后可供资本提供者的现金</td>
+</tr>
+<tr>
+<td>加权平均资本成本</td>
+<td>WACC</td>
+<td>以股权和债务各自成本按市值比例加权的综合资本成本</td>
+</tr>
+<tr>
+<td>终值</td>
+<td>Terminal Value</td>
+<td>预测期之后企业持续经营产生的价值</td>
+</tr>
+<tr>
+<td>永续增长率</td>
+<td>Perpetuity Growth Rate</td>
+<td>假设企业在预测期后以恒定速率无限增长</td>
+</tr>
+<tr>
+<td>β系数</td>
+<td>Beta</td>
+<td>衡量个股相对市场整体的系统性风险</td>
+</tr>
+<tr>
+<td>股权风险溢价</td>
+<td>Equity Risk Premium (ERP)</td>
+<td>股票市场预期回报率超过无风险利率的部分</td>
+</tr>
+<tr>
+<td>资本资产定价模型</td>
+<td>CAPM</td>
+<td>Ke = Rf + β×(Rm-Rf)，用于估算股权成本</td>
+</tr>
+</tbody>
+</table></div><h2 id="实务要点">实务要点</h2>
+<ul>
+<li><strong>敏感性分析必不可少</strong>：DCF 对折现率和永续增长率极其敏感，必须做情景分析表（如 WACC 8%-12%、g 1%-3% 的矩阵）</li>
+<li><strong>终值占比过高是警示信号</strong>：如果终值占企业总价值超过 70%-80%，说明 DCF 结果过度依赖远期假设，可靠性下降</li>
+<li><strong>现金流预测应与经营计划一致</strong>：营收增长率、利润率、资本支出等假设需与管理层的商业计划书相互印证</li>
+<li><strong>VC 阶段慎用 DCF</strong>：早期企业现金流为负且高度不确定，DCF 模型输出对假设极为敏感，更适合用可比公司法或 VC Method</li>
+<li><strong>注意现金流口径选择</strong>：FCFF（全投资）vs FCFE（股权自由现金流），折现率需对应一致</li>
+</ul>
+<h2 id="常见误区">常见误区</h2>
+<ul>
+<li><strong>忽视预测期长度的合理性</strong>：对于周期性行业（如半导体、大宗商品），5 年预测期可能未覆盖完整周期，导致估值偏差</li>
+<li><strong>将终值增长率等同于通胀</strong>：永续增长率应反映实际增长率，而非名义GDP增速；在成熟市场，2% 已是上限</li>
+<li><strong>忽略资本结构变化的影响</strong>：如果目标企业未来将大幅举债或去杠杆，WACC 本身也是变动的，不能用静态折现率</li>
+</ul>
+<h2 id="参考来源">参考来源</h2>
+<ul>
+<li>Aswath Damodaran, <em>Investment Valuation: Tools and Techniques for Determining the Value of Any Asset</em>, 3rd Edition, Wiley, 2012</li>
+<li>McKinsey &amp; Company, <em>Valuation: Measuring and Managing the Value of Companies</em>, 7th Edition, Wiley, 2020</li>
+<li>投资银行学经典教材（罗斯《公司理财》第12版）</li>
+<li>CFA Institute, <em>Equity Valuation</em>, Level II Curriculum</li>
+</ul>
+<h2 id="相关主题">相关主题</h2>
+<ul>
+<li><a href="/articles/%E5%8F%AF%E6%AF%94%E5%85%AC%E5%8F%B8%E6%B3%95/">可比公司法</a> 交叉验证 DCF 结果</li>
+<li><a href="/articles/%E9%A3%8E%E9%99%A9%E6%8A%95%E8%B5%84%E6%B3%95/">风险投资法</a> VC 早期阶段的替代估值方法</li>
+<li><a href="/articles/pre-money%E4%B8%8Epost-money/">Pre-Money与Post-Money</a> 融资轮次中的估值定义</li>
+<li><a href="/articles/%E4%BC%B0%E5%80%BC%E8%B0%88%E5%88%A4%E4%B8%8E%E5%8D%9A%E5%BC%88/">估值谈判与博弈</a> 如何在谈判中使用 DCF 分析支撑立场</li>
+<li><a href="/search/?q=%F0%9F%92%BC%20%E5%BB%BA%E5%B7%A5%E6%8A%95%E8%B5%84%2F%F0%9F%93%8A%20%E8%B4%A2%E5%8A%A1%E4%B8%8E%E4%BC%B0%E5%80%BC%2F%E5%BB%BA%E5%B7%A5%E4%BC%B0%E5%80%BC%E6%96%B9%E6%B3%95%E8%AE%BA">💼 建工投资/📊 财务与估值/建工估值方法论</a> — 建工行业的 DCF 特殊假设与 PB/订单估值法</li>
+</ul>
+</div> <!-- Related Articles --> <section class="mt-12 pt-8 border-t border-gray-200 dark:border-primary-800"> <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">📎 相关推荐</h2> <div class="space-y-3"> <a href="/articles/估值谈判与博弈/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">估值方法</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 估值谈判与博弈 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">心理机制：
+- 先报价的一方通常会设定谈判的&quot;锚点&quot;，后续讨论围绕这个锚点展开
+- 创始人先报高估值 → 谈判结果往往高于投资人预期
+- 投资人先报低估值 → 谈判结果往往低于创始人预期</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/pre-money与post-money/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">估值方法</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> Pre-Money 与 Post-Money 估值 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">示例：
+- Pre-Money = 8000万元
+- 投资金额 = 2000万元
+- Post-Money = 1亿元
+- 投资人股权比例 = 2000 / 10000 = 20%</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/可比公司法/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">估值方法</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 可比公司法（Comparable Company Analysis） </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">四步流程：
+1. 选择可比公司 — 筛选业务模式、规模、增长阶段相似的上市公司
+2. 计算估值倍数 — 使用股价/企业价值与财务指标的比率
+3. 确定估值区间 — 取可比公司倍数的中位数或均值，剔除异常值
+4. 应用并调整 — 将倍数应用于目标企业对应财务指标，加上流动性折扣</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/风险投资法/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">估值方法</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 风险投资法（VC Method） </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Step 1：估算退出价值（Exit Value）
+
+退出价值 = 退出年份的财务指标 x 退出倍数
+
+常用指标：净利润、EBITDA、营收、ARR</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/lp与gp关系/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">基础概念</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> LP 与 GP 关系 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">GP 的权利：
+- 投资决策的全部自主权（投资/退出/估值）
+- 收取管理费（Management Fee）和业绩报酬（Carried Interest）
+- 选择被投企业董事席位
+- 决定基金的投资策略与行业方向</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a> </div> </section> </div> <!-- Table of Contents (Desktop) --> <aside class="hidden xl:block w-64 flex-shrink-0"> <div class="sticky top-20"> <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">目录</h3> <nav class="space-y-1"> <a href="#概述" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="概述"> 概述 </a><a href="#核心内容" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="核心内容"> 核心内容 </a><a href="#dcf-基本原理" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="dcf-基本原理"> DCF 基本原理 </a><a href="#wacc-加权平均资本成本-计算" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="wacc-加权平均资本成本-计算"> WACC（加权平均资本成本）计算 </a><a href="#终值估算方法" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="终值估算方法"> 终值估算方法 </a><a href="#预测期现金流估算" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="预测期现金流估算"> 预测期现金流估算 </a><a href="#dcf-在-vc-pe-中的变体应用" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="dcf-在-vc-pe-中的变体应用"> DCF 在 VC/PE 中的变体应用 </a><a href="#关键术语" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键术语"> 关键术语 </a><a href="#实务要点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="实务要点"> 实务要点 </a><a href="#常见误区" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="常见误区"> 常见误区 </a><a href="#参考来源" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="参考来源"> 参考来源 </a><a href="#相关主题" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="相关主题"> 相关主题 </a> </nav> </div> </aside> </article> <script type="module">const n=new IntersectionObserver(e=>{e.forEach(t=>{const o=t.target.id,c=document.querySelector(`.toc-link[data-heading="${o}"]`);c&&t.isIntersecting&&(document.querySelectorAll(".toc-link").forEach(r=>r.classList.remove("text-accent-600","dark:text-accent-400")),c.classList.add("text-accent-600","dark:text-accent-400"))})},{rootMargin:"-80px 0px -80% 0px"});document.querySelectorAll(".prose h2[id], .prose h3[id], .prose h4[id]").forEach(e=>{n.observe(e)});</script>  </div> </main> </div> <!-- Mobile sidebar overlay --> <div id="sidebar-overlay" class="fixed inset-0 z-20 bg-black/50 hidden lg:hidden"></div> <script type="module">const m=document.getElementById("theme-toggle"),o=document.getElementById("theme-light-icon"),d=document.getElementById("theme-dark-icon");function t(e){e?(document.documentElement.classList.add("dark"),o?.classList.add("hidden"),d?.classList.remove("hidden"),localStorage.setItem("theme","dark")):(document.documentElement.classList.remove("dark"),o?.classList.remove("hidden"),d?.classList.add("hidden"),localStorage.setItem("theme","light"))}const s=localStorage.getItem("theme");t(s==="light"?!1:s==="dark"?!0:window.matchMedia("(prefers-color-scheme: dark)").matches);m?.addEventListener("click",()=>{t(!document.documentElement.classList.contains("dark"))});const r=document.getElementById("mobile-menu-toggle"),g=document.getElementById("sidebar"),l=document.getElementById("sidebar-overlay");function i(){g?.classList.toggle("-translate-x-full"),l?.classList.toggle("hidden")}r?.addEventListener("click",i);l?.addEventListener("click",i);const c=document.getElementById("reading-progress");window.addEventListener("scroll",()=>{const e=window.scrollY,n=document.documentElement.scrollHeight-window.innerHeight,a=n>0?e/n*100:0;c&&(c.style.width=`${Math.min(100,a)}%`)});document.addEventListener("keydown",e=>{(e.ctrlKey||e.metaKey)&&e.key==="k"&&(e.preventDefault(),window.location.href="/search/")});</script> </body> </html> 

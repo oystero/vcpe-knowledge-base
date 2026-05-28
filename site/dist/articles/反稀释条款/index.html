@@ -1,0 +1,314 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="VC/PE 投资知识库 - 面向投资实战的系统化知识框架"><meta name="generator" content="Astro v5.18.2"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>反稀释条款（Anti-Dilution Protection） | VC/PE 投资知识库</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/index.D-0dJCf_.css"></head> <body class="bg-gray-50 dark:bg-primary-950 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300"> <!-- Reading Progress Bar --> <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-accent-500 to-accent-300 z-50 transition-all duration-150" style="width: 0%"></div> <!-- Header --> <header class="sticky top-0 z-40 bg-white/80 dark:bg-primary-900/80 backdrop-blur-md border-b border-gray-200 dark:border-primary-800"> <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between"> <div class="flex items-center gap-4"> <a href="/" class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity"> <span class="text-2xl">💰</span> <span class="hidden sm:inline">VC/PE 投资知识库</span> </a> </div> <div class="flex items-center gap-3"> <!-- Search --> <a href="/search/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> <span class="hidden md:inline">搜索...</span> <kbd class="hidden md:inline px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-primary-700 rounded">Ctrl+K</kbd> </a> <!-- Graph --> <a href="/graph/" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="12" cy="12" r="2"></circle><path d="M8 6h8M6 8v8M18 8v8M8 18h8M8 8l4 4M16 8l-4 4M8 16l4-4M16 16l-4-4"></path></svg> </a> <!-- Theme Toggle --> <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="切换主题"> <svg id="theme-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg> <svg id="theme-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> </button> <!-- Mobile Menu Toggle --> <button id="mobile-menu-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors lg:hidden"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> </button> </div> </div> </header> <div class="flex flex-1 max-w-screen-2xl mx-auto w-full"> <!-- Sidebar --> <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-30 w-72 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-primary-900 border-r border-gray-200 dark:border-primary-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300"> <nav class="p-4 space-y-1"> <a href="/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏠</span> 首页
+</a> <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">模块导航</div> <a href="/modules/00/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📚</span> 00 基础概念
+</a> <a href="/modules/01/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔄</span> 01 投资流程
+</a> <a href="/modules/02/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>💵</span> 02 估值方法
+</a> <a href="/modules/03/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400"> <span>📜</span> 03 法律与条款
+</a> <a href="/modules/04/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏭</span> 04 行业赛道
+</a> <a href="/modules/05/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔍</span> 05 尽职调查
+</a> <a href="/modules/06/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🤝</span> 06 投后管理
+</a> <a href="/modules/07/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🚪</span> 07 退出策略
+</a> <a href="/modules/08/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🇨🇳</span> 08 中国VC/PE实务
+</a> <a href="/modules/09/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📊</span> 09 风险与组合
+</a> <a href="/modules/10/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📖</span> 10 案例库
+</a> <a href="/modules/11/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🛠️</span> 11 工具与资源
+</a> </nav> </aside> <!-- Main Content --> <main class="flex-1 min-w-0 lg:ml-72"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">   <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6 flex-wrap"> <a href="/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a> <span>/</span> <a href="/modules/03/" class="hover:text-accent-600 dark:hover:text-accent-400">法律与条款</a> <span>/</span> <span class="text-gray-800 dark:text-gray-200 truncate">反稀释条款（Anti-Dilution Protection）</span> </nav> <article class="flex gap-8"> <!-- Article Content --> <div class="flex-1 min-w-0"> <!-- Article Header --> <header class="mb-8"> <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">反稀释条款（Anti-Dilution Protection）</h1> <div class="flex flex-wrap items-center gap-3 mb-4"> <a href="/modules/03/" class="text-xs px-2.5 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 hover:bg-accent-200 dark:hover:bg-accent-900/50 transition-colors"> 法律与条款 </a>  <a href="/search/?tag=vc-pe" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> vc-pe </a><a href="/search/?tag=%E6%B3%95%E5%BE%8B%E6%9D%A1%E6%AC%BE" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 法律条款 </a><a href="/search/?tag=%E5%8F%8D%E7%A8%80%E9%87%8A" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 反稀释 </a><a href="/search/?tag=anti-dilution" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> anti-dilution </a><a href="/search/?tag=%E4%BC%98%E5%85%88%E8%82%A1" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 优先股 </a> </div> <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400"> <span>创建于 2026/05/27</span>  <span>3326字</span> <span>约 9 分钟阅读</span> </div> </header> <!-- Article Body --> <div class="prose"><h2 id="概述">概述</h2>
+<p>反稀释条款（Anti-Dilution Clause）是 VC/PE 投资中优先股的核心保护条款之一，旨在保护投资人在后续融资轮次估值下调（Down Round）时免受过度稀释。当企业以低于前一轮的价格发行新股时，反稀释条款会调整前轮投资人的转换价格，使其获得更多普通股，从而维持其持股比例和经济利益。</p>
+<h2 id="核心内容">核心内容</h2>
+<h3 id="反稀释条款的两种主要类型">反稀释条款的两种主要类型</h3>
+<h4 id="1-full-ratchet-完全棘轮">1. Full Ratchet（完全棘轮）</h4>
+<p><strong>机制：</strong></p>
+<ul>
+<li>转换价格直接调整为后续轮次的发行价格</li>
+<li>无论后续轮次的发行数量多少，均以最低价格为准</li>
+</ul>
+<p><strong>公式：</strong></p>
+<pre><code>新转换价格 = 后续轮次的每股价格
+</code></pre>
+<p><strong>示例：</strong></p>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>参数</th>
+<th>A轮</th>
+<th>B轮（Down Round）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>每股价格</td>
+<td>10元</td>
+<td>5元</td>
+</tr>
+<tr>
+<td>A轮投资人持有</td>
+<td>100万股优先股</td>
+<td>—</td>
+</tr>
+<tr>
+<td>转换价格（Full Ratchet）</td>
+<td>10元</td>
+<td>调整为5元</td>
+</tr>
+<tr>
+<td>可转换普通股数</td>
+<td>100万股</td>
+<td>调整为200万股</td>
+</tr>
+</tbody>
+</table></div><p><strong>特点：</strong> 对投资人保护最强，但对创始人和其他股东的稀释影响极大。</p>
+<h4 id="2-weighted-average-加权平均">2. Weighted Average（加权平均）</h4>
+<p><strong>机制：</strong></p>
+<ul>
+<li>考虑后续轮次的发行规模，按加权平均方式调整转换价格</li>
+<li>区分为&quot;广义加权平均&quot;（Broad-Based）和&quot;狭义加权平均&quot;（Narrow-Based）</li>
+</ul>
+<p><strong>公式：</strong></p>
+<pre><code>新转换价格 = 原转换价格 × (已发行股数 + 按原价可购新股数) / (已发行股数 + 实际发行新股数)
+
+即：CP₂ = CP₁ × (CS₁ + CS₁') / (CS₁ + CS₂)
+
+其中：
+CP₁ = 原转换价格
+CS₁ = 下轮前完全稀释总股数
+CS₁' = 本轮融资额按原价可购股数 = 本轮融资额 / CP₁
+CS₂ = 本轮实际发行股数 = 本轮融资额 / 下轮每股价格
+</code></pre>
+<p><strong>Broad-Based vs Narrow-Based：</strong></p>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>类型</th>
+<th>已发行股数（CS₁）的口径</th>
+<th>对投资人的保护</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Broad-Based（广义）</td>
+<td>包含全部已发行股份、期权池、可转换证券</td>
+<td>较弱（稀释被分摊到更大基数）</td>
+</tr>
+<tr>
+<td>Narrow-Based（狭义）</td>
+<td>仅包含已发行优先股</td>
+<td>较强（稀释仅在优先股之间分摊）</td>
+</tr>
+</tbody>
+</table></div><h3 id="计算示例">计算示例</h3>
+<p><strong>场景设定：</strong></p>
+<ul>
+<li>A轮：投资1000万元，每股10元，获得100万股优先股</li>
+<li>A轮前完全稀释总股本：900万股（含期权池）</li>
+<li>B轮：融资2000万元，每股5元（Down Round）</li>
+</ul>
+<p><strong>Full Ratchet 计算：</strong></p>
+<pre><code>新转换价格 = 5元
+A轮可转换普通股 = 1000万 / 5 = 200万股
+新增稀释 = 200万 - 100万 = 100万股额外获得
+</code></pre>
+<p><strong>Broad-Based Weighted Average 计算：</strong></p>
+<pre><code>CS₁ = 900万股（完全稀释总股本）
+CS₁' = 1000万 / 10 = 100万股
+CS₂ = 2000万 / 5 = 400万股
+
+新转换价格 = 10 × (900 + 100) / (900 + 400)
+           = 10 × 1000 / 1300
+           = 7.69元
+
+A轮可转换普通股 = 1000万 / 7.69 = 130万股
+新增稀释 = 130万 - 100万 = 30万股额外获得
+</code></pre>
+<p><strong>对比总结：</strong></p>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>方式</th>
+<th>调整后转换价格</th>
+<th>A轮可转换股数</th>
+<th>额外获得</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>无反稀释</td>
+<td>10元</td>
+<td>100万股</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Broad-Based WA</td>
+<td>7.69元</td>
+<td>130万股</td>
+<td>30万股</td>
+</tr>
+<tr>
+<td>Narrow-Based WA</td>
+<td>6.25元</td>
+<td>160万股</td>
+<td>60万股</td>
+</tr>
+<tr>
+<td>Full Ratchet</td>
+<td>5元</td>
+<td>200万股</td>
+<td>100万股</td>
+</tr>
+</tbody>
+</table></div><h3 id="pay-to-play-条款">Pay-to-Play 条款</h3>
+<p><strong>机制：</strong></p>
+<ul>
+<li>要求投资人在后续轮次中继续跟投，否则失去反稀释保护</li>
+<li>将优先股降级为普通股或&quot;死优先股&quot;（Zombie Preferred）</li>
+</ul>
+<p><strong>目的：</strong></p>
+<ul>
+<li>确保投资人在企业困难时继续提供资金支持</li>
+<li>防止投资人&quot;搭便车&quot;——享受保护但不承担义务</li>
+</ul>
+<p><strong>Pay-to-Play 的典型设计：</strong></p>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>设计要素</th>
+<th>选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>要求参与程度</td>
+<td>必须参与后续轮次</td>
+<td>100%参与或按比例参与</td>
+</tr>
+<tr>
+<td>未参与后果</td>
+<td>丧失反稀释保护</td>
+<td>降级为普通股或次级优先股</td>
+</tr>
+<tr>
+<td>宽限期</td>
+<td>允许一定时间窗口</td>
+<td>通常30-90天</td>
+</tr>
+<tr>
+<td>适用轮次</td>
+<td>仅限Down Round</td>
+<td>或所有后续轮次</td>
+</tr>
+</tbody>
+</table></div><h3 id="反稀释的例外与排除">反稀释的例外与排除</h3>
+<p>以下情况通常不触发反稀释调整：</p>
+<ul>
+<li>员工期权池的发行（ESOP）</li>
+<li>债务转换为股权（除非以低于转换价发行）</li>
+<li>股票分红或拆股</li>
+<li>并购中发行的对价股份</li>
+<li>经优先股多数持有人同意的发行</li>
+</ul>
+<h3 id="中国市场的特殊实践">中国市场的特殊实践</h3>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>实践特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>以Weighted Average为主</td>
+<td>Full Ratchet 在中国市场相对少见</td>
+</tr>
+<tr>
+<td>Pay-to-Play较少</td>
+<td>中国LP/GP关系与美国不同，条款较少使用</td>
+</tr>
+<tr>
+<td>反稀释与对赌叠加</td>
+<td>部分交易同时设置反稀释和业绩对赌</td>
+</tr>
+<tr>
+<td>人民币基金条款较温和</td>
+<td>相比美元基金，人民币基金的保护条款通常较弱</td>
+</tr>
+</tbody>
+</table></div><h2 id="关键术语">关键术语</h2>
+<div class="table-wrapper"><table<thead>
+<tr>
+<th>术语</th>
+<th>英文</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>完全棘轮</td>
+<td>Full Ratchet</td>
+<td>转换价格直接调整为后续最低发行价格的反稀释方式</td>
+</tr>
+<tr>
+<td>加权平均</td>
+<td>Weighted Average</td>
+<td>按发行规模加权调整转换价格的反稀释方式</td>
+</tr>
+<tr>
+<td>广义加权平均</td>
+<td>Broad-Based Weighted Average</td>
+<td>以全部稀释后股本为基础计算的加权平均</td>
+</tr>
+<tr>
+<td>狭义加权平均</td>
+<td>Narrow-Based Weighted Average</td>
+<td>仅以已发行优先股为基础计算的加权平均</td>
+</tr>
+<tr>
+<td>转换价格</td>
+<td>Conversion Price</td>
+<td>优先股转换为普通股的价格</td>
+</tr>
+<tr>
+<td>估值下调融资</td>
+<td>Down Round</td>
+<td>后续融资轮次估值低于前一轮的融资</td>
+</tr>
+<tr>
+<td>死优先股</td>
+<td>Zombie Preferred</td>
+<td>失去反稀释等保护后仅保留基本权利的优先股</td>
+</tr>
+<tr>
+<td>跟投义务</td>
+<td>Pay-to-Play</td>
+<td>要求投资人在后续轮次继续投资的义务</td>
+</tr>
+</tbody>
+</table></div><h2 id="实务要点">实务要点</h2>
+<ul>
+<li><strong>Broad-Based Weighted Average 是市场主流</strong>：绝大多数美元基金的标准化条款采用此方式，中国市场也以此为主</li>
+<li><strong>创始人应争取排除 Full Ratchet</strong>：Full Ratchet 对创始人极其不利，一轮 Down Round 可能导致创始人丧失控股权</li>
+<li><strong>注意反稀释与优先清算权的叠加效应</strong>：反稀释增加持股比例 + 优先清算权保障退出，两者叠加对普通股影响巨大</li>
+<li><strong>计算 Cap Table 影响</strong>：任何反稀释条款都应在 Cap Table 模型中模拟其影响，看清 Down Round 各方持股变化</li>
+<li><strong>Pay-to-Play 是双刃剑</strong>：对投资人而言可能限制灵活性，但有助于筛选出真正支持企业的投资人</li>
+</ul>
+<h2 id="常见误区">常见误区</h2>
+<ul>
+<li><strong>认为反稀释只是&quot;技术条款&quot;</strong>：反稀释在 Down Round 中可能导致创始人持股比例大幅下降，绝非无关紧要的细节</li>
+<li><strong>混淆 Broad-Based 和 Narrow-Based</strong>：两者计算结果差异显著（在上述示例中相差50%），必须在条款中明确</li>
+<li><strong>忽视排除条款</strong>：期权池发行、并购对价等通常被排除在反稀释触发之外，需确认排除清单是否完整</li>
+</ul>
+<h2 id="参考来源">参考来源</h2>
+<ul>
+<li>Brad Feld &amp; Jason Mendelson, <em>Venture Deals</em>, 4th Edition, Wiley, 2019</li>
+<li>NVCA (National Venture Capital Association), <em>Model Legal Documents</em></li>
+<li>Cooley LLP, <em>Venture Capital Term Sheet Guide</em></li>
+<li>Fenwick &amp; West, <em>Silicon Valley Venture Capital Survey</em></li>
+<li>清华大学五道口金融学院, 《中国股权投资市场年度报告》</li>
+</ul>
+<h2 id="相关主题">相关主题</h2>
+<ul>
+<li><a href="/articles/pre-money%E4%B8%8Epost-money/">Pre-Money与Post-Money</a> 估值基础决定了反稀释的触发条件</li>
+<li><a href="/articles/%E5%AF%B9%E8%B5%8C%E5%8D%8F%E8%AE%AE-vam/">对赌协议-VAM</a> 另一种估值保护机制</li>
+<li><a href="/articles/%E4%BC%98%E5%85%88%E6%B8%85%E7%AE%97%E6%9D%83/">优先清算权</a> 与反稀释叠加影响退出分配</li>
+<li><a href="/articles/%E4%BC%B0%E5%80%BC%E8%B0%88%E5%88%A4%E4%B8%8E%E5%8D%9A%E5%BC%88/">估值谈判与博弈</a> 反稀释条款是估值谈判的重要筹码</li>
+<li><a href="/articles/%E8%82%A1%E4%B8%9C%E5%8D%8F%E8%AE%AE%E6%A0%B8%E5%BF%83%E6%9D%A1%E6%AC%BE/">股东协议核心条款</a> 反稀释条款嵌入股东协议</li>
+</ul>
+</div> <!-- Related Articles --> <section class="mt-12 pt-8 border-t border-gray-200 dark:border-primary-800"> <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">📎 相关推荐</h2> <div class="space-y-3"> <a href="/articles/股东协议核心条款/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">法律与条款</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 股东协议核心条款 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">机制：
+- 现有股东拟向第三方转让股份时，其他股东有权在同等条件下优先购买
+- 目的是维护现有股东的持股比例，防止引入不受欢迎的新股东</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/估值谈判与博弈/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">估值方法</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 估值谈判与博弈 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">心理机制：
+- 先报价的一方通常会设定谈判的&quot;锚点&quot;，后续讨论围绕这个锚点展开
+- 创始人先报高估值 → 谈判结果往往高于投资人预期
+- 投资人先报低估值 → 谈判结果往往低于创始人预期</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/优先清算权/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">法律与条款</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 优先清算权（Liquidation Preference） </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">优先清算权 = 优先倍数 + 参与权类型</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/对赌协议-vam/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">法律与条款</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 对赌协议（VAM） </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">业绩指标选择：</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/articles/董事会席位与一票否决/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">法律与条款</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 董事会席位与一票否决权 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">典型董事会构成：</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a> </div> </section> </div> <!-- Table of Contents (Desktop) --> <aside class="hidden xl:block w-64 flex-shrink-0"> <div class="sticky top-20"> <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">目录</h3> <nav class="space-y-1"> <a href="#概述" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="概述"> 概述 </a><a href="#核心内容" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="核心内容"> 核心内容 </a><a href="#反稀释条款的两种主要类型" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="反稀释条款的两种主要类型"> 反稀释条款的两种主要类型 </a><a href="#1-full-ratchet-完全棘轮" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="1-full-ratchet-完全棘轮"> 1. Full Ratchet（完全棘轮） </a><a href="#2-weighted-average-加权平均" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="2-weighted-average-加权平均"> 2. Weighted Average（加权平均） </a><a href="#计算示例" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="计算示例"> 计算示例 </a><a href="#pay-to-play-条款" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="pay-to-play-条款"> Pay-to-Play 条款 </a><a href="#反稀释的例外与排除" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="反稀释的例外与排除"> 反稀释的例外与排除 </a><a href="#中国市场的特殊实践" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="中国市场的特殊实践"> 中国市场的特殊实践 </a><a href="#关键术语" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键术语"> 关键术语 </a><a href="#实务要点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="实务要点"> 实务要点 </a><a href="#常见误区" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="常见误区"> 常见误区 </a><a href="#参考来源" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="参考来源"> 参考来源 </a><a href="#相关主题" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="相关主题"> 相关主题 </a> </nav> </div> </aside> </article> <script type="module">const n=new IntersectionObserver(e=>{e.forEach(t=>{const o=t.target.id,c=document.querySelector(`.toc-link[data-heading="${o}"]`);c&&t.isIntersecting&&(document.querySelectorAll(".toc-link").forEach(r=>r.classList.remove("text-accent-600","dark:text-accent-400")),c.classList.add("text-accent-600","dark:text-accent-400"))})},{rootMargin:"-80px 0px -80% 0px"});document.querySelectorAll(".prose h2[id], .prose h3[id], .prose h4[id]").forEach(e=>{n.observe(e)});</script>  </div> </main> </div> <!-- Mobile sidebar overlay --> <div id="sidebar-overlay" class="fixed inset-0 z-20 bg-black/50 hidden lg:hidden"></div> <script type="module">const m=document.getElementById("theme-toggle"),o=document.getElementById("theme-light-icon"),d=document.getElementById("theme-dark-icon");function t(e){e?(document.documentElement.classList.add("dark"),o?.classList.add("hidden"),d?.classList.remove("hidden"),localStorage.setItem("theme","dark")):(document.documentElement.classList.remove("dark"),o?.classList.remove("hidden"),d?.classList.add("hidden"),localStorage.setItem("theme","light"))}const s=localStorage.getItem("theme");t(s==="light"?!1:s==="dark"?!0:window.matchMedia("(prefers-color-scheme: dark)").matches);m?.addEventListener("click",()=>{t(!document.documentElement.classList.contains("dark"))});const r=document.getElementById("mobile-menu-toggle"),g=document.getElementById("sidebar"),l=document.getElementById("sidebar-overlay");function i(){g?.classList.toggle("-translate-x-full"),l?.classList.toggle("hidden")}r?.addEventListener("click",i);l?.addEventListener("click",i);const c=document.getElementById("reading-progress");window.addEventListener("scroll",()=>{const e=window.scrollY,n=document.documentElement.scrollHeight-window.innerHeight,a=n>0?e/n*100:0;c&&(c.style.width=`${Math.min(100,a)}%`)});document.addEventListener("keydown",e=>{(e.ctrlKey||e.metaKey)&&e.key==="k"&&(e.preventDefault(),window.location.href="/search/")});</script> </body> </html> 
