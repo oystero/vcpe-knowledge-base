@@ -1,0 +1,556 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="VC/PE 投资知识库 - 面向投资实战的系统化知识框架"><meta name="generator" content="Astro v5.18.2"><link rel="icon" type="image/svg+xml" href="/vcpe-knowledge-base/favicon.svg"><title>Theranos — 从100亿美元估值到零：硅谷最大创业骗局 | VC/PE 投资知识库</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/vcpe-knowledge-base/_astro/index.DHKBIVZD.css"></head> <body class="bg-gray-50 dark:bg-primary-950 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300"> <!-- Reading Progress Bar --> <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-accent-500 to-accent-300 z-50 transition-all duration-150" style="width: 0%"></div> <!-- Header --> <header class="sticky top-0 z-40 bg-white/80 dark:bg-primary-900/80 backdrop-blur-md border-b border-gray-200 dark:border-primary-800"> <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between"> <div class="flex items-center gap-4"> <a href="/vcpe-knowledge-base/" class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity"> <span class="text-2xl">💰</span> <span class="hidden sm:inline">VC/PE 投资知识库</span> </a> </div> <div class="flex items-center gap-3"> <!-- Search --> <a href="/vcpe-knowledge-base/search/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> <span class="hidden md:inline">搜索...</span> <kbd class="hidden md:inline px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-primary-700 rounded">Ctrl+K</kbd> </a> <!-- Graph --> <a href="/vcpe-knowledge-base/graph/" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="12" cy="12" r="2"></circle><path d="M8 6h8M6 8v8M18 8v8M8 18h8M8 8l4 4M16 8l-4 4M8 16l4-4M16 16l-4-4"></path></svg> </a> <!-- Theme Toggle --> <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="切换主题"> <svg id="theme-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg> <svg id="theme-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> </button> <!-- Mobile Menu Toggle --> <button id="mobile-menu-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors lg:hidden"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> </button> </div> </div> </header> <div class="flex flex-1 max-w-screen-2xl mx-auto w-full"> <!-- Sidebar --> <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-30 w-72 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-primary-900 border-r border-gray-200 dark:border-primary-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300"> <nav class="p-4 space-y-1"> <a href="/vcpe-knowledge-base/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏠</span> 首页
+</a> <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">模块导航</div> <a href="/vcpe-knowledge-base/modules/00/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📚</span> 00 基础概念
+</a> <a href="/vcpe-knowledge-base/modules/01/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔄</span> 01 投资流程
+</a> <a href="/vcpe-knowledge-base/modules/02/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>💵</span> 02 估值方法
+</a> <a href="/vcpe-knowledge-base/modules/03/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📜</span> 03 法律与条款
+</a> <a href="/vcpe-knowledge-base/modules/04/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏭</span> 04 行业赛道
+</a> <a href="/vcpe-knowledge-base/modules/05/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔍</span> 05 尽职调查
+</a> <a href="/vcpe-knowledge-base/modules/06/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🤝</span> 06 投后管理
+</a> <a href="/vcpe-knowledge-base/modules/07/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🚪</span> 07 退出策略
+</a> <a href="/vcpe-knowledge-base/modules/08/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🇨🇳</span> 08 中国VC/PE实务
+</a> <a href="/vcpe-knowledge-base/modules/09/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📊</span> 09 风险与组合
+</a> <a href="/vcpe-knowledge-base/modules/10/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400"> <span>📖</span> 10 案例库
+</a> <a href="/vcpe-knowledge-base/modules/11/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🛠️</span> 11 工具与资源
+</a> </nav> </aside> <!-- Main Content --> <main class="flex-1 min-w-0 lg:ml-72"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">   <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6 flex-wrap"> <a href="/vcpe-knowledge-base/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a> <span>/</span> <a href="/vcpe-knowledge-base/modules/10/" class="hover:text-accent-600 dark:hover:text-accent-400">案例库</a> <span>/</span> <span class="text-gray-800 dark:text-gray-200 truncate">Theranos — 从100亿美元估值到零：硅谷最大创业骗局</span> </nav> <article class="flex gap-8"> <!-- Article Content --> <div class="flex-1 min-w-0"> <!-- Article Header --> <header class="mb-8"> <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Theranos — 从100亿美元估值到零：硅谷最大创业骗局</h1> <div class="flex flex-wrap items-center gap-3 mb-4"> <a href="/modules/10/" class="text-xs px-2.5 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 hover:bg-accent-200 dark:hover:bg-accent-900/50 transition-colors"> 案例库 </a> <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300">
+案例研究
+</span> <a href="/search/?tag=vc-pe" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> vc-pe </a><a href="/search/?tag=%E6%A1%88%E4%BE%8B" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 案例 </a><a href="/search/?tag=%E5%A4%B1%E8%B4%A5" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 失败 </a><a href="/search/?tag=%E6%AC%BA%E8%AF%88" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 欺诈 </a><a href="/search/?tag=%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 医疗科技 </a><a href="/search/?tag=%E7%8B%AC%E8%A7%92%E5%85%BD" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 独角兽 </a><a href="/search/?tag=%E7%A1%85%E8%B0%B7" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 硅谷 </a> </div> <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400"> <span>创建于 2026/05/28</span>  <span>6782字</span> <span>约 17 分钟阅读</span> </div> </header> <!-- Article Body --> <div class="prose"><h2 id="基本信息">基本信息</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>公司全称</td>
+<td>Theranos Inc.</td>
+</tr>
+<tr>
+<td>创始人</td>
+<td>Elizabeth Holmes（伊丽莎白·霍姆斯）</td>
+</tr>
+<tr>
+<td>成立时间</td>
+<td>2003年</td>
+</tr>
+<tr>
+<td>总部</td>
+<td>美国加州帕洛阿尔托</td>
+</tr>
+<tr>
+<td>主营业务</td>
+<td>血液检测技术（声称只需一滴血即可完成数百项检测）</td>
+</tr>
+<tr>
+<td>巅峰估值</td>
+<td>100亿美元（2013-2014年）</td>
+</tr>
+<tr>
+<td>最终结局</td>
+<td>2018年解散清算，创始人被判11年3个月监禁</td>
+</tr>
+<tr>
+<td>累计融资</td>
+<td>约7.24亿美元</td>
+</tr>
+</tbody>
+</table></div><h2 id="融资历程">融资历程</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>轮次</th>
+<th>时间</th>
+<th>金额</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>种子轮</td>
+<td>2004年</td>
+<td>100万美元</td>
+<td>Tim Draper（硅谷VC，霍姆斯家族朋友）</td>
+</tr>
+<tr>
+<td>早期融资</td>
+<td>2004-2012年</td>
+<td>约4亿美元</td>
+<td>逐步积累</td>
+</tr>
+<tr>
+<td>后期融资</td>
+<td>2013-2015年</td>
+<td>约3亿美元</td>
+<td>—</td>
+</tr>
+<tr>
+<td>合计</td>
+<td>2004-2016年</td>
+<td>约7.24亿美元</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div><p>主要投资者包括：</p>
+<ul>
+<li><strong>Tim Draper</strong>：硅谷知名VC，第一个投资者</li>
+<li><strong>Rupert Murdoch</strong>（默多克）：投资1.25亿美元</li>
+<li><strong>Walton家族</strong>（沃尔玛创始家族）：投资1.5亿美元</li>
+<li><strong>DeVos家族</strong>（含教育部长Betsy DeVos）：投资1亿美元</li>
+<li><strong>Cox家族</strong>（Cox Enterprises）</li>
+<li><strong>Carlos Slim Helú</strong>（墨西哥首富）</li>
+<li><strong>Larry Ellison</strong>（甲骨文创始人）</li>
+<li><strong>前国务卿George Shultz</strong>、<strong>前国防部长James Mattis</strong>等政界人士加入董事会</li>
+</ul>
+<h2 id="商业模式-曾经的愿景">商业模式（曾经的愿景）</h2>
+<p>Theranos声称开发了一项革命性技术——只需从指尖采集一滴血（Nanotainer技术），即可在便携式血液分析仪（Edison）上完成数百项血液检测，包括癌症筛查、胆固醇检测、血糖监测等。与传统抽血检测相比，Theranos的技术号称更快、更便宜、更便捷。</p>
+<p>愿景是颠覆价值750亿美元的血液检测行业，让每个人都能方便地获得自己的健康数据。霍姆斯被媒体比作&quot;下一个乔布斯&quot;，常穿黑色高领毛衣，刻意模仿乔布斯的形象。</p>
+<h2 id="失败原因分析">失败原因分析</h2>
+<h3 id="核心原因-从始至终的技术欺诈">核心原因：从始至终的技术欺诈</h3>
+<ol>
+<li>
+<p><strong>核心技术根本不可行</strong>：Theranos的Edison血液分析仪从未能够准确完成其声称的数百项检测。实际上，该设备只能完成极少数检测项目，且结果极不准确。内部邮件揭露，公司使用改装的演示设备来掩盖错误结果，或部分隐藏检测结果来欺骗投资者和合作伙伴。</p>
+</li>
+<li>
+<p><strong>系统性欺骗投资者</strong>：向投资者提供的财务文件声称2014年将产生9500万美元收入（来自制药服务和医院实验室等），但实际收入仅约10万美元。同时期每月净亏损800-900万美元。</p>
+</li>
+<li>
+<p><strong>利用监管漏洞</strong>：Theranos通过将检测服务定位为&quot;消费者直接检测&quot;而非&quot;临床实验室检测&quot;，规避了FDA的上市前审查和同行评审的科学研究验证。</p>
+</li>
+</ol>
+<h3 id="次要原因">次要原因</h3>
+<ol start="4">
+<li>
+<p><strong>&quot;Fake it till you make it&quot;的硅谷文化</strong>：霍姆斯将硅谷创业文化中最危险的一面——“先假装做到，直到真正做到”——推向了极致。在软件行业，这可能只是用户体验的问题；但在医疗行业，错误的检测结果可能致命。</p>
+</li>
+<li>
+<p><strong>名人背书掩盖了技术缺陷</strong>：董事会中大量的政界、军界名人（前国务卿、前国防部长等）给Theranos披上了信誉的外衣，使投资者和合作伙伴放松了警惕。</p>
+</li>
+<li>
+<p><strong>保密文化阻碍了外部审查</strong>：Theranos以&quot;商业机密&quot;为由，拒绝向投资者和合作伙伴展示技术细节，包括使用其他公司的商业设备替代自有设备进行检测。</p>
+</li>
+<li>
+<p><strong>创始人对吹哨人的压制</strong>：前员工Tyler Shultz（前国务卿George Shultz的孙子）和Erika Cheung发现技术问题后，遭到公司律师的威胁和恐吓。</p>
+</li>
+</ol>
+<h2 id="关键转折点时间线">关键转折点时间线</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>时间</th>
+<th>事件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2003年</td>
+<td>19岁的霍姆斯从斯坦福辍学，创立Theranos</td>
+</tr>
+<tr>
+<td>2004年</td>
+<td>获得Tim Draper的100万美元种子投资</td>
+</tr>
+<tr>
+<td>2013年</td>
+<td>估值达10亿美元，正式成为独角兽</td>
+</tr>
+<tr>
+<td>2013-2014年</td>
+<td>与Walgreens合作，在其药店内开设检测中心</td>
+</tr>
+<tr>
+<td>2014年</td>
+<td>估值达100亿美元，霍姆斯以45亿美元身家登上福布斯</td>
+</tr>
+<tr>
+<td>2015年10月</td>
+<td>华尔街日报记者John Carreyrou发表调查报道，揭露技术问题</td>
+</tr>
+<tr>
+<td>2015年10月</td>
+<td>CMS（联邦医疗保险和医疗补助服务中心）启动调查</td>
+</tr>
+<tr>
+<td>2016年1月</td>
+<td>CMS发布报告，指出Theranos实验室存在严重问题</td>
+</tr>
+<tr>
+<td>2016年6月</td>
+<td>福布斯将Theranos估值下调至8亿美元（霍姆斯身家归零）</td>
+</tr>
+<tr>
+<td>2016年7月</td>
+<td>Walgreens终止合作</td>
+</tr>
+<tr>
+<td>2018年3月</td>
+<td>SEC指控霍姆斯和Balwani&quot;大规模欺诈&quot;</td>
+</tr>
+<tr>
+<td>2018年3月</td>
+<td>霍姆斯与SEC和解：罚款50万美元，放弃投票权，10年内不得担任上市公司高管</td>
+</tr>
+<tr>
+<td>2018年6月</td>
+<td>霍姆斯和Balwani被联邦大陪审团起诉，面临9项电信欺诈和2项共谋罪</td>
+</tr>
+<tr>
+<td>2018年9月</td>
+<td>Theranos开始解散清算</td>
+</tr>
+<tr>
+<td>2021年8月</td>
+<td>审判开始</td>
+</tr>
+<tr>
+<td>2022年1月</td>
+<td>霍姆斯被判4项欺诈投资者罪名成立</td>
+</tr>
+<tr>
+<td>2022年11月</td>
+<td>霍姆斯被判处11年3个月监禁</td>
+</tr>
+<tr>
+<td>2022年7月</td>
+<td>Balwani被判欺诈投资者和患者罪名成立</td>
+</tr>
+<tr>
+<td>2022年12月</td>
+<td>Balwani被判处12年11个月监禁</td>
+</tr>
+<tr>
+<td>2024年</td>
+<td>霍姆斯上诉失败，法院维持原判及4.52亿美元赔偿</td>
+</tr>
+</tbody>
+</table></div><h2 id="投资人损失分析">投资人损失分析</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>投资方</th>
+<th>投资金额</th>
+<th>损失情况</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Walton家族</td>
+<td>1.5亿美元</td>
+<td>全部损失</td>
+<td>沃尔玛创始家族</td>
+</tr>
+<tr>
+<td>Rupert Murdoch</td>
+<td>1.25亿美元</td>
+<td>全部损失</td>
+<td>新闻集团创始人</td>
+</tr>
+<tr>
+<td>DeVos家族</td>
+<td>1亿美元</td>
+<td>全部损失</td>
+<td>含前教育部长</td>
+</tr>
+<tr>
+<td>其他投资者</td>
+<td>约3.5亿美元</td>
+<td>全部损失</td>
+<td>包括Larry Ellison等</td>
+</tr>
+</tbody>
+</table></div><p><strong>总损失</strong>：约7.24亿美元全部损失。投资者后来通过诉讼获得部分和解——霍姆斯和Balwani被判赔偿4.52亿美元。</p>
+<h2 id="尽调红旗信号深度分析">尽调红旗信号深度分析</h2>
+<h3 id="红旗1-创始人拒绝展示技术细节">红旗1：创始人拒绝展示技术细节</h3>
+<p><strong>发现难度</strong>：低 — 只要要求技术演示即可发现。</p>
+<p><strong>为何被忽略</strong>：霍姆斯以&quot;商业机密&quot;为由拒绝技术展示，投资人接受了这一说法。名人背书（前国务卿、前国防部长）增加了可信度。</p>
+<p><strong>尽调检查项</strong>：</p>
+<ul>
+<li>对于声称拥有突破性技术的公司，必须要求独立的技术验证</li>
+<li>聘请行业专家进行技术尽调，而非仅依赖创始人演示</li>
+<li>如果公司拒绝技术展示，应立即终止投资流程</li>
+<li>链接：<a href="/vcpe-knowledge-base/articles/%E5%95%86%E4%B8%9A%E5%B0%BD%E8%B0%83%E6%96%B9%E6%B3%95/">商业尽调方法</a> — 技术尽调要点</li>
+</ul>
+<h3 id="红旗2-缺乏独立的科学验证">红旗2：缺乏独立的科学验证</h3>
+<p><strong>发现难度</strong>：低 — Theranos从未在同行评审期刊发表论文。</p>
+<p><strong>为何被忽略</strong>：投资人对医疗科技行业的专业性缺乏了解，未意识到同行评审的重要性。</p>
+<p><strong>尽调检查项</strong>：</p>
+<ul>
+<li>检查公司是否在同行评审期刊发表过技术验证论文</li>
+<li>评估公司的研发团队是否具备相关领域的专业背景</li>
+<li>了解公司的技术是否获得了行业认证或监管批准</li>
+<li>链接：<a href="/vcpe-knowledge-base/articles/%E5%B0%BD%E8%B0%83%E7%BA%A2%E6%97%97%E4%BF%A1%E5%8F%B7/">尽调红旗信号</a> — 技术验证缺失</li>
+</ul>
+<h3 id="红旗3-创始人年龄和背景不匹配">红旗3：创始人年龄和背景不匹配</h3>
+<p><strong>发现难度</strong>：低 — 霍姆斯的履历公开透明。</p>
+<p><strong>为何被忽略</strong>：在&quot;年轻天才&quot;的叙事下，霍姆斯19岁辍学创业被视为&quot;勇气&quot;和&quot;远见&quot;。但缺乏医学背景却声称要颠覆血液检测行业，值得怀疑。</p>
+<p><strong>尽调检查项</strong>：</p>
+<ul>
+<li>评估创始人的专业背景是否与创业领域匹配</li>
+<li>了解创始团队是否具备相关行业的核心技术人员</li>
+<li>对于深度科技公司，创始人必须具备相关的技术背景</li>
+<li>链接：<a href="/vcpe-knowledge-base/articles/%E5%95%86%E4%B8%9A%E5%B0%BD%E8%B0%83%E6%96%B9%E6%B3%95/">商业尽调方法</a> — 创始人背景调查</li>
+</ul>
+<h3 id="红旗4-过度依赖名人背书">红旗4：过度依赖名人背书</h3>
+<p><strong>发现难度</strong>：低 — Theranos的董事会构成公开可查。</p>
+<p><strong>为何被忽略</strong>：前国务卿、前国防部长等名人加入董事会，被视为公司可信度的证明。但这些名人并非医疗技术专家，他们的背书仅限于&quot;政治信誉&quot;。</p>
+<p><strong>尽调检查项</strong>：</p>
+<ul>
+<li>区分&quot;政治信誉&quot;和&quot;技术信誉&quot;</li>
+<li>评估董事会成员是否具备相关行业的专业能力</li>
+<li>不应将名人背书作为投资决策的主要依据</li>
+<li>链接：<a href="/vcpe-knowledge-base/articles/%E6%B3%95%E5%BE%8B%E5%B0%BD%E8%B0%83%E6%B8%85%E5%8D%95/">法律尽调清单</a> — 董事会构成审查</li>
+</ul>
+<h3 id="红旗5-保密程度异常">红旗5：保密程度异常</h3>
+<p><strong>发现难度</strong>：中等 — 需要对比行业惯例。</p>
+<p><strong>为何被忽略</strong>：在科技行业，保护商业机密是正常的。但Theranos的保密程度远超正常范围，实际上是在掩盖技术缺陷。</p>
+<p><strong>尽调检查项</strong>：</p>
+<ul>
+<li>对比同行业公司的保密程度</li>
+<li>如果公司拒绝向投资人展示核心技术，应高度警惕</li>
+<li>评估保密是否合理（是否真的涉及商业机密）</li>
+<li>链接：<a href="/vcpe-knowledge-base/articles/%E5%B0%BD%E8%B0%83%E7%BA%A2%E6%97%97%E4%BF%A1%E5%8F%B7/">尽调红旗信号</a> — 信息不透明</li>
+</ul>
+<h3 id="红旗6-吹哨人的存在">红旗6：吹哨人的存在</h3>
+<p><strong>发现难度</strong>：高 — 吹哨人信息在投资时通常不公开。</p>
+<p><strong>为何被忽略</strong>：Tyler Shultz的警告被忽视了多年。公司律师的威胁和恐吓使吹哨人难以发声。</p>
+<p><strong>尽调检查项</strong>：</p>
+<ul>
+<li>在投资前进行背景调查，了解是否有前员工提出过质疑</li>
+<li>关注Glassdoor等平台上的员工评价</li>
+<li>如果发现吹哨人信息，应认真调查而非忽视</li>
+<li>链接：<a href="/vcpe-knowledge-base/articles/%E5%95%86%E4%B8%9A%E5%B0%BD%E8%B0%83%E6%96%B9%E6%B3%95/">商业尽调方法</a> — 员工访谈和背景调查</li>
+</ul>
+<h3 id="红旗7-财务数据无法验证">红旗7：财务数据无法验证</h3>
+<p><strong>发现难度</strong>：中等 — 需要深入分析财务数据。</p>
+<p><strong>为何被忽略</strong>：投资人信任管理层提供的财务数据，未进行独立验证。</p>
+<p><strong>尽调检查项</strong>：</p>
+<ul>
+<li>要求公司提供详细的收入来源和客户清单</li>
+<li>独立验证主要客户的存在和交易真实性</li>
+<li>对比公司声称的收入与行业规模是否合理</li>
+<li>链接：<a href="/vcpe-knowledge-base/articles/%E8%B4%A2%E5%8A%A1%E5%B0%BD%E8%B0%83%E6%B8%85%E5%8D%95/">财务尽调清单</a> — 收入真实性验证</li>
+</ul>
+<h2 id="估值泡沫分析">估值泡沫分析</h2>
+<h3 id="暴雷前的估值水平">暴雷前的估值水平</h3>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>时间</th>
+<th>估值</th>
+<th>收入（真实）</th>
+<th>P/S倍数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2004年（种子轮）</td>
+<td>约500万美元</td>
+<td>0</td>
+<td>—</td>
+<td>纯概念期</td>
+</tr>
+<tr>
+<td>2013年（独角兽）</td>
+<td>10亿美元</td>
+<td>约10万美元</td>
+<td>~10000x</td>
+<td>极度泡沫</td>
+</tr>
+<tr>
+<td>2014年（巅峰）</td>
+<td>100亿美元</td>
+<td>约10万美元</td>
+<td>~100000x</td>
+<td>完全脱离现实</td>
+</tr>
+<tr>
+<td>2016年（曝光后）</td>
+<td>8亿美元</td>
+<td>—</td>
+<td>—</td>
+<td>福布斯下调</td>
+</tr>
+</tbody>
+</table></div><h3 id="估值方法的误用">估值方法的误用</h3>
+<ol>
+<li>
+<p><strong>基于虚假技术的估值</strong>：Theranos的估值完全建立在&quot;一滴血检测&quot;的技术承诺上，而这一技术根本不可行。估值的基础是虚假的。</p>
+</li>
+<li>
+<p><strong>名人背书替代技术验证</strong>：投资人将名人背书等同于技术可靠，但政治信誉不等于技术信誉。</p>
+</li>
+<li>
+<p><strong>TAM（总可寻址市场）估值法的滥用</strong>：Theranos声称要颠覆750亿美元的血液检测市场，投资人基于这一TAM进行估值。但TAM的前提是技术可行，而技术根本不可行。</p>
+</li>
+<li>
+<p><strong>&quot;下一个乔布斯&quot;的叙事溢价</strong>：霍姆斯被比作&quot;下一个乔布斯&quot;，这一叙事为公司带来了巨大的估值溢价。</p>
+</li>
+</ol>
+<h3 id="估值参考框架">估值参考框架</h3>
+<ul>
+<li>合理估值方法：技术验证后才能估值</li>
+<li>参考公司：Quest Diagnostics（P/S约2-3x，PE约15x）</li>
+<li>如果技术可行，合理估值可能在10-20亿美元（基于TAM和市场份额假设）</li>
+<li>但技术根本不可行，合理估值应为0</li>
+<li>链接：<a href="/vcpe-knowledge-base/articles/%E5%8F%AF%E6%AF%94%E5%85%AC%E5%8F%B8%E6%B3%95/">可比公司法</a>、<a href="/vcpe-knowledge-base/articles/pre-money%E4%B8%8Epost-money/">Pre-Money与Post-Money</a>、<a href="/vcpe-knowledge-base/articles/%E4%BC%B0%E5%80%BC%E8%B0%88%E5%88%A4%E4%B8%8E%E5%8D%9A%E5%BC%88/">估值谈判与博弈</a></li>
+</ul>
+<h2 id="法律条款复盘">法律条款复盘</h2>
+<h3 id="对赌条款情况">对赌条款情况</h3>
+<p>Theranos的融资协议中未公开披露对赌条款，但存在隐性安排：</p>
+<ul>
+<li>投资人预期Theranos在5-10年内实现技术突破和商业化</li>
+<li>霍姆斯的超级投票权使其在公司拥有绝对控制权</li>
+</ul>
+<h3 id="回购条款触发">回购条款触发</h3>
+<ul>
+<li>SEC指控霍姆斯和Balwani&quot;大规模欺诈&quot;</li>
+<li>霍姆斯与SEC和解：罚款50万美元，放弃投票权，10年内不得担任上市公司高管</li>
+<li>刑事诉讼最终判了霍姆斯11年监禁</li>
+</ul>
+<h3 id="法律追偿情况">法律追偿情况</h3>
+<ul>
+<li>SEC对霍姆斯和Balwani提起民事诉讼</li>
+<li>联邦检察官对霍姆斯和Balwani提起刑事诉讼</li>
+<li>霍姆斯被判4项欺诈投资者罪名成立，判处11年3个月监禁</li>
+<li>Balwani被判欺诈投资者和患者罪名成立，判处12年11个月监禁</li>
+<li>霍姆斯和Balwani被判赔偿4.52亿美元</li>
+<li>链接：<a href="/vcpe-knowledge-base/articles/%E5%AF%B9%E8%B5%8C%E5%8D%8F%E8%AE%AE-vam/">对赌协议-VAM</a>、<a href="/vcpe-knowledge-base/articles/%E5%9B%9E%E8%B4%AD%E6%9D%A1%E6%AC%BE%E8%A7%A6%E5%8F%91/">回购条款触发</a>、<a href="/vcpe-knowledge-base/articles/%E8%82%A1%E4%B8%9C%E5%8D%8F%E8%AE%AE%E6%A0%B8%E5%BF%83%E6%9D%A1%E6%AC%BE/">股东协议核心条款</a></li>
+</ul>
+<h2 id="投资组合教训">投资组合教训</h2>
+<h3 id="失败案例在组合中的合理比例">失败案例在组合中的合理比例</h3>
+<ul>
+<li>深度科技/医疗科技项目：建议不超过组合的15-20%</li>
+<li>尚未通过同行评审的技术项目：需谨慎评估</li>
+<li>单一项目最大敞口：不超过基金总额的10%</li>
+</ul>
+<h3 id="分散化策略启示">分散化策略启示</h3>
+<ol>
+<li><strong>技术验证</strong>：对声称拥有突破性技术的公司，必须要求独立的技术验证</li>
+<li><strong>行业专家</strong>：投资深度科技项目时，必须聘请行业专家进行尽调</li>
+<li><strong>名人背书</strong>：不应将名人背书作为投资决策的主要依据</li>
+</ol>
+<h3 id="风险类型归类">风险类型归类</h3>
+<ul>
+<li><strong>技术风险</strong>：核心技术不可行（P0级）</li>
+<li><strong>创始人风险</strong>：系统性欺诈（P0级）</li>
+<li><strong>治理风险</strong>：超级投票权+名人背书（P0级）</li>
+<li><strong>监管风险</strong>：利用监管漏洞（P1级）</li>
+<li>链接：<a href="/vcpe-knowledge-base/articles/%E6%8A%95%E8%B5%84%E7%BB%84%E5%90%88%E6%9E%84%E5%BB%BA/">投资组合构建</a>、<a href="/vcpe-knowledge-base/articles/%E5%88%86%E6%95%A3%E5%8C%96%E7%AD%96%E7%95%A5/">分散化策略</a>、<a href="/vcpe-knowledge-base/articles/%E5%B8%B8%E8%A7%81%E9%A3%8E%E9%99%A9%E7%B1%BB%E5%9E%8B/">常见风险类型</a></li>
+</ul>
+<h2 id="关联案例对比">关联案例对比</h2>
+<h3 id="与同赛道成功案例对比-theranos-vs-quest-diagnostics">与同赛道成功案例对比：Theranos vs Quest Diagnostics</h3>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>维度</th>
+<th>Theranos</th>
+<th>Quest Diagnostics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>技术</td>
+<td>声称一滴血检测数百项</td>
+<td>传统抽血检测</td>
+</tr>
+<tr>
+<td>估值</td>
+<td>巅峰100亿美元</td>
+<td>约200亿美元</td>
+</tr>
+<tr>
+<td>收入</td>
+<td>约10万美元</td>
+<td>约100亿美元</td>
+</tr>
+<tr>
+<td>盈利能力</td>
+<td>从未盈利</td>
+<td>稳定盈利</td>
+</tr>
+<tr>
+<td>核心差异</td>
+<td>技术虚假</td>
+<td>技术成熟</td>
+</tr>
+</tbody>
+</table></div><p><strong>关键教训</strong>：在医疗行业，技术必须经过严格的科学验证。Quest Diagnostics用了数十年建立技术和运营体系，Theranos试图用虚假技术&quot;速成&quot;，最终付出了欺诈的代价。</p>
+<h3 id="与同类型失败案例对比-theranos-vs-ftx">与同类型失败案例对比：Theranos vs FTX</h3>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>维度</th>
+<th>Theranos</th>
+<th>FTX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>造假类型</td>
+<td>技术能力造假</td>
+<td>财务数据造假</td>
+</tr>
+<tr>
+<td>造假规模</td>
+<td>声称收入9500万实际仅10万</td>
+<td>挪用客户资金90亿美元</td>
+</tr>
+<tr>
+<td>发现方式</td>
+<td>记者调查+吹哨人</td>
+<td>资产负债表曝光</td>
+</tr>
+<tr>
+<td>创始人结局</td>
+<td>被判11年监禁</td>
+<td>被判25年监禁</td>
+</tr>
+<tr>
+<td>投资者</td>
+<td>名人家族</td>
+<td>顶级VC</td>
+</tr>
+</tbody>
+</table></div><p><strong>关键教训</strong>：无论是技术造假还是财务造假，核心都是创始人诚信缺失。投资者必须进行独立验证，不能仅依赖创始人和名人背书。</p>
+<ul>
+<li>链接：<a href="/vcpe-knowledge-base/articles/%E6%A1%88%E4%BE%8B-%E5%A4%B1%E8%B4%A5-ftx/">案例-失败-FTX</a>、<a href="/vcpe-knowledge-base/articles/%E6%A1%88%E4%BE%8B-%E5%A4%B1%E8%B4%A5-%E7%91%9E%E5%B9%B8%E5%92%96%E5%95%A1/">案例-失败-瑞幸咖啡</a></li>
+</ul>
+<h2 id="经验教训">经验教训</h2>
+<ol>
+<li>
+<p><strong>&quot;Fake it till you make it&quot;在医疗行业是致命的</strong>：硅谷创业文化中的&quot;先假装做到&quot;在软件行业可能只是功能缺失，但在涉及人命的医疗行业，这可能导致错误诊断和生命损失。</p>
+</li>
+<li>
+<p><strong>技术尽调必须包含独立专家验证</strong>：对于声称拥有突破性技术的公司，投资者必须聘请独立的行业专家进行技术验证，而不能仅依赖创始人的演示和说辞。</p>
+</li>
+<li>
+<p><strong>名人背书不等于技术可靠</strong>：前国务卿、前国防部长加入董事会并不能证明公司的技术是可行的。投资者应区分&quot;政治信誉&quot;和&quot;技术信誉&quot;。</p>
+</li>
+<li>
+<p><strong>投资者应认真对待吹哨人</strong>：Tyler Shultz的警告被忽视了多年。任何公司内部的异议声音都值得认真调查。</p>
+</li>
+<li>
+<p><strong>SEC和解不等于无罪</strong>：霍姆斯与SEC的和解（罚款50万美元、10年禁止担任上市公司高管）看似轻描淡写，但刑事诉讼最终判了她11年监禁。</p>
+</li>
+<li>
+<p><strong>监管漏洞可以被利用</strong>：Theranos利用了FDA对&quot;消费者直接检测&quot;产品的监管空白。投资者应关注监管风险，特别是在医疗健康领域。</p>
+</li>
+</ol>
+<h2 id="参考来源">参考来源</h2>
+<ul>
+<li>Investopedia: “Theranos: A Fallen Unicorn”</li>
+<li>Wikipedia: Elizabeth Holmes &amp; Theranos词条</li>
+<li>CNBC: “Theranos: DeVos, other investors reportedly lost over $600 million”</li>
+<li>PMC: “Lessons from Theranos – Restructuring Biomedical Innovation”</li>
+<li>BBC: “Theranos founder Elizabeth Holmes loses fraud appeal”</li>
+<li>Hagens Berman: Theranos Investor Fraud案件资料</li>
+</ul>
+<h2 id="相关主题">相关主题</h2>
+<ul>
+<li><a href="/vcpe-knowledge-base/articles/%E6%A1%88%E4%BE%8B-%E5%A4%B1%E8%B4%A5-ftx/">案例-失败-FTX</a> — 另一个硅谷&quot;天才创始人&quot;的欺诈案例</li>
+<li><a href="/vcpe-knowledge-base/articles/%E6%A1%88%E4%BE%8B-%E5%A4%B1%E8%B4%A5-%E7%91%9E%E5%B9%B8%E5%92%96%E5%95%A1/">案例-失败-瑞幸咖啡</a> — 财务造假的中国案例</li>
+<li><a href="/vcpe-knowledge-base/articles/%E6%A1%88%E4%BE%8B-%E5%A4%B1%E8%B4%A5-wework/">案例-失败-WeWork</a> — 创始人治理失控的案例</li>
+<li><a href="/vcpe-knowledge-base/articles/%E6%A1%88%E4%BE%8B-%E5%A4%B1%E8%B4%A5-%E6%9F%94%E5%AE%87%E7%A7%91%E6%8A%80/">案例-失败-柔宇科技</a> — 技术公司估值泡沫</li>
+<li><a href="/vcpe-knowledge-base/articles/%E5%8F%AF%E6%AF%94%E5%85%AC%E5%8F%B8%E6%B3%95/">可比公司法</a> — 如何选择正确的估值参照系</li>
+<li><a href="/vcpe-knowledge-base/articles/%E6%8A%95%E8%B5%84%E7%BB%84%E5%90%88%E6%9E%84%E5%BB%BA/">投资组合构建</a> — 如何在组合中配置深度科技项目</li>
+<li><a href="/vcpe-knowledge-base/articles/%E5%B0%BD%E8%B0%83%E7%BA%A2%E6%97%97%E4%BF%A1%E5%8F%B7/">尽调红旗信号</a> — 技术造假的识别方法</li>
+<li><a href="/vcpe-knowledge-base/articles/%E5%95%86%E4%B8%9A%E5%B0%BD%E8%B0%83%E6%96%B9%E6%B3%95/">商业尽调方法</a> — 技术尽调的关键步骤</li>
+<li><a href="/vcpe-knowledge-base/articles/%E6%B3%95%E5%BE%8B%E5%B0%BD%E8%B0%83%E6%B8%85%E5%8D%95/">法律尽调清单</a> — 董事会构成审查</li>
+<li><a href="/vcpe-knowledge-base/articles/%E5%88%86%E6%95%A3%E5%8C%96%E7%AD%96%E7%95%A5/">分散化策略</a> — 如何避免名人背书的投资陷阱</li>
+</ul>
+</div> <!-- Related Articles --> <section class="mt-12 pt-8 border-t border-gray-200 dark:border-primary-800"> <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">📎 相关推荐</h2> <div class="space-y-3"> <a href="/vcpe-knowledge-base/articles/案例-失败-ftx/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> FTX — 从320亿美元到零：加密货币史上最大的欺诈案 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">FTX是一家加密货币衍生品交易所，提供期货、期权、杠杆代币等复杂金融产品。SBF被塑造为&quot;加密货币的救世主&quot;和&quot;有效利他主义&quot;的践行者——他声称赚取巨额财富是为了将其捐出。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/案例-失败-wework/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> WeWork — 从470亿美元估值到28亿美元的独角兽泡沫破灭 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">WeWork的表面愿景是&quot;提升全世界的感知力&quot;，核心业务是长期租赁商业地产，经过装修设计后分割成小单元，以短期灵活的方式转租给初创企业、自由职业者和跨国公司。创始人诺伊曼将WeWork包装为&quot;科技公司&quot;而非房地产公司，声称其拥有强大的社区运营能力和数据驱动的空间管理技术。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/案例-失败-柔宇科技/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 柔宇科技 — 500亿独角兽的柔性屏帝国梦碎 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">主要股东包括：刘自鸿（38.6%）、中信资本（6.05%）、深创投等40余家机构。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/失败案例-ofo押金危机/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 失败案例-OFO押金危机 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">注意：OFO在2018年后未再获得新融资，2020年后实质上已停止运营。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/失败案例-乐视生态崩塌/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 失败案例-乐视生态崩塌 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">注意：乐视网在2015年市值最高达1700亿元，是当时创业板市值最高的公司。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a> </div> </section> </div> <!-- Table of Contents (Desktop) --> <aside class="hidden xl:block w-64 flex-shrink-0"> <div class="sticky top-20"> <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">目录</h3> <nav class="space-y-1"> <a href="#基本信息" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="基本信息"> 基本信息 </a><a href="#融资历程" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="融资历程"> 融资历程 </a><a href="#商业模式-曾经的愿景" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="商业模式-曾经的愿景"> 商业模式（曾经的愿景） </a><a href="#失败原因分析" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="失败原因分析"> 失败原因分析 </a><a href="#核心原因-从始至终的技术欺诈" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="核心原因-从始至终的技术欺诈"> 核心原因：从始至终的技术欺诈 </a><a href="#次要原因" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="次要原因"> 次要原因 </a><a href="#关键转折点时间线" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键转折点时间线"> 关键转折点时间线 </a><a href="#投资人损失分析" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="投资人损失分析"> 投资人损失分析 </a><a href="#尽调红旗信号深度分析" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="尽调红旗信号深度分析"> 尽调红旗信号深度分析 </a><a href="#红旗1-创始人拒绝展示技术细节" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="红旗1-创始人拒绝展示技术细节"> 红旗1：创始人拒绝展示技术细节 </a><a href="#红旗2-缺乏独立的科学验证" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="红旗2-缺乏独立的科学验证"> 红旗2：缺乏独立的科学验证 </a><a href="#红旗3-创始人年龄和背景不匹配" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="红旗3-创始人年龄和背景不匹配"> 红旗3：创始人年龄和背景不匹配 </a><a href="#红旗4-过度依赖名人背书" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="红旗4-过度依赖名人背书"> 红旗4：过度依赖名人背书 </a><a href="#红旗5-保密程度异常" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="红旗5-保密程度异常"> 红旗5：保密程度异常 </a><a href="#红旗6-吹哨人的存在" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="红旗6-吹哨人的存在"> 红旗6：吹哨人的存在 </a><a href="#红旗7-财务数据无法验证" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="红旗7-财务数据无法验证"> 红旗7：财务数据无法验证 </a><a href="#估值泡沫分析" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="估值泡沫分析"> 估值泡沫分析 </a><a href="#暴雷前的估值水平" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="暴雷前的估值水平"> 暴雷前的估值水平 </a><a href="#估值方法的误用" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="估值方法的误用"> 估值方法的误用 </a><a href="#估值参考框架" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="估值参考框架"> 估值参考框架 </a><a href="#法律条款复盘" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="法律条款复盘"> 法律条款复盘 </a><a href="#对赌条款情况" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="对赌条款情况"> 对赌条款情况 </a><a href="#回购条款触发" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="回购条款触发"> 回购条款触发 </a><a href="#法律追偿情况" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="法律追偿情况"> 法律追偿情况 </a><a href="#投资组合教训" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="投资组合教训"> 投资组合教训 </a><a href="#失败案例在组合中的合理比例" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="失败案例在组合中的合理比例"> 失败案例在组合中的合理比例 </a><a href="#分散化策略启示" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="分散化策略启示"> 分散化策略启示 </a><a href="#风险类型归类" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="风险类型归类"> 风险类型归类 </a><a href="#关联案例对比" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关联案例对比"> 关联案例对比 </a><a href="#与同赛道成功案例对比-theranos-vs-quest-diagnostics" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="与同赛道成功案例对比-theranos-vs-quest-diagnostics"> 与同赛道成功案例对比：Theranos vs Quest Diagnostics </a><a href="#与同类型失败案例对比-theranos-vs-ftx" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="与同类型失败案例对比-theranos-vs-ftx"> 与同类型失败案例对比：Theranos vs FTX </a><a href="#经验教训" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="经验教训"> 经验教训 </a><a href="#参考来源" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="参考来源"> 参考来源 </a><a href="#相关主题" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="相关主题"> 相关主题 </a> </nav> </div> </aside> </article> <script type="module">const n=new IntersectionObserver(e=>{e.forEach(t=>{const o=t.target.id,c=document.querySelector(`.toc-link[data-heading="${o}"]`);c&&t.isIntersecting&&(document.querySelectorAll(".toc-link").forEach(r=>r.classList.remove("text-accent-600","dark:text-accent-400")),c.classList.add("text-accent-600","dark:text-accent-400"))})},{rootMargin:"-80px 0px -80% 0px"});document.querySelectorAll(".prose h2[id], .prose h3[id], .prose h4[id]").forEach(e=>{n.observe(e)});</script>  </div> </main> </div> <!-- Mobile sidebar overlay --> <div id="sidebar-overlay" class="fixed inset-0 z-20 bg-black/50 hidden lg:hidden"></div> <script type="module">const m=document.getElementById("theme-toggle"),o=document.getElementById("theme-light-icon"),d=document.getElementById("theme-dark-icon");function t(e){e?(document.documentElement.classList.add("dark"),o?.classList.add("hidden"),d?.classList.remove("hidden"),localStorage.setItem("theme","dark")):(document.documentElement.classList.remove("dark"),o?.classList.remove("hidden"),d?.classList.add("hidden"),localStorage.setItem("theme","light"))}const s=localStorage.getItem("theme");t(s==="light"?!1:s==="dark"?!0:window.matchMedia("(prefers-color-scheme: dark)").matches);m?.addEventListener("click",()=>{t(!document.documentElement.classList.contains("dark"))});const r=document.getElementById("mobile-menu-toggle"),g=document.getElementById("sidebar"),l=document.getElementById("sidebar-overlay");function i(){g?.classList.toggle("-translate-x-full"),l?.classList.toggle("hidden")}r?.addEventListener("click",i);l?.addEventListener("click",i);const c=document.getElementById("reading-progress");window.addEventListener("scroll",()=>{const e=window.scrollY,n=document.documentElement.scrollHeight-window.innerHeight,a=n>0?e/n*100:0;c&&(c.style.width=`${Math.min(100,a)}%`)});document.addEventListener("keydown",e=>{(e.ctrlKey||e.metaKey)&&e.key==="k"&&(e.preventDefault(),window.location.href="/vcpe-knowledge-base/search/")});</script> </body> </html> 

@@ -1,0 +1,283 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="VC/PE 投资知识库 - 面向投资实战的系统化知识框架"><meta name="generator" content="Astro v5.18.2"><link rel="icon" type="image/svg+xml" href="/vcpe-knowledge-base/favicon.svg"><title>董事会治理 | VC/PE 投资知识库</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/vcpe-knowledge-base/_astro/index.DHKBIVZD.css"></head> <body class="bg-gray-50 dark:bg-primary-950 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300"> <!-- Reading Progress Bar --> <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-accent-500 to-accent-300 z-50 transition-all duration-150" style="width: 0%"></div> <!-- Header --> <header class="sticky top-0 z-40 bg-white/80 dark:bg-primary-900/80 backdrop-blur-md border-b border-gray-200 dark:border-primary-800"> <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between"> <div class="flex items-center gap-4"> <a href="/vcpe-knowledge-base/" class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity"> <span class="text-2xl">💰</span> <span class="hidden sm:inline">VC/PE 投资知识库</span> </a> </div> <div class="flex items-center gap-3"> <!-- Search --> <a href="/vcpe-knowledge-base/search/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> <span class="hidden md:inline">搜索...</span> <kbd class="hidden md:inline px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-primary-700 rounded">Ctrl+K</kbd> </a> <!-- Graph --> <a href="/vcpe-knowledge-base/graph/" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="12" cy="12" r="2"></circle><path d="M8 6h8M6 8v8M18 8v8M8 18h8M8 8l4 4M16 8l-4 4M8 16l4-4M16 16l-4-4"></path></svg> </a> <!-- Theme Toggle --> <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="切换主题"> <svg id="theme-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg> <svg id="theme-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> </button> <!-- Mobile Menu Toggle --> <button id="mobile-menu-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors lg:hidden"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> </button> </div> </div> </header> <div class="flex flex-1 max-w-screen-2xl mx-auto w-full"> <!-- Sidebar --> <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-30 w-72 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-primary-900 border-r border-gray-200 dark:border-primary-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300"> <nav class="p-4 space-y-1"> <a href="/vcpe-knowledge-base/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏠</span> 首页
+</a> <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">模块导航</div> <a href="/vcpe-knowledge-base/modules/00/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📚</span> 00 基础概念
+</a> <a href="/vcpe-knowledge-base/modules/01/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔄</span> 01 投资流程
+</a> <a href="/vcpe-knowledge-base/modules/02/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>💵</span> 02 估值方法
+</a> <a href="/vcpe-knowledge-base/modules/03/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📜</span> 03 法律与条款
+</a> <a href="/vcpe-knowledge-base/modules/04/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏭</span> 04 行业赛道
+</a> <a href="/vcpe-knowledge-base/modules/05/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔍</span> 05 尽职调查
+</a> <a href="/vcpe-knowledge-base/modules/06/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400"> <span>🤝</span> 06 投后管理
+</a> <a href="/vcpe-knowledge-base/modules/07/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🚪</span> 07 退出策略
+</a> <a href="/vcpe-knowledge-base/modules/08/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🇨🇳</span> 08 中国VC/PE实务
+</a> <a href="/vcpe-knowledge-base/modules/09/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📊</span> 09 风险与组合
+</a> <a href="/vcpe-knowledge-base/modules/10/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📖</span> 10 案例库
+</a> <a href="/vcpe-knowledge-base/modules/11/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🛠️</span> 11 工具与资源
+</a> </nav> </aside> <!-- Main Content --> <main class="flex-1 min-w-0 lg:ml-72"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">   <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6 flex-wrap"> <a href="/vcpe-knowledge-base/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a> <span>/</span> <a href="/vcpe-knowledge-base/modules/06/" class="hover:text-accent-600 dark:hover:text-accent-400">投后管理</a> <span>/</span> <span class="text-gray-800 dark:text-gray-200 truncate">董事会治理</span> </nav> <article class="flex gap-8"> <!-- Article Content --> <div class="flex-1 min-w-0"> <!-- Article Header --> <header class="mb-8"> <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">董事会治理</h1> <div class="flex flex-wrap items-center gap-3 mb-4"> <a href="/modules/06/" class="text-xs px-2.5 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 hover:bg-accent-200 dark:hover:bg-accent-900/50 transition-colors"> 投后管理 </a>  <a href="/search/?tag=vc-pe" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> vc-pe </a><a href="/search/?tag=%E6%8A%95%E5%90%8E%E7%AE%A1%E7%90%86" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 投后管理 </a><a href="/search/?tag=%E5%85%AC%E5%8F%B8%E6%B2%BB%E7%90%86" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 公司治理 </a><a href="/search/?tag=%E8%91%A3%E4%BA%8B%E4%BC%9A" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 董事会 </a> </div> <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400"> <span>创建于 2026/05/27</span>  <span>2964字</span> <span>约 8 分钟阅读</span> </div> </header> <!-- Article Body --> <div class="prose"><h2 id="概述">概述</h2>
+<p>董事会治理是投后管理的核心机制，指投资人通过董事会席位参与被投企业重大决策、监督管理层履职、保护股东权益的制度安排。良好的董事会治理能有效降低代理成本、提升企业决策质量，是VC/PE投资人实现投后价值创造和风险控制的关键抓手。</p>
+<h2 id="核心内容">核心内容</h2>
+<h3 id="一-董事会构成">一、董事会构成</h3>
+<h4 id="1-董事会规模与席位分配">1. 董事会规模与席位分配</h4>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>企业阶段</th>
+<th>建议董事人数</th>
+<th>投资人席位</th>
+<th>创始团队席位</th>
+<th>独立董事</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>种子/天使轮</td>
+<td>3-5人</td>
+<td>0-1席</td>
+<td>2-3席</td>
+<td>0-1席</td>
+</tr>
+<tr>
+<td>A轮</td>
+<td>5-7人</td>
+<td>1-2席</td>
+<td>2-3席</td>
+<td>0-1席</td>
+</tr>
+<tr>
+<td>B轮及以后</td>
+<td>5-9人</td>
+<td>1-3席</td>
+<td>2-3席</td>
+<td>1-2席</td>
+</tr>
+<tr>
+<td>Pre-IPO</td>
+<td>7-11人</td>
+<td>1-2席</td>
+<td>2-3席</td>
+<td>3席以上</td>
+</tr>
+</tbody>
+</table></div><h4 id="2-独立董事的角色">2. 独立董事的角色</h4>
+<ul>
+<li><strong>定义</strong>：独立于公司管理层和主要股东，无重大利益关联的外部董事</li>
+<li><strong>核心职能</strong>：
+<ul>
+<li>在关联交易、高管薪酬等利益冲突事项上提供独立判断</li>
+<li>A股上市要求独立董事占比不低于1/3，且至少包含1名会计专业人士</li>
+<li>监督审计委员会、薪酬委员会等专门委员会运作</li>
+</ul>
+</li>
+<li><strong>选任标准</strong>：行业经验、专业背景（法律/财务/技术）、时间投入意愿</li>
+</ul>
+<h4 id="3-投资人董事的权利与义务">3. 投资人董事的权利与义务</h4>
+<p><strong>权利：</strong></p>
+<ul>
+<li>信息知情权：定期获取财务报告、经营数据</li>
+<li>提案权：就重大事项向董事会提出议案</li>
+<li>表决权：对普通决议和特别决议进行投票</li>
+<li>现场检查权：走访公司、查阅账簿</li>
+</ul>
+<p><strong>义务：</strong></p>
+<ul>
+<li>忠实义务：不得利用董事地位谋取私利</li>
+<li>勤勉义务：以合理注意参与公司决策</li>
+<li>保密义务：对获悉的商业秘密承担保密责任</li>
+<li>竞业禁止：不得自营或为他人经营同类业务</li>
+</ul>
+<h3 id="二-董事会会议制度">二、董事会会议制度</h3>
+<h4 id="1-会议频率">1. 会议频率</h4>
+<ul>
+<li><strong>定期会议</strong>：每季度至少1次，年度不少于4次</li>
+<li><strong>临时会议</strong>：代表1/10以上表决权的股东、1/3以上董事或监事会可提议召开</li>
+<li><strong>年度董事会</strong>：审议年度报告、利润分配方案、下年度预算</li>
+</ul>
+<h4 id="2-会议议程设置">2. 会议议程设置</h4>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>议程类型</th>
+<th>典型内容</th>
+<th>频率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>财务回顾</td>
+<td>收入/利润/现金流/KPI完成情况</td>
+<td>每次</td>
+</tr>
+<tr>
+<td>战略讨论</td>
+<td>业务方向、市场变化、竞争分析</td>
+<td>季度/半年</td>
+</tr>
+<tr>
+<td>人事任命</td>
+<td>高管任命/解聘、股权激励方案</td>
+<td>按需</td>
+</tr>
+<tr>
+<td>融资决策</td>
+<td>新一轮融资、估值、条款</td>
+<td>按需</td>
+</tr>
+<tr>
+<td>风险通报</td>
+<td>重大风险事件、合规问题</td>
+<td>按需</td>
+</tr>
+</tbody>
+</table></div><h4 id="3-决议类型">3. 决议类型</h4>
+<p><strong>普通决议</strong>（过半数通过）：</p>
+<ul>
+<li>审议批准年度报告和财务方案</li>
+<li>制定公司基本管理制度</li>
+<li>决定内部管理机构设置</li>
+<li>聘任或解聘总经理及高管</li>
+</ul>
+<p><strong>特别决议</strong>（2/3以上通过）：</p>
+<ul>
+<li>修改公司章程</li>
+<li>增加或减少注册资本</li>
+<li>公司合并、分立、解散或变更形式</li>
+<li>发行公司债券</li>
+</ul>
+<h3 id="三-中国公司法下的董事会规则">三、中国公司法下的董事会规则</h3>
+<h4 id="1-法律框架-公司法-2023修订版要点">1. 法律框架（《公司法》2023修订版要点）</h4>
+<ul>
+<li>有限责任公司：董事会成员3-13人，可不设董事会（仅设1名执行董事）</li>
+<li>股份有限公司：董事会成员5-19人</li>
+<li>董事任期每届不超过3年，可连选连任</li>
+<li>董事长/副董事长由全体董事过半数选举产生</li>
+</ul>
+<h4 id="2-投资人保护的常见治理安排">2. 投资人保护的常见治理安排</h4>
+<ul>
+<li><strong>一票否决权（Protective Provisions）</strong>：对特定重大事项（如增发新股、关联交易、变更公司章程）拥有否决权</li>
+<li><strong>观察员权利（Observer Rights）</strong>：不持股或持股较少的投资人委派观察员列席董事会</li>
+<li><strong>信息权（Information Rights）</strong>：定期获取月度/季度财务报告和经营数据</li>
+<li><strong>反稀释保护</strong>：后续融资中的优先认购权和反稀释调整机制</li>
+</ul>
+<h3 id="四-董事会委员会设置">四、董事会委员会设置</h3>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>委员会</th>
+<th>职能</th>
+<th>建议设置阶段</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>审计委员会</td>
+<td>财务报告审核、内控监督、外部审计沟通</td>
+<td>B轮以后</td>
+</tr>
+<tr>
+<td>薪酬委员会</td>
+<td>高管薪酬方案、股权激励计划</td>
+<td>B轮以后</td>
+</tr>
+<tr>
+<td>提名委员会</td>
+<td>董事和高管候选人推荐</td>
+<td>Pre-IPO</td>
+</tr>
+<tr>
+<td>战略委员会</td>
+<td>重大战略决策审议</td>
+<td>A轮以后（非必需）</td>
+</tr>
+</tbody>
+</table></div><h2 id="关键术语">关键术语</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>术语</th>
+<th>英文</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>董事会</td>
+<td>Board of Directors</td>
+<td>公司的最高经营决策机构，负责重大事项决策和管理层监督</td>
+</tr>
+<tr>
+<td>独立董事</td>
+<td>Independent Director</td>
+<td>独立于管理层和主要股东的外部董事，提供独立判断</td>
+</tr>
+<tr>
+<td>一票否决权</td>
+<td>Protective Provisions / Veto Right</td>
+<td>投资人对特定重大事项拥有的否决权</td>
+</tr>
+<tr>
+<td>董事会观察员</td>
+<td>Board Observer</td>
+<td>列席董事会但无投票权的代表</td>
+</tr>
+<tr>
+<td>普通决议</td>
+<td>Ordinary Resolution</td>
+<td>经全体董事过半数通过的决议</td>
+</tr>
+<tr>
+<td>特别决议</td>
+<td>Special Resolution</td>
+<td>经全体董事2/3以上通过的决议</td>
+</tr>
+<tr>
+<td>忠实义务</td>
+<td>Duty of Loyalty</td>
+<td>董事不得将个人利益置于公司利益之上</td>
+</tr>
+<tr>
+<td>勤勉义务</td>
+<td>Duty of Care</td>
+<td>董事应以合理注意和谨慎态度履行职责</td>
+</tr>
+<tr>
+<td>关联交易</td>
+<td>Related Party Transaction</td>
+<td>公司与关联方之间的交易，需独立董事审批</td>
+</tr>
+</tbody>
+</table></div><h2 id="实务要点">实务要点</h2>
+<ul>
+<li><strong>董事席位争取时机</strong>：在Term Sheet阶段就应明确约定董事会席位分配，而非交割后再协商。A轮通常争取1个席位，B轮以后可根据持股比例争取观察员或额外席位</li>
+<li><strong>会议准备与参与</strong>：投资人董事应提前至少3-5天收到会议材料，认真审阅后参会，避免&quot;橡皮图章&quot;式履职。建议每次会前与管理层进行预沟通</li>
+<li><strong>一票否决权的边界</strong>：一票否决权应聚焦于保护性事项（如增资、分红、并购等），不应滥用干预日常经营，否则可能引发创始团队反感并影响决策效率</li>
+<li><strong>董事责任风险</strong>：投资人董事需关注自身责任风险，特别是在公司出现财务困难、违规经营时。建议购买董事责任保险（D&amp;O Insurance）</li>
+<li><strong>治理升级路径</strong>：随企业成长逐步完善治理结构，从早期的简单3人董事会过渡到包含专业委员会的成熟治理架构</li>
+</ul>
+<h2 id="常见误区">常见误区</h2>
+<ul>
+<li><strong>将董事会开成&quot;汇报会&quot;</strong>：部分投资人董事仅听取汇报而不深入讨论战略问题，错失提供增值服务和风险预警的机会。董事会应是双向互动的决策平台</li>
+<li><strong>过度使用否决权</strong>：频繁行使一票否决权会破坏与创始团队的信任关系，降低决策效率。否决权是&quot;核武器&quot;，应谨慎使用，日常问题应通过沟通协商解决</li>
+<li><strong>忽视独立董事的价值</strong>：早期企业往往不设独立董事，但独立董事能在创始人与投资人利益冲突时提供平衡。特别是在关联交易、高管薪酬等敏感议题上，独立董事的存在至关重要</li>
+</ul>
+<h2 id="参考来源">参考来源</h2>
+<ul>
+<li>《中华人民共和国公司法》（2023年修订版）</li>
+<li>National Venture Capital Association (NVCA) Model Documents</li>
+<li>中国证券监督管理委员会《上市公司治理准则》</li>
+<li>《创业投资基金管理办法》</li>
+</ul>
+<h2 id="相关主题">相关主题</h2>
+<ul>
+<li><a href="/vcpe-knowledge-base/articles/%E6%8A%95%E8%B5%84%E6%9D%A1%E6%AC%BE%E6%B8%85%E5%8D%95-term-sheet/">投资条款清单-Term-Sheet</a> — 董事会条款通常在Term Sheet阶段确定</li>
+<li><a href="/vcpe-knowledge-base/articles/%E8%82%A1%E4%B8%9C%E5%8D%8F%E8%AE%AE%E6%A0%B8%E5%BF%83%E6%9D%A1%E6%AC%BE/">股东协议核心条款</a> — 董事会权利是股东协议的核心内容之一</li>
+<li><a href="/vcpe-knowledge-base/articles/%E8%91%A3%E4%BA%8B%E4%BC%9A%E5%B8%AD%E4%BD%8D%E4%B8%8E%E4%B8%80%E7%A5%A8%E5%90%A6%E5%86%B3/">董事会席位与一票否决</a> — 一票否决权的详细法律分析</li>
+<li><a href="/vcpe-knowledge-base/articles/%E5%A2%9E%E5%80%BC%E6%9C%8D%E5%8A%A1%E4%B8%8E%E8%B5%84%E6%BA%90%E5%AF%B9%E6%8E%A5/">增值服务与资源对接</a> — 投资人如何通过董事会提供增值服务</li>
+<li><a href="/vcpe-knowledge-base/articles/lp%E4%B8%8Egp%E5%85%B3%E7%B3%BB/">LP与GP关系</a> — GP在被投企业董事会中的角色定位</li>
+<li><a href="/vcpe-knowledge-base/articles/%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96%E6%B5%81%E7%A8%8B/">投资决策流程</a> — 投资决策中对治理结构的评估</li>
+</ul>
+</div> <!-- Related Articles --> <section class="mt-12 pt-8 border-t border-gray-200 dark:border-primary-800"> <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">📎 相关推荐</h2> <div class="space-y-3"> <a href="/vcpe-knowledge-base/articles/增值服务与资源对接/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">投后管理</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 增值服务与资源对接 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">LP在选择GP时，增值服务能力是重要的评估维度：</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/投资后首次沟通/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">投资流程</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 投资后首次沟通 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">目的：
+- 建立个人层面的信任关系
+- 了解创始人的真实期望和担忧
+- 明确投资人的角色定位（增值而非干预）</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/投资决策流程/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">投资流程</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 投资决策流程 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">IC 的规模：
+- 早期 VC：通常 3-5 人
+- 成长期 VC/PE：通常 5-7 人
+- 大型 PE：通常 7-10 人，可能设多个分委员会</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/股东协议核心条款/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">法律与条款</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 股东协议核心条款 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">机制：
+- 现有股东拟向第三方转让股份时，其他股东有权在同等条件下优先购买
+- 目的是维护现有股东的持股比例，防止引入不受欢迎的新股东</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/kpi监控体系/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">投后管理</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> KPI监控体系 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">- 现金跑道（Cash Runway） = 当前现金余额/月均现金消耗
+  - 健康水平：至少12个月
+  - 预警阈值：低于6个月需立即采取行动
+  - 行动触发：低于3个月应启动紧急融资或成本削减</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a> </div> </section> </div> <!-- Table of Contents (Desktop) --> <aside class="hidden xl:block w-64 flex-shrink-0"> <div class="sticky top-20"> <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">目录</h3> <nav class="space-y-1"> <a href="#概述" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="概述"> 概述 </a><a href="#核心内容" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="核心内容"> 核心内容 </a><a href="#一-董事会构成" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="一-董事会构成"> 一、董事会构成 </a><a href="#1-董事会规模与席位分配" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="1-董事会规模与席位分配"> 1. 董事会规模与席位分配 </a><a href="#2-独立董事的角色" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="2-独立董事的角色"> 2. 独立董事的角色 </a><a href="#3-投资人董事的权利与义务" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="3-投资人董事的权利与义务"> 3. 投资人董事的权利与义务 </a><a href="#二-董事会会议制度" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="二-董事会会议制度"> 二、董事会会议制度 </a><a href="#1-会议频率" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="1-会议频率"> 1. 会议频率 </a><a href="#2-会议议程设置" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="2-会议议程设置"> 2. 会议议程设置 </a><a href="#3-决议类型" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="3-决议类型"> 3. 决议类型 </a><a href="#三-中国公司法下的董事会规则" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="三-中国公司法下的董事会规则"> 三、中国公司法下的董事会规则 </a><a href="#1-法律框架-公司法-2023修订版要点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="1-法律框架-公司法-2023修订版要点"> 1. 法律框架（《公司法》2023修订版要点） </a><a href="#2-投资人保护的常见治理安排" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="2-投资人保护的常见治理安排"> 2. 投资人保护的常见治理安排 </a><a href="#四-董事会委员会设置" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="四-董事会委员会设置"> 四、董事会委员会设置 </a><a href="#关键术语" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键术语"> 关键术语 </a><a href="#实务要点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="实务要点"> 实务要点 </a><a href="#常见误区" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="常见误区"> 常见误区 </a><a href="#参考来源" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="参考来源"> 参考来源 </a><a href="#相关主题" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="相关主题"> 相关主题 </a> </nav> </div> </aside> </article> <script type="module">const n=new IntersectionObserver(e=>{e.forEach(t=>{const o=t.target.id,c=document.querySelector(`.toc-link[data-heading="${o}"]`);c&&t.isIntersecting&&(document.querySelectorAll(".toc-link").forEach(r=>r.classList.remove("text-accent-600","dark:text-accent-400")),c.classList.add("text-accent-600","dark:text-accent-400"))})},{rootMargin:"-80px 0px -80% 0px"});document.querySelectorAll(".prose h2[id], .prose h3[id], .prose h4[id]").forEach(e=>{n.observe(e)});</script>  </div> </main> </div> <!-- Mobile sidebar overlay --> <div id="sidebar-overlay" class="fixed inset-0 z-20 bg-black/50 hidden lg:hidden"></div> <script type="module">const m=document.getElementById("theme-toggle"),o=document.getElementById("theme-light-icon"),d=document.getElementById("theme-dark-icon");function t(e){e?(document.documentElement.classList.add("dark"),o?.classList.add("hidden"),d?.classList.remove("hidden"),localStorage.setItem("theme","dark")):(document.documentElement.classList.remove("dark"),o?.classList.remove("hidden"),d?.classList.add("hidden"),localStorage.setItem("theme","light"))}const s=localStorage.getItem("theme");t(s==="light"?!1:s==="dark"?!0:window.matchMedia("(prefers-color-scheme: dark)").matches);m?.addEventListener("click",()=>{t(!document.documentElement.classList.contains("dark"))});const r=document.getElementById("mobile-menu-toggle"),g=document.getElementById("sidebar"),l=document.getElementById("sidebar-overlay");function i(){g?.classList.toggle("-translate-x-full"),l?.classList.toggle("hidden")}r?.addEventListener("click",i);l?.addEventListener("click",i);const c=document.getElementById("reading-progress");window.addEventListener("scroll",()=>{const e=window.scrollY,n=document.documentElement.scrollHeight-window.innerHeight,a=n>0?e/n*100:0;c&&(c.style.width=`${Math.min(100,a)}%`)});document.addEventListener("keydown",e=>{(e.ctrlKey||e.metaKey)&&e.key==="k"&&(e.preventDefault(),window.location.href="/vcpe-knowledge-base/search/")});</script> </body> </html> 

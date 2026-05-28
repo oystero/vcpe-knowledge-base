@@ -1,0 +1,929 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="VC/PE 投资知识库 - 面向投资实战的系统化知识框架"><meta name="generator" content="Astro v5.18.2"><link rel="icon" type="image/svg+xml" href="/vcpe-knowledge-base/favicon.svg"><title>财务模型模板说明 | VC/PE 投资知识库</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/vcpe-knowledge-base/_astro/index.DHKBIVZD.css"></head> <body class="bg-gray-50 dark:bg-primary-950 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300"> <!-- Reading Progress Bar --> <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-accent-500 to-accent-300 z-50 transition-all duration-150" style="width: 0%"></div> <!-- Header --> <header class="sticky top-0 z-40 bg-white/80 dark:bg-primary-900/80 backdrop-blur-md border-b border-gray-200 dark:border-primary-800"> <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between"> <div class="flex items-center gap-4"> <a href="/vcpe-knowledge-base/" class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity"> <span class="text-2xl">💰</span> <span class="hidden sm:inline">VC/PE 投资知识库</span> </a> </div> <div class="flex items-center gap-3"> <!-- Search --> <a href="/vcpe-knowledge-base/search/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> <span class="hidden md:inline">搜索...</span> <kbd class="hidden md:inline px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-primary-700 rounded">Ctrl+K</kbd> </a> <!-- Graph --> <a href="/vcpe-knowledge-base/graph/" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="12" cy="12" r="2"></circle><path d="M8 6h8M6 8v8M18 8v8M8 18h8M8 8l4 4M16 8l-4 4M8 16l4-4M16 16l-4-4"></path></svg> </a> <!-- Theme Toggle --> <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="切换主题"> <svg id="theme-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg> <svg id="theme-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> </button> <!-- Mobile Menu Toggle --> <button id="mobile-menu-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors lg:hidden"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> </button> </div> </div> </header> <div class="flex flex-1 max-w-screen-2xl mx-auto w-full"> <!-- Sidebar --> <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-30 w-72 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-primary-900 border-r border-gray-200 dark:border-primary-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300"> <nav class="p-4 space-y-1"> <a href="/vcpe-knowledge-base/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏠</span> 首页
+</a> <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">模块导航</div> <a href="/vcpe-knowledge-base/modules/00/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📚</span> 00 基础概念
+</a> <a href="/vcpe-knowledge-base/modules/01/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔄</span> 01 投资流程
+</a> <a href="/vcpe-knowledge-base/modules/02/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>💵</span> 02 估值方法
+</a> <a href="/vcpe-knowledge-base/modules/03/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📜</span> 03 法律与条款
+</a> <a href="/vcpe-knowledge-base/modules/04/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏭</span> 04 行业赛道
+</a> <a href="/vcpe-knowledge-base/modules/05/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔍</span> 05 尽职调查
+</a> <a href="/vcpe-knowledge-base/modules/06/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🤝</span> 06 投后管理
+</a> <a href="/vcpe-knowledge-base/modules/07/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🚪</span> 07 退出策略
+</a> <a href="/vcpe-knowledge-base/modules/08/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🇨🇳</span> 08 中国VC/PE实务
+</a> <a href="/vcpe-knowledge-base/modules/09/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📊</span> 09 风险与组合
+</a> <a href="/vcpe-knowledge-base/modules/10/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📖</span> 10 案例库
+</a> <a href="/vcpe-knowledge-base/modules/11/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400"> <span>🛠️</span> 11 工具与资源
+</a> </nav> </aside> <!-- Main Content --> <main class="flex-1 min-w-0 lg:ml-72"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">   <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6 flex-wrap"> <a href="/vcpe-knowledge-base/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a> <span>/</span> <a href="/vcpe-knowledge-base/modules/11/" class="hover:text-accent-600 dark:hover:text-accent-400">工具与资源</a> <span>/</span> <span class="text-gray-800 dark:text-gray-200 truncate">财务模型模板说明</span> </nav> <article class="flex gap-8"> <!-- Article Content --> <div class="flex-1 min-w-0"> <!-- Article Header --> <header class="mb-8"> <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">财务模型模板说明</h1> <div class="flex flex-wrap items-center gap-3 mb-4"> <a href="/modules/11/" class="text-xs px-2.5 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 hover:bg-accent-200 dark:hover:bg-accent-900/50 transition-colors"> 工具与资源 </a>  <a href="/search/?tag=vc-pe" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> vc-pe </a><a href="/search/?tag=%E8%B4%A2%E5%8A%A1%E6%A8%A1%E5%9E%8B" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 财务模型 </a><a href="/search/?tag=%E4%BC%B0%E5%80%BC" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 估值 </a><a href="/search/?tag=%E4%BC%B0%E5%80%BC%E5%B7%A5%E5%85%B7" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 估值工具 </a> </div> <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400"> <span>创建于 2026/05/27</span>  <span>7078字</span> <span>约 18 分钟阅读</span> </div> </header> <!-- Article Body --> <div class="prose"><h2 id="概述">概述</h2>
+<p>财务模型是VC/PE投资决策的核心工具，通过量化分析帮助投资人评估企业价值、测算投资回报、进行敏感性分析。不同投资场景需要不同类型的财务模型，掌握主要模型的搭建方法和应用要点，是投资从业者的基本技能。本文介绍VC/PE领域最常用的三种财务模型及其搭建要点。</p>
+<h2 id="核心内容">核心内容</h2>
+<h3 id="一-常用财务模型类型">一、常用财务模型类型</h3>
+<h4 id="1-dcf模型-discounted-cash-flow-现金流折现模型">1. DCF模型（Discounted Cash Flow，现金流折现模型）</h4>
+<p><strong>核心原理</strong></p>
+<ul>
+<li>通过预测企业未来自由现金流，以适当的折现率折算为现值</li>
+<li>理论上最&quot;正确&quot;的估值方法，基于企业内在价值</li>
+<li>对假设输入高度敏感，需要谨慎选择参数</li>
+</ul>
+<p><strong>适用场景</strong></p>
+<ul>
+<li>现金流可预测的成熟企业</li>
+<li>基础设施、公用事业等稳定行业</li>
+<li>长期战略投资评估</li>
+</ul>
+<p><strong>DCF模型结构</strong></p>
+<pre><code>┌─────────────────────────────────────────────────────┐
+│                   DCF模型框架                         │
+├─────────────────────────────────────────────────────┤
+│  历史财务数据（3-5年）                                │
+│     ↓                                                │
+│  收入预测（市场规模 × 市场份额 × 客单价）              │
+│     ↓                                                │
+│  成本费用预测（固定成本 + 变动成本）                   │
+│     ↓                                                │
+│  自由现金流（FCF = EBITDA - 资本支出 - 营运资金变动）  │
+│     ↓                                                │
+│  折现率计算（WACC）                                   │
+│     ↓                                                │
+│  终值计算（Terminal Value）                           │
+│     ↓                                                │
+│  企业价值（EV）= PV(FCF) + PV(TV)                    │
+│     ↓                                                │
+│  股权价值 = EV - 净债务                               │
+└─────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>关键假设输入</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>假设类别</th>
+<th>具体参数</th>
+<th>数据来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>收入增长</td>
+<td>年增长率、增长驱动因素</td>
+<td>行业报告、管理层指引</td>
+</tr>
+<tr>
+<td>利润率</td>
+<td>毛利率、EBITDA利润率</td>
+<td>历史数据、可比公司</td>
+</tr>
+<tr>
+<td>资本支出</td>
+<td>维护性/扩张性资本支出</td>
+<td>历史数据、管理层指引</td>
+</tr>
+<tr>
+<td>营运资金</td>
+<td>周转天数、占收入比例</td>
+<td>历史数据、行业基准</td>
+</tr>
+<tr>
+<td>折现率</td>
+<td>WACC</td>
+<td>CAPM模型计算</td>
+</tr>
+<tr>
+<td>终值假设</td>
+<td>永续增长率、退出倍数</td>
+<td>长期GDP增长、行业经验</td>
+</tr>
+</tbody>
+</table></div><p><strong>WACC计算公式</strong></p>
+<p>$$WACC = \frac{E}{E+D} \times R_e + \frac{D}{E+D} \times R_d \times (1-T)$$</p>
+<p>其中：</p>
+<ul>
+<li>E = 股权市值</li>
+<li>D = 债务市值</li>
+<li>R_e = 股权成本（CAPM计算）</li>
+<li>R_d = 债务成本</li>
+<li>T = 税率</li>
+</ul>
+<p><strong>DCF模型的局限性</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>局限</th>
+<th>说明</th>
+<th>应对方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>假设敏感性</td>
+<td>小幅假设变化导致大幅估值波动</td>
+<td>敏感性分析、情景分析</td>
+</tr>
+<tr>
+<td>终值占比高</td>
+<td>终值可能占估值50%以上</td>
+<td>测试不同终值假设</td>
+</tr>
+<tr>
+<td>预测不确定性</td>
+<td>远期预测准确度低</td>
+<td>使用蒙特卡洛模拟</td>
+</tr>
+<tr>
+<td>不适用早期企业</td>
+<td>早期企业现金流不可预测</td>
+<td>改用相对估值法</td>
+</tr>
+</tbody>
+</table></div><h4 id="2-lbo模型-leveraged-buyout-model-杠杆收购模型">2. LBO模型（Leveraged Buyout Model，杠杆收购模型）</h4>
+<p><strong>核心原理</strong></p>
+<ul>
+<li>通过债务杠杆放大股权投资回报</li>
+<li>关注企业现金流对债务的覆盖能力</li>
+<li>PE并购交易的标准分析工具</li>
+</ul>
+<p><strong>适用场景</strong></p>
+<ul>
+<li>PE并购交易估值</li>
+<li>现金流稳定的成熟企业</li>
+<li>有明确退出路径的投资</li>
+</ul>
+<p><strong>LBO模型结构</strong></p>
+<pre><code>┌─────────────────────────────────────────────────────┐
+│                   LBO模型框架                         │
+├─────────────────────────────────────────────────────┤
+│  交易结构假设                                          │
+│  ├─ 收购价格（EV/EBITDA倍数）                         │
+│  ├─ 资本结构（债务/股权比例）                          │
+│  ├─ 债务条款（利率、期限、还款计划）                    │
+│  └─ 交易费用                                          │
+│     ↓                                                │
+│  被投企业财务预测                                      │
+│  ├─ 收入增长                                          │
+│  ├─ 利润率变化                                        │
+│  ├─ 资本支出                                          │
+│  └─ 营运资金                                          │
+│     ↓                                                │
+│  现金流与债务分析                                      │
+│  ├─ 自由现金流                                        │
+│  ├─ 债务偿还计划                                      │
+│  └─ 覆盖比率（DSCR、ICR）                            │
+│     ↓                                                │
+│  退出分析                                             │
+│  ├─ 退出时间（通常3-5年）                             │
+│  ├─ 退出倍数                                          │
+│  └─ 退出价值                                          │
+│     ↓                                                │
+│  回报测算                                             │
+│  ├─ 股权IRR                                           │
+│  ├─ 股权倍数（MOIC）                                  │
+│  └─ 敏感性分析                                        │
+└─────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>LBO关键指标</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>指标</th>
+<th>计算公式</th>
+<th>健康范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DSCR</td>
+<td>EBITDA / 债务本息</td>
+<td>&gt;1.5x</td>
+</tr>
+<tr>
+<td>ICR</td>
+<td>EBITDA / 利息费用</td>
+<td>&gt;3.0x</td>
+</tr>
+<tr>
+<td>杠杆倍数</td>
+<td>债务 / EBITDA</td>
+<td>3-6x</td>
+</tr>
+<tr>
+<td>股权占比</td>
+<td>股权 / 总对价</td>
+<td>30-50%</td>
+</tr>
+</tbody>
+</table></div><p><strong>LBO模型的特殊假设</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>假设类别</th>
+<th>具体参数</th>
+<th>经验值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>收购倍数</td>
+<td>EV/EBITDA</td>
+<td>8-15x（行业差异大）</td>
+</tr>
+<tr>
+<td>债务成本</td>
+<td>优先债/次级债利率</td>
+<td>5-12%</td>
+</tr>
+<tr>
+<td>退出倍数</td>
+<td>通常等于或略低于收购倍数</td>
+<td>8-12x</td>
+</tr>
+<tr>
+<td>持有期</td>
+<td>3-5年</td>
+<td>PE标准周期</td>
+</tr>
+</tbody>
+</table></div><h4 id="3-可比公司分析模型-comparable-company-analysis">3. 可比公司分析模型（Comparable Company Analysis）</h4>
+<p><strong>核心原理</strong></p>
+<ul>
+<li>通过与类似公司的市场估值对比，推算目标公司价值</li>
+<li>基于市场定价，反映当前市场情绪</li>
+<li>相对简单快速，但依赖可比公司的选择</li>
+</ul>
+<p><strong>适用场景</strong></p>
+<ul>
+<li>IPO定价参考</li>
+<li>并购交易估值</li>
+<li>快速估值验证</li>
+<li>缺乏详细财务预测时</li>
+</ul>
+<p><strong>可比公司分析框架</strong></p>
+<pre><code>┌─────────────────────────────────────────────────────┐
+│              可比公司分析框架                          │
+├─────────────────────────────────────────────────────┤
+│  Step 1: 选择可比公司                                 │
+│  ├─ 行业相同或相似                                    │
+│  ├─ 规模相近                                          │
+│  ├─ 增长阶段类似                                      │
+│  └─ 地理市场类似                                      │
+│     ↓                                                │
+│  Step 2: 收集估值倍数                                 │
+│  ├─ EV/Revenue                                        │
+│  ├─ EV/EBITDA                                         │
+│  ├─ P/E                                               │
+│  └─ P/B                                               │
+│     ↓                                                │
+│  Step 3: 计算可比公司估值区间                          │
+│  ├─ 中位数                                            │
+│  ├─ 平均数                                            │
+│  └─ 25%-75%分位数                                     │
+│     ↓                                                │
+│  Step 4: 应用于目标公司                                │
+│  ├─ 选择适当的倍数区间                                 │
+│  ├─ 考虑目标公司相对优劣势调整                         │
+│  └─ 计算企业价值/股权价值                              │
+└─────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>常用估值倍数</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>倍数</th>
+<th>计算公式</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EV/Revenue</td>
+<td>企业价值 / 收入</td>
+<td>高增长、亏损企业</td>
+</tr>
+<tr>
+<td>EV/EBITDA</td>
+<td>企业价值 / EBITDA</td>
+<td>盈利稳定企业</td>
+</tr>
+<tr>
+<td>P/E</td>
+<td>股价 / 每股收益</td>
+<td>成熟上市公司</td>
+</tr>
+<tr>
+<td>P/B</td>
+<td>股价 / 每股净资产</td>
+<td>资产密集型行业</td>
+</tr>
+<tr>
+<td>EV/Subscriber</td>
+<td>企业价值 / 用户数</td>
+<td>互联网/平台企业</td>
+</tr>
+</tbody>
+</table></div><p><strong>可比公司选择标准</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>标准</th>
+<th>权重</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>行业一致性</td>
+<td>高</td>
+<td>主营业务相同或高度相似</td>
+</tr>
+<tr>
+<td>规模可比性</td>
+<td>中</td>
+<td>收入/市值在同一数量级</td>
+</tr>
+<tr>
+<td>增长阶段</td>
+<td>中</td>
+<td>处于相似的生命周期阶段</td>
+</tr>
+<tr>
+<td>盈利能力</td>
+<td>中</td>
+<td>利润率水平相近</td>
+</tr>
+<tr>
+<td>地域市场</td>
+<td>低</td>
+<td>服务的地理市场类似</td>
+</tr>
+</tbody>
+</table></div><h3 id="二-excel模板结构说明">二、Excel模板结构说明</h3>
+<h4 id="标准财务模型模板结构">标准财务模型模板结构</h4>
+<p><strong>Sheet 1：假设（Assumptions）</strong></p>
+<pre><code>┌─────────────────────────────────────────────────────┐
+│                 假设页结构                            │
+├─────────────────────────────────────────────────────┤
+│  公司基本信息                                         │
+│  ├─ 公司名称、行业、成立年份                          │
+│  └─ 基准年份、预测期长度                              │
+│                                                      │
+│  收入假设                                             │
+│  ├─ 市场规模与增长率                                  │
+│  ├─ 市场份额假设                                      │
+│  └─ 客单价/ARPU假设                                   │
+│                                                      │
+│  成本假设                                             │
+│  ├─ 毛利率假设                                        │
+│  ├─ 运营费用率假设                                    │
+│  └─ 人力成本增长假设                                  │
+│                                                      │
+│  资本性假设                                           │
+│  ├─ 资本支出假设                                      │
+│  ├─ 营运资金假设                                      │
+│  └─ 折旧摊销政策                                      │
+│                                                      │
+│  估值假设                                             │
+│  ├─ 折现率/WACC                                       │
+│  ├─ 终值增长率                                        │
+│  └─ 可比公司倍数                                      │
+└─────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>Sheet 2：利润表（Income Statement）</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>项目</th>
+<th>预测逻辑</th>
+<th>数据来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营业收入</td>
+<td>市场规模 × 市场份额</td>
+<td>假设页</td>
+</tr>
+<tr>
+<td>营业成本</td>
+<td>收入 × (1-毛利率)</td>
+<td>假设页</td>
+</tr>
+<tr>
+<td>毛利润</td>
+<td>收入 - 成本</td>
+<td>计算</td>
+</tr>
+<tr>
+<td>运营费用</td>
+<td>收入 × 费用率</td>
+<td>假设页</td>
+</tr>
+<tr>
+<td>EBITDA</td>
+<td>毛利润 - 运营费用（不含折旧）</td>
+<td>计算</td>
+</tr>
+<tr>
+<td>折旧摊销</td>
+<td>固定资产/无形资产摊销</td>
+<td>假设页</td>
+</tr>
+<tr>
+<td>EBIT</td>
+<td>EBITDA - 折旧摊销</td>
+<td>计算</td>
+</tr>
+<tr>
+<td>利息费用</td>
+<td>债务余额 × 利率</td>
+<td>假设页</td>
+</tr>
+<tr>
+<td>税前利润</td>
+<td>EBIT - 利息费用</td>
+<td>计算</td>
+</tr>
+<tr>
+<td>所得税</td>
+<td>税前利润 × 税率</td>
+<td>假设页</td>
+</tr>
+<tr>
+<td>净利润</td>
+<td>税前利润 - 所得税</td>
+<td>计算</td>
+</tr>
+</tbody>
+</table></div><p><strong>Sheet 3：资产负债表（Balance Sheet）</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>科目</th>
+<th>预测逻辑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>流动资产</td>
+<td>现金、应收账款、存货（基于周转天数）</td>
+</tr>
+<tr>
+<td>非流动资产</td>
+<td>固定资产、无形资产（基于资本支出和折旧）</td>
+</tr>
+<tr>
+<td>流动负债</td>
+<td>应付账款、短期借款（基于周转天数）</td>
+</tr>
+<tr>
+<td>非流动负债</td>
+<td>长期借款（基于还款计划）</td>
+</tr>
+<tr>
+<td>股东权益</td>
+<td>留存收益累计</td>
+</tr>
+</tbody>
+</table></div><p><strong>Sheet 4：现金流量表（Cash Flow Statement）</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>类别</th>
+<th>主要项目</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>经营活动</td>
+<td>净利润、折旧摊销、营运资金变动</td>
+</tr>
+<tr>
+<td>投资活动</td>
+<td>资本支出、投资收益</td>
+</tr>
+<tr>
+<td>筹资活动</td>
+<td>借款、还款、分红</td>
+</tr>
+</tbody>
+</table></div><p><strong>Sheet 5：估值（Valuation）</strong></p>
+<pre><code>┌─────────────────────────────────────────────────────┐
+│                 估值页结构                            │
+├─────────────────────────────────────────────────────┤
+│  DCF估值                                              │
+│  ├─ 自由现金流计算                                    │
+│  ├─ 折现率计算（WACC）                                │
+│  ├─ 终值计算                                          │
+│  └─ 企业价值/股权价值                                 │
+│                                                      │
+│  可比公司估值                                         │
+│  ├─ 可比公司数据                                      │
+│  ├─ 估值倍数区间                                      │
+│  └─ 企业价值/股权价值                                 │
+│                                                      │
+│  综合估值                                             │
+│  ├─ 各方法权重                                        │
+│  └─ 目标估值区间                                      │
+└─────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>Sheet 6：敏感性分析（Sensitivity Analysis）</strong></p>
+<ul>
+<li>双变量敏感性分析表格</li>
+<li>关键假设变化对估值/回报的影响</li>
+<li>情景分析（乐观、基准、悲观）</li>
+</ul>
+<p><strong>Sheet 7：图表（Charts）</strong></p>
+<ul>
+<li>收入增长趋势图</li>
+<li>利润率变化图</li>
+<li>现金流预测图</li>
+<li>估值区间图</li>
+</ul>
+<h3 id="三-关键假设输入">三、关键假设输入</h3>
+<p><strong>收入预测假设</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>假设层级</th>
+<th>具体参数</th>
+<th>验证方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>宏观层</td>
+<td>GDP增长、行业增速</td>
+<td>权威机构预测</td>
+</tr>
+<tr>
+<td>市场层</td>
+<td>市场规模、渗透率</td>
+<td>行业报告</td>
+</tr>
+<tr>
+<td>公司层</td>
+<td>市场份额、客单价</td>
+<td>管理层指引、历史数据</td>
+</tr>
+</tbody>
+</table></div><p><strong>成本预测假设</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>成本类型</th>
+<th>预测方法</th>
+<th>注意事项</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>固定成本</td>
+<td>基于人员规模和租金</td>
+<td>关注规模效应</td>
+</tr>
+<tr>
+<td>变动成本</td>
+<td>收入 × 变动成本率</td>
+<td>关注边际成本变化</td>
+</tr>
+<tr>
+<td>资本支出</td>
+<td>维护性 + 扩张性</td>
+<td>区分必要和可选支出</td>
+</tr>
+</tbody>
+</table></div><p><strong>估值参数假设</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>参数</th>
+<th>计算方法</th>
+<th>数据来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>无风险利率</td>
+<td>10年期国债收益率</td>
+<td>市场数据</td>
+</tr>
+<tr>
+<td>股权风险溢价</td>
+<td>历史平均 + 调整</td>
+<td>学术研究、咨询公司</td>
+</tr>
+<tr>
+<td>Beta</td>
+<td>可比公司回归分析</td>
+<td>Wind/Bloomberg</td>
+</tr>
+<tr>
+<td>债务成本</td>
+<td>市场利率 + 信用利差</td>
+<td>信用评级、市场数据</td>
+</tr>
+</tbody>
+</table></div><h3 id="四-敏感性分析">四、敏感性分析</h3>
+<p><strong>敏感性分析的目的</strong></p>
+<ul>
+<li>识别对估值/回报影响最大的假设</li>
+<li>测试不同情景下的投资可行性</li>
+<li>支持投资决策的风险评估</li>
+</ul>
+<p><strong>单变量敏感性分析</strong></p>
+<p>改变单一假设，观察对结果的影响：</p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>假设变量</th>
+<th>基准值</th>
+<th>-20%</th>
+<th>-10%</th>
+<th>基准</th>
+<th>+10%</th>
+<th>+20%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>收入增长率</td>
+<td>25%</td>
+<td>X1</td>
+<td>X2</td>
+<td>X3</td>
+<td>X4</td>
+<td>X5</td>
+</tr>
+<tr>
+<td>EBITDA利润率</td>
+<td>20%</td>
+<td>Y1</td>
+<td>Y2</td>
+<td>Y3</td>
+<td>Y4</td>
+<td>Y5</td>
+</tr>
+<tr>
+<td>退出倍数</td>
+<td>10x</td>
+<td>Z1</td>
+<td>Z2</td>
+<td>Z3</td>
+<td>Z4</td>
+<td>Z5</td>
+</tr>
+</tbody>
+</table></div><p><strong>双变量敏感性分析</strong></p>
+<p>同时改变两个假设，观察交叉影响：</p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th></th>
+<th>退出倍数 8x</th>
+<th>退出倍数 10x</th>
+<th>退出倍数 12x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>收入增长20%</td>
+<td>A1</td>
+<td>A2</td>
+<td>A3</td>
+</tr>
+<tr>
+<td>收入增长25%</td>
+<td>B1</td>
+<td>B2</td>
+<td>B3</td>
+</tr>
+<tr>
+<td>收入增长30%</td>
+<td>C1</td>
+<td>C2</td>
+<td>C3</td>
+</tr>
+</tbody>
+</table></div><p><strong>情景分析</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>情景</th>
+<th>收入增长</th>
+<th>利润率</th>
+<th>退出倍数</th>
+<th>IRR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>乐观</td>
+<td>35%</td>
+<td>25%</td>
+<td>12x</td>
+<td>40%</td>
+</tr>
+<tr>
+<td>基准</td>
+<td>25%</td>
+<td>20%</td>
+<td>10x</td>
+<td>28%</td>
+</tr>
+<tr>
+<td>悲观</td>
+<td>15%</td>
+<td>15%</td>
+<td>8x</td>
+<td>15%</td>
+</tr>
+</tbody>
+</table></div><h3 id="五-模型搭建要点">五、模型搭建要点</h3>
+<p><strong>模型设计原则</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>原则</th>
+<th>说明</th>
+<th>实践建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>清晰性</td>
+<td>结构清晰，易于理解</td>
+<td>使用统一的格式和颜色</td>
+</tr>
+<tr>
+<td>灵活性</td>
+<td>假设易于调整</td>
+<td>所有假设集中在假设页</td>
+</tr>
+<tr>
+<td>一致性</td>
+<td>公式逻辑一致</td>
+<td>避免硬编码，使用公式引用</td>
+</tr>
+<tr>
+<td>可追溯性</td>
+<td>公式来源清晰</td>
+<td>使用注释和说明</td>
+</tr>
+<tr>
+<td>稳健性</td>
+<td>错误检查机制</td>
+<td>添加错误检查公式</td>
+</tr>
+</tbody>
+</table></div><p><strong>常见错误与防范</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>错误类型</th>
+<th>具体表现</th>
+<th>防范措施</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>循环引用</td>
+<td>现金流和利息互为因果</td>
+<td>使用迭代计算或结构调整</td>
+</tr>
+<tr>
+<td>硬编码</td>
+<td>直接输入数字而非引用</td>
+<td>所有数字链接到假设页</td>
+</tr>
+<tr>
+<td>单位错误</td>
+<td>千元/百万元混用</td>
+<td>统一单位，添加单位标注</td>
+</tr>
+<tr>
+<td>时间错误</td>
+<td>年度/季度数据混用</td>
+<td>清晰标注时间维度</td>
+</tr>
+<tr>
+<td>基准年错误</td>
+<td>预测起点错误</td>
+<td>核实基准年数据</td>
+</tr>
+</tbody>
+</table></div><p><strong>模型检查清单</strong></p>
+<pre><code>□ 假设页是否包含所有关键假设
+□ 历史数据是否准确可靠
+□ 预测逻辑是否合理
+□ 利润表、资产负债表、现金流量表是否勾稽平衡
+□ 估值方法是否适用
+□ 敏感性分析是否覆盖关键变量
+□ 单位是否统一
+□ 公式是否可追溯
+□ 是否有错误检查机制
+□ 图表是否清晰展示关键结论
+</code></pre>
+<h3 id="六-vc早期项目估值的特殊性">六、VC早期项目估值的特殊性</h3>
+<p><strong>传统估值方法的局限</strong></p>
+<p>早期VC项目通常：</p>
+<ul>
+<li>没有历史财务数据</li>
+<li>现金流高度不确定</li>
+<li>难以找到可比公司</li>
+<li>传统DCF不适用</li>
+</ul>
+<p><strong>VC常用估值方法</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>方法</th>
+<th>原理</th>
+<th>适用阶段</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Berkus方法</td>
+<td>基于5个关键因素打分估值</td>
+<td>种子轮</td>
+</tr>
+<tr>
+<td>Scorecard方法</td>
+<td>与可比公司对比调整</td>
+<td>天使轮</td>
+</tr>
+<tr>
+<td>风险因素法</td>
+<td>识别并量化各类风险</td>
+<td>天使/Pre-A</td>
+</tr>
+<tr>
+<td>可比交易法</td>
+<td>参考类似交易估值</td>
+<td>A轮及以后</td>
+</tr>
+<tr>
+<td>收入倍数法</td>
+<td>收入 × 行业倍数</td>
+<td>有收入后</td>
+</tr>
+</tbody>
+</table></div><h2 id="关键术语">关键术语</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>术语</th>
+<th>英文</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DCF</td>
+<td>Discounted Cash Flow</td>
+<td>现金流折现估值方法</td>
+</tr>
+<tr>
+<td>LBO</td>
+<td>Leveraged Buyout</td>
+<td>杠杆收购</td>
+</tr>
+<tr>
+<td>WACC</td>
+<td>Weighted Average Cost of Capital</td>
+<td>加权平均资本成本</td>
+</tr>
+<tr>
+<td>EBITDA</td>
+<td>Earnings Before Interest, Taxes, Depreciation, and Amortization</td>
+<td>息税折旧摊销前利润</td>
+</tr>
+<tr>
+<td>FCFF</td>
+<td>Free Cash Flow to Firm</td>
+<td>企业自由现金流</td>
+</tr>
+<tr>
+<td>Terminal Value</td>
+<td>终值</td>
+<td>预测期末的企业价值</td>
+</tr>
+<tr>
+<td>Sensitivity Analysis</td>
+<td>敏感性分析</td>
+<td>测试假设变化对结果的影响</td>
+</tr>
+<tr>
+<td>MOIC</td>
+<td>Multiple on Invested Capital</td>
+<td>投资回报倍数</td>
+</tr>
+</tbody>
+</table></div><h2 id="实务要点">实务要点</h2>
+<ul>
+<li><strong>假设要有依据</strong>：每个关键假设都应有数据支持或合理逻辑</li>
+<li><strong>模型要灵活</strong>：假设应易于调整，便于快速测试不同情景</li>
+<li><strong>关注关键驱动因素</strong>：识别对结果影响最大的假设，重点验证</li>
+<li><strong>多方法交叉验证</strong>：使用2-3种估值方法，取合理区间</li>
+<li><strong>定期更新</strong>：根据最新信息及时更新模型假设</li>
+</ul>
+<h2 id="常见误区">常见误区</h2>
+<ul>
+<li><strong>过度精确</strong>：对不确定的预测追求过高精度，忽视假设本身的不确定性</li>
+<li><strong>忽视终值</strong>：终值可能占估值50%以上，但往往被草率处理</li>
+<li><strong>模型代替判断</strong>：模型只是决策支持工具，不能替代投资判断</li>
+</ul>
+<h2 id="参考来源">参考来源</h2>
+<ul>
+<li>Rosenbaum, J. &amp; Pearl, J. “Investment Banking: Valuation, LBOs, M&amp;A, and IPOs”</li>
+<li>Koller, T. et al. “Valuation: Measuring and Managing the Value of Companies”</li>
+<li>McKinsey &amp; Company, “Valuation” (经典教材)</li>
+<li>估值学院 (Valuation Academy) 公开课程</li>
+</ul>
+<h2 id="相关主题">相关主题</h2>
+<ul>
+<li><a href="/vcpe-knowledge-base/articles/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8E%E4%BF%A1%E6%81%AF%E6%BA%90/">常用数据库与信息源</a> 模型输入数据的来源</li>
+<li><a href="/vcpe-knowledge-base/articles/dpi%E4%B8%8Eirr%E8%A7%A3%E8%AF%BB/">DPI与IRR解读</a> 模型输出的业绩指标</li>
+<li><a href="/vcpe-knowledge-base/articles/%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96%E6%B5%81%E7%A8%8B/">投资决策流程</a> 财务模型在投资决策中的应用</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E8%A1%8C%E4%B8%9A%E7%A0%94%E7%A9%B6%E6%96%B9%E6%B3%95%E8%AE%BA">行业研究方法论</a> 行业假设的研究方法</li>
+<li><a href="/vcpe-knowledge-base/articles/%E6%8E%A8%E8%8D%90%E4%B9%A6%E5%8D%95/">推荐书单</a> 财务建模学习资源</li>
+</ul>
+</div> <!-- Related Articles --> <section class="mt-12 pt-8 border-t border-gray-200 dark:border-primary-800"> <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">📎 相关推荐</h2> <div class="space-y-3"> <a href="/vcpe-knowledge-base/articles/常用数据库与信息源/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">工具与资源</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 常用数据库与信息源 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">IT桔子（itjuzi.com）</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/推荐书单/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">工具与资源</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 推荐书单 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">适合初入VC/PE行业的新人、对风险投资感兴趣的创业者、想了解行业基础知识的读者。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/投资决策流程/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">投资流程</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 投资决策流程 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">IC 的规模：
+- 早期 VC：通常 3-5 人
+- 成长期 VC/PE：通常 5-7 人
+- 大型 PE：通常 7-10 人，可能设多个分委员会</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/dpi与irr解读/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">风险与组合</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> DPI与IRR解读 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">定义：基金已分配给投资人的现金与投资人已缴入资本的比率</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/index/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">其他</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> VC/PE 投资知识库 — 导航索引 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">---</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a> </div> </section> </div> <!-- Table of Contents (Desktop) --> <aside class="hidden xl:block w-64 flex-shrink-0"> <div class="sticky top-20"> <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">目录</h3> <nav class="space-y-1"> <a href="#概述" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="概述"> 概述 </a><a href="#核心内容" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="核心内容"> 核心内容 </a><a href="#一-常用财务模型类型" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="一-常用财务模型类型"> 一、常用财务模型类型 </a><a href="#1-dcf模型-discounted-cash-flow-现金流折现模型" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="1-dcf模型-discounted-cash-flow-现金流折现模型"> 1. DCF模型（Discounted Cash Flow，现金流折现模型） </a><a href="#2-lbo模型-leveraged-buyout-model-杠杆收购模型" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="2-lbo模型-leveraged-buyout-model-杠杆收购模型"> 2. LBO模型（Leveraged Buyout Model，杠杆收购模型） </a><a href="#3-可比公司分析模型-comparable-company-analysis" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="3-可比公司分析模型-comparable-company-analysis"> 3. 可比公司分析模型（Comparable Company Analysis） </a><a href="#二-excel模板结构说明" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="二-excel模板结构说明"> 二、Excel模板结构说明 </a><a href="#标准财务模型模板结构" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="标准财务模型模板结构"> 标准财务模型模板结构 </a><a href="#三-关键假设输入" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="三-关键假设输入"> 三、关键假设输入 </a><a href="#四-敏感性分析" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="四-敏感性分析"> 四、敏感性分析 </a><a href="#五-模型搭建要点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="五-模型搭建要点"> 五、模型搭建要点 </a><a href="#六-vc早期项目估值的特殊性" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="六-vc早期项目估值的特殊性"> 六、VC早期项目估值的特殊性 </a><a href="#关键术语" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键术语"> 关键术语 </a><a href="#实务要点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="实务要点"> 实务要点 </a><a href="#常见误区" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="常见误区"> 常见误区 </a><a href="#参考来源" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="参考来源"> 参考来源 </a><a href="#相关主题" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="相关主题"> 相关主题 </a> </nav> </div> </aside> </article> <script type="module">const n=new IntersectionObserver(e=>{e.forEach(t=>{const o=t.target.id,c=document.querySelector(`.toc-link[data-heading="${o}"]`);c&&t.isIntersecting&&(document.querySelectorAll(".toc-link").forEach(r=>r.classList.remove("text-accent-600","dark:text-accent-400")),c.classList.add("text-accent-600","dark:text-accent-400"))})},{rootMargin:"-80px 0px -80% 0px"});document.querySelectorAll(".prose h2[id], .prose h3[id], .prose h4[id]").forEach(e=>{n.observe(e)});</script>  </div> </main> </div> <!-- Mobile sidebar overlay --> <div id="sidebar-overlay" class="fixed inset-0 z-20 bg-black/50 hidden lg:hidden"></div> <script type="module">const m=document.getElementById("theme-toggle"),o=document.getElementById("theme-light-icon"),d=document.getElementById("theme-dark-icon");function t(e){e?(document.documentElement.classList.add("dark"),o?.classList.add("hidden"),d?.classList.remove("hidden"),localStorage.setItem("theme","dark")):(document.documentElement.classList.remove("dark"),o?.classList.remove("hidden"),d?.classList.add("hidden"),localStorage.setItem("theme","light"))}const s=localStorage.getItem("theme");t(s==="light"?!1:s==="dark"?!0:window.matchMedia("(prefers-color-scheme: dark)").matches);m?.addEventListener("click",()=>{t(!document.documentElement.classList.contains("dark"))});const r=document.getElementById("mobile-menu-toggle"),g=document.getElementById("sidebar"),l=document.getElementById("sidebar-overlay");function i(){g?.classList.toggle("-translate-x-full"),l?.classList.toggle("hidden")}r?.addEventListener("click",i);l?.addEventListener("click",i);const c=document.getElementById("reading-progress");window.addEventListener("scroll",()=>{const e=window.scrollY,n=document.documentElement.scrollHeight-window.innerHeight,a=n>0?e/n*100:0;c&&(c.style.width=`${Math.min(100,a)}%`)});document.addEventListener("keydown",e=>{(e.ctrlKey||e.metaKey)&&e.key==="k"&&(e.preventDefault(),window.location.href="/vcpe-knowledge-base/search/")});</script> </body> </html> 

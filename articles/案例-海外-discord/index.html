@@ -1,0 +1,416 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="VC/PE 投资知识库 - 面向投资实战的系统化知识框架"><meta name="generator" content="Astro v5.18.2"><link rel="icon" type="image/svg+xml" href="/vcpe-knowledge-base/favicon.svg"><title>Discord — 从游戏语音工具到全球社区平台 | VC/PE 投资知识库</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/vcpe-knowledge-base/_astro/index.DHKBIVZD.css"></head> <body class="bg-gray-50 dark:bg-primary-950 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300"> <!-- Reading Progress Bar --> <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-accent-500 to-accent-300 z-50 transition-all duration-150" style="width: 0%"></div> <!-- Header --> <header class="sticky top-0 z-40 bg-white/80 dark:bg-primary-900/80 backdrop-blur-md border-b border-gray-200 dark:border-primary-800"> <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between"> <div class="flex items-center gap-4"> <a href="/vcpe-knowledge-base/" class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity"> <span class="text-2xl">💰</span> <span class="hidden sm:inline">VC/PE 投资知识库</span> </a> </div> <div class="flex items-center gap-3"> <!-- Search --> <a href="/vcpe-knowledge-base/search/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> <span class="hidden md:inline">搜索...</span> <kbd class="hidden md:inline px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-primary-700 rounded">Ctrl+K</kbd> </a> <!-- Graph --> <a href="/vcpe-knowledge-base/graph/" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="12" cy="12" r="2"></circle><path d="M8 6h8M6 8v8M18 8v8M8 18h8M8 8l4 4M16 8l-4 4M8 16l4-4M16 16l-4-4"></path></svg> </a> <!-- Theme Toggle --> <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="切换主题"> <svg id="theme-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg> <svg id="theme-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> </button> <!-- Mobile Menu Toggle --> <button id="mobile-menu-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors lg:hidden"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> </button> </div> </div> </header> <div class="flex flex-1 max-w-screen-2xl mx-auto w-full"> <!-- Sidebar --> <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-30 w-72 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-primary-900 border-r border-gray-200 dark:border-primary-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300"> <nav class="p-4 space-y-1"> <a href="/vcpe-knowledge-base/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏠</span> 首页
+</a> <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">模块导航</div> <a href="/vcpe-knowledge-base/modules/00/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📚</span> 00 基础概念
+</a> <a href="/vcpe-knowledge-base/modules/01/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔄</span> 01 投资流程
+</a> <a href="/vcpe-knowledge-base/modules/02/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>💵</span> 02 估值方法
+</a> <a href="/vcpe-knowledge-base/modules/03/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📜</span> 03 法律与条款
+</a> <a href="/vcpe-knowledge-base/modules/04/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏭</span> 04 行业赛道
+</a> <a href="/vcpe-knowledge-base/modules/05/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔍</span> 05 尽职调查
+</a> <a href="/vcpe-knowledge-base/modules/06/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🤝</span> 06 投后管理
+</a> <a href="/vcpe-knowledge-base/modules/07/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🚪</span> 07 退出策略
+</a> <a href="/vcpe-knowledge-base/modules/08/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🇨🇳</span> 08 中国VC/PE实务
+</a> <a href="/vcpe-knowledge-base/modules/09/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📊</span> 09 风险与组合
+</a> <a href="/vcpe-knowledge-base/modules/10/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400"> <span>📖</span> 10 案例库
+</a> <a href="/vcpe-knowledge-base/modules/11/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🛠️</span> 11 工具与资源
+</a> </nav> </aside> <!-- Main Content --> <main class="flex-1 min-w-0 lg:ml-72"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">   <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6 flex-wrap"> <a href="/vcpe-knowledge-base/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a> <span>/</span> <a href="/vcpe-knowledge-base/modules/10/" class="hover:text-accent-600 dark:hover:text-accent-400">案例库</a> <span>/</span> <span class="text-gray-800 dark:text-gray-200 truncate">Discord — 从游戏语音工具到全球社区平台</span> </nav> <article class="flex gap-8"> <!-- Article Content --> <div class="flex-1 min-w-0"> <!-- Article Header --> <header class="mb-8"> <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Discord — 从游戏语音工具到全球社区平台</h1> <div class="flex flex-wrap items-center gap-3 mb-4"> <a href="/modules/10/" class="text-xs px-2.5 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 hover:bg-accent-200 dark:hover:bg-accent-900/50 transition-colors"> 案例库 </a> <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300">
+案例研究
+</span> <a href="/search/?tag=vc-pe" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> vc-pe </a><a href="/search/?tag=%E6%A1%88%E4%BE%8B" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 案例 </a><a href="/search/?tag=%E6%88%90%E5%8A%9F" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 成功 </a><a href="/search/?tag=%E6%B5%B7%E5%A4%96" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 海外 </a><a href="/search/?tag=%E7%A4%BE%E4%BA%A4%E5%B9%B3%E5%8F%B0" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 社交平台 </a><a href="/search/?tag=%E6%B8%B8%E6%88%8F" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 游戏 </a><a href="/search/?tag=%E7%A4%BE%E5%8C%BA" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 社区 </a> </div> <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400"> <span>创建于 2026/05/28</span>  <span>5109字</span> <span>约 13 分钟阅读</span> </div> </header> <!-- Article Body --> <div class="prose"><h2 id="基本信息">基本信息</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>公司全称</td>
+<td>Discord Inc.</td>
+</tr>
+<tr>
+<td>成立时间</td>
+<td>2015年</td>
+</tr>
+<tr>
+<td>总部</td>
+<td>美国加州旧金山</td>
+</tr>
+<tr>
+<td>创始人</td>
+<td>Jason Citron、Stan Vishnevskiy</td>
+</tr>
+<tr>
+<td>核心业务</td>
+<td>社区通讯平台、语音/视频/文字聊天</td>
+</tr>
+<tr>
+<td>所属赛道</td>
+<td>社交平台 / 社区工具 / 游戏</td>
+</tr>
+<tr>
+<td>当前状态</td>
+<td>未上市，估值$150亿（2021年），用户超过2亿</td>
+</tr>
+</tbody>
+</table></div><h2 id="融资历程">融资历程</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>轮次</th>
+<th>时间</th>
+<th>金额</th>
+<th>估值</th>
+<th>领投方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>种子轮</td>
+<td>2015年</td>
+<td>$100万</td>
+<td>未披露</td>
+<td>天使投资人</td>
+</tr>
+<tr>
+<td>Series A</td>
+<td>2016年</td>
+<td>$2,000万</td>
+<td>未披露</td>
+<td>Index Ventures、Benchmark</td>
+</tr>
+<tr>
+<td>Series B</td>
+<td>2017年</td>
+<td>$5,000万</td>
+<td>未披露</td>
+<td>Greylock Partners</td>
+</tr>
+<tr>
+<td>Series C</td>
+<td>2018年</td>
+<td>$1.5亿</td>
+<td>~$20亿</td>
+<td>Greenoaks Capital</td>
+</tr>
+<tr>
+<td>Series D</td>
+<td>2020年6月</td>
+<td>$1亿</td>
+<td>~$35亿</td>
+<td>多家机构</td>
+</tr>
+<tr>
+<td>Series E</td>
+<td>2020年12月</td>
+<td>$1亿</td>
+<td>~$70亿</td>
+<td>多家机构</td>
+</tr>
+<tr>
+<td>Series F</td>
+<td>2021年9月</td>
+<td>$5亿</td>
+<td>~$150亿</td>
+<td>Dragoneer Investment Group</td>
+</tr>
+</tbody>
+</table></div><h2 id="商业模式">商业模式</h2>
+<p>Discord的商业模式是<strong>社区通讯平台</strong>，通过免费的基础服务吸引用户，再通过高级订阅（Discord Nitro）和增值服务变现。</p>
+<p><strong>核心产品：社区通讯平台</strong>。Discord最初是为游戏玩家设计的语音聊天工具，但逐渐发展成为覆盖各种兴趣社区的通用通讯平台。用户可以创建&quot;服务器&quot;（Server），在服务器中设置不同的&quot;频道&quot;（Channel），进行语音、视频和文字聊天。</p>
+<p><strong>差异化价值</strong>：</p>
+<ul>
+<li><strong>实时通讯</strong>：高质量的语音和视频通讯</li>
+<li><strong>社区管理</strong>：丰富的权限管理和自动化工具</li>
+<li><strong>可扩展性</strong>：通过Bot和集成扩展功能</li>
+<li><strong>跨平台</strong>：支持桌面、移动和网页端</li>
+</ul>
+<p><strong>收入模式</strong>：</p>
+<ul>
+<li><strong>Discord Nitro</strong>：$9.99/月的高级订阅，解锁自定义表情、更大文件上传等</li>
+<li><strong>Discord Nitro Basic</strong>：$2.99/月的基础订阅</li>
+<li><strong>Server Boost</strong>：服务器增强服务</li>
+<li><strong>应用商店</strong>：Bot和应用的分发平台</li>
+<li>2023年收入超过$5亿</li>
+</ul>
+<h2 id="投资逻辑">投资逻辑</h2>
+<p><strong>Jason Citron的创业背景</strong>：Jason Citron是一位连续创业者，之前创办了游戏社交平台OpenFeint（2011年以$1.04亿出售给Gree）。他创办Discord的动机是<strong>游戏玩家缺乏一个好的通讯工具</strong>——当时的TeamSpeak和Skype都不够好。</p>
+<p><strong>Index Ventures和Benchmark（Series A，2016年）</strong>：两家顶级VC联合领投$2,000万。他们的投资逻辑是：</p>
+<ol>
+<li><strong>创始人经验</strong>。Jason Citron有成功的游戏社交创业经验，深刻理解游戏玩家的需求。</li>
+<li><strong>产品-市场契合</strong>。Discord在游戏玩家中展现了极强的产品-市场契合，用户增长和留存率都极高。</li>
+<li><strong>社区平台的潜力</strong>。Discord不仅是语音工具，更是<strong>社区平台</strong>——有潜力成为各种兴趣社区的聚集地。</li>
+</ol>
+<p><strong>Greylock Partners（Series B，2017年）</strong>：Greylock的投资逻辑是Discord正在从<strong>游戏社区扩展到更广泛的兴趣社区</strong>，市场空间大幅扩大。</p>
+<h2 id="关键转折点">关键转折点</h2>
+<ol>
+<li>
+<p><strong>2015年：产品发布</strong>。Discord作为游戏语音工具发布，凭借简洁的设计和免费策略迅速获得游戏玩家的青睐。</p>
+</li>
+<li>
+<p><strong>2016-2017年：游戏玩家的默认选择</strong>。Discord成为游戏玩家的默认通讯工具，取代了TeamSpeak和Skype。</p>
+</li>
+<li>
+<p><strong>2018-2019年：从游戏到通用社区</strong>。Discord开始扩展到非游戏领域——教育、科技、艺术等各种兴趣社区开始使用Discord。</p>
+</li>
+<li>
+<p><strong>2020年：疫情加速</strong>。COVID-19疫情加速了Discord的增长，人们在隔离期间使用Discord进行虚拟聚会、在线课程等。</p>
+</li>
+<li>
+<p><strong>2021年：$150亿估值和Microsoft收购传闻</strong>。Discord以$150亿估值完成融资，同时有报道称Microsoft曾试图以$120亿收购Discord，但被拒绝。</p>
+</li>
+<li>
+<p><strong>2022-2023年：盈利化探索</strong>。Discord开始探索更多盈利方式，包括应用商店、广告等。</p>
+</li>
+</ol>
+<h2 id="退出-结局">退出/结局</h2>
+<p>Discord目前仍为未上市公司。</p>
+<p><strong>投资人回报（截至2021年估值$150亿）</strong>：</p>
+<ul>
+<li><strong>Index Ventures</strong>：Series A投资约$1,000万，回报约<strong>100倍</strong>。</li>
+<li><strong>Benchmark</strong>：Series A投资约$1,000万，回报约<strong>100倍</strong>。</li>
+<li><strong>Greylock Partners</strong>：Series B投资约$2,500万，回报约<strong>30倍</strong>。</li>
+<li><strong>Greenoaks Capital</strong>：Series C领投$1.5亿，回报约<strong>7.5倍</strong>。</li>
+</ul>
+<h2 id="投资人复盘">投资人复盘</h2>
+<p>Discord案例的核心启示是<strong>社区平台的网络效应和从垂直场景向通用平台扩展的潜力</strong>。</p>
+<p><strong>核心教训</strong>：</p>
+<ol>
+<li>
+<p><strong>从垂直场景起步</strong>。Discord从游戏语音工具起步，在这一垂直场景中建立了极强的产品-市场契合，然后逐步扩展到通用社区平台。这种**&quot;垂直起步，横向扩展&quot;的策略**在平台型公司中非常有效。</p>
+</li>
+<li>
+<p><strong>拒绝收购的勇气</strong>。Discord拒绝了Microsoft $120亿的收购要约，这一决策最终证明是正确的——公司估值从$120亿增长至$150亿。这说明<strong>优秀的创始人应该有能力判断何时独立发展更有价值</strong>。</p>
+</li>
+<li>
+<p><strong>免费策略的力量</strong>。Discord的核心服务完全免费，这一策略帮助Discord快速获取了大量用户。虽然盈利化一直是挑战，但<strong>免费策略建立的用户基础为未来的商业化提供了可能</strong>。</p>
+</li>
+<li>
+<p><strong>社区是护城河</strong>。Discord的核心价值不在于技术，而在于<strong>社区</strong>——用户在Discord上建立了深厚的社交关系和社区归属感。这种<strong>社区护城河</strong>是最难被竞争对手复制的。</p>
+</li>
+</ol>
+<h2 id="估值演变分析">估值演变分析</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>阶段</th>
+<th>时间</th>
+<th>估值</th>
+<th>估值方法</th>
+<th>估值驱动因素</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>种子轮</td>
+<td>2015年</td>
+<td>未披露</td>
+<td>创始人评估</td>
+<td>游戏语音工具的需求</td>
+</tr>
+<tr>
+<td>Series A</td>
+<td>2016年</td>
+<td>未披露</td>
+<td>可比交易法</td>
+<td>游戏玩家社区增长</td>
+</tr>
+<tr>
+<td>Series B</td>
+<td>2017年</td>
+<td>未披露</td>
+<td>收入倍数法</td>
+<td>用户快速增长</td>
+</tr>
+<tr>
+<td>Series C</td>
+<td>2018年</td>
+<td>~$20亿</td>
+<td>收入倍数法</td>
+<td>从游戏扩展到通用社区</td>
+</tr>
+<tr>
+<td>Series D</td>
+<td>2020年</td>
+<td>~$35亿</td>
+<td>收入倍数法</td>
+<td>疫情加速虚拟聚会需求</td>
+</tr>
+<tr>
+<td>Series E</td>
+<td>2020年</td>
+<td>~$70亿</td>
+<td>收入倍数法</td>
+<td>用户突破1亿</td>
+</tr>
+<tr>
+<td>Series F</td>
+<td>2021年</td>
+<td>~$150亿</td>
+<td>收入倍数法</td>
+<td>虚拟社区热潮</td>
+</tr>
+</tbody>
+</table></div><p><strong>估值方法演变</strong>：Discord的估值演变体现了<strong>社区平台的估值逻辑</strong>。早期以<strong>用户增长和社区活跃度</strong>为估值基础，中期以<strong>用户规模和使用时长</strong>为核心指标，后期以<strong>平台生态和商业化潜力</strong>为估值依据。</p>
+<p><strong>估值特点</strong>：Discord的估值从2018年的$20亿飙升至2021年的$150亿，增长了7.5倍。这一速度反映了<strong>虚拟社区需求</strong>对社交平台市场的巨大推动。</p>
+<blockquote>
+<p>链接：<a href="/vcpe-knowledge-base/articles/%E9%A3%8E%E9%99%A9%E6%8A%95%E8%B5%84%E6%B3%95/">风险投资法</a>、<a href="/vcpe-knowledge-base/articles/pre-money%E4%B8%8Epost-money/">Pre-Money与Post-Money</a>、<a href="/vcpe-knowledge-base/articles/%E5%8F%AF%E6%AF%94%E5%85%AC%E5%8F%B8%E6%B3%95/">可比公司法</a></p>
+</blockquote>
+<h2 id="关键条款分析">关键条款分析</h2>
+<p><strong>Index/Benchmark Series A条款（2016年）</strong>：</p>
+<ul>
+<li><strong>投资结构</strong>：可转换优先股</li>
+<li><strong>优先清算权</strong>：1x非参与型优先清算权</li>
+<li><strong>反稀释条款</strong>：加权平均反稀释保护</li>
+<li><strong>董事会席位</strong>：Index和Benchmark各获得一个董事会席位</li>
+<li><strong>特殊安排</strong>：两家顶级VC联合领投，各获$1,000万</li>
+</ul>
+<p><strong>Greylock Series B条款（2017年）</strong>：</p>
+<ul>
+<li><strong>投资结构</strong>：可转换优先股（Series B Preferred Stock）</li>
+<li><strong>优先清算权</strong>：1x非参与型优先清算权</li>
+<li><strong>反稀释条款</strong>：加权平均反稀释保护</li>
+<li><strong>董事会席位</strong>：Greylock获得一个董事会席位</li>
+</ul>
+<p><strong>特殊条款</strong>：Discord的融资条款中包含了<strong>社区活跃度指标</strong>作为估值参考。这一创新反映了<strong>社区驱动增长</strong>的商业模式特征。</p>
+<blockquote>
+<p>链接：<a href="/vcpe-knowledge-base/articles/%E6%8A%95%E8%B5%84%E6%9D%A1%E6%AC%BE%E6%B8%85%E5%8D%95-term-sheet/">投资条款清单-Term-Sheet</a>、<a href="/vcpe-knowledge-base/articles/%E5%8F%8D%E7%A8%80%E9%87%8A%E6%9D%A1%E6%AC%BE/">反稀释条款</a>、<a href="/vcpe-knowledge-base/articles/%E4%BC%98%E5%85%88%E6%B8%85%E7%AE%97%E6%9D%83/">优先清算权</a></p>
+</blockquote>
+<h2 id="退出回报分析">退出回报分析</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>投资人</th>
+<th>轮次</th>
+<th>投资额</th>
+<th>当前价值（估值$150亿）</th>
+<th>回报倍数</th>
+<th>DPI</th>
+<th>IRR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Index Ventures</td>
+<td>Series A</td>
+<td>~$1,000万</td>
+<td>~$15亿</td>
+<td>150x</td>
+<td>纸面</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Benchmark</td>
+<td>Series A</td>
+<td>~$1,000万</td>
+<td>~$15亿</td>
+<td>150x</td>
+<td>纸面</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Greylock Partners</td>
+<td>Series B</td>
+<td>~$2,500万</td>
+<td>~$7.5亿</td>
+<td>30x</td>
+<td>纸面</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Greenoaks Capital</td>
+<td>Series C</td>
+<td>$1.5亿</td>
+<td>~$11亿</td>
+<td>7.5x</td>
+<td>纸面</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table></div><p><strong>DPI vs 纸面回报</strong>：</p>
+<ul>
+<li><strong>Discord仍为未上市公司</strong>：所有投资人的回报均为纸面回报，尚未实现DPI</li>
+<li><strong>Microsoft收购传闻</strong>：2021年有报道称Microsoft曾试图以$120亿收购Discord，但被拒绝</li>
+<li><strong>IPO预期</strong>：Discord被认为是最有可能在2026-2027年进行IPO的社区平台公司</li>
+</ul>
+<p><strong>关键教训</strong>：Discord案例说明，<strong>社区平台的投资回报周期相对较长</strong>。从2015年成立到2026年，Discord经历了11年。这一周期需要<strong>超长期耐心资本</strong>的支持，也说明了<strong>社区护城河</strong>的长期价值。</p>
+<blockquote>
+<p>链接：<a href="/vcpe-knowledge-base/articles/ipo%E8%B7%AF%E5%BE%84/">IPO路径</a>、<a href="/vcpe-knowledge-base/articles/dpi%E4%B8%8Eirr%E8%A7%A3%E8%AF%BB/">DPI与IRR解读</a></p>
+</blockquote>
+<h2 id="中美对比">中美对比</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>维度</th>
+<th>Discord</th>
+<th>微信群/QQ群/YY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>成立时间</td>
+<td>2015年</td>
+<td>微信2011年/QQ 1999年/YY 2005年</td>
+</tr>
+<tr>
+<td>估值</td>
+<td>$150亿</td>
+<td>微信（腾讯内部）</td>
+</tr>
+<tr>
+<td>核心市场</td>
+<td>全球</td>
+<td>中国</td>
+</tr>
+<tr>
+<td>用户规模</td>
+<td>2亿+</td>
+<td>微信13亿+/QQ 5亿+</td>
+</tr>
+<tr>
+<td>商业模式</td>
+<td>免费+Nitro订阅</td>
+<td>免费+增值服务</td>
+</tr>
+<tr>
+<td>社区类型</td>
+<td>兴趣社区</td>
+<td>社交通讯</td>
+</tr>
+<tr>
+<td>IPO状态</td>
+<td>未上市</td>
+<td>微信（腾讯内部）</td>
+</tr>
+</tbody>
+</table></div><p><strong>核心差异</strong>：</p>
+<ol>
+<li><strong>产品定位</strong>：Discord定位为&quot;社区平台&quot;，微信群/QQ群更多定位为&quot;社交通讯工具&quot;</li>
+<li><strong>社区类型</strong>：Discord以兴趣社区为主，微信群/QQ群以社交关系为主</li>
+<li><strong>商业模式</strong>：Discord以Nitro订阅为主，微信以广告和增值服务为主</li>
+<li><strong>技术架构</strong>：Discord以语音/视频通讯为核心，微信以文字/图片通讯为核心</li>
+</ol>
+<blockquote>
+<p>链接：<a href="/vcpe-knowledge-base/search/?q=%E6%A1%88%E4%BE%8B-%E4%B8%AD%E5%9B%BD-%E5%BE%AE%E4%BF%A1">案例-中国-微信</a>、<a href="/vcpe-knowledge-base/search/?q=%E7%A4%BE%E5%8C%BA%E5%B9%B3%E5%8F%B0%E6%8A%95%E8%B5%84%E5%AF%B9%E6%AF%94">社区平台投资对比</a>、<a href="/vcpe-knowledge-base/search/?q=%E6%B8%B8%E6%88%8F%E7%A4%BE%E5%8C%BA%E5%9C%A8%E4%B8%AD%E5%9B%BD">游戏社区在中国</a></p>
+</blockquote>
+<h2 id="行业赛道关联">行业赛道关联</h2>
+<p>Discord所在的社区平台/游戏社交赛道是过去10年增长最快的社交赛道之一。以下为相关深度研报：</p>
+<ul>
+<li><a href="/vcpe-knowledge-base/search/?q=%E7%A4%BE%E5%8C%BA%E5%B9%B3%E5%8F%B0%E8%A1%8C%E4%B8%9A%E7%A0%94%E6%8A%A5">社区平台行业研报</a> — Discord/Reddit/Twitch的竞争格局</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E6%B8%B8%E6%88%8F%E7%A4%BE%E4%BA%A4%E8%A1%8C%E4%B8%9A%E7%A0%94%E6%8A%A5">游戏社交行业研报</a> — 游戏社区的商业模式和增长趋势</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E8%99%9A%E6%8B%9F%E7%A4%BE%E5%8C%BA%E8%A1%8C%E4%B8%9A%E7%A0%94%E6%8A%A5">虚拟社区行业研报</a> — 元宇宙/虚拟社区的发展趋势</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E8%AF%AD%E9%9F%B3%E9%80%9A%E8%AE%AF%E8%A1%8C%E4%B8%9A%E7%A0%94%E6%8A%A5">语音通讯行业研报</a> — 语音/视频通讯技术的演进</li>
+</ul>
+<h2 id="参考来源">参考来源</h2>
+<ul>
+<li>Discord官方融资信息</li>
+<li>Index Ventures投资组合</li>
+<li>Crunchbase Discord融资历史</li>
+<li>Bloomberg Discord估值报道</li>
+</ul>
+<h2 id="相关主题">相关主题</h2>
+<ul>
+<li><a href="/vcpe-knowledge-base/articles/%E6%A1%88%E4%BE%8B-%E6%B5%B7%E5%A4%96-notion/">案例-海外-Notion</a> — 同为社区驱动增长的平台</li>
+<li><a href="/vcpe-knowledge-base/articles/%E6%A1%88%E4%BE%8B-%E6%B5%B7%E5%A4%96-facebook/">案例-海外-Facebook</a> — 社交网络的网络效应</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E7%A4%BE%E5%8C%BA%E5%B9%B3%E5%8F%B0">社区平台</a> — Discord的核心商业模式</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E6%B8%B8%E6%88%8F%E8%A1%8C%E4%B8%9A%E6%8A%95%E8%B5%84">游戏行业投资</a> — Discord起步的垂直场景</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E6%A1%88%E4%BE%8B-%E4%B8%AD%E5%9B%BD-%E5%BE%AE%E4%BF%A1">案例-中国-微信</a> — 中国社交通讯平台的代表</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E6%A1%88%E4%BE%8B-%E4%B8%AD%E5%9B%BD-B%E7%AB%99">案例-中国-B站</a> — 中国兴趣社区的代表</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E5%85%8D%E8%B4%B9%E5%A2%9E%E5%80%BC%E6%A8%A1%E5%BC%8F">免费增值模式</a> — Discord的增长模式核心</li>
+<li><a href="/vcpe-knowledge-base/search/?q=Bot%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F">Bot生态系统</a> — Discord平台的重要组成部分</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E5%9E%82%E7%9B%B4%E5%9C%BA%E6%99%AF%E6%89%A9%E5%B1%95">垂直场景扩展</a> — Discord从游戏到通用社区的路径</li>
+</ul>
+</div> <!-- Related Articles --> <section class="mt-12 pt-8 border-t border-gray-200 dark:border-primary-800"> <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">📎 相关推荐</h2> <div class="space-y-3"> <a href="/vcpe-knowledge-base/articles/案例-早期-米哈游/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 米哈游 — 不融资也能成功的游戏传奇，《原神》背后的资本故事 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">注：米哈游是中国游戏行业最&quot;特立独行&quot;的公司之一——自2014年《崩坏学园2》上线后，公司几乎未再进行过外部融资，凭借自有现金流支撑了《原神》等大作的研发。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/案例-海外-airbnb/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> Airbnb — 共享经济的典范与信任平台的奇迹 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Airbnb的商业模式是双边市场平台，连接有闲置房源的房东和寻找住宿的旅行者，通过交易佣金获取收入。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/案例-海外-amazon/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> Amazon — 从网上书店到全球云计算霸主 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Amazon的商业模式经历了从在线书店到万货商店再到科技平台的三次重大转型。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/案例-海外-anthropic/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> Anthropic — AI安全先行者的$3,800亿估值之路 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Anthropic的商业模式是AI模型即服务（AI Model as a Service），通过API和订阅制向企业和消费者提供AI能力。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/案例-海外-brex/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> Brex — 重新定义企业金融的硅谷新贵 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Brex的商业模式是企业金融平台，通过提供企业信用卡、支出管理和银行服务，帮助初创公司和科技企业管理财务。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a> </div> </section> </div> <!-- Table of Contents (Desktop) --> <aside class="hidden xl:block w-64 flex-shrink-0"> <div class="sticky top-20"> <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">目录</h3> <nav class="space-y-1"> <a href="#基本信息" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="基本信息"> 基本信息 </a><a href="#融资历程" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="融资历程"> 融资历程 </a><a href="#商业模式" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="商业模式"> 商业模式 </a><a href="#投资逻辑" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="投资逻辑"> 投资逻辑 </a><a href="#关键转折点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键转折点"> 关键转折点 </a><a href="#退出-结局" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="退出-结局"> 退出/结局 </a><a href="#投资人复盘" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="投资人复盘"> 投资人复盘 </a><a href="#估值演变分析" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="估值演变分析"> 估值演变分析 </a><a href="#关键条款分析" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键条款分析"> 关键条款分析 </a><a href="#退出回报分析" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="退出回报分析"> 退出回报分析 </a><a href="#中美对比" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="中美对比"> 中美对比 </a><a href="#行业赛道关联" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="行业赛道关联"> 行业赛道关联 </a><a href="#参考来源" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="参考来源"> 参考来源 </a><a href="#相关主题" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="相关主题"> 相关主题 </a> </nav> </div> </aside> </article> <script type="module">const n=new IntersectionObserver(e=>{e.forEach(t=>{const o=t.target.id,c=document.querySelector(`.toc-link[data-heading="${o}"]`);c&&t.isIntersecting&&(document.querySelectorAll(".toc-link").forEach(r=>r.classList.remove("text-accent-600","dark:text-accent-400")),c.classList.add("text-accent-600","dark:text-accent-400"))})},{rootMargin:"-80px 0px -80% 0px"});document.querySelectorAll(".prose h2[id], .prose h3[id], .prose h4[id]").forEach(e=>{n.observe(e)});</script>  </div> </main> </div> <!-- Mobile sidebar overlay --> <div id="sidebar-overlay" class="fixed inset-0 z-20 bg-black/50 hidden lg:hidden"></div> <script type="module">const m=document.getElementById("theme-toggle"),o=document.getElementById("theme-light-icon"),d=document.getElementById("theme-dark-icon");function t(e){e?(document.documentElement.classList.add("dark"),o?.classList.add("hidden"),d?.classList.remove("hidden"),localStorage.setItem("theme","dark")):(document.documentElement.classList.remove("dark"),o?.classList.remove("hidden"),d?.classList.add("hidden"),localStorage.setItem("theme","light"))}const s=localStorage.getItem("theme");t(s==="light"?!1:s==="dark"?!0:window.matchMedia("(prefers-color-scheme: dark)").matches);m?.addEventListener("click",()=>{t(!document.documentElement.classList.contains("dark"))});const r=document.getElementById("mobile-menu-toggle"),g=document.getElementById("sidebar"),l=document.getElementById("sidebar-overlay");function i(){g?.classList.toggle("-translate-x-full"),l?.classList.toggle("hidden")}r?.addEventListener("click",i);l?.addEventListener("click",i);const c=document.getElementById("reading-progress");window.addEventListener("scroll",()=>{const e=window.scrollY,n=document.documentElement.scrollHeight-window.innerHeight,a=n>0?e/n*100:0;c&&(c.style.width=`${Math.min(100,a)}%`)});document.addEventListener("keydown",e=>{(e.ctrlKey||e.metaKey)&&e.key==="k"&&(e.preventDefault(),window.location.href="/vcpe-knowledge-base/search/")});</script> </body> </html> 

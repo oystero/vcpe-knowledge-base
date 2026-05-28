@@ -1,0 +1,239 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="VC/PE 投资知识库 - 面向投资实战的系统化知识框架"><meta name="generator" content="Astro v5.18.2"><link rel="icon" type="image/svg+xml" href="/vcpe-knowledge-base/favicon.svg"><title>基金生命周期 | VC/PE 投资知识库</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/vcpe-knowledge-base/_astro/index.DHKBIVZD.css"></head> <body class="bg-gray-50 dark:bg-primary-950 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300"> <!-- Reading Progress Bar --> <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-accent-500 to-accent-300 z-50 transition-all duration-150" style="width: 0%"></div> <!-- Header --> <header class="sticky top-0 z-40 bg-white/80 dark:bg-primary-900/80 backdrop-blur-md border-b border-gray-200 dark:border-primary-800"> <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between"> <div class="flex items-center gap-4"> <a href="/vcpe-knowledge-base/" class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity"> <span class="text-2xl">💰</span> <span class="hidden sm:inline">VC/PE 投资知识库</span> </a> </div> <div class="flex items-center gap-3"> <!-- Search --> <a href="/vcpe-knowledge-base/search/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> <span class="hidden md:inline">搜索...</span> <kbd class="hidden md:inline px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-primary-700 rounded">Ctrl+K</kbd> </a> <!-- Graph --> <a href="/vcpe-knowledge-base/graph/" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="12" cy="12" r="2"></circle><path d="M8 6h8M6 8v8M18 8v8M8 18h8M8 8l4 4M16 8l-4 4M8 16l4-4M16 16l-4-4"></path></svg> </a> <!-- Theme Toggle --> <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="切换主题"> <svg id="theme-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg> <svg id="theme-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> </button> <!-- Mobile Menu Toggle --> <button id="mobile-menu-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors lg:hidden"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> </button> </div> </div> </header> <div class="flex flex-1 max-w-screen-2xl mx-auto w-full"> <!-- Sidebar --> <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-30 w-72 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-primary-900 border-r border-gray-200 dark:border-primary-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300"> <nav class="p-4 space-y-1"> <a href="/vcpe-knowledge-base/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏠</span> 首页
+</a> <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">模块导航</div> <a href="/vcpe-knowledge-base/modules/00/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400"> <span>📚</span> 00 基础概念
+</a> <a href="/vcpe-knowledge-base/modules/01/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔄</span> 01 投资流程
+</a> <a href="/vcpe-knowledge-base/modules/02/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>💵</span> 02 估值方法
+</a> <a href="/vcpe-knowledge-base/modules/03/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📜</span> 03 法律与条款
+</a> <a href="/vcpe-knowledge-base/modules/04/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏭</span> 04 行业赛道
+</a> <a href="/vcpe-knowledge-base/modules/05/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔍</span> 05 尽职调查
+</a> <a href="/vcpe-knowledge-base/modules/06/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🤝</span> 06 投后管理
+</a> <a href="/vcpe-knowledge-base/modules/07/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🚪</span> 07 退出策略
+</a> <a href="/vcpe-knowledge-base/modules/08/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🇨🇳</span> 08 中国VC/PE实务
+</a> <a href="/vcpe-knowledge-base/modules/09/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📊</span> 09 风险与组合
+</a> <a href="/vcpe-knowledge-base/modules/10/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📖</span> 10 案例库
+</a> <a href="/vcpe-knowledge-base/modules/11/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🛠️</span> 11 工具与资源
+</a> </nav> </aside> <!-- Main Content --> <main class="flex-1 min-w-0 lg:ml-72"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">   <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6 flex-wrap"> <a href="/vcpe-knowledge-base/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a> <span>/</span> <a href="/vcpe-knowledge-base/modules/00/" class="hover:text-accent-600 dark:hover:text-accent-400">基础概念</a> <span>/</span> <span class="text-gray-800 dark:text-gray-200 truncate">基金生命周期</span> </nav> <article class="flex gap-8"> <!-- Article Content --> <div class="flex-1 min-w-0"> <!-- Article Header --> <header class="mb-8"> <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">基金生命周期</h1> <div class="flex flex-wrap items-center gap-3 mb-4"> <a href="/modules/00/" class="text-xs px-2.5 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 hover:bg-accent-200 dark:hover:bg-accent-900/50 transition-colors"> 基础概念 </a>  <a href="/search/?tag=vc-pe" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> vc-pe </a><a href="/search/?tag=%E5%9F%BA%E9%87%91%E8%BF%90%E8%90%A5" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 基金运营 </a><a href="/search/?tag=%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 生命周期 </a><a href="/search/?tag=%E5%8B%9F%E6%8A%95%E7%AE%A1%E9%80%80" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 募投管退 </a> </div> <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400"> <span>创建于 2026/05/27</span>  <span>3118字</span> <span>约 8 分钟阅读</span> </div> </header> <!-- Article Body --> <div class="prose"><h2 id="概述">概述</h2>
+<p>VC/PE 基金具有明确的生命周期，通常为 10 年（可延长 1-3 年），经历募集、投资、管理、退出四个阶段。理解基金生命周期对于 LP 评估基金表现、GP 规划投资节奏、创业者理解投资方约束都至关重要。</p>
+<h2 id="核心内容">核心内容</h2>
+<h3 id="四阶段概览">四阶段概览</h3>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>阶段</th>
+<th>英文</th>
+<th>典型时长</th>
+<th>核心任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>募集期</td>
+<td>Fundraising Period</td>
+<td>6-18 个月</td>
+<td>路演、谈判、签署 LPA、First Close</td>
+</tr>
+<tr>
+<td>投资期</td>
+<td>Investment Period</td>
+<td>3-5 年</td>
+<td>Deal sourcing、DD、投资决策、Capital Call</td>
+</tr>
+<tr>
+<td>管理期/投后期</td>
+<td>Post-Investment Period / Harvesting Period</td>
+<td>3-7 年</td>
+<td>投后管理、增值服务、规划退出</td>
+</tr>
+<tr>
+<td>退出期</td>
+<td>Exit / Liquidation Period</td>
+<td>1-3 年</td>
+<td>IPO、并购、股权转让、基金清算</td>
+</tr>
+</tbody>
+</table></div><h3 id="典型-10-年基金时间线">典型 10 年基金时间线</h3>
+<pre><code>Year 1-2:  募集 + 首次投资
+Year 1-5:  投资期（Investment Period）
+Year 3-10: 管理期（持续投后管理）
+Year 5-10: 退出期（IPO/并购/Secondary Sale）
+Year 10:   基金到期（Maturity）
+Year 10-12: 延长期（Extension Period，如有需要）
+</code></pre>
+<h3 id="阶段一-募集期-fundraising-period">阶段一：募集期（Fundraising Period）</h3>
+<p><strong>关键里程碑：</strong></p>
+<ol>
+<li><strong>PDB（Private Placement Memorandum）制作：</strong> 包含基金策略、团队介绍、条款清单</li>
+<li><strong>Target LP List：</strong> 确定目标 LP 类型和规模（养老金/母基金/家族办公室等）</li>
+<li><strong>First Close：</strong> 首次封闭，通常在承诺出资达到目标规模的 30%-50% 时进行</li>
+<li><strong>Final Close：</strong> 最终封闭，通常在 First Close 后 6-12 个月</li>
+</ol>
+<p><strong>行业数据（2024-2025）：</strong></p>
+<ul>
+<li>全球 VC/PE 募资周期中位数：约 14 个月</li>
+<li>亚洲基金平均募资规模：约 3-5 亿美元（成长型），5,000 万-1.5 亿美元（早期 VC）</li>
+<li>募资成功率：仅约 30%-40% 的基金能完成 Final Close</li>
+</ul>
+<h3 id="阶段二-投资期-investment-period">阶段二：投资期（Investment Period）</h3>
+<p><strong>投资节奏管理：</strong></p>
+<ul>
+<li>GP 通常在投资期内完成 80%-100% 的承诺出资部署</li>
+<li>典型 VC 基金投资 20-40 个项目（早期）或 10-20 个项目（成长期）</li>
+<li>投资节奏建议：前两年较快（占 50%-60%），后两年较审慎</li>
+</ul>
+<p><strong>Capital Call 机制：</strong></p>
+<ul>
+<li>GP 按需发起 Capital Call，通常提前 10 个工作日通知</li>
+<li>LP 需在约定期限内（通常 5-10 个工作日）完成打款</li>
+<li>违约（Default）的 LP 可能面临利息罚金甚至权益稀释</li>
+</ul>
+<h3 id="阶段三-管理期-post-investment-period">阶段三：管理期（Post-Investment Period）</h3>
+<p><strong>投后管理内容：</strong></p>
+<ul>
+<li><strong>Board Participation：</strong> GP 代表参与被投企业董事会</li>
+<li><strong>财务监控：</strong> 季度/年度财务报告审查</li>
+<li><strong>增值服务：</strong> 协助招聘、业务拓展、后续融资</li>
+<li><strong>估值更新：</strong> 每季度/半年进行 NAV（净资产价值）估值</li>
+</ul>
+<p><strong>投后管理投入比例：</strong></p>
+<ul>
+<li>头部基金通常将 30%-40% 的团队精力投入投后管理</li>
+<li>典型 VC 基金每位投资人员负责 8-12 个活跃项目</li>
+</ul>
+<h3 id="阶段四-退出期-exit-period">阶段四：退出期（Exit Period）</h3>
+<p><strong>主要退出方式：</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>退出方式</th>
+<th>占比（全球）</th>
+<th>典型回报倍数</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IPO</td>
+<td>15%-25%</td>
+<td>3-10x</td>
+<td>高成长、盈利或接近盈利的企业</td>
+</tr>
+<tr>
+<td>并购（Trade Sale）</td>
+<td>40%-50%</td>
+<td>2-5x</td>
+<td>战略收购、行业整合</td>
+</tr>
+<tr>
+<td>Secondary Sale</td>
+<td>15%-20%</td>
+<td>1.5-3x</td>
+<td>股权转让给其他 PE/战略方</td>
+</tr>
+<tr>
+<td>Management Buyback</td>
+<td>5%-10%</td>
+<td>1-2x</td>
+<td>管理层回购</td>
+</tr>
+<tr>
+<td>清算（Write-off）</td>
+<td>5%-15%</td>
+<td>0-0.5x</td>
+<td>失败项目</td>
+</tr>
+</tbody>
+</table></div><p><strong>基金到期处理：</strong></p>
+<ul>
+<li>基金到期后如仍有未退出资产，GP 可申请 Extension（通常 1-2 年，需 LP 多数同意）</li>
+<li>最终未退出资产可通过 Secondary Market 整体出售给 S 基金（Secondary Fund）</li>
+</ul>
+<h3 id="关键时间节点示意">关键时间节点示意</h3>
+<pre><code>                    投资期                    管理期/退出期
+               |&lt;------ 5年 ------&gt;|&lt;--------- 5年 ---------&gt;|
+年份:  0   1   2   3   4   5   6   7   8   9   10  11  12
+       |   |   |   |   |   |   |   |   |   |   |   |   |
+       First    投资     投资期    主要    基金    延长
+       Close    启动     结束     退出    到期    期结束
+</code></pre>
+<h2 id="关键术语">关键术语</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>术语</th>
+<th>英文</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>承诺出资</td>
+<td>Commitment</td>
+<td>LP 承诺向基金投入的总金额</td>
+</tr>
+<tr>
+<td>缴款通知</td>
+<td>Capital Call / Drawdown</td>
+<td>GP 通知 LP 缴付出资的正式通知</td>
+</tr>
+<tr>
+<td>已投成本</td>
+<td>Cost Basis / Invested Capital</td>
+<td>基金实际投入被投企业的总金额</td>
+</tr>
+<tr>
+<td>净资产价值</td>
+<td>NAV (Net Asset Value)</td>
+<td>基金持有的所有资产按公允价值计算的净值</td>
+</tr>
+<tr>
+<td>分配</td>
+<td>Distribution</td>
+<td>基金向 LP 返还本金和利润</td>
+</tr>
+<tr>
+<td>延长期</td>
+<td>Extension Period</td>
+<td>基金到期后经 LP 同意延长的 1-3 年期间</td>
+</tr>
+<tr>
+<td>基金条款</td>
+<td>Fund Terms</td>
+<td>LPA 中规定基金运营规则的核心条款</td>
+</tr>
+</tbody>
+</table></div><h2 id="实务要点">实务要点</h2>
+<ul>
+<li><strong>募资是马拉松，不是短跑：</strong> 从首次接触 LP 到 Final Close 通常需要 12-18 个月，GP 应提前规划，保持 Pipeline 持续更新</li>
+<li><strong>投资节奏比单个项目更重要：</strong> GP 需平衡 FOMO（Fear of Missing Out）和 J-Curve 效应，避免在市场高点集中投资</li>
+<li><strong>投后管理是回报的倍增器：</strong> 头部基金的超额回报往往来自投后增值服务，而非单纯的项目发现能力</li>
+<li><strong>退出规划应从投资时就开始：</strong> 每个投资项目在投资决策阶段就应初步规划退出路径</li>
+<li><strong>LP 的现金流管理：</strong> LP 需要为 Capital Call 保留充足的流动性储备（通常为承诺出资的 30%-50% 以现金/等价物形式持有）</li>
+</ul>
+<h2 id="常见误区">常见误区</h2>
+<ul>
+<li><strong>将投资期等同于基金生命：</strong> 很多从业者只关注投资期，忽视了管理期和退出期才是基金回报兑现的关键阶段，投后管理和退出能力同样重要</li>
+<li><strong>忽视 J-Curve 效应：</strong> VC/PE 基金在前 3-5 年通常呈现负回报（费用 + 投资损失），真正有意义的业绩评估应至少等到基金第 5 年之后</li>
+<li><strong>认为基金到期就必须清算：</strong> 实际上很多基金需要延长 1-3 年才能完成所有退出，这在行业中是常态而非异常</li>
+</ul>
+<h2 id="参考来源">参考来源</h2>
+<ul>
+<li>Metrick, A. &amp; Yasuda, A. <em>Venture Capital and the Finance of Innovation</em>. Wiley, 2010.</li>
+<li>EVCA (now Invest Europe). <em>Investor Reporting Guidelines</em>, 2023.</li>
+<li>Cambridge Associates. <em>Private Equity and Venture Capital Benchmark Report</em>, 2024.</li>
+<li>Preqin. <em>Global Private Equity &amp; Venture Capital Report</em>, 2024.</li>
+</ul>
+<h2 id="相关主题">相关主题</h2>
+<ul>
+<li><a href="/vcpe-knowledge-base/articles/lp%E4%B8%8Egp%E5%85%B3%E7%B3%BB/">LP与GP关系</a> — 理解基金生命周期中的 LP-GP 动态</li>
+<li><a href="/vcpe-knowledge-base/articles/%E7%AE%A1%E7%90%86%E8%B4%B9%E4%B8%8E%E6%94%B6%E7%9B%8A%E5%88%86%E9%85%8D/">管理费与收益分配</a> — 不同阶段的费用结构变化</li>
+<li><a href="/vcpe-knowledge-base/articles/%E5%9F%BA%E9%87%91%E6%9E%B6%E6%9E%84%E4%B8%8E%E6%B3%95%E5%BE%8B%E5%AE%9E%E4%BD%93/">基金架构与法律实体</a> — 基金生命周期的法律载体</li>
+<li><a href="/vcpe-knowledge-base/articles/%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96%E6%B5%81%E7%A8%8B/">投资决策流程</a> — 投资期的核心决策机制</li>
+<li><a href="/vcpe-knowledge-base/articles/%E6%8A%95%E8%B5%84%E5%90%8E%E9%A6%96%E6%AC%A1%E6%B2%9F%E9%80%9A/">投资后首次沟通</a> — 投资完成后进入管理期的第一步</li>
+</ul>
+</div> <!-- Related Articles --> <section class="mt-12 pt-8 border-t border-gray-200 dark:border-primary-800"> <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">📎 相关推荐</h2> <div class="space-y-3"> <a href="/vcpe-knowledge-base/articles/基金架构与法律实体/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">基础概念</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 基金架构与法律实体 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">有限合伙制是全球 VC/PE 行业最主流的基金架构。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/管理费与收益分配/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">基础概念</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 管理费与收益分配 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">管理费是 LP 为覆盖基金运营成本而支付给 GP 的固定费用。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/投资后首次沟通/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">投资流程</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 投资后首次沟通 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">目的：
+- 建立个人层面的信任关系
+- 了解创始人的真实期望和担忧
+- 明确投资人的角色定位（增值而非干预）</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/lp与gp关系/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">基础概念</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> LP 与 GP 关系 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">GP 的权利：
+- 投资决策的全部自主权（投资/退出/估值）
+- 收取管理费（Management Fee）和业绩报酬（Carried Interest）
+- 选择被投企业董事席位
+- 决定基金的投资策略与行业方向</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/投资决策流程/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">投资流程</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 投资决策流程 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">IC 的规模：
+- 早期 VC：通常 3-5 人
+- 成长期 VC/PE：通常 5-7 人
+- 大型 PE：通常 7-10 人，可能设多个分委员会</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a> </div> </section> </div> <!-- Table of Contents (Desktop) --> <aside class="hidden xl:block w-64 flex-shrink-0"> <div class="sticky top-20"> <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">目录</h3> <nav class="space-y-1"> <a href="#概述" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="概述"> 概述 </a><a href="#核心内容" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="核心内容"> 核心内容 </a><a href="#四阶段概览" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="四阶段概览"> 四阶段概览 </a><a href="#典型-10-年基金时间线" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="典型-10-年基金时间线"> 典型 10 年基金时间线 </a><a href="#阶段一-募集期-fundraising-period" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="阶段一-募集期-fundraising-period"> 阶段一：募集期（Fundraising Period） </a><a href="#阶段二-投资期-investment-period" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="阶段二-投资期-investment-period"> 阶段二：投资期（Investment Period） </a><a href="#阶段三-管理期-post-investment-period" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="阶段三-管理期-post-investment-period"> 阶段三：管理期（Post-Investment Period） </a><a href="#阶段四-退出期-exit-period" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="阶段四-退出期-exit-period"> 阶段四：退出期（Exit Period） </a><a href="#关键时间节点示意" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="关键时间节点示意"> 关键时间节点示意 </a><a href="#关键术语" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键术语"> 关键术语 </a><a href="#实务要点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="实务要点"> 实务要点 </a><a href="#常见误区" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="常见误区"> 常见误区 </a><a href="#参考来源" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="参考来源"> 参考来源 </a><a href="#相关主题" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="相关主题"> 相关主题 </a> </nav> </div> </aside> </article> <script type="module">const n=new IntersectionObserver(e=>{e.forEach(t=>{const o=t.target.id,c=document.querySelector(`.toc-link[data-heading="${o}"]`);c&&t.isIntersecting&&(document.querySelectorAll(".toc-link").forEach(r=>r.classList.remove("text-accent-600","dark:text-accent-400")),c.classList.add("text-accent-600","dark:text-accent-400"))})},{rootMargin:"-80px 0px -80% 0px"});document.querySelectorAll(".prose h2[id], .prose h3[id], .prose h4[id]").forEach(e=>{n.observe(e)});</script>  </div> </main> </div> <!-- Mobile sidebar overlay --> <div id="sidebar-overlay" class="fixed inset-0 z-20 bg-black/50 hidden lg:hidden"></div> <script type="module">const m=document.getElementById("theme-toggle"),o=document.getElementById("theme-light-icon"),d=document.getElementById("theme-dark-icon");function t(e){e?(document.documentElement.classList.add("dark"),o?.classList.add("hidden"),d?.classList.remove("hidden"),localStorage.setItem("theme","dark")):(document.documentElement.classList.remove("dark"),o?.classList.remove("hidden"),d?.classList.add("hidden"),localStorage.setItem("theme","light"))}const s=localStorage.getItem("theme");t(s==="light"?!1:s==="dark"?!0:window.matchMedia("(prefers-color-scheme: dark)").matches);m?.addEventListener("click",()=>{t(!document.documentElement.classList.contains("dark"))});const r=document.getElementById("mobile-menu-toggle"),g=document.getElementById("sidebar"),l=document.getElementById("sidebar-overlay");function i(){g?.classList.toggle("-translate-x-full"),l?.classList.toggle("hidden")}r?.addEventListener("click",i);l?.addEventListener("click",i);const c=document.getElementById("reading-progress");window.addEventListener("scroll",()=>{const e=window.scrollY,n=document.documentElement.scrollHeight-window.innerHeight,a=n>0?e/n*100:0;c&&(c.style.width=`${Math.min(100,a)}%`)});document.addEventListener("keydown",e=>{(e.ctrlKey||e.metaKey)&&e.key==="k"&&(e.preventDefault(),window.location.href="/vcpe-knowledge-base/search/")});</script> </body> </html> 

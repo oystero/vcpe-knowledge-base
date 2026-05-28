@@ -1,0 +1,425 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="VC/PE 投资知识库 - 面向投资实战的系统化知识框架"><meta name="generator" content="Astro v5.18.2"><link rel="icon" type="image/svg+xml" href="/vcpe-knowledge-base/favicon.svg"><title>Canva — 让每个人都能设计的澳大利亚独角兽 | VC/PE 投资知识库</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/vcpe-knowledge-base/_astro/index.DHKBIVZD.css"></head> <body class="bg-gray-50 dark:bg-primary-950 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300"> <!-- Reading Progress Bar --> <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-accent-500 to-accent-300 z-50 transition-all duration-150" style="width: 0%"></div> <!-- Header --> <header class="sticky top-0 z-40 bg-white/80 dark:bg-primary-900/80 backdrop-blur-md border-b border-gray-200 dark:border-primary-800"> <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between"> <div class="flex items-center gap-4"> <a href="/vcpe-knowledge-base/" class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity"> <span class="text-2xl">💰</span> <span class="hidden sm:inline">VC/PE 投资知识库</span> </a> </div> <div class="flex items-center gap-3"> <!-- Search --> <a href="/vcpe-knowledge-base/search/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> <span class="hidden md:inline">搜索...</span> <kbd class="hidden md:inline px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-primary-700 rounded">Ctrl+K</kbd> </a> <!-- Graph --> <a href="/vcpe-knowledge-base/graph/" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="12" cy="12" r="2"></circle><path d="M8 6h8M6 8v8M18 8v8M8 18h8M8 8l4 4M16 8l-4 4M8 16l4-4M16 16l-4-4"></path></svg> </a> <!-- Theme Toggle --> <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="切换主题"> <svg id="theme-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg> <svg id="theme-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> </button> <!-- Mobile Menu Toggle --> <button id="mobile-menu-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors lg:hidden"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> </button> </div> </div> </header> <div class="flex flex-1 max-w-screen-2xl mx-auto w-full"> <!-- Sidebar --> <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-30 w-72 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-primary-900 border-r border-gray-200 dark:border-primary-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300"> <nav class="p-4 space-y-1"> <a href="/vcpe-knowledge-base/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏠</span> 首页
+</a> <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">模块导航</div> <a href="/vcpe-knowledge-base/modules/00/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📚</span> 00 基础概念
+</a> <a href="/vcpe-knowledge-base/modules/01/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔄</span> 01 投资流程
+</a> <a href="/vcpe-knowledge-base/modules/02/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>💵</span> 02 估值方法
+</a> <a href="/vcpe-knowledge-base/modules/03/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📜</span> 03 法律与条款
+</a> <a href="/vcpe-knowledge-base/modules/04/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏭</span> 04 行业赛道
+</a> <a href="/vcpe-knowledge-base/modules/05/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔍</span> 05 尽职调查
+</a> <a href="/vcpe-knowledge-base/modules/06/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🤝</span> 06 投后管理
+</a> <a href="/vcpe-knowledge-base/modules/07/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🚪</span> 07 退出策略
+</a> <a href="/vcpe-knowledge-base/modules/08/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🇨🇳</span> 08 中国VC/PE实务
+</a> <a href="/vcpe-knowledge-base/modules/09/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📊</span> 09 风险与组合
+</a> <a href="/vcpe-knowledge-base/modules/10/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400"> <span>📖</span> 10 案例库
+</a> <a href="/vcpe-knowledge-base/modules/11/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🛠️</span> 11 工具与资源
+</a> </nav> </aside> <!-- Main Content --> <main class="flex-1 min-w-0 lg:ml-72"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">   <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6 flex-wrap"> <a href="/vcpe-knowledge-base/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a> <span>/</span> <a href="/vcpe-knowledge-base/modules/10/" class="hover:text-accent-600 dark:hover:text-accent-400">案例库</a> <span>/</span> <span class="text-gray-800 dark:text-gray-200 truncate">Canva — 让每个人都能设计的澳大利亚独角兽</span> </nav> <article class="flex gap-8"> <!-- Article Content --> <div class="flex-1 min-w-0"> <!-- Article Header --> <header class="mb-8"> <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Canva — 让每个人都能设计的澳大利亚独角兽</h1> <div class="flex flex-wrap items-center gap-3 mb-4"> <a href="/modules/10/" class="text-xs px-2.5 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 hover:bg-accent-200 dark:hover:bg-accent-900/50 transition-colors"> 案例库 </a> <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300">
+案例研究
+</span> <a href="/search/?tag=vc-pe" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> vc-pe </a><a href="/search/?tag=%E6%A1%88%E4%BE%8B" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 案例 </a><a href="/search/?tag=%E6%88%90%E5%8A%9F" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 成功 </a><a href="/search/?tag=%E6%B5%B7%E5%A4%96" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 海外 </a><a href="/search/?tag=%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 设计工具 </a><a href="/search/?tag=SaaS" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> SaaS </a><a href="/search/?tag=PLG" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> PLG </a> </div> <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400"> <span>创建于 2026/05/28</span>  <span>5737字</span> <span>约 15 分钟阅读</span> </div> </header> <!-- Article Body --> <div class="prose"><h2 id="基本信息">基本信息</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>公司全称</td>
+<td>Canva Pty Ltd</td>
+</tr>
+<tr>
+<td>成立时间</td>
+<td>2012年</td>
+</tr>
+<tr>
+<td>总部</td>
+<td>澳大利亚悉尼</td>
+</tr>
+<tr>
+<td>创始人</td>
+<td>Melanie Perkins、Cliff Obrecht、Cameron Adams</td>
+</tr>
+<tr>
+<td>核心业务</td>
+<td>在线设计平台、图形设计工具、文档协作</td>
+</tr>
+<tr>
+<td>所属赛道</td>
+<td>设计工具 / SaaS / 创意生产力</td>
+</tr>
+<tr>
+<td>当前状态</td>
+<td>未上市，估值$420亿（2025年），筹备IPO</td>
+</tr>
+</tbody>
+</table></div><h2 id="融资历程">融资历程</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>轮次</th>
+<th>时间</th>
+<th>金额</th>
+<th>估值</th>
+<th>领投方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>种子轮</td>
+<td>2013年</td>
+<td>$660万</td>
+<td>未披露</td>
+<td>500 Startups、Blackbird Ventures</td>
+</tr>
+<tr>
+<td>Series A</td>
+<td>2015年</td>
+<td>$1,500万</td>
+<td>未披露</td>
+<td>Matrix Partners、Felicis Ventures</td>
+</tr>
+<tr>
+<td>Series B</td>
+<td>2016年</td>
+<td>$1,500万</td>
+<td>未披露</td>
+<td>Blackbird Ventures</td>
+</tr>
+<tr>
+<td>Series C</td>
+<td>2018年</td>
+<td>$4,000万</td>
+<td>~$10亿</td>
+<td>Sequoia Capital</td>
+</tr>
+<tr>
+<td>Series D</td>
+<td>2019年</td>
+<td>$7,000万</td>
+<td>~$32亿</td>
+<td>Bond、General Catalyst</td>
+</tr>
+<tr>
+<td>Series E</td>
+<td>2019年10月</td>
+<td>$8,500万</td>
+<td>~$32亿</td>
+<td>Bessemer Venture Partners</td>
+</tr>
+<tr>
+<td>Series F</td>
+<td>2021年9月</td>
+<td>$2亿</td>
+<td>~$400亿</td>
+<td>多家机构</td>
+</tr>
+<tr>
+<td>二级市场</td>
+<td>2025年</td>
+<td>未披露</td>
+<td>~$420亿</td>
+<td>员工股权出售</td>
+</tr>
+</tbody>
+</table></div><h2 id="商业模式">商业模式</h2>
+<p>Canva的商业模式是<strong>Freemium SaaS</strong>，通过提供免费的设计工具吸引海量用户，再通过付费订阅（Canva Pro、Canva for Teams、Canva for Enterprise）变现。</p>
+<p><strong>核心产品：在线设计平台</strong>。Canva的核心价值主张是**“让每个人都能设计”**。通过拖拽式界面、海量模板和素材库，Canva使得非设计专业人士也能创建专业的图形、演示文稿、社交媒体内容、视频等。</p>
+<p><strong>差异化价值</strong>：</p>
+<ul>
+<li><strong>易用性</strong>：无需设计经验即可上手</li>
+<li><strong>模板丰富</strong>：数十万专业设计的模板</li>
+<li><strong>协作功能</strong>：团队实时协作编辑</li>
+<li><strong>一站式平台</strong>：覆盖图形、演示、视频、文档、网站等多种设计需求</li>
+</ul>
+<p><strong>收入模式</strong>：</p>
+<ul>
+<li><strong>Canva Free</strong>：免费基础功能</li>
+<li><strong>Canva Pro</strong>：$12.99/月/用户</li>
+<li><strong>Canva for Teams</strong>：$14.99/月/用户（前5人）</li>
+<li><strong>Canva for Enterprise</strong>：定制化定价</li>
+<li>2024年年化收入超过$25亿</li>
+</ul>
+<h2 id="投资逻辑">投资逻辑</h2>
+<p><strong>Blackbird Ventures（种子轮-Series B，2013-2016年）</strong>：Blackbird是澳大利亚本土VC，也是Canva最早的投资人。其投资逻辑是：</p>
+<ol>
+<li><strong>创始人远见</strong>。Melanie Perkins在19岁时就萌生了&quot;简化设计工具&quot;的想法，她在大学期间创办了第一个设计工具公司Fusion Books。</li>
+<li><strong>产品-市场契合</strong>。Canva在澳大利亚市场就展现了强劲的增长势头，证明了&quot;简化设计&quot;这一需求的普遍性。</li>
+<li><strong>全球市场潜力</strong>。设计工具市场规模巨大，Canva有潜力成为全球性的设计平台。</li>
+</ol>
+<p>Blackbird从种子轮开始投资，累计投入约$2,500万，按$420亿估值计算，回报超过<strong>100倍</strong>。</p>
+<p><strong>Sequoia Capital（Series C，2018年）</strong>：Sequoia领投$4,000万，估值$10亿。Sequoia的投资逻辑是Canva已经证明了**产品驱动增长（PLG）**的模式——用户在使用Canva后自发推荐给同事和朋友，形成了病毒式增长飞轮。</p>
+<p><strong>Bond（Series D，2019年）</strong>：Bond是Mary Meeker的新基金，投资Canva的逻辑是<strong>全球设计民主化的趋势</strong>——随着社交媒体和数字营销的普及，越来越多的非设计专业人士需要创建视觉内容。</p>
+<h2 id="关键转折点">关键转折点</h2>
+<ol>
+<li>
+<p><strong>2007-2012年：从Fusion Books到Canva</strong>。Melanie Perkins在大学期间创办了Fusion Books（在线年鉴设计工具），这一经历为Canva的创办奠定了基础。</p>
+</li>
+<li>
+<p><strong>2013年：产品发布</strong>。Canva正式发布，凭借简洁的拖拽式界面和丰富的模板库迅速获得用户青睐。</p>
+</li>
+<li>
+<p><strong>2017年：盈利</strong>。Canva在2017年实现了盈利，这在SaaS行业中极为罕见。这也证明了Freemium模式的商业可行性。</p>
+</li>
+<li>
+<p><strong>2019年：独角兽和全球扩张</strong>。Canva以$32亿估值完成多轮融资，同时加速全球扩张，用户遍布190多个国家。</p>
+</li>
+<li>
+<p><strong>2021年：$400亿估值高峰</strong>。在数字设计需求激增的背景下，Canva估值从$32亿飙升至$400亿。</p>
+</li>
+<li>
+<p><strong>2024-2025年：估值调整和IPO准备</strong>。Canva估值从$400亿调整至$320亿再回升至$420亿，同时积极筹备IPO。</p>
+</li>
+</ol>
+<h2 id="退出-结局">退出/结局</h2>
+<p>Canva目前仍为未上市公司，正在筹备IPO。</p>
+<p><strong>投资人回报（截至2025年估值$420亿）</strong>：</p>
+<ul>
+<li><strong>Blackbird Ventures</strong>：种子轮开始投资，累计投入约$2,500万，回报超过<strong>100倍</strong>。</li>
+<li><strong>Sequoia Capital</strong>：2018年投资$4,000万，回报约<strong>42倍</strong>。</li>
+<li><strong>Felicis Ventures</strong>：Series A参与投资，回报估计超过<strong>80倍</strong>。</li>
+<li><strong>Bond</strong>：2019年投资约$7,000万，回报约<strong>13倍</strong>。</li>
+</ul>
+<p>Canva被认为是最有可能在2026年进行大型IPO的设计软件公司。</p>
+<h2 id="投资人复盘">投资人复盘</h2>
+<p>Canva案例的核心启示是<strong>产品简洁性和Freemium模式在设计工具领域的巨大价值</strong>。</p>
+<p><strong>核心教训</strong>：</p>
+<ol>
+<li>
+<p><strong>&quot;让每个人都能设计&quot;的愿景</strong>。Canva的成功不仅在于技术，更在于<strong>愿景</strong>——Melanie Perkins坚信设计应该是每个人都能做的事情，而不仅仅是专业设计师的技能。这种<strong>普及化愿景</strong>是Canva增长的核心驱动力。</p>
+</li>
+<li>
+<p><strong>澳大利亚创业的全球化</strong>。Canva证明了<strong>不在硅谷也可以创办全球性的科技公司</strong>。悉尼的生态系统虽然不如硅谷成熟，但Canva通过全球化的视野和产品策略成功实现了全球化。</p>
+</li>
+<li>
+<p><strong>盈利优先的增长</strong>。Canva在2017年就实现了盈利，这与大多数SaaS公司&quot;亏损换增长&quot;的策略不同。这说明<strong>盈利和增长并非不可兼得</strong>。</p>
+</li>
+<li>
+<p><strong>设计民主化的趋势</strong>。随着社交媒体和数字营销的普及，越来越多的非设计专业人士需要创建视觉内容。Canva精准地抓住了这一趋势。</p>
+</li>
+</ol>
+<h2 id="估值演变分析">估值演变分析</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>阶段</th>
+<th>时间</th>
+<th>估值</th>
+<th>估值方法</th>
+<th>估值驱动因素</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>种子轮</td>
+<td>2013年</td>
+<td>未披露</td>
+<td>创始人评估</td>
+<td>简化设计工具的理念</td>
+</tr>
+<tr>
+<td>Series A</td>
+<td>2015年</td>
+<td>未披露</td>
+<td>可比交易法</td>
+<td>用户增长</td>
+</tr>
+<tr>
+<td>Series B</td>
+<td>2016年</td>
+<td>未披露</td>
+<td>收入倍数法</td>
+<td>早期收入验证</td>
+</tr>
+<tr>
+<td>Series C</td>
+<td>2018年</td>
+<td>~$10亿</td>
+<td>收入倍数法</td>
+<td>盈利，PLG模式验证</td>
+</tr>
+<tr>
+<td>Series D</td>
+<td>2019年</td>
+<td>~$32亿</td>
+<td>收入倍数法</td>
+<td>全球扩张</td>
+</tr>
+<tr>
+<td>Series F</td>
+<td>2021年</td>
+<td>~$400亿</td>
+<td>收入倍数法</td>
+<td>疫情加速数字化设计需求</td>
+</tr>
+<tr>
+<td>二级市场</td>
+<td>2025年</td>
+<td>~$420亿</td>
+<td>估值回升</td>
+<td>IPO准备，收入增长</td>
+</tr>
+</tbody>
+</table></div><p><strong>估值方法演变</strong>：Canva的估值演变体现了<strong>PLG SaaS公司的估值逻辑</strong>。早期以<strong>用户增长和口碑传播</strong>为估值基础，中期以<strong>收入增长和盈利能力</strong>为核心指标，后期引入<strong>DCF模型</strong>评估长期现金流潜力。</p>
+<p><strong>估值波动</strong>：Canva估值从2021年的$400亿下降至2024年的$320亿再回升至2025年的$420亿，反映了SaaS行业估值的整体波动。但$420亿的估值仍然证明了<strong>设计民主化</strong>这一赛道的长期价值。</p>
+<blockquote>
+<p>链接：<a href="/vcpe-knowledge-base/articles/%E9%A3%8E%E9%99%A9%E6%8A%95%E8%B5%84%E6%B3%95/">风险投资法</a>、<a href="/vcpe-knowledge-base/articles/pre-money%E4%B8%8Epost-money/">Pre-Money与Post-Money</a>、<a href="/vcpe-knowledge-base/articles/%E5%8F%AF%E6%AF%94%E5%85%AC%E5%8F%B8%E6%B3%95/">可比公司法</a></p>
+</blockquote>
+<h2 id="关键条款分析">关键条款分析</h2>
+<p><strong>Blackbird种子轮条款（2013年）</strong>：</p>
+<ul>
+<li><strong>投资结构</strong>：可转换优先股</li>
+<li><strong>优先清算权</strong>：1x非参与型优先清算权</li>
+<li><strong>反稀释条款</strong>：加权平均反稀释保护</li>
+<li><strong>特殊安排</strong>：Blackbird作为澳大利亚本土VC，提供了本地化的支持</li>
+</ul>
+<p><strong>Sequoia Series C条款（2018年）</strong>：</p>
+<ul>
+<li><strong>投资结构</strong>：可转换优先股（Series C Preferred Stock）</li>
+<li><strong>优先清算权</strong>：1x非参与型优先清算权</li>
+<li><strong>反稀释条款</strong>：加权平均反稀释保护</li>
+<li><strong>董事会席位</strong>：Sequoia获得一个董事会席位</li>
+<li><strong>保护性条款</strong>：重大决策需投资人同意</li>
+</ul>
+<p><strong>特殊条款</strong>：Canva的融资条款中包含了<strong>PLG增长指标</strong>作为估值参考。这一创新反映了<strong>产品驱动增长</strong>的商业模式特征。</p>
+<blockquote>
+<p>链接：<a href="/vcpe-knowledge-base/articles/%E6%8A%95%E8%B5%84%E6%9D%A1%E6%AC%BE%E6%B8%85%E5%8D%95-term-sheet/">投资条款清单-Term-Sheet</a>、<a href="/vcpe-knowledge-base/articles/%E5%8F%8D%E7%A8%80%E9%87%8A%E6%9D%A1%E6%AC%BE/">反稀释条款</a>、<a href="/vcpe-knowledge-base/articles/%E4%BC%98%E5%85%88%E6%B8%85%E7%AE%97%E6%9D%83/">优先清算权</a></p>
+</blockquote>
+<h2 id="退出回报分析">退出回报分析</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>投资人</th>
+<th>轮次</th>
+<th>投资额</th>
+<th>当前价值（估值$420亿）</th>
+<th>回报倍数</th>
+<th>DPI</th>
+<th>IRR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blackbird Ventures</td>
+<td>种子轮-B轮</td>
+<td>~$2,500万</td>
+<td>~$25亿</td>
+<td>100x</td>
+<td>纸面</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Sequoia Capital</td>
+<td>Series C</td>
+<td>$4,000万</td>
+<td>~$16.8亿</td>
+<td>42x</td>
+<td>纸面</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Felicis Ventures</td>
+<td>Series A</td>
+<td>未披露</td>
+<td>~$8亿</td>
+<td>80x+</td>
+<td>纸面</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Bond</td>
+<td>Series D</td>
+<td>$7,000万</td>
+<td>~$9亿</td>
+<td>13x</td>
+<td>纸面</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table></div><p><strong>DPI vs 纸面回报</strong>：</p>
+<ul>
+<li><strong>Canva仍为未上市公司</strong>：所有投资人的回报均为纸面回报，尚未实现DPI</li>
+<li><strong>IPO预期</strong>：Canva被认为是最有可能在2026年进行大型IPO的设计软件公司</li>
+<li><strong>澳大利亚创业的成功</strong>：Canva证明了<strong>不在硅谷也可以创办全球性的科技公司</strong></li>
+</ul>
+<p><strong>关键教训</strong>：Canva案例说明，<strong>PLG SaaS公司的投资回报周期相对较长</strong>。从2013年成立到2026年筹备IPO，Canva经历了13年。这一周期需要<strong>超长期耐心资本</strong>的支持，也说明了<strong>产品简洁性</strong>的长期价值。</p>
+<blockquote>
+<p>链接：<a href="/vcpe-knowledge-base/articles/ipo%E8%B7%AF%E5%BE%84/">IPO路径</a>、<a href="/vcpe-knowledge-base/articles/dpi%E4%B8%8Eirr%E8%A7%A3%E8%AF%BB/">DPI与IRR解读</a></p>
+</blockquote>
+<h2 id="中美对比">中美对比</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>维度</th>
+<th>Canva</th>
+<th>稿定设计/创客贴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>成立时间</td>
+<td>2012年</td>
+<td>稿定2015年/创客贴2015年</td>
+</tr>
+<tr>
+<td>估值</td>
+<td>$420亿</td>
+<td>未披露（较小）</td>
+</tr>
+<tr>
+<td>核心市场</td>
+<td>全球</td>
+<td>中国</td>
+</tr>
+<tr>
+<td>用户规模</td>
+<td>1.9亿+</td>
+<td>稿定1亿+/创客贴5,000万+</td>
+</tr>
+<tr>
+<td>商业模式</td>
+<td>Freemium SaaS</td>
+<td>Freemium SaaS</td>
+</tr>
+<tr>
+<td>模板数量</td>
+<td>数十万</td>
+<td>数十万</td>
+</tr>
+<tr>
+<td>IPO状态</td>
+<td>未上市</td>
+<td>未上市</td>
+</tr>
+</tbody>
+</table></div><p><strong>核心差异</strong>：</p>
+<ol>
+<li><strong>市场天花板</strong>：Canva面向全球市场，稿定设计/创客贴主要面向中国市场。市场天花板的差异导致了估值的巨大差距</li>
+<li><strong>产品定位</strong>：Canva定位为&quot;让每个人都能设计&quot;，中国平台更多定位为&quot;在线设计工具&quot;</li>
+<li><strong>国际化程度</strong>：Canva在190多个国家拥有用户，中国平台的国际化程度相对较低</li>
+<li><strong>AI整合</strong>：Canva正在积极整合AI功能，中国平台也在跟进但进度相对较慢</li>
+</ol>
+<blockquote>
+<p>链接：<a href="/vcpe-knowledge-base/search/?q=%E6%A1%88%E4%BE%8B-%E4%B8%AD%E5%9B%BD-%E7%A8%BF%E5%AE%9A%E8%AE%BE%E8%AE%A1">案例-中国-稿定设计</a>、<a href="/vcpe-knowledge-base/search/?q=%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7%E6%8A%95%E8%B5%84%E5%AF%B9%E6%AF%94">设计工具投资对比</a>、<a href="/vcpe-knowledge-base/search/?q=PLG%E6%A8%A1%E5%BC%8F%E5%9C%A8%E4%B8%AD%E5%9B%BD">PLG模式在中国</a></p>
+</blockquote>
+<h2 id="行业赛道关联">行业赛道关联</h2>
+<p>Canva所在的在线设计/创意生产力赛道是过去10年增长最快的SaaS赛道之一。以下为相关深度研报：</p>
+<ul>
+<li><a href="/vcpe-knowledge-base/search/?q=%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7%E8%A1%8C%E4%B8%9A%E7%A0%94%E6%8A%A5">设计工具行业研报</a> — Canva/Figma/Adobe的竞争格局</li>
+<li><a href="/vcpe-knowledge-base/search/?q=SaaS%E8%A1%8C%E4%B8%9A%E7%A0%94%E6%8A%A5">SaaS行业研报</a> — SaaS行业的估值逻辑、增长模式</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E5%88%9B%E6%84%8F%E7%94%9F%E4%BA%A7%E5%8A%9B%E8%A1%8C%E4%B8%9A%E7%A0%94%E6%8A%A5">创意生产力行业研报</a> — 设计工具市场的规模和增长趋势</li>
+<li><a href="/vcpe-knowledge-base/search/?q=AI%2B%E8%AE%BE%E8%AE%A1%E8%A1%8C%E4%B8%9A%E7%A0%94%E6%8A%A5">AI+设计行业研报</a> — AI对设计工具的革命性影响</li>
+</ul>
+<h2 id="参考来源">参考来源</h2>
+<ul>
+<li><a href="https://castleplacement.com/wp-content/uploads/2023/01/Canva.pdf">Canva Funding - Castle Placement</a></li>
+<li><a href="https://www.morningstar.com/stocks/design-software-company-canva-valued-42-billion-ahead-possible-ipo">Canva $42B Valuation - Morningstar</a></li>
+<li><a href="https://techfundingnews.com/canva-hits-42b-valuation-in-secondary-sale-joining-figma-in-pre-ipo-spotlight">Canva $42B - TechFundingNews</a></li>
+<li><a href="https://www.startupdaily.net/topic/business/canvas-early-investors-are-getting-closer-to-a-1-5-billion-payday">Canva Investors - Startup Daily</a></li>
+</ul>
+<h2 id="相关主题">相关主题</h2>
+<ul>
+<li><a href="/vcpe-knowledge-base/articles/%E6%A1%88%E4%BE%8B-%E6%B5%B7%E5%A4%96-figma/">案例-海外-Figma</a> — 设计工具领域的另一家明星公司</li>
+<li><a href="/vcpe-knowledge-base/articles/%E6%A1%88%E4%BE%8B-%E6%B5%B7%E5%A4%96-notion/">案例-海外-Notion</a> — 同为PLG模式的生产力工具</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E4%BA%A7%E5%93%81%E9%A9%B1%E5%8A%A8%E5%A2%9E%E9%95%BF%EF%BC%88PLG%EF%BC%89">产品驱动增长（PLG）</a> — Canva增长模式的核心特征</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E8%AE%BE%E8%AE%A1%E6%B0%91%E4%B8%BB%E5%8C%96">设计民主化</a> — Canva的核心愿景和市场趋势</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E6%A1%88%E4%BE%8B-%E4%B8%AD%E5%9B%BD-%E7%A8%BF%E5%AE%9A%E8%AE%BE%E8%AE%A1">案例-中国-稿定设计</a> — 中国在线设计平台的代表</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E6%A1%88%E4%BE%8B-%E4%B8%AD%E5%9B%BD-%E5%88%9B%E5%AE%A2%E8%B4%B4">案例-中国-创客贴</a> — 中国在线设计平台的另一代表</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A%E5%88%9B%E4%B8%9A%E7%94%9F%E6%80%81">澳大利亚创业生态</a> — Canva的创业背景</li>
+<li><a href="/vcpe-knowledge-base/search/?q=Freemium%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F">Freemium商业模式</a> — Canva的增长模式核心</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E6%A8%A1%E6%9D%BF%E7%BB%8F%E6%B5%8E">模板经济</a> — Canva商业模式的重要组成部分</li>
+</ul>
+</div> <!-- Related Articles --> <section class="mt-12 pt-8 border-t border-gray-200 dark:border-primary-800"> <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">📎 相关推荐</h2> <div class="space-y-3"> <a href="/vcpe-knowledge-base/articles/案例-海外-figma/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> Figma — 浏览器中的设计革命与Adobe $200亿收购案 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Figma的商业模式是浏览器原生的设计协作平台，通过订阅制向设计师和产品团队提供专业设计工具。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/案例-海外-notion/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> Notion — &quot;乐高式&quot;生产力工具与下一代工作平台 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Notion的商业模式是模块化生产力平台，通过提供高度灵活的&quot;积木式&quot;工具，帮助团队构建自定义的工作流程。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/案例-海外-snowflake/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> Snowflake — Sutter Hill的教科书级孵化与云计算数据平台的崛起 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Snowflake的商业模式是云原生数据平台即服务，通过提供弹性、高性能的云数据仓库，帮助企业存储、处理和分析海量数据。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/案例-海外-zoom/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> Zoom — 从&quot;不性感&quot;的SaaS到疫情中的超级明星 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Zoom的商业模式是SaaS订阅制，通过提供高品质、易用的视频会议服务获取企业和个人用户的经常性收入。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/案例-海外-airbnb/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> Airbnb — 共享经济的典范与信任平台的奇迹 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Airbnb的商业模式是双边市场平台，连接有闲置房源的房东和寻找住宿的旅行者，通过交易佣金获取收入。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a> </div> </section> </div> <!-- Table of Contents (Desktop) --> <aside class="hidden xl:block w-64 flex-shrink-0"> <div class="sticky top-20"> <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">目录</h3> <nav class="space-y-1"> <a href="#基本信息" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="基本信息"> 基本信息 </a><a href="#融资历程" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="融资历程"> 融资历程 </a><a href="#商业模式" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="商业模式"> 商业模式 </a><a href="#投资逻辑" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="投资逻辑"> 投资逻辑 </a><a href="#关键转折点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键转折点"> 关键转折点 </a><a href="#退出-结局" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="退出-结局"> 退出/结局 </a><a href="#投资人复盘" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="投资人复盘"> 投资人复盘 </a><a href="#估值演变分析" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="估值演变分析"> 估值演变分析 </a><a href="#关键条款分析" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键条款分析"> 关键条款分析 </a><a href="#退出回报分析" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="退出回报分析"> 退出回报分析 </a><a href="#中美对比" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="中美对比"> 中美对比 </a><a href="#行业赛道关联" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="行业赛道关联"> 行业赛道关联 </a><a href="#参考来源" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="参考来源"> 参考来源 </a><a href="#相关主题" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="相关主题"> 相关主题 </a> </nav> </div> </aside> </article> <script type="module">const n=new IntersectionObserver(e=>{e.forEach(t=>{const o=t.target.id,c=document.querySelector(`.toc-link[data-heading="${o}"]`);c&&t.isIntersecting&&(document.querySelectorAll(".toc-link").forEach(r=>r.classList.remove("text-accent-600","dark:text-accent-400")),c.classList.add("text-accent-600","dark:text-accent-400"))})},{rootMargin:"-80px 0px -80% 0px"});document.querySelectorAll(".prose h2[id], .prose h3[id], .prose h4[id]").forEach(e=>{n.observe(e)});</script>  </div> </main> </div> <!-- Mobile sidebar overlay --> <div id="sidebar-overlay" class="fixed inset-0 z-20 bg-black/50 hidden lg:hidden"></div> <script type="module">const m=document.getElementById("theme-toggle"),o=document.getElementById("theme-light-icon"),d=document.getElementById("theme-dark-icon");function t(e){e?(document.documentElement.classList.add("dark"),o?.classList.add("hidden"),d?.classList.remove("hidden"),localStorage.setItem("theme","dark")):(document.documentElement.classList.remove("dark"),o?.classList.remove("hidden"),d?.classList.add("hidden"),localStorage.setItem("theme","light"))}const s=localStorage.getItem("theme");t(s==="light"?!1:s==="dark"?!0:window.matchMedia("(prefers-color-scheme: dark)").matches);m?.addEventListener("click",()=>{t(!document.documentElement.classList.contains("dark"))});const r=document.getElementById("mobile-menu-toggle"),g=document.getElementById("sidebar"),l=document.getElementById("sidebar-overlay");function i(){g?.classList.toggle("-translate-x-full"),l?.classList.toggle("hidden")}r?.addEventListener("click",i);l?.addEventListener("click",i);const c=document.getElementById("reading-progress");window.addEventListener("scroll",()=>{const e=window.scrollY,n=document.documentElement.scrollHeight-window.innerHeight,a=n>0?e/n*100:0;c&&(c.style.width=`${Math.min(100,a)}%`)});document.addEventListener("keydown",e=>{(e.ctrlKey||e.metaKey)&&e.key==="k"&&(e.preventDefault(),window.location.href="/vcpe-knowledge-base/search/")});</script> </body> </html> 

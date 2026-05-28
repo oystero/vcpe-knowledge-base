@@ -1,0 +1,749 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="VC/PE 投资知识库 - 面向投资实战的系统化知识框架"><meta name="generator" content="Astro v5.18.2"><link rel="icon" type="image/svg+xml" href="/vcpe-knowledge-base/favicon.svg"><title>常见风险类型 | VC/PE 投资知识库</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/vcpe-knowledge-base/_astro/index.DHKBIVZD.css"></head> <body class="bg-gray-50 dark:bg-primary-950 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300"> <!-- Reading Progress Bar --> <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-accent-500 to-accent-300 z-50 transition-all duration-150" style="width: 0%"></div> <!-- Header --> <header class="sticky top-0 z-40 bg-white/80 dark:bg-primary-900/80 backdrop-blur-md border-b border-gray-200 dark:border-primary-800"> <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between"> <div class="flex items-center gap-4"> <a href="/vcpe-knowledge-base/" class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity"> <span class="text-2xl">💰</span> <span class="hidden sm:inline">VC/PE 投资知识库</span> </a> </div> <div class="flex items-center gap-3"> <!-- Search --> <a href="/vcpe-knowledge-base/search/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> <span class="hidden md:inline">搜索...</span> <kbd class="hidden md:inline px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-primary-700 rounded">Ctrl+K</kbd> </a> <!-- Graph --> <a href="/vcpe-knowledge-base/graph/" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="12" cy="12" r="2"></circle><path d="M8 6h8M6 8v8M18 8v8M8 18h8M8 8l4 4M16 8l-4 4M8 16l4-4M16 16l-4-4"></path></svg> </a> <!-- Theme Toggle --> <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="切换主题"> <svg id="theme-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg> <svg id="theme-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> </button> <!-- Mobile Menu Toggle --> <button id="mobile-menu-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors lg:hidden"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> </button> </div> </div> </header> <div class="flex flex-1 max-w-screen-2xl mx-auto w-full"> <!-- Sidebar --> <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-30 w-72 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-primary-900 border-r border-gray-200 dark:border-primary-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300"> <nav class="p-4 space-y-1"> <a href="/vcpe-knowledge-base/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏠</span> 首页
+</a> <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">模块导航</div> <a href="/vcpe-knowledge-base/modules/00/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📚</span> 00 基础概念
+</a> <a href="/vcpe-knowledge-base/modules/01/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔄</span> 01 投资流程
+</a> <a href="/vcpe-knowledge-base/modules/02/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>💵</span> 02 估值方法
+</a> <a href="/vcpe-knowledge-base/modules/03/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📜</span> 03 法律与条款
+</a> <a href="/vcpe-knowledge-base/modules/04/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏭</span> 04 行业赛道
+</a> <a href="/vcpe-knowledge-base/modules/05/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔍</span> 05 尽职调查
+</a> <a href="/vcpe-knowledge-base/modules/06/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🤝</span> 06 投后管理
+</a> <a href="/vcpe-knowledge-base/modules/07/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🚪</span> 07 退出策略
+</a> <a href="/vcpe-knowledge-base/modules/08/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🇨🇳</span> 08 中国VC/PE实务
+</a> <a href="/vcpe-knowledge-base/modules/09/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400"> <span>📊</span> 09 风险与组合
+</a> <a href="/vcpe-knowledge-base/modules/10/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📖</span> 10 案例库
+</a> <a href="/vcpe-knowledge-base/modules/11/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🛠️</span> 11 工具与资源
+</a> </nav> </aside> <!-- Main Content --> <main class="flex-1 min-w-0 lg:ml-72"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">   <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6 flex-wrap"> <a href="/vcpe-knowledge-base/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a> <span>/</span> <a href="/vcpe-knowledge-base/modules/09/" class="hover:text-accent-600 dark:hover:text-accent-400">风险与组合</a> <span>/</span> <span class="text-gray-800 dark:text-gray-200 truncate">常见风险类型</span> </nav> <article class="flex gap-8"> <!-- Article Content --> <div class="flex-1 min-w-0"> <!-- Article Header --> <header class="mb-8"> <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">常见风险类型</h1> <div class="flex flex-wrap items-center gap-3 mb-4"> <a href="/modules/09/" class="text-xs px-2.5 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 hover:bg-accent-200 dark:hover:bg-accent-900/50 transition-colors"> 风险与组合 </a>  <a href="/search/?tag=vc-pe" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> vc-pe </a><a href="/search/?tag=%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 风险管理 </a><a href="/search/?tag=%E9%A3%8E%E9%99%A9%E8%AF%86%E5%88%AB" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 风险识别 </a><a href="/search/?tag=risk-management" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> risk-management </a> </div> <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400"> <span>创建于 2026/05/27</span>  <span>5554字</span> <span>约 14 分钟阅读</span> </div> </header> <!-- Article Body --> <div class="prose"><h2 id="概述">概述</h2>
+<p>VC/PE投资面临多层次、多维度的风险，系统性地识别和管理这些风险是保护投资人利益、实现预期回报的基础。与公开市场不同，VC/PE的风险具有隐蔽性强、滞后性高、流动性差等特点，需要建立专业化的风险管理体系。深入理解各类风险的特征、成因和应对策略，是GP和LP都必须具备的核心能力。</p>
+<h2 id="核心内容">核心内容</h2>
+<h3 id="一-市场风险-market-risk">一、市场风险（Market Risk）</h3>
+<p><strong>定义</strong>：由宏观经济环境、市场周期、行业趋势变化导致的投资损失风险</p>
+<p><strong>主要表现形式</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>风险因素</th>
+<th>影响机制</th>
+<th>典型案例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>经济衰退</td>
+<td>企业盈利下降，估值承压</td>
+<td>2008年金融危机</td>
+</tr>
+<tr>
+<td>利率上升</td>
+<td>资金成本增加，估值压缩</td>
+<td>2022年美联储加息周期</td>
+</tr>
+<tr>
+<td>行业周期</td>
+<td>特定行业景气度下降</td>
+<td>2019年互联网行业调整</td>
+</tr>
+<tr>
+<td>估值泡沫</td>
+<td>高估值投资难以实现回报</td>
+<td>2015年O2O泡沫</td>
+</tr>
+<tr>
+<td>流动性收紧</td>
+<td>融资困难，退出受阻</td>
+<td>2018年去杠杆</td>
+</tr>
+</tbody>
+</table></div><p><strong>量化指标</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>指标</th>
+<th>说明</th>
+<th>预警阈值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>市场PE倍数</td>
+<td>行业估值水平</td>
+<td>&gt;历史均值+1σ</td>
+</tr>
+<tr>
+<td>IPO数量</td>
+<td>退出渠道畅通度</td>
+<td>同比下降&gt;30%</td>
+</tr>
+<tr>
+<td>融资轮次间隔</td>
+<td>企业融资能力</td>
+<td>&gt;18个月</td>
+</tr>
+<tr>
+<td>破折号比例</td>
+<td>追加投资vs新投资</td>
+<td>追加占比&gt;60%</td>
+</tr>
+</tbody>
+</table></div><p><strong>应对策略</strong></p>
+<ul>
+<li>保持投资纪律，避免在市场高点集中投资</li>
+<li>建立逆周期投资策略，在市场低迷时加大配置</li>
+<li>关注宏观经济指标，提前调整投资节奏</li>
+<li>预留充足的后续资金，应对市场变化</li>
+</ul>
+<h3 id="二-流动性风险-liquidity-risk">二、流动性风险（Liquidity Risk）</h3>
+<p><strong>定义</strong>：无法在需要时以合理价格变现投资的风险</p>
+<p><strong>VC/PE流动性风险的特殊性</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>维度</th>
+<th>公开市场</th>
+<th>VC/PE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>交易频率</td>
+<td>实时交易</td>
+<td>7-10年锁定</td>
+</tr>
+<tr>
+<td>价格透明度</td>
+<td>连续定价</td>
+<td>季度/年度估值</td>
+</tr>
+<tr>
+<td>退出灵活性</td>
+<td>随时可卖</td>
+<td>依赖特定事件</td>
+</tr>
+<tr>
+<td>折价幅度</td>
+<td>通常&lt;5%</td>
+<td>可能达20-40%</td>
+</tr>
+</tbody>
+</table></div><p><strong>流动性风险来源</strong></p>
+<ol>
+<li>
+<p><strong>基金层面</strong></p>
+<ul>
+<li>封闭期限制（通常7-10年）</li>
+<li>延长期风险（基金可能延期1-3年）</li>
+<li>LP份额转让的限制和折价</li>
+</ul>
+</li>
+<li>
+<p><strong>项目层面</strong></p>
+<ul>
+<li>退出渠道受限（IPO窗口、并购市场）</li>
+<li>公司治理问题导致退出困难</li>
+<li>创始人/大股东不配合退出</li>
+</ul>
+</li>
+<li>
+<p><strong>市场层面</strong></p>
+<ul>
+<li>整体市场流动性收紧</li>
+<li>特定行业退出政策变化</li>
+<li>地缘政治影响跨境退出</li>
+</ul>
+</li>
+</ol>
+<p><strong>流动性风险管理工具</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>工具</th>
+<th>适用场景</th>
+<th>成本/折价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LP二级市场转让</td>
+<td>LP急需流动性</td>
+<td>10-30%折价</td>
+</tr>
+<tr>
+<td>基金重组</td>
+<td>延长持有期</td>
+<td>交易成本1-3%</td>
+</tr>
+<tr>
+<td>结构化融资</td>
+<td>临时流动性需求</td>
+<td>利率8-15%</td>
+</tr>
+<tr>
+<td>资产证券化</td>
+<td>打包退出</td>
+<td>5-15%折价</td>
+</tr>
+</tbody>
+</table></div><h3 id="三-管理人风险-key-person-risk">三、管理人风险（Key Person Risk）</h3>
+<p><strong>定义</strong>：因GP团队核心成员变动或能力不足导致的投资损失风险</p>
+<p><strong>管理人风险类型</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>风险类型</th>
+<th>表现</th>
+<th>影响程度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心人员离职</td>
+<td>关键合伙人离开基金</td>
+<td>高</td>
+</tr>
+<tr>
+<td>团队分裂</td>
+<td>团队内部矛盾导致分家</td>
+<td>高</td>
+</tr>
+<tr>
+<td>能力不足</td>
+<td>投资判断失误、投后管理缺位</td>
+<td>中高</td>
+</tr>
+<tr>
+<td>利益冲突</td>
+<td>GP利益与LP利益不一致</td>
+<td>中</td>
+</tr>
+<tr>
+<td>道德风险</td>
+<td>欺诈、挪用资金</td>
+<td>极高</td>
+</tr>
+</tbody>
+</table></div><p><strong>管理人风险评估框架</strong></p>
+<pre><code>┌─────────────────────────────────────────────────────┐
+│                管理人风险评估维度                      │
+├─────────────────────────────────────────────────────┤
+│  团队稳定性        │  决策能力        │  治理结构      │
+│  ├─ 核心人员在职年限│  ├─ 历史业绩     │  ├─ 决策流程   │
+│  ├─ 团队扩张能力   │  ├─ 投资方法论   │  ├─ 利益绑定   │
+│  ├─ 继任计划       │  ├─ 行业认知     │  ├─ 透明度     │
+│  └─ 人员流动率     │  └─ 学习能力     │  └─ 合规记录   │
+└─────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>保护机制</strong></p>
+<ol>
+<li>
+<p><strong>Key Person条款</strong></p>
+<ul>
+<li>约定关键人员名单</li>
+<li>触发条件（如离职、减少投入时间）</li>
+<li>触发后果（暂停投资、重组基金）</li>
+</ul>
+</li>
+<li>
+<p><strong>利益绑定机制</strong></p>
+<ul>
+<li>GP跟投比例（通常1-5%）</li>
+<li>递延薪酬和回拨机制</li>
+<li>长期业绩考核</li>
+</ul>
+</li>
+<li>
+<p><strong>治理监督机制</strong></p>
+<ul>
+<li>LP咨询委员会（LPAC）</li>
+<li>定期报告和审计</li>
+<li>第三方估值</li>
+</ul>
+</li>
+</ol>
+<h3 id="四-政策风险-regulatory-risk">四、政策风险（Regulatory Risk）</h3>
+<p><strong>定义</strong>：因政策法规变化导致的投资损失风险</p>
+<p><strong>中国市场的政策风险特征</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>风险领域</th>
+<th>政策变化</th>
+<th>影响案例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>行业监管</td>
+<td>教育&quot;双减&quot;政策</td>
+<td>教育赛道投资大幅缩水</td>
+</tr>
+<tr>
+<td>数据安全</td>
+<td>《数据安全法》</td>
+<td>互联网企业合规成本上升</td>
+</tr>
+<tr>
+<td>反垄断</td>
+<td>平台经济反垄断</td>
+<td>并退出渠道受限</td>
+</tr>
+<tr>
+<td>外商投资</td>
+<td>负面清单调整</td>
+<td>跨境投资结构受限</td>
+</tr>
+<tr>
+<td>税收政策</td>
+<td>合伙企业税收调整</td>
+<td>基金架构成本变化</td>
+</tr>
+</tbody>
+</table></div><p><strong>跨境投资的特殊政策风险</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>风险类型</th>
+<th>说明</th>
+<th>应对策略</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CFIUS审查</td>
+<td>美国对外国投资的安全审查</td>
+<td>提前评估、结构调整</td>
+</tr>
+<tr>
+<td>数据跨境</td>
+<td>数据出境限制</td>
+<td>本地化存储、合规设计</td>
+</tr>
+<tr>
+<td>外汇管制</td>
+<td>资金进出限制</td>
+<td>合规路径、额度规划</td>
+</tr>
+<tr>
+<td>双重征税</td>
+<td>跨境税收安排</td>
+<td>税收协定、架构优化</td>
+</tr>
+</tbody>
+</table></div><p><strong>政策风险管理方法</strong></p>
+<ol>
+<li>
+<p><strong>政策跟踪机制</strong></p>
+<ul>
+<li>建立政策监测团队或外包服务</li>
+<li>定期政策分析报告</li>
+<li>行业协会沟通渠道</li>
+</ul>
+</li>
+<li>
+<p><strong>合规体系建设</strong></p>
+<ul>
+<li>投前政策合规评估</li>
+<li>投后合规监控</li>
+<li>专业法律顾问支持</li>
+</ul>
+</li>
+<li>
+<p><strong>投资策略调整</strong></p>
+<ul>
+<li>避免过度集中于政策敏感行业</li>
+<li>关注政策鼓励方向</li>
+<li>预留应对政策变化的缓冲空间</li>
+</ul>
+</li>
+</ol>
+<h3 id="五-道德风险-ethical-risk">五、道德风险（Ethical Risk）</h3>
+<p><strong>定义</strong>：因利益冲突、信息不对称导致的道德问题</p>
+<p><strong>VC/PE中的道德风险表现</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>风险类型</th>
+<th>具体表现</th>
+<th>严重程度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>欺诈</td>
+<td>虚构项目、夸大业绩</td>
+<td>极高</td>
+</tr>
+<tr>
+<td>利益输送</td>
+<td>向关联方输送利益</td>
+<td>高</td>
+</tr>
+<tr>
+<td>信息隐瞒</td>
+<td>隐瞒重大不利信息</td>
+<td>高</td>
+</tr>
+<tr>
+<td>过度收费</td>
+<td>不合理的费用结构</td>
+<td>中</td>
+</tr>
+<tr>
+<td>自我交易</td>
+<td>GP与被投企业利益冲突</td>
+<td>中高</td>
+</tr>
+</tbody>
+</table></div><p><strong>典型案例</strong></p>
+<ol>
+<li><strong>某知名VC欺诈案</strong>：GP虚构投资业绩，挪用基金资产</li>
+<li><strong>利益输送案例</strong>：GP将优质项目机会转移至自有账户</li>
+<li><strong>估值操纵</strong>：通过关联方交易人为推高项目估值</li>
+</ol>
+<p><strong>防范措施</strong></p>
+<ol>
+<li>
+<p><strong>尽职调查</strong></p>
+<ul>
+<li>GP背景调查（犯罪记录、诉讼历史）</li>
+<li>历史业绩独立验证</li>
+<li>团队访谈和参考调查</li>
+</ul>
+</li>
+<li>
+<p><strong>合同条款保护</strong></p>
+<ul>
+<li>详细的LP权利条款</li>
+<li>审计权和检查权</li>
+<li>违约追责机制</li>
+</ul>
+</li>
+<li>
+<p><strong>持续监控</strong></p>
+<ul>
+<li>定期审计和估值复核</li>
+<li>异常交易监测</li>
+<li>举报机制建设</li>
+</ul>
+</li>
+</ol>
+<h3 id="六-集中度风险-concentration-risk">六、集中度风险（Concentration Risk）</h3>
+<p><strong>定义</strong>：因投资组合过度集中于特定项目、行业或地区导致的风险</p>
+<p><strong>集中度风险类型</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>集中类型</th>
+<th>说明</th>
+<th>健康范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单一项目集中</td>
+<td>单个项目占基金比例</td>
+<td>&lt;15%</td>
+</tr>
+<tr>
+<td>行业集中</td>
+<td>单一行业占基金比例</td>
+<td>&lt;30%</td>
+</tr>
+<tr>
+<td>阶段集中</td>
+<td>单一阶段占基金比例</td>
+<td>&lt;50%</td>
+</tr>
+<tr>
+<td>地区集中</td>
+<td>单一地区占基金比例</td>
+<td>&lt;60%</td>
+</tr>
+<tr>
+<td>GP集中（FOF层面）</td>
+<td>单一GP占FOF比例</td>
+<td>&lt;10%</td>
+</tr>
+</tbody>
+</table></div><p><strong>集中度风险量化</strong></p>
+<p><strong>赫芬达尔指数（HHI）</strong>
+$$HHI = \sum_{i=1}^{n} w_i^2$$</p>
+<p>其中$w_i$为第i个投资的权重</p>
+<ul>
+<li>HHI &lt; 0.10：高度分散</li>
+<li>HHI 0.10-0.25：适度集中</li>
+<li>HHI &gt; 0.25：高度集中</li>
+</ul>
+<p><strong>集中度风险管理</strong></p>
+<ol>
+<li>
+<p><strong>设定集中度上限</strong></p>
+<ul>
+<li>单一项目：10-15%</li>
+<li>单一行业：25-30%</li>
+<li>单一地区：50-60%</li>
+</ul>
+</li>
+<li>
+<p><strong>定期监控</strong></p>
+<ul>
+<li>季度集中度报告</li>
+<li>偏离预警机制</li>
+<li>动态调整建议</li>
+</ul>
+</li>
+<li>
+<p><strong>压力测试</strong></p>
+<ul>
+<li>模拟单一项目/行业失败的影响</li>
+<li>评估极端情况下的组合损失</li>
+<li>制定应急预案</li>
+</ul>
+</li>
+</ol>
+<h3 id="七-汇率风险-exchange-rate-risk">七、汇率风险（Exchange Rate Risk）</h3>
+<p><strong>定义</strong>：跨境投资因汇率波动导致的投资损失风险</p>
+<p><strong>汇率风险来源</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>风险类型</th>
+<th>说明</th>
+<th>影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>交易风险</td>
+<td>投资和退出时汇率差异</td>
+<td>直接影响回报</td>
+</tr>
+<tr>
+<td>折算风险</td>
+<td>外币资产折算成本币</td>
+<td>影响账面价值</td>
+</tr>
+<tr>
+<td>经济风险</td>
+<td>汇率影响被投企业经营</td>
+<td>间接影响回报</td>
+</tr>
+</tbody>
+</table></div><p><strong>汇率风险管理工具</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>工具</th>
+<th>成本</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>远期合约</td>
+<td>0.5-2%</td>
+<td>确定性现金流对冲</td>
+</tr>
+<tr>
+<td>期权</td>
+<td>1-5%</td>
+<td>不确定性现金流保护</td>
+</tr>
+<tr>
+<td>自然对冲</td>
+<td>无</td>
+<td>收入支出币种匹配</td>
+</tr>
+<tr>
+<td>货币互换</td>
+<td>0.3-1%</td>
+<td>长期头寸对冲</td>
+</tr>
+</tbody>
+</table></div><p><strong>汇率风险管理策略</strong></p>
+<ol>
+<li>
+<p><strong>完全不对冲</strong></p>
+<ul>
+<li>适用于：长期投资、汇率波动可接受</li>
+<li>优势：成本低</li>
+<li>风险：汇率大幅波动影响回报</li>
+</ul>
+</li>
+<li>
+<p><strong>部分对冲（50-70%）</strong></p>
+<ul>
+<li>适用于：中期投资、中等风险偏好</li>
+<li>优势：平衡成本和保护</li>
+<li>风险：仍有部分汇率敞口</li>
+</ul>
+</li>
+<li>
+<p><strong>完全对冲</strong></p>
+<ul>
+<li>适用于：短期投资、低风险偏好</li>
+<li>优势：消除汇率风险</li>
+<li>风险：对冲成本高、可能错失汇率收益</li>
+</ul>
+</li>
+</ol>
+<h3 id="八-风险量化方法">八、风险量化方法</h3>
+<p><strong>常用风险量化指标</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>指标</th>
+<th>计算方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最大回撤</td>
+<td>最高点到最低点的跌幅</td>
+<td>衡量极端损失</td>
+</tr>
+<tr>
+<td>波动率</td>
+<td>回报标准差</td>
+<td>衡量收益波动性</td>
+</tr>
+<tr>
+<td>VaR</td>
+<td>给定置信水平下的最大损失</td>
+<td>风险价值</td>
+</tr>
+<tr>
+<td>CVaR</td>
+<td>超过VaR的平均损失</td>
+<td>尾部风险</td>
+</tr>
+<tr>
+<td>Sharpe Ratio</td>
+<td>(回报-无风险)/波动率</td>
+<td>风险调整回报</td>
+</tr>
+</tbody>
+</table></div><p><strong>VC/PE风险量化的特殊性</strong></p>
+<p>由于VC/PE数据的特殊性（低频、估值滞后、非正态分布），传统风险指标需要调整：</p>
+<ol>
+<li><strong>去滞后调整</strong>：使用调整后的回报数据计算波动率</li>
+<li><strong>非参数方法</strong>：使用分位数回归等方法处理非正态分布</li>
+<li><strong>情景分析</strong>：结合历史情景和假设情景进行压力测试</li>
+<li><strong>蒙特卡洛模拟</strong>：模拟多种可能的回报路径</li>
+</ol>
+<p><strong>风险量化实践框架</strong></p>
+<pre><code>┌─────────────────────────────────────────────────────┐
+│                风险量化框架                           │
+├─────────────────────────────────────────────────────┤
+│  数据准备          │  指标计算          │  应用决策   │
+│  ├─ 历史回报数据   │  ├─ 波动率计算     │  ├─ 资产配置│
+│  ├─ 估值数据       │  ├─ VaR/CVaR      │  ├─ 风险预算│
+│  ├─ 宏观数据       │  ├─ 相关性分析     │  ├─ 压力测试│
+│  └─ 数据清洗调整   │  └─ 情景模拟       │  └─ 报告输出│
+└─────────────────────────────────────────────────────┘
+</code></pre>
+<h3 id="九-综合风险管理框架">九、综合风险管理框架</h3>
+<p><strong>风险管理三道防线</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>防线</th>
+<th>责任主体</th>
+<th>主要职责</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一道</td>
+<td>投资团队</td>
+<td>项目尽调、投后管理</td>
+</tr>
+<tr>
+<td>第二道</td>
+<td>风控/合规团队</td>
+<td>风险监测、合规审查</td>
+</tr>
+<tr>
+<td>第三道</td>
+<td>审计委员会</td>
+<td>独立审计、监督</td>
+</tr>
+</tbody>
+</table></div><p><strong>风险管理流程</strong></p>
+<ol>
+<li><strong>风险识别</strong>：系统梳理各类风险因素</li>
+<li><strong>风险评估</strong>：量化风险概率和影响程度</li>
+<li><strong>风险应对</strong>：制定规避、降低、转移、接受策略</li>
+<li><strong>风险监控</strong>：持续跟踪风险指标变化</li>
+<li><strong>风险报告</strong>：定期向利益相关方报告</li>
+</ol>
+<h2 id="关键术语">关键术语</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>术语</th>
+<th>英文</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>市场风险</td>
+<td>Market Risk</td>
+<td>因市场环境变化导致的投资损失风险</td>
+</tr>
+<tr>
+<td>流动性风险</td>
+<td>Liquidity Risk</td>
+<td>无法及时以合理价格变现的风险</td>
+</tr>
+<tr>
+<td>管理人风险</td>
+<td>Key Person Risk</td>
+<td>因GP团队变动导致的风险</td>
+</tr>
+<tr>
+<td>政策风险</td>
+<td>Regulatory Risk</td>
+<td>因政策法规变化导致的风险</td>
+</tr>
+<tr>
+<td>道德风险</td>
+<td>Ethical Risk</td>
+<td>因利益冲突、欺诈等道德问题导致的风险</td>
+</tr>
+<tr>
+<td>集中度风险</td>
+<td>Concentration Risk</td>
+<td>因组合过度集中导致的风险</td>
+</tr>
+<tr>
+<td>汇率风险</td>
+<td>Exchange Rate Risk</td>
+<td>因汇率波动导致的风险</td>
+</tr>
+<tr>
+<td>VaR</td>
+<td>Value at Risk</td>
+<td>给定置信水平下的最大可能损失</td>
+</tr>
+<tr>
+<td>HHI</td>
+<td>Herfindahl-Hirschman Index</td>
+<td>衡量集中度的指标</td>
+</tr>
+</tbody>
+</table></div><h2 id="实务要点">实务要点</h2>
+<ul>
+<li><strong>建立风险矩阵</strong>：将各类风险按概率和影响程度分类，确定优先管理顺序</li>
+<li><strong>设置风险限额</strong>：为各类风险设定明确的上限，如单一项目占比、行业集中度等</li>
+<li><strong>定期压力测试</strong>：模拟极端市场环境，评估组合的抗风险能力</li>
+<li><strong>完善合同条款</strong>：通过LPA条款保护LP权益，明确GP责任</li>
+<li><strong>保持信息透明</strong>：建立定期报告机制，及时沟通风险变化</li>
+</ul>
+<h2 id="常见误区">常见误区</h2>
+<ul>
+<li><strong>忽视系统性风险</strong>：只关注项目层面风险，忽视宏观市场环境的系统性影响</li>
+<li><strong>过度依赖历史数据</strong>：VC/PE市场的结构性变化可能导致历史风险模型失效</li>
+<li><strong>风险管理形式化</strong>：建立风险管理制度但未真正执行，缺乏实际效果</li>
+</ul>
+<h2 id="参考来源">参考来源</h2>
+<ul>
+<li>Global Private Capital Association, “Risk Management Guidelines”</li>
+<li>ILPA, “Principles 3.0”</li>
+<li>McKinsey &amp; Company, “Private Markets Risk Management”</li>
+<li>清科研究中心, 《中国VC/PE风险管理报告》</li>
+</ul>
+<h2 id="相关主题">相关主题</h2>
+<ul>
+<li><a href="/vcpe-knowledge-base/articles/%E6%8A%95%E8%B5%84%E7%BB%84%E5%90%88%E6%9E%84%E5%BB%BA/">投资组合构建</a> 如何构建风险可控的投资组合</li>
+<li><a href="/vcpe-knowledge-base/articles/%E5%88%86%E6%95%A3%E5%8C%96%E7%AD%96%E7%95%A5/">分散化策略</a> 降低非系统性风险的方法论</li>
+<li><a href="/vcpe-knowledge-base/articles/dpi%E4%B8%8Eirr%E8%A7%A3%E8%AF%BB/">DPI与IRR解读</a> 衡量风险调整后回报的指标</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E6%B3%95%E5%BE%8B%E4%B8%8E%E5%90%88%E8%A7%84">法律与合规</a> 法律风险防范与合规管理</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E5%9F%BA%E9%87%91%E8%AE%BE%E7%AB%8B%E4%B8%8E%E6%9E%B6%E6%9E%84">基金设立与架构</a> 基金结构对风险管理的影响</li>
+</ul>
+</div> <!-- Related Articles --> <section class="mt-12 pt-8 border-t border-gray-200 dark:border-primary-800"> <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">📎 相关推荐</h2> <div class="space-y-3"> <a href="/vcpe-knowledge-base/articles/分散化策略/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">风险与组合</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 分散化策略 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">不同投资阶段的风险收益特征差异显著：</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/dpi与irr解读/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">风险与组合</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> DPI与IRR解读 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">定义：基金已分配给投资人的现金与投资人已缴入资本的比率</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/投资组合构建/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">风险与组合</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 投资组合构建 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">VC/PE领域的组合构建与公开市场投资有本质区别：</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/案例-失败-ftx/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> FTX — 从320亿美元到零：加密货币史上最大的欺诈案 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">FTX是一家加密货币衍生品交易所，提供期货、期权、杠杆代币等复杂金融产品。SBF被塑造为&quot;加密货币的救世主&quot;和&quot;有效利他主义&quot;的践行者——他声称赚取巨额财富是为了将其捐出。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/案例-失败-ofo小黄车/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> OFO小黄车 — 资本裹挟下的共享经济泡沫，150亿融资烧出一地鸡毛 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">OFO最初定位为校园共享单车平台，用户通过APP扫码解锁校园内的自行车，按次付费（1元/小时）。其核心愿景是解决&quot;最后一公里&quot;出行问题，通过共享模式提高单车使用效率。戴威曾将共享单车列入中国&quot;新四大发明&quot;（高铁、扫码支付、共享单车、网购）。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a> </div> </section> </div> <!-- Table of Contents (Desktop) --> <aside class="hidden xl:block w-64 flex-shrink-0"> <div class="sticky top-20"> <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">目录</h3> <nav class="space-y-1"> <a href="#概述" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="概述"> 概述 </a><a href="#核心内容" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="核心内容"> 核心内容 </a><a href="#一-市场风险-market-risk" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="一-市场风险-market-risk"> 一、市场风险（Market Risk） </a><a href="#二-流动性风险-liquidity-risk" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="二-流动性风险-liquidity-risk"> 二、流动性风险（Liquidity Risk） </a><a href="#三-管理人风险-key-person-risk" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="三-管理人风险-key-person-risk"> 三、管理人风险（Key Person Risk） </a><a href="#四-政策风险-regulatory-risk" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="四-政策风险-regulatory-risk"> 四、政策风险（Regulatory Risk） </a><a href="#五-道德风险-ethical-risk" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="五-道德风险-ethical-risk"> 五、道德风险（Ethical Risk） </a><a href="#六-集中度风险-concentration-risk" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="六-集中度风险-concentration-risk"> 六、集中度风险（Concentration Risk） </a><a href="#七-汇率风险-exchange-rate-risk" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="七-汇率风险-exchange-rate-risk"> 七、汇率风险（Exchange Rate Risk） </a><a href="#八-风险量化方法" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="八-风险量化方法"> 八、风险量化方法 </a><a href="#九-综合风险管理框架" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="九-综合风险管理框架"> 九、综合风险管理框架 </a><a href="#关键术语" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键术语"> 关键术语 </a><a href="#实务要点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="实务要点"> 实务要点 </a><a href="#常见误区" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="常见误区"> 常见误区 </a><a href="#参考来源" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="参考来源"> 参考来源 </a><a href="#相关主题" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="相关主题"> 相关主题 </a> </nav> </div> </aside> </article> <script type="module">const n=new IntersectionObserver(e=>{e.forEach(t=>{const o=t.target.id,c=document.querySelector(`.toc-link[data-heading="${o}"]`);c&&t.isIntersecting&&(document.querySelectorAll(".toc-link").forEach(r=>r.classList.remove("text-accent-600","dark:text-accent-400")),c.classList.add("text-accent-600","dark:text-accent-400"))})},{rootMargin:"-80px 0px -80% 0px"});document.querySelectorAll(".prose h2[id], .prose h3[id], .prose h4[id]").forEach(e=>{n.observe(e)});</script>  </div> </main> </div> <!-- Mobile sidebar overlay --> <div id="sidebar-overlay" class="fixed inset-0 z-20 bg-black/50 hidden lg:hidden"></div> <script type="module">const m=document.getElementById("theme-toggle"),o=document.getElementById("theme-light-icon"),d=document.getElementById("theme-dark-icon");function t(e){e?(document.documentElement.classList.add("dark"),o?.classList.add("hidden"),d?.classList.remove("hidden"),localStorage.setItem("theme","dark")):(document.documentElement.classList.remove("dark"),o?.classList.remove("hidden"),d?.classList.add("hidden"),localStorage.setItem("theme","light"))}const s=localStorage.getItem("theme");t(s==="light"?!1:s==="dark"?!0:window.matchMedia("(prefers-color-scheme: dark)").matches);m?.addEventListener("click",()=>{t(!document.documentElement.classList.contains("dark"))});const r=document.getElementById("mobile-menu-toggle"),g=document.getElementById("sidebar"),l=document.getElementById("sidebar-overlay");function i(){g?.classList.toggle("-translate-x-full"),l?.classList.toggle("hidden")}r?.addEventListener("click",i);l?.addEventListener("click",i);const c=document.getElementById("reading-progress");window.addEventListener("scroll",()=>{const e=window.scrollY,n=document.documentElement.scrollHeight-window.innerHeight,a=n>0?e/n*100:0;c&&(c.style.width=`${Math.min(100,a)}%`)});document.addEventListener("keydown",e=>{(e.ctrlKey||e.metaKey)&&e.key==="k"&&(e.preventDefault(),window.location.href="/vcpe-knowledge-base/search/")});</script> </body> </html> 

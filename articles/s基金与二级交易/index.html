@@ -1,0 +1,489 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="VC/PE 投资知识库 - 面向投资实战的系统化知识框架"><meta name="generator" content="Astro v5.18.2"><link rel="icon" type="image/svg+xml" href="/vcpe-knowledge-base/favicon.svg"><title>S基金与二级交易 | VC/PE 投资知识库</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/vcpe-knowledge-base/_astro/index.DHKBIVZD.css"></head> <body class="bg-gray-50 dark:bg-primary-950 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300"> <!-- Reading Progress Bar --> <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-accent-500 to-accent-300 z-50 transition-all duration-150" style="width: 0%"></div> <!-- Header --> <header class="sticky top-0 z-40 bg-white/80 dark:bg-primary-900/80 backdrop-blur-md border-b border-gray-200 dark:border-primary-800"> <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between"> <div class="flex items-center gap-4"> <a href="/vcpe-knowledge-base/" class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity"> <span class="text-2xl">💰</span> <span class="hidden sm:inline">VC/PE 投资知识库</span> </a> </div> <div class="flex items-center gap-3"> <!-- Search --> <a href="/vcpe-knowledge-base/search/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> <span class="hidden md:inline">搜索...</span> <kbd class="hidden md:inline px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-primary-700 rounded">Ctrl+K</kbd> </a> <!-- Graph --> <a href="/vcpe-knowledge-base/graph/" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="12" cy="12" r="2"></circle><path d="M8 6h8M6 8v8M18 8v8M8 18h8M8 8l4 4M16 8l-4 4M8 16l4-4M16 16l-4-4"></path></svg> </a> <!-- Theme Toggle --> <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="切换主题"> <svg id="theme-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg> <svg id="theme-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> </button> <!-- Mobile Menu Toggle --> <button id="mobile-menu-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors lg:hidden"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> </button> </div> </div> </header> <div class="flex flex-1 max-w-screen-2xl mx-auto w-full"> <!-- Sidebar --> <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-30 w-72 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-primary-900 border-r border-gray-200 dark:border-primary-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300"> <nav class="p-4 space-y-1"> <a href="/vcpe-knowledge-base/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏠</span> 首页
+</a> <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">模块导航</div> <a href="/vcpe-knowledge-base/modules/00/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📚</span> 00 基础概念
+</a> <a href="/vcpe-knowledge-base/modules/01/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔄</span> 01 投资流程
+</a> <a href="/vcpe-knowledge-base/modules/02/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>💵</span> 02 估值方法
+</a> <a href="/vcpe-knowledge-base/modules/03/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📜</span> 03 法律与条款
+</a> <a href="/vcpe-knowledge-base/modules/04/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏭</span> 04 行业赛道
+</a> <a href="/vcpe-knowledge-base/modules/05/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔍</span> 05 尽职调查
+</a> <a href="/vcpe-knowledge-base/modules/06/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🤝</span> 06 投后管理
+</a> <a href="/vcpe-knowledge-base/modules/07/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400"> <span>🚪</span> 07 退出策略
+</a> <a href="/vcpe-knowledge-base/modules/08/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🇨🇳</span> 08 中国VC/PE实务
+</a> <a href="/vcpe-knowledge-base/modules/09/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📊</span> 09 风险与组合
+</a> <a href="/vcpe-knowledge-base/modules/10/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📖</span> 10 案例库
+</a> <a href="/vcpe-knowledge-base/modules/11/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🛠️</span> 11 工具与资源
+</a> </nav> </aside> <!-- Main Content --> <main class="flex-1 min-w-0 lg:ml-72"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">   <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6 flex-wrap"> <a href="/vcpe-knowledge-base/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a> <span>/</span> <a href="/vcpe-knowledge-base/modules/07/" class="hover:text-accent-600 dark:hover:text-accent-400">退出策略</a> <span>/</span> <span class="text-gray-800 dark:text-gray-200 truncate">S基金与二级交易</span> </nav> <article class="flex gap-8"> <!-- Article Content --> <div class="flex-1 min-w-0"> <!-- Article Header --> <header class="mb-8"> <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">S基金与二级交易</h1> <div class="flex flex-wrap items-center gap-3 mb-4"> <a href="/modules/07/" class="text-xs px-2.5 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 hover:bg-accent-200 dark:hover:bg-accent-900/50 transition-colors"> 退出策略 </a>  <a href="/search/?tag=vc-pe" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> vc-pe </a><a href="/search/?tag=%E9%80%80%E5%87%BA%E7%AD%96%E7%95%A5" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 退出策略 </a><a href="/search/?tag=S%E5%9F%BA%E9%87%91" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> S基金 </a><a href="/search/?tag=%E4%BA%8C%E7%BA%A7%E4%BA%A4%E6%98%93" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 二级交易 </a><a href="/search/?tag=Secondary" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> Secondary </a><a href="/search/?tag=LP%E6%9D%83%E7%9B%8A%E8%BD%AC%E8%AE%A9" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> LP权益转让 </a> </div> <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400"> <span>创建于 2026/05/27</span>  <span>4710字</span> <span>约 12 分钟阅读</span> </div> </header> <!-- Article Body --> <div class="prose"><h2 id="概述">概述</h2>
+<p>S基金（Secondary Fund）是专门从事私募股权基金份额和投资组合公司股权二级市场交易的基金。二级交易（Secondary Transaction）为VC/PE投资人提供了IPO和并购之外的重要退出渠道，能在基金存续期内实现流动性，解决LP的资金需求或投资组合调整需求。全球PE二级市场年交易规模已超过1000亿美元，中国市场正在快速发展。</p>
+<h2 id="核心内容">核心内容</h2>
+<h3 id="一-s基金运作机制">一、S基金运作机制</h3>
+<h4 id="1-s基金的定义与分类">1. S基金的定义与分类</h4>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>类型</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LP份额交易</td>
+<td>LP Stake Sale</td>
+<td>LP将持有的基金份额转让给S基金</td>
+</tr>
+<tr>
+<td>GP-led二级交易</td>
+<td>GP-led Secondary</td>
+<td>GP主导的交易，包括接续基金、结构化二级交易等</td>
+</tr>
+<tr>
+<td>直投二级交易</td>
+<td>Direct Secondary</td>
+<td>直接购买被投企业的股权</td>
+</tr>
+<tr>
+<td>收尾交易</td>
+<td>Tail-end Sale</td>
+<td>购买即将到期基金的剩余资产</td>
+</tr>
+</tbody>
+</table></div><h4 id="2-s基金的投资策略">2. S基金的投资策略</h4>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>策略</th>
+<th>说明</th>
+<th>预期回报</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>折价收购</td>
+<td>以NAV折价收购LP份额</td>
+<td>15-25% IRR</td>
+</tr>
+<tr>
+<td>优质资产抢购</td>
+<td>竞争性收购明星基金的份额</td>
+<td>12-18% IRR</td>
+</tr>
+<tr>
+<td>接续基金</td>
+<td>参与GP-led的接续基金交易</td>
+<td>15-20% IRR</td>
+</tr>
+<tr>
+<td>结构化二级</td>
+<td>结构化交易（优先/劣后分层）</td>
+<td>10-15% IRR</td>
+</tr>
+<tr>
+<td>重组型投资</td>
+<td>收购问题基金并进行重组</td>
+<td>20-30% IRR（风险较高）</td>
+</tr>
+</tbody>
+</table></div><h4 id="3-s基金的运作流程">3. S基金的运作流程</h4>
+<pre><code>1. 卖方发起
+   ├── LP发起：LP因资金需求或投资组合调整主动出售
+   └── GP发起：GP为延长管理期或优化基金结构发起交易
+   ↓
+2. 估值与定价
+   ├── NAV评估：基于最新估值报告
+   ├── 资产质量分析：底层资产深度分析
+   ├── 折价/溢价确定：基于市场供需和资产质量
+   └── 第三方评估：聘请独立评估机构
+   ↓
+3. 尽职调查
+   ├── 基金层面：GP能力、基金条款、投资组合
+   ├── 资产层面：底层企业深度分析
+   ├── 法律层面：转让限制、优先购买权
+   └── 税务层面：税务结构优化
+   ↓
+4. 交易谈判与执行
+   ├── 条款谈判：价格、交割条件、陈述保证
+   ├── 通知与同意：通知GP和相关方
+   ├── 优先购买权处理：其他LP的优先购买权
+   └── 交割：资金支付、权益过户
+   ↓
+5. 投后管理
+   ├── 接替原LP的权利义务
+   ├── 参与基金决策
+   └── 监控退出进展
+</code></pre>
+<h3 id="二-二级交易定价">二、二级交易定价</h3>
+<h4 id="1-nav折价-溢价">1. NAV折价/溢价</h4>
+<p><strong>NAV（净资产价值）</strong> 是二级交易定价的基础参考。</p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>资产类型</th>
+<th>典型折价/溢价范围</th>
+<th>影响因素</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>优质VC基金份额</td>
+<td>溢价5-30%</td>
+<td>GP品牌、底层资产质量、市场热度</td>
+</tr>
+<tr>
+<td>普通PE基金份额</td>
+<td>折价0-20%</td>
+<td>基金成熟度、底层资产流动性</td>
+</tr>
+<tr>
+<td>困境基金份额</td>
+<td>折价30-70%</td>
+<td>资产质量差、退出前景不明</td>
+</tr>
+<tr>
+<td>直投资产</td>
+<td>折价10-40%</td>
+<td>企业阶段、行业、控制权</td>
+</tr>
+</tbody>
+</table></div><h4 id="2-影响定价的关键因素">2. 影响定价的关键因素</h4>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>因素</th>
+<th>对价格的影响</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GP品牌</td>
+<td>正相关</td>
+<td>顶级GP的份额通常溢价交易</td>
+</tr>
+<tr>
+<td>基金成熟度</td>
+<td>先降后升</td>
+<td>中期基金折价最大（J曲线效应）</td>
+</tr>
+<tr>
+<td>底层资产质量</td>
+<td>正相关</td>
+<td>优质资产占比越高，折价越小</td>
+</tr>
+<tr>
+<td>市场流动性</td>
+<td>正相关</td>
+<td>市场活跃时折价缩小</td>
+</tr>
+<tr>
+<td>剩余存续期</td>
+<td>负相关</td>
+<td>越接近到期，不确定性越小</td>
+</tr>
+<tr>
+<td>控制权</td>
+<td>正相关</td>
+<td>有控制权的资产溢价交易</td>
+</tr>
+</tbody>
+</table></div><h4 id="3-定价方法">3. 定价方法</h4>
+<ul>
+<li><strong>NAV折价法</strong>：最新NAV × (1 - 折价率)</li>
+<li><strong>DCF法</strong>：预测未来分配的现金流折现</li>
+<li><strong>可比交易法</strong>：参考近期类似交易的定价</li>
+<li><strong>底层资产加总法</strong>：逐个分析底层资产价值后加总</li>
+</ul>
+<h3 id="三-gp-led-secondary">三、GP-led Secondary</h3>
+<h4 id="1-定义与类型">1. 定义与类型</h4>
+<p>GP-led Secondary是指GP主动发起的二级市场交易，通常涉及将现有基金的资产转移到新的载体中。</p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>类型</th>
+<th>说明</th>
+<th>典型场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>接续基金（Continuation Fund）</td>
+<td>GP设立新基金购买原基金的资产</td>
+<td>优质资产需要更长持有期</td>
+</tr>
+<tr>
+<td>结构化二级（Structured Secondary）</td>
+<td>优先/劣后结构化交易</td>
+<td>满足不同风险偏好的投资者</td>
+</tr>
+<tr>
+<td>Strip Sale</td>
+<td>出售基金部分资产</td>
+<td>为LP提供流动性</td>
+</tr>
+<tr>
+<td>Stapled Secondary</td>
+<td>新基金募集+二级交易捆绑</td>
+<td>GP为LP提供流动性的同时募集新资金</td>
+</tr>
+</tbody>
+</table></div><h4 id="2-gp-led-secondary的优缺点">2. GP-led Secondary的优缺点</h4>
+<p><strong>对GP的优势：</strong></p>
+<ul>
+<li>延长优质资产的持有期</li>
+<li>避免在不利时机被迫退出</li>
+<li>获取新的管理费和Carry收入</li>
+<li>为LP提供流动性选择</li>
+</ul>
+<p><strong>对买方（S基金）的优势：</strong></p>
+<ul>
+<li>获得GP已经深度管理的优质资产</li>
+<li>缩短投资周期（资产已成熟）</li>
+<li>信息透明度较高（GP提供详细资料）</li>
+<li>竞争相对LP份额交易较小</li>
+</ul>
+<p><strong>潜在风险：</strong></p>
+<ul>
+<li>利益冲突：GP同时代表卖方（原基金）和买方（新基金）</li>
+<li>估值争议：交易价格是否公允</li>
+<li>LP选择权：原LP应有选择留下或退出的权利</li>
+</ul>
+<h3 id="四-lp权益转让流程">四、LP权益转让流程</h3>
+<h4 id="1-转让前准备">1. 转让前准备</h4>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>步骤</th>
+<th>内容</th>
+<th>时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>审查基金合同</td>
+<td>确认转让限制、优先购买权、GP同意权</td>
+<td>1-2周</td>
+</tr>
+<tr>
+<td>估值评估</td>
+<td>获取最新NAV、分析底层资产</td>
+<td>2-4周</td>
+</tr>
+<tr>
+<td>寻找买家</td>
+<td>通过FA、S基金平台、直接联系</td>
+<td>4-12周</td>
+</tr>
+<tr>
+<td>条款谈判</td>
+<td>价格、交割条件、陈述保证</td>
+<td>2-4周</td>
+</tr>
+</tbody>
+</table></div><h4 id="2-转让流程">2. 转让流程</h4>
+<pre><code>1. 卖方通知GP
+   ├── 提交转让意向书
+   └── 获取GP对转让条件的确认
+   ↓
+2. GP审查与同意
+   ├── GP审查买方资质
+   ├── GP确认是否同意转让
+   └── 确认优先购买权安排
+   ↓
+3. 优先购买权通知
+   ├── 通知其他LP转让条款
+   ├── 其他LP在约定期限内行使优先购买权
+   └── 优先购买权到期或被行使
+   ↓
+4. 签署转让协议
+   ├── LP权益转让协议
+   ├── 买方承诺函（遵守基金合同）
+   └── GP确认函
+   ↓
+5. 交割
+   ├── 买方支付转让对价
+   ├── 更新基金登记册
+   └── 买方正式成为基金LP
+</code></pre>
+<h4 id="3-转让中的关键条款">3. 转让中的关键条款</h4>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>条款</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GP同意权</td>
+<td>大多数基金合同要求GP同意LP转让</td>
+</tr>
+<tr>
+<td>优先购买权</td>
+<td>其他LP有权按同等条件优先购买</td>
+</tr>
+<tr>
+<td>随售权</td>
+<td>部分情况下其他LP可随同出售</td>
+</tr>
+<tr>
+<td>最低转让金额</td>
+<td>通常有最低转让份额要求</td>
+</tr>
+<tr>
+<td>合格投资者要求</td>
+<td>买方需满足合格投资者标准</td>
+</tr>
+<tr>
+<td>转让费用</td>
+<td>GP可能收取转让行政费用</td>
+</tr>
+</tbody>
+</table></div><h3 id="五-中国s基金市场发展">五、中国S基金市场发展</h3>
+<h4 id="1-市场规模与趋势">1. 市场规模与趋势</h4>
+<ul>
+<li>中国PE二级市场起步较晚，2017年后快速发展</li>
+<li>2023年交易规模估计约200-300亿元人民币</li>
+<li>年增长率约30-50%，增长迅速</li>
+<li>主要参与者：歌斐资产、盛世投资、昆仲资本、深创投等</li>
+</ul>
+<h4 id="2-中国市场特点">2. 中国市场特点</h4>
+<ul>
+<li><strong>LP份额交易为主</strong>：GP-led交易占比低</li>
+<li><strong>折价幅度较大</strong>：通常20-40%折价（相比国际市场10-20%）</li>
+<li><strong>信息不对称严重</strong>：底层资产信息获取困难</li>
+<li><strong>GP配合度参差不齐</strong>：部分GP对二级交易持消极态度</li>
+<li><strong>政策环境逐步完善</strong>：中基协逐步建立二级交易规范</li>
+</ul>
+<h4 id="3-中国s基金发展的挑战">3. 中国S基金发展的挑战</h4>
+<ul>
+<li><strong>估值定价困难</strong>：缺乏透明的估值基准和定价机制</li>
+<li><strong>GP限制较多</strong>：基金合同中转让限制条款较严格</li>
+<li><strong>税务处理不明确</strong>：二级交易的税务处理规则尚不清晰</li>
+<li><strong>市场参与者有限</strong>：专业S基金数量少，市场深度不足</li>
+<li><strong>信息披露不充分</strong>：底层资产信息透明度低</li>
+</ul>
+<h4 id="4-发展趋势">4. 发展趋势</h4>
+<ul>
+<li><strong>政策支持</strong>：多地政府出台支持S基金发展的政策</li>
+<li><strong>GP-led交易增长</strong>：GP-led交易将逐步增加</li>
+<li><strong>估值体系完善</strong>：独立估值机构和定价机制将逐步建立</li>
+<li><strong>机构化程度提升</strong>：更多专业S基金设立</li>
+<li><strong>数字化平台</strong>：线上二级交易平台将提升交易效率</li>
+</ul>
+<h3 id="六-典型案例">六、典型案例</h3>
+<h4 id="案例1-lp份额折价转让">案例1：LP份额折价转让</h4>
+<ul>
+<li><strong>背景</strong>：某FOF基金因LP赎回压力，需出售持有的3只VC基金份额</li>
+<li><strong>交易结构</strong>：以NAV的75%打包转让给某S基金</li>
+<li><strong>交易规模</strong>：约2亿元人民币</li>
+<li><strong>特点</strong>：买方获得了进入优质VC基金的机会，卖方解决了流动性需求</li>
+</ul>
+<h4 id="案例2-gp-led接续基金">案例2：GP-led接续基金</h4>
+<ul>
+<li><strong>背景</strong>：某PE基金持有3家优质企业，但基金即将到期</li>
+<li><strong>交易结构</strong>：GP设立接续基金，原LP可选择留下或退出，S基金收购退出LP的份额</li>
+<li><strong>交易规模</strong>：约5亿元人民币</li>
+<li><strong>特点</strong>：优质资产得以继续持有，GP保留管理权，退出LP获得流动性</li>
+</ul>
+<h2 id="关键术语">关键术语</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>术语</th>
+<th>英文</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S基金</td>
+<td>Secondary Fund</td>
+<td>专门从事PE二级市场交易的基金</td>
+</tr>
+<tr>
+<td>二级交易</td>
+<td>Secondary Transaction</td>
+<td>PE基金份额或股权的买卖交易</td>
+</tr>
+<tr>
+<td>NAV</td>
+<td>Net Asset Value</td>
+<td>基金净资产价值</td>
+</tr>
+<tr>
+<td>GP-led Secondary</td>
+<td>—</td>
+<td>GP主导的二级市场交易</td>
+</tr>
+<tr>
+<td>接续基金</td>
+<td>Continuation Fund</td>
+<td>GP设立用于承接原基金资产的新基金</td>
+</tr>
+<tr>
+<td>优先购买权</td>
+<td>Right of First Refusal</td>
+<td>其他LP按同等条件优先购买的权利</td>
+</tr>
+<tr>
+<td>LP Stake Sale</td>
+<td>—</td>
+<td>LP将持有的基金份额转让</td>
+</tr>
+<tr>
+<td>折价</td>
+<td>Discount</td>
+<td>交易价格低于NAV</td>
+</tr>
+<tr>
+<td>溢价</td>
+<td>Premium</td>
+<td>交易价格高于NAV</td>
+</tr>
+<tr>
+<td>J曲线效应</td>
+<td>J-Curve Effect</td>
+<td>基金早期回报为负，后期逐步转正的现象</td>
+</tr>
+</tbody>
+</table></div><h2 id="实务要点">实务要点</h2>
+<ul>
+<li><strong>理解基金合同中的转让限制</strong>：在发起二级交易前，务必仔细审查基金合同中关于LP份额转让的限制条款，包括GP同意权、优先购买权、最低持有期限等</li>
+<li><strong>深度尽调底层资产</strong>：S基金投资的核心是底层资产质量。应投入足够资源分析底层企业的发展前景、估值合理性和退出可能性</li>
+<li><strong>关注GP质量</strong>：GP的管理能力和声誉直接影响基金表现。应评估GP的历史业绩、投资策略、团队稳定性和行业口碑</li>
+<li><strong>把握市场时机</strong>：二级市场交易具有明显的周期性。在市场低迷时（折价大）可能是买入机会，在市场活跃时可能是卖出机会</li>
+<li><strong>税务规划</strong>：二级交易涉及的税务问题较为复杂，包括增值税、所得税、印花税等。应在交易前进行充分的税务规划</li>
+</ul>
+<h2 id="常见误区">常见误区</h2>
+<ul>
+<li><strong>过度追求深度折价</strong>：深度折价的份额往往底层资产质量差或退出前景不明。不应仅因折价幅度大就盲目买入，而应关注资产质量</li>
+<li><strong>忽视GP的配合度</strong>：部分GP对二级交易持消极态度，可能在转让过程中设置障碍。应在交易前评估GP的配合意愿</li>
+<li><strong>低估信息不对称风险</strong>：二级交易中买方获取的信息有限，可能遗漏重要风险。应通过多种渠道验证信息，必要时聘请独立第三方进行尽调</li>
+</ul>
+<h2 id="参考来源">参考来源</h2>
+<ul>
+<li>中国证券投资基金业协会《私募投资基金二级市场交易指引》</li>
+<li>Greenhill “Secondary Market Overview”</li>
+<li>Evercore “Secondary Market Review”</li>
+<li>Campden Wealth “Global Family Office Report”</li>
+<li>投中研究院《中国S基金市场研究报告》</li>
+</ul>
+<h2 id="相关主题">相关主题</h2>
+<ul>
+<li><a href="/vcpe-knowledge-base/articles/ipo%E8%B7%AF%E5%BE%84/">IPO路径</a> — IPO是PE退出的首选渠道</li>
+<li><a href="/vcpe-knowledge-base/articles/%E5%B9%B6%E8%B4%AD%E9%80%80%E5%87%BA/">并购退出</a> — 并购是另一种重要的退出方式</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E5%9B%9E%E8%B4%AD%E6%9D%A1%E6%AC%BE%E8%A7%A6%E5%8F%91.md">回购条款触发.md</a> — 当其他退出方式无法实现时的备选</li>
+<li><a href="/vcpe-knowledge-base/articles/%E5%9F%BA%E9%87%91%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">基金生命周期</a> — S基金交易与基金存续期管理</li>
+<li><a href="/vcpe-knowledge-base/articles/lp%E4%B8%8Egp%E5%85%B3%E7%B3%BB/">LP与GP关系</a> — GP-led交易中的LP关系管理</li>
+<li><a href="/vcpe-knowledge-base/articles/%E5%9F%BA%E9%87%91%E6%9E%B6%E6%9E%84%E4%B8%8E%E6%B3%95%E5%BE%8B%E5%AE%9E%E4%BD%93/">基金架构与法律实体</a> — 二级交易的法律结构设计</li>
+<li><a href="/vcpe-knowledge-base/articles/%E7%AE%A1%E7%90%86%E8%B4%B9%E4%B8%8E%E6%94%B6%E7%9B%8A%E5%88%86%E9%85%8D/">管理费与收益分配</a> — 二级交易对管理费和收益分配的影响</li>
+<li><a href="/vcpe-knowledge-base/articles/%E4%BC%B0%E5%80%BC%E8%B0%88%E5%88%A4%E4%B8%8E%E5%8D%9A%E5%BC%88/">估值谈判与博弈</a> — 二级交易的定价和估值</li>
+</ul>
+</div> <!-- Related Articles --> <section class="mt-12 pt-8 border-t border-gray-200 dark:border-primary-800"> <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">📎 相关推荐</h2> <div class="space-y-3"> <a href="/vcpe-knowledge-base/articles/ipo路径/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">退出策略</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> IPO路径 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">阶段二：辅导与申报（6-12个月）
+├── 辅导备案（地方证监局）
+├── 规范运行辅导（通常3-6个月）
+├── 编制招股说明书
+├── 财务审计（通常需要3年1期）
+├── 内部控制审计
+└── 提交申报材料</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/并购退出/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">退出策略</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 并购退出 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">阶段二：买方接触与初步谈判（2-4个月）
+├── 保密协议（NDA）签署
+├── 发送Teaser（项目概要）
+├── 发送IM（信息备忘录）
+├── 初步估值讨论
+├── 收集非约束性报价（Indicative Offer）
+└── 筛选2-3家入围买家</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/回购条款触发/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">退出策略</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 回购条款触发 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">业绩对赌型：
+&gt; 若目标公司在2024年度经审计的净利润低于人民币5000万元，则投资人有权要求实际控制人在收到书面通知后60个工作日内回购其持有的全部或部分股权。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/基金架构与法律实体/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">基础概念</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 基金架构与法律实体 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">有限合伙制是全球 VC/PE 行业最主流的基金架构。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/基金生命周期/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">基础概念</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 基金生命周期 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">关键里程碑：
+1. PDB（Private Placement Memorandum）制作： 包含基金策略、团队介绍、条款清单
+2. Target LP List： 确定目标 LP 类型和规模（养老金/母基金/家族办公室等）
+3. First Close： 首次封闭，通常在承诺出资达到目标规模的 30%-50% 时进行
+4. Final Close： 最终封闭，通常在 First Close 后 </p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a> </div> </section> </div> <!-- Table of Contents (Desktop) --> <aside class="hidden xl:block w-64 flex-shrink-0"> <div class="sticky top-20"> <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">目录</h3> <nav class="space-y-1"> <a href="#概述" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="概述"> 概述 </a><a href="#核心内容" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="核心内容"> 核心内容 </a><a href="#一-s基金运作机制" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="一-s基金运作机制"> 一、S基金运作机制 </a><a href="#1-s基金的定义与分类" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="1-s基金的定义与分类"> 1. S基金的定义与分类 </a><a href="#2-s基金的投资策略" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="2-s基金的投资策略"> 2. S基金的投资策略 </a><a href="#3-s基金的运作流程" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="3-s基金的运作流程"> 3. S基金的运作流程 </a><a href="#二-二级交易定价" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="二-二级交易定价"> 二、二级交易定价 </a><a href="#1-nav折价-溢价" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="1-nav折价-溢价"> 1. NAV折价/溢价 </a><a href="#2-影响定价的关键因素" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="2-影响定价的关键因素"> 2. 影响定价的关键因素 </a><a href="#3-定价方法" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="3-定价方法"> 3. 定价方法 </a><a href="#三-gp-led-secondary" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="三-gp-led-secondary"> 三、GP-led Secondary </a><a href="#1-定义与类型" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="1-定义与类型"> 1. 定义与类型 </a><a href="#2-gp-led-secondary的优缺点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="2-gp-led-secondary的优缺点"> 2. GP-led Secondary的优缺点 </a><a href="#四-lp权益转让流程" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="四-lp权益转让流程"> 四、LP权益转让流程 </a><a href="#1-转让前准备" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="1-转让前准备"> 1. 转让前准备 </a><a href="#2-转让流程" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="2-转让流程"> 2. 转让流程 </a><a href="#3-转让中的关键条款" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="3-转让中的关键条款"> 3. 转让中的关键条款 </a><a href="#五-中国s基金市场发展" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="五-中国s基金市场发展"> 五、中国S基金市场发展 </a><a href="#1-市场规模与趋势" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="1-市场规模与趋势"> 1. 市场规模与趋势 </a><a href="#2-中国市场特点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="2-中国市场特点"> 2. 中国市场特点 </a><a href="#3-中国s基金发展的挑战" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="3-中国s基金发展的挑战"> 3. 中国S基金发展的挑战 </a><a href="#4-发展趋势" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="4-发展趋势"> 4. 发展趋势 </a><a href="#六-典型案例" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="六-典型案例"> 六、典型案例 </a><a href="#案例1-lp份额折价转让" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="案例1-lp份额折价转让"> 案例1：LP份额折价转让 </a><a href="#案例2-gp-led接续基金" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-6" data-heading="案例2-gp-led接续基金"> 案例2：GP-led接续基金 </a><a href="#关键术语" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键术语"> 关键术语 </a><a href="#实务要点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="实务要点"> 实务要点 </a><a href="#常见误区" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="常见误区"> 常见误区 </a><a href="#参考来源" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="参考来源"> 参考来源 </a><a href="#相关主题" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="相关主题"> 相关主题 </a> </nav> </div> </aside> </article> <script type="module">const n=new IntersectionObserver(e=>{e.forEach(t=>{const o=t.target.id,c=document.querySelector(`.toc-link[data-heading="${o}"]`);c&&t.isIntersecting&&(document.querySelectorAll(".toc-link").forEach(r=>r.classList.remove("text-accent-600","dark:text-accent-400")),c.classList.add("text-accent-600","dark:text-accent-400"))})},{rootMargin:"-80px 0px -80% 0px"});document.querySelectorAll(".prose h2[id], .prose h3[id], .prose h4[id]").forEach(e=>{n.observe(e)});</script>  </div> </main> </div> <!-- Mobile sidebar overlay --> <div id="sidebar-overlay" class="fixed inset-0 z-20 bg-black/50 hidden lg:hidden"></div> <script type="module">const m=document.getElementById("theme-toggle"),o=document.getElementById("theme-light-icon"),d=document.getElementById("theme-dark-icon");function t(e){e?(document.documentElement.classList.add("dark"),o?.classList.add("hidden"),d?.classList.remove("hidden"),localStorage.setItem("theme","dark")):(document.documentElement.classList.remove("dark"),o?.classList.remove("hidden"),d?.classList.add("hidden"),localStorage.setItem("theme","light"))}const s=localStorage.getItem("theme");t(s==="light"?!1:s==="dark"?!0:window.matchMedia("(prefers-color-scheme: dark)").matches);m?.addEventListener("click",()=>{t(!document.documentElement.classList.contains("dark"))});const r=document.getElementById("mobile-menu-toggle"),g=document.getElementById("sidebar"),l=document.getElementById("sidebar-overlay");function i(){g?.classList.toggle("-translate-x-full"),l?.classList.toggle("hidden")}r?.addEventListener("click",i);l?.addEventListener("click",i);const c=document.getElementById("reading-progress");window.addEventListener("scroll",()=>{const e=window.scrollY,n=document.documentElement.scrollHeight-window.innerHeight,a=n>0?e/n*100:0;c&&(c.style.width=`${Math.min(100,a)}%`)});document.addEventListener("keydown",e=>{(e.ctrlKey||e.metaKey)&&e.key==="k"&&(e.preventDefault(),window.location.href="/vcpe-knowledge-base/search/")});</script> </body> </html> 

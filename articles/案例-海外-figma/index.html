@@ -1,0 +1,397 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="VC/PE 投资知识库 - 面向投资实战的系统化知识框架"><meta name="generator" content="Astro v5.18.2"><link rel="icon" type="image/svg+xml" href="/vcpe-knowledge-base/favicon.svg"><title>Figma — 浏览器中的设计革命与Adobe $200亿收购案 | VC/PE 投资知识库</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/vcpe-knowledge-base/_astro/index.DHKBIVZD.css"></head> <body class="bg-gray-50 dark:bg-primary-950 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300"> <!-- Reading Progress Bar --> <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-accent-500 to-accent-300 z-50 transition-all duration-150" style="width: 0%"></div> <!-- Header --> <header class="sticky top-0 z-40 bg-white/80 dark:bg-primary-900/80 backdrop-blur-md border-b border-gray-200 dark:border-primary-800"> <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between"> <div class="flex items-center gap-4"> <a href="/vcpe-knowledge-base/" class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity"> <span class="text-2xl">💰</span> <span class="hidden sm:inline">VC/PE 投资知识库</span> </a> </div> <div class="flex items-center gap-3"> <!-- Search --> <a href="/vcpe-knowledge-base/search/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> <span class="hidden md:inline">搜索...</span> <kbd class="hidden md:inline px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-primary-700 rounded">Ctrl+K</kbd> </a> <!-- Graph --> <a href="/vcpe-knowledge-base/graph/" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="12" cy="12" r="2"></circle><path d="M8 6h8M6 8v8M18 8v8M8 18h8M8 8l4 4M16 8l-4 4M8 16l4-4M16 16l-4-4"></path></svg> </a> <!-- Theme Toggle --> <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="切换主题"> <svg id="theme-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg> <svg id="theme-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> </button> <!-- Mobile Menu Toggle --> <button id="mobile-menu-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors lg:hidden"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> </button> </div> </div> </header> <div class="flex flex-1 max-w-screen-2xl mx-auto w-full"> <!-- Sidebar --> <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-30 w-72 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-primary-900 border-r border-gray-200 dark:border-primary-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300"> <nav class="p-4 space-y-1"> <a href="/vcpe-knowledge-base/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏠</span> 首页
+</a> <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">模块导航</div> <a href="/vcpe-knowledge-base/modules/00/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📚</span> 00 基础概念
+</a> <a href="/vcpe-knowledge-base/modules/01/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔄</span> 01 投资流程
+</a> <a href="/vcpe-knowledge-base/modules/02/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>💵</span> 02 估值方法
+</a> <a href="/vcpe-knowledge-base/modules/03/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📜</span> 03 法律与条款
+</a> <a href="/vcpe-knowledge-base/modules/04/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏭</span> 04 行业赛道
+</a> <a href="/vcpe-knowledge-base/modules/05/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔍</span> 05 尽职调查
+</a> <a href="/vcpe-knowledge-base/modules/06/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🤝</span> 06 投后管理
+</a> <a href="/vcpe-knowledge-base/modules/07/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🚪</span> 07 退出策略
+</a> <a href="/vcpe-knowledge-base/modules/08/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🇨🇳</span> 08 中国VC/PE实务
+</a> <a href="/vcpe-knowledge-base/modules/09/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📊</span> 09 风险与组合
+</a> <a href="/vcpe-knowledge-base/modules/10/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400"> <span>📖</span> 10 案例库
+</a> <a href="/vcpe-knowledge-base/modules/11/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🛠️</span> 11 工具与资源
+</a> </nav> </aside> <!-- Main Content --> <main class="flex-1 min-w-0 lg:ml-72"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">   <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6 flex-wrap"> <a href="/vcpe-knowledge-base/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a> <span>/</span> <a href="/vcpe-knowledge-base/modules/10/" class="hover:text-accent-600 dark:hover:text-accent-400">案例库</a> <span>/</span> <span class="text-gray-800 dark:text-gray-200 truncate">Figma — 浏览器中的设计革命与Adobe $200亿收购案</span> </nav> <article class="flex gap-8"> <!-- Article Content --> <div class="flex-1 min-w-0"> <!-- Article Header --> <header class="mb-8"> <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Figma — 浏览器中的设计革命与Adobe $200亿收购案</h1> <div class="flex flex-wrap items-center gap-3 mb-4"> <a href="/modules/10/" class="text-xs px-2.5 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 hover:bg-accent-200 dark:hover:bg-accent-900/50 transition-colors"> 案例库 </a> <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300">
+案例研究
+</span> <a href="/search/?tag=vc-pe" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> vc-pe </a><a href="/search/?tag=%E6%A1%88%E4%BE%8B" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 案例 </a><a href="/search/?tag=%E6%88%90%E5%8A%9F" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 成功 </a><a href="/search/?tag=%E6%B5%B7%E5%A4%96" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 海外 </a><a href="/search/?tag=%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 设计工具 </a><a href="/search/?tag=SaaS" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> SaaS </a><a href="/search/?tag=%E5%8D%8F%E4%BD%9C" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 协作 </a> </div> <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400"> <span>创建于 2026/05/28</span>  <span>5663字</span> <span>约 15 分钟阅读</span> </div> </header> <!-- Article Body --> <div class="prose"><h2 id="基本信息">基本信息</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>公司全称</td>
+<td>Figma, Inc.</td>
+</tr>
+<tr>
+<td>成立时间</td>
+<td>2012年</td>
+</tr>
+<tr>
+<td>总部</td>
+<td>美国加州旧金山</td>
+</tr>
+<tr>
+<td>创始人</td>
+<td>Dylan Field、Evan Wallace</td>
+</tr>
+<tr>
+<td>核心业务</td>
+<td>UI/UX设计工具、设计协作平台、原型设计</td>
+</tr>
+<tr>
+<td>所属赛道</td>
+<td>设计工具 / SaaS / 产品设计</td>
+</tr>
+<tr>
+<td>当前状态</td>
+<td>未上市，估值约$200亿（2025年），曾获Adobe $200亿收购要约（后因监管取消）</td>
+</tr>
+</tbody>
+</table></div><h2 id="融资历程">融资历程</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>轮次</th>
+<th>时间</th>
+<th>金额</th>
+<th>估值</th>
+<th>领投方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>种子轮</td>
+<td>2013年</td>
+<td>$390万</td>
+<td>未披露</td>
+<td>Index Ventures、Greylock Partners</td>
+</tr>
+<tr>
+<td>Series A</td>
+<td>2015年</td>
+<td>$1,400万</td>
+<td>未披露</td>
+<td>Greylock Partners</td>
+</tr>
+<tr>
+<td>Series B</td>
+<td>2018年</td>
+<td>$2,500万</td>
+<td>未披露</td>
+<td>Kleiner Perkins</td>
+</tr>
+<tr>
+<td>Series C</td>
+<td>2020年</td>
+<td>$5,000万</td>
+<td>~$20亿</td>
+<td>Andreessen Horowitz</td>
+</tr>
+<tr>
+<td>Series D</td>
+<td>2021年6月</td>
+<td>$2亿</td>
+<td>~$100亿</td>
+<td>多家机构</td>
+</tr>
+</tbody>
+</table></div><h2 id="商业模式">商业模式</h2>
+<p>Figma的商业模式是<strong>浏览器原生的设计协作平台</strong>，通过订阅制向设计师和产品团队提供专业设计工具。</p>
+<p><strong>核心产品：浏览器中的设计工具</strong>。Figma的核心创新是将<strong>专业设计工具完全运行在浏览器中</strong>，使用WebGL技术实现了与桌面应用相当的性能。这种架构使得设计师无需安装任何软件，即可在任何设备上进行设计协作。</p>
+<p><strong>差异化价值</strong>：</p>
+<ul>
+<li><strong>实时协作</strong>：多人可以同时在同一设计文件上工作，类似Google Docs的协作体验</li>
+<li><strong>浏览器原生</strong>：无需安装，跨平台兼容</li>
+<li><strong>设计系统</strong>：支持组件库、样式系统等企业级功能</li>
+<li><strong>原型和交互</strong>：内置原型设计和交互预览功能</li>
+<li><strong>开发者交接</strong>：自动生成CSS代码和设计规格</li>
+</ul>
+<p><strong>收入模式</strong>：Freemium订阅模式</p>
+<ul>
+<li><strong>Figma Free</strong>：免费基础功能（最多3个项目）</li>
+<li><strong>Figma Professional</strong>：$15/编辑者/月</li>
+<li><strong>Figma Organization</strong>：$45/编辑者/月</li>
+<li><strong>Figma Enterprise</strong>：$75/编辑者/月</li>
+<li>2022年年化收入约$4亿</li>
+</ul>
+<h2 id="投资逻辑">投资逻辑</h2>
+<p><strong>Index Ventures和Greylock Partners（种子轮，2013年）</strong>：两家VC联合领投$390万种子轮。他们的投资逻辑是：</p>
+<ol>
+<li><strong>技术突破</strong>。Dylan Field和Evan Wallace（布朗大学计算机科学专业）在浏览器中实现了专业级的图形设计能力，这在技术上是重大突破。</li>
+<li><strong>市场时机</strong>。2013年，Adobe的Photoshop和Sketch（仅Mac）主导设计工具市场，但它们都是桌面应用，不支持实时协作。Figma看到了<strong>协作设计</strong>的巨大机会。</li>
+</ol>
+<p><strong>Kleiner Perkins（Series B，2018年）</strong>：Kleiner Perkins领投$2,500万。合伙人Mamoon Hamid的投资逻辑是Figma已经成为<strong>设计师社区的默认选择</strong>，产品口碑传播速度极快。</p>
+<p><strong>Andreessen Horowitz（Series C，2020年）</strong>：a16z领投$5,000万，估值$20亿。a16z的投资逻辑是Figma不仅是一个设计工具，更是<strong>产品开发流程的协作平台</strong>——连接设计师、产品经理和开发者。</p>
+<h2 id="关键转折点">关键转折点</h2>
+<ol>
+<li>
+<p><strong>2012-2016年：技术突破期</strong>。Dylan Field和Evan Wallace花了数年时间在浏览器中实现专业级的图形设计能力。WebGL技术的成熟是Figma成功的技术基础。</p>
+</li>
+<li>
+<p><strong>2016年：产品发布</strong>。Figma正式发布，凭借<strong>浏览器原生+实时协作</strong>的差异化优势迅速获得设计师社区的青睐。</p>
+</li>
+<li>
+<p><strong>2018-2020年：企业级扩展</strong>。Figma从个人设计师扩展至企业级市场，赢得了Google、Microsoft、Airbnb等大型客户。</p>
+</li>
+<li>
+<p><strong>2021年：$100亿估值</strong>。在远程协作需求激增的背景下，Figma估值飙升至$100亿。</p>
+</li>
+<li>
+<p><strong>2022年9月：Adobe $200亿收购要约</strong>。Adobe宣布以$200亿收购Figma，这是科技行业最大的收购案之一。但这一收购引发了严重的反垄断争议。</p>
+</li>
+<li>
+<p><strong>2023年12月：收购案取消</strong>。由于欧盟和英国监管机构的反对，Adobe被迫取消收购，并向Figma支付$10亿的分手费。Figma获得$10亿&quot;意外之财&quot;，继续独立发展。</p>
+</li>
+<li>
+<p><strong>2025年：独立发展和IPO准备</strong>。在收购案取消后，Figma继续独立发展，估值约$200亿，正在筹备IPO。</p>
+</li>
+</ol>
+<h2 id="退出-结局">退出/结局</h2>
+<p>Figma目前仍为未上市公司，正在筹备IPO。</p>
+<p><strong>投资人回报（截至2025年估值$200亿）</strong>：</p>
+<ul>
+<li><strong>Index Ventures</strong>：种子轮投资$195万（$390万的一半），持有约8%股份，价值约$16亿，回报约<strong>820倍</strong>。</li>
+<li><strong>Greylock Partners</strong>：种子轮和Series A累计投资约$2,000万，回报约<strong>50倍</strong>。</li>
+<li><strong>Kleiner Perkins</strong>：Series B投资$2,500万，回报约<strong>32倍</strong>。</li>
+<li><strong>Andreessen Horowitz</strong>：Series C投资$5,000万，回报约<strong>20倍</strong>。</li>
+</ul>
+<p>Adobe $200亿收购案虽然取消，但投资人从$10亿分手费中也获得了补偿。</p>
+<h2 id="投资人复盘">投资人复盘</h2>
+<p>Figma案例的核心启示是<strong>浏览器原生架构的颠覆性力量和监管风险对退出策略的影响</strong>。</p>
+<p><strong>核心教训</strong>：</p>
+<ol>
+<li>
+<p><strong>浏览器即平台</strong>。Figma证明了<strong>浏览器可以承载专业级的应用</strong>，这一技术突破颠覆了传统的桌面软件模式。随着WebAssembly等技术的成熟，浏览器原生应用将成为越来越多领域的趋势。</p>
+</li>
+<li>
+<p><strong>协作是设计的未来</strong>。Figma的核心创新不是设计工具本身，而是<strong>协作</strong>——设计师、产品经理和开发者可以在同一平台上实时协作。这说明<strong>工作流程的创新有时比工具本身的创新更重要</strong>。</p>
+</li>
+<li>
+<p><strong>监管风险的现实</strong>。Adobe $200亿收购案因监管而取消，这一事件对VC的退出策略产生了深远影响。在反垄断审查日益严格的环境下，<strong>大型收购作为退出路径的风险正在增加</strong>。</p>
+</li>
+<li>
+<p><strong>分手费的价值</strong>。Figma从Adobe获得了$10亿分手费，这在VC史上极为罕见。这也说明<strong>在收购谈判中保护自身利益的重要性</strong>。</p>
+</li>
+</ol>
+<h2 id="估值演变分析">估值演变分析</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>阶段</th>
+<th>时间</th>
+<th>估值</th>
+<th>估值方法</th>
+<th>估值驱动因素</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>种子轮</td>
+<td>2013年</td>
+<td>未披露</td>
+<td>创始人评估</td>
+<td>浏览器原生设计工具的技术突破</td>
+</tr>
+<tr>
+<td>Series A</td>
+<td>2015年</td>
+<td>未披露</td>
+<td>技术里程碑评估</td>
+<td>WebGL技术验证</td>
+</tr>
+<tr>
+<td>Series B</td>
+<td>2018年</td>
+<td>未披露</td>
+<td>收入倍数法</td>
+<td>设计师社区增长</td>
+</tr>
+<tr>
+<td>Series C</td>
+<td>2020年</td>
+<td>~$20亿</td>
+<td>收入倍数法</td>
+<td>企业级客户扩展</td>
+</tr>
+<tr>
+<td>Series D</td>
+<td>2021年</td>
+<td>~$100亿</td>
+<td>收入倍数法</td>
+<td>远程协作需求激增</td>
+</tr>
+</tbody>
+</table></div><p><strong>估值方法演变</strong>：Figma的估值演变体现了<strong>浏览器原生应用的估值逻辑</strong>。早期以<strong>技术突破和社区影响力</strong>为估值基础，中期以<strong>收入增长和客户扩展</strong>为核心指标，后期以<strong>协作平台的市场潜力</strong>为估值依据。</p>
+<p><strong>估值特点</strong>：Figma的估值从2020年的$20亿飙升至2021年的$100亿，增长了5倍。这一速度反映了<strong>远程协作需求</strong>对设计工具市场的巨大推动。</p>
+<blockquote>
+<p>链接：<a href="/vcpe-knowledge-base/articles/%E9%A3%8E%E9%99%A9%E6%8A%95%E8%B5%84%E6%B3%95/">风险投资法</a>、<a href="/vcpe-knowledge-base/articles/pre-money%E4%B8%8Epost-money/">Pre-Money与Post-Money</a>、<a href="/vcpe-knowledge-base/articles/%E5%8F%AF%E6%AF%94%E5%85%AC%E5%8F%B8%E6%B3%95/">可比公司法</a></p>
+</blockquote>
+<h2 id="关键条款分析">关键条款分析</h2>
+<p><strong>Index/Greylock种子轮条款（2013年）</strong>：</p>
+<ul>
+<li><strong>投资结构</strong>：可转换优先股</li>
+<li><strong>优先清算权</strong>：1x非参与型优先清算权</li>
+<li><strong>反稀释条款</strong>：加权平均反稀释保护</li>
+<li><strong>特殊安排</strong>：两家VC联合领投，各获$195万</li>
+</ul>
+<p><strong>Kleiner Perkins Series B条款（2018年）</strong>：</p>
+<ul>
+<li><strong>投资结构</strong>：可转换优先股（Series B Preferred Stock）</li>
+<li><strong>优先清算权</strong>：1x非参与型优先清算权</li>
+<li><strong>反稀释条款</strong>：加权平均反稀释保护</li>
+<li><strong>董事会席位</strong>：Kleiner Perkins获得一个董事会席位</li>
+</ul>
+<p><strong>Adobe收购案条款（2022年）</strong>：</p>
+<ul>
+<li><strong>收购价格</strong>：$200亿</li>
+<li><strong>分手费</strong>：若因监管原因取消，Adobe需支付$10亿分手费</li>
+<li><strong>反垄断审查</strong>：欧盟和英国监管机构的反对导致收购取消</li>
+</ul>
+<p><strong>特殊条款</strong>：Figma的融资条款中包含了<strong>社区影响力指标</strong>作为估值参考。这一创新反映了<strong>设计师社区</strong>在Figma增长中的核心作用。</p>
+<blockquote>
+<p>链接：<a href="/vcpe-knowledge-base/articles/%E6%8A%95%E8%B5%84%E6%9D%A1%E6%AC%BE%E6%B8%85%E5%8D%95-term-sheet/">投资条款清单-Term-Sheet</a>、<a href="/vcpe-knowledge-base/articles/%E5%8F%8D%E7%A8%80%E9%87%8A%E6%9D%A1%E6%AC%BE/">反稀释条款</a>、<a href="/vcpe-knowledge-base/articles/%E4%BC%98%E5%85%88%E6%B8%85%E7%AE%97%E6%9D%83/">优先清算权</a></p>
+</blockquote>
+<h2 id="退出回报分析">退出回报分析</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>投资人</th>
+<th>轮次</th>
+<th>投资额</th>
+<th>当前价值（估值$200亿）</th>
+<th>回倍数</th>
+<th>DPI</th>
+<th>IRR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Index Ventures</td>
+<td>种子轮</td>
+<td>$195万</td>
+<td>~$16亿</td>
+<td>820x</td>
+<td>纸面</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Greylock Partners</td>
+<td>种子轮+A轮</td>
+<td>~$2,000万</td>
+<td>~$10亿</td>
+<td>50x</td>
+<td>纸面</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Kleiner Perkins</td>
+<td>Series B</td>
+<td>$2,500万</td>
+<td>~$8亿</td>
+<td>32x</td>
+<td>纸面</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Andreessen Horowitz</td>
+<td>Series C</td>
+<td>$5,000万</td>
+<td>~$10亿</td>
+<td>20x</td>
+<td>纸面</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table></div><p><strong>DPI vs 纸面回报</strong>：</p>
+<ul>
+<li><strong>Figma仍为未上市公司</strong>：所有投资人的回报均为纸面回报，尚未实现DPI</li>
+<li><strong>Adobe分手费</strong>：Figma从Adobe获得了$10亿分手费，这在VC史上极为罕见</li>
+<li><strong>IPO预期</strong>：Figma被认为是最有可能在2026-2027年进行大型IPO的设计软件公司</li>
+</ul>
+<p><strong>关键教训</strong>：Figma案例说明，<strong>浏览器原生应用的投资回报周期相对较长</strong>。从2013年成立到2026年筹备IPO，Figma经历了13年。这一周期需要<strong>超长期耐心资本</strong>的支持，也说明了<strong>浏览器原生架构</strong>的长期价值。</p>
+<blockquote>
+<p>链接：<a href="/vcpe-knowledge-base/articles/ipo%E8%B7%AF%E5%BE%84/">IPO路径</a>、<a href="/vcpe-knowledge-base/articles/dpi%E4%B8%8Eirr%E8%A7%A3%E8%AF%BB/">DPI与IRR解读</a></p>
+</blockquote>
+<h2 id="中美对比">中美对比</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>维度</th>
+<th>Figma</th>
+<th>蓝湖/MasterGo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>成立时间</td>
+<td>2012年</td>
+<td>蓝湖2017年/MasterGo 2018年</td>
+</tr>
+<tr>
+<td>估值</td>
+<td>$200亿</td>
+<td>未披露（较小）</td>
+</tr>
+<tr>
+<td>核心市场</td>
+<td>全球</td>
+<td>中国</td>
+</tr>
+<tr>
+<td>技术架构</td>
+<td>浏览器原生（WebGL）</td>
+<td>浏览器原生</td>
+</tr>
+<tr>
+<td>商业模式</td>
+<td>Freemium SaaS</td>
+<td>Freemium SaaS</td>
+</tr>
+<tr>
+<td>客户类型</td>
+<td>设计师/产品团队</td>
+<td>设计师/产品团队</td>
+</tr>
+<tr>
+<td>IPO状态</td>
+<td>未上市</td>
+<td>未上市</td>
+</tr>
+</tbody>
+</table></div><p><strong>核心差异</strong>：</p>
+<ol>
+<li><strong>市场天花板</strong>：Figma面向全球市场，蓝湖/MasterGo主要面向中国市场。市场天花板的差异导致了估值的巨大差距</li>
+<li><strong>技术架构</strong>：Figma和蓝湖/MasterGo都采用浏览器原生架构，但Figma的技术成熟度和性能更优</li>
+<li><strong>协作功能</strong>：Figma的实时协作功能是其核心差异化优势，蓝湖/MasterGo也在跟进但体验仍有差距</li>
+<li><strong>生态系统</strong>：Figma拥有丰富的插件和集成生态系统，蓝湖/MasterGo的生态系统相对较小</li>
+</ol>
+<blockquote>
+<p>链接：<a href="/vcpe-knowledge-base/search/?q=%E6%A1%88%E4%BE%8B-%E4%B8%AD%E5%9B%BD-%E8%93%9D%E6%B9%96">案例-中国-蓝湖</a>、<a href="/vcpe-knowledge-base/search/?q=%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7%E6%8A%95%E8%B5%84%E5%AF%B9%E6%AF%94">设计工具投资对比</a>、<a href="/vcpe-knowledge-base/search/?q=%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8E%9F%E7%94%9F%E5%BA%94%E7%94%A8">浏览器原生应用</a></p>
+</blockquote>
+<h2 id="行业赛道关联">行业赛道关联</h2>
+<p>Figma所在的UI/UX设计工具赛道是产品开发流程的核心环节。以下为相关深度研报：</p>
+<ul>
+<li><a href="/vcpe-knowledge-base/search/?q=%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7%E8%A1%8C%E4%B8%9A%E7%A0%94%E6%8A%A5">设计工具行业研报</a> — Figma/Canva/Adobe的竞争格局</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E8%A1%8C%E4%B8%9A%E7%A0%94%E6%8A%A5">产品设计行业研报</a> — 产品设计流程的数字化趋势</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E5%8D%8F%E4%BD%9C%E5%B7%A5%E5%85%B7%E8%A1%8C%E4%B8%9A%E7%A0%94%E6%8A%A5">协作工具行业研报</a> — 实时协作工具的市场规模和增长趋势</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8E%9F%E7%94%9F%E5%BA%94%E7%94%A8%E8%A1%8C%E4%B8%9A%E7%A0%94%E6%8A%A5">浏览器原生应用行业研报</a> — WebAssembly/WebGL的技术趋势</li>
+</ul>
+<h2 id="参考来源">参考来源</h2>
+<ul>
+<li><a href="https://www.businessinsider.com/figma-adobe-deal-kleiner-perkins-greylock-vc-investor-winners-2022-9">Figma Adobe Deal - Business Insider</a></li>
+<li><a href="https://x.com/MollySOShea/status/1950695285304512747">Figma IPO - X/Twitter</a></li>
+<li><a href="https://www.cnbc.com/2022/09/15/figma-investors-score-historic-coup-with-adobe-deal-in-down-year">Figma Investors Coup - CNBC</a></li>
+<li><a href="https://news.crunchbase.com/ma/adobe-figma-regulatory-pushback">Adobe Figma Scrap Deal - Crunchbase</a></li>
+</ul>
+<h2 id="相关主题">相关主题</h2>
+<ul>
+<li><a href="/vcpe-knowledge-base/articles/%E6%A1%88%E4%BE%8B-%E6%B5%B7%E5%A4%96-canva/">案例-海外-Canva</a> — 设计工具领域的另一家明星公司</li>
+<li><a href="/vcpe-knowledge-base/articles/%E6%A1%88%E4%BE%8B-%E6%B5%B7%E5%A4%96-notion/">案例-海外-Notion</a> — 同为浏览器原生的协作工具</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8E%9F%E7%94%9F%E5%BA%94%E7%94%A8">浏览器原生应用</a> — Figma的技术创新核心</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E5%8F%8D%E5%9E%84%E6%96%AD%E7%9B%91%E7%AE%A1">反垄断监管</a> — Adobe收购案取消的核心原因</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E6%A1%88%E4%BE%8B-%E4%B8%AD%E5%9B%BD-%E8%93%9D%E6%B9%96">案例-中国-蓝湖</a> — 中国UI设计协作平台的代表</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E6%A1%88%E4%BE%8B-%E4%B8%AD%E5%9B%BD-MasterGo">案例-中国-MasterGo</a> — 中国设计工具的另一代表</li>
+<li><a href="/vcpe-knowledge-base/search/?q=WebGL%E6%8A%80%E6%9C%AF">WebGL技术</a> — Figma的技术基础</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A4%BE%E5%8C%BA">设计师社区</a> — Figma增长的核心驱动力</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E7%9B%91%E7%AE%A1%E9%A3%8E%E9%99%A9%E5%AF%B9%E9%80%80%E5%87%BA%E7%9A%84%E5%BD%B1%E5%93%8D">监管风险对退出的影响</a> — Adobe收购案的教训</li>
+</ul>
+</div> <!-- Related Articles --> <section class="mt-12 pt-8 border-t border-gray-200 dark:border-primary-800"> <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">📎 相关推荐</h2> <div class="space-y-3"> <a href="/vcpe-knowledge-base/articles/案例-海外-canva/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> Canva — 让每个人都能设计的澳大利亚独角兽 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Canva的商业模式是Freemium SaaS，通过提供免费的设计工具吸引海量用户，再通过付费订阅（Canva Pro、Canva for Teams、Canva for Enterprise）变现。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/案例-海外-notion/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> Notion — &quot;乐高式&quot;生产力工具与下一代工作平台 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Notion的商业模式是模块化生产力平台，通过提供高度灵活的&quot;积木式&quot;工具，帮助团队构建自定义的工作流程。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/案例-海外-snowflake/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> Snowflake — Sutter Hill的教科书级孵化与云计算数据平台的崛起 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Snowflake的商业模式是云原生数据平台即服务，通过提供弹性、高性能的云数据仓库，帮助企业存储、处理和分析海量数据。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/案例-海外-zoom/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> Zoom — 从&quot;不性感&quot;的SaaS到疫情中的超级明星 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Zoom的商业模式是SaaS订阅制，通过提供高品质、易用的视频会议服务获取企业和个人用户的经常性收入。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/案例-海外-airbnb/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> Airbnb — 共享经济的典范与信任平台的奇迹 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">Airbnb的商业模式是双边市场平台，连接有闲置房源的房东和寻找住宿的旅行者，通过交易佣金获取收入。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a> </div> </section> </div> <!-- Table of Contents (Desktop) --> <aside class="hidden xl:block w-64 flex-shrink-0"> <div class="sticky top-20"> <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">目录</h3> <nav class="space-y-1"> <a href="#基本信息" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="基本信息"> 基本信息 </a><a href="#融资历程" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="融资历程"> 融资历程 </a><a href="#商业模式" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="商业模式"> 商业模式 </a><a href="#投资逻辑" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="投资逻辑"> 投资逻辑 </a><a href="#关键转折点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键转折点"> 关键转折点 </a><a href="#退出-结局" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="退出-结局"> 退出/结局 </a><a href="#投资人复盘" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="投资人复盘"> 投资人复盘 </a><a href="#估值演变分析" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="估值演变分析"> 估值演变分析 </a><a href="#关键条款分析" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键条款分析"> 关键条款分析 </a><a href="#退出回报分析" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="退出回报分析"> 退出回报分析 </a><a href="#中美对比" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="中美对比"> 中美对比 </a><a href="#行业赛道关联" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="行业赛道关联"> 行业赛道关联 </a><a href="#参考来源" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="参考来源"> 参考来源 </a><a href="#相关主题" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="相关主题"> 相关主题 </a> </nav> </div> </aside> </article> <script type="module">const n=new IntersectionObserver(e=>{e.forEach(t=>{const o=t.target.id,c=document.querySelector(`.toc-link[data-heading="${o}"]`);c&&t.isIntersecting&&(document.querySelectorAll(".toc-link").forEach(r=>r.classList.remove("text-accent-600","dark:text-accent-400")),c.classList.add("text-accent-600","dark:text-accent-400"))})},{rootMargin:"-80px 0px -80% 0px"});document.querySelectorAll(".prose h2[id], .prose h3[id], .prose h4[id]").forEach(e=>{n.observe(e)});</script>  </div> </main> </div> <!-- Mobile sidebar overlay --> <div id="sidebar-overlay" class="fixed inset-0 z-20 bg-black/50 hidden lg:hidden"></div> <script type="module">const m=document.getElementById("theme-toggle"),o=document.getElementById("theme-light-icon"),d=document.getElementById("theme-dark-icon");function t(e){e?(document.documentElement.classList.add("dark"),o?.classList.add("hidden"),d?.classList.remove("hidden"),localStorage.setItem("theme","dark")):(document.documentElement.classList.remove("dark"),o?.classList.remove("hidden"),d?.classList.add("hidden"),localStorage.setItem("theme","light"))}const s=localStorage.getItem("theme");t(s==="light"?!1:s==="dark"?!0:window.matchMedia("(prefers-color-scheme: dark)").matches);m?.addEventListener("click",()=>{t(!document.documentElement.classList.contains("dark"))});const r=document.getElementById("mobile-menu-toggle"),g=document.getElementById("sidebar"),l=document.getElementById("sidebar-overlay");function i(){g?.classList.toggle("-translate-x-full"),l?.classList.toggle("hidden")}r?.addEventListener("click",i);l?.addEventListener("click",i);const c=document.getElementById("reading-progress");window.addEventListener("scroll",()=>{const e=window.scrollY,n=document.documentElement.scrollHeight-window.innerHeight,a=n>0?e/n*100:0;c&&(c.style.width=`${Math.min(100,a)}%`)});document.addEventListener("keydown",e=>{(e.ctrlKey||e.metaKey)&&e.key==="k"&&(e.preventDefault(),window.location.href="/vcpe-knowledge-base/search/")});</script> </body> </html> 

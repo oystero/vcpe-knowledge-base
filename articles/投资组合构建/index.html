@@ -1,0 +1,342 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="VC/PE 投资知识库 - 面向投资实战的系统化知识框架"><meta name="generator" content="Astro v5.18.2"><link rel="icon" type="image/svg+xml" href="/vcpe-knowledge-base/favicon.svg"><title>投资组合构建 | VC/PE 投资知识库</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/vcpe-knowledge-base/_astro/index.DHKBIVZD.css"></head> <body class="bg-gray-50 dark:bg-primary-950 text-gray-900 dark:text-gray-100 font-sans min-h-screen flex flex-col transition-colors duration-300"> <!-- Reading Progress Bar --> <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-accent-500 to-accent-300 z-50 transition-all duration-150" style="width: 0%"></div> <!-- Header --> <header class="sticky top-0 z-40 bg-white/80 dark:bg-primary-900/80 backdrop-blur-md border-b border-gray-200 dark:border-primary-800"> <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between"> <div class="flex items-center gap-4"> <a href="/vcpe-knowledge-base/" class="flex items-center gap-2 text-lg font-bold text-primary-600 dark:text-accent-400 hover:opacity-80 transition-opacity"> <span class="text-2xl">💰</span> <span class="hidden sm:inline">VC/PE 投资知识库</span> </a> </div> <div class="flex items-center gap-3"> <!-- Search --> <a href="/vcpe-knowledge-base/search/" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors text-sm" title="搜索"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> <span class="hidden md:inline">搜索...</span> <kbd class="hidden md:inline px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-primary-700 rounded">Ctrl+K</kbd> </a> <!-- Graph --> <a href="/vcpe-knowledge-base/graph/" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="知识图谱"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="12" cy="12" r="2"></circle><path d="M8 6h8M6 8v8M18 8v8M8 18h8M8 8l4 4M16 8l-4 4M8 16l4-4M16 16l-4-4"></path></svg> </a> <!-- Theme Toggle --> <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors" title="切换主题"> <svg id="theme-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg> <svg id="theme-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> </button> <!-- Mobile Menu Toggle --> <button id="mobile-menu-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800 transition-colors lg:hidden"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> </button> </div> </div> </header> <div class="flex flex-1 max-w-screen-2xl mx-auto w-full"> <!-- Sidebar --> <aside id="sidebar" class="fixed lg:sticky top-16 left-0 z-30 w-72 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-primary-900 border-r border-gray-200 dark:border-primary-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300"> <nav class="p-4 space-y-1"> <a href="/vcpe-knowledge-base/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏠</span> 首页
+</a> <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">模块导航</div> <a href="/vcpe-knowledge-base/modules/00/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📚</span> 00 基础概念
+</a> <a href="/vcpe-knowledge-base/modules/01/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔄</span> 01 投资流程
+</a> <a href="/vcpe-knowledge-base/modules/02/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>💵</span> 02 估值方法
+</a> <a href="/vcpe-knowledge-base/modules/03/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📜</span> 03 法律与条款
+</a> <a href="/vcpe-knowledge-base/modules/04/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🏭</span> 04 行业赛道
+</a> <a href="/vcpe-knowledge-base/modules/05/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🔍</span> 05 尽职调查
+</a> <a href="/vcpe-knowledge-base/modules/06/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🤝</span> 06 投后管理
+</a> <a href="/vcpe-knowledge-base/modules/07/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🚪</span> 07 退出策略
+</a> <a href="/vcpe-knowledge-base/modules/08/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🇨🇳</span> 08 中国VC/PE实务
+</a> <a href="/vcpe-knowledge-base/modules/09/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400"> <span>📊</span> 09 风险与组合
+</a> <a href="/vcpe-knowledge-base/modules/10/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>📖</span> 10 案例库
+</a> <a href="/vcpe-knowledge-base/modules/11/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-primary-800"> <span>🛠️</span> 11 工具与资源
+</a> </nav> </aside> <!-- Main Content --> <main class="flex-1 min-w-0 lg:ml-72"> <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">   <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6 flex-wrap"> <a href="/vcpe-knowledge-base/" class="hover:text-accent-600 dark:hover:text-accent-400">首页</a> <span>/</span> <a href="/vcpe-knowledge-base/modules/09/" class="hover:text-accent-600 dark:hover:text-accent-400">风险与组合</a> <span>/</span> <span class="text-gray-800 dark:text-gray-200 truncate">投资组合构建</span> </nav> <article class="flex gap-8"> <!-- Article Content --> <div class="flex-1 min-w-0"> <!-- Article Header --> <header class="mb-8"> <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">投资组合构建</h1> <div class="flex flex-wrap items-center gap-3 mb-4"> <a href="/modules/09/" class="text-xs px-2.5 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 hover:bg-accent-200 dark:hover:bg-accent-900/50 transition-colors"> 风险与组合 </a>  <a href="/search/?tag=vc-pe" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> vc-pe </a><a href="/search/?tag=%E7%BB%84%E5%90%88%E7%AE%A1%E7%90%86" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> 组合管理 </a><a href="/search/?tag=portfolio-construction" class="text-xs px-2.5 py-1 rounded-full bg-gray-100 dark:bg-primary-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-primary-700 transition-colors"> portfolio-construction </a> </div> <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400"> <span>创建于 2026/05/27</span>  <span>3129字</span> <span>约 8 分钟阅读</span> </div> </header> <!-- Article Body --> <div class="prose"><h2 id="概述">概述</h2>
+<p>投资组合构建是VC/PE基金管理人将基金资金分配到不同项目中的系统化过程，直接影响基金的最终回报和风险水平。合理的组合构建能够在控制下行风险的同时，最大化捕捉幂律分布带来的超额收益机会。对于LP而言，理解GP的组合构建逻辑是评估基金策略可行性的关键维度。</p>
+<h2 id="核心内容">核心内容</h2>
+<h3 id="一-组合理论在vc-pe中的应用">一、组合理论在VC/PE中的应用</h3>
+<p>VC/PE领域的组合构建与公开市场投资有本质区别：</p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>维度</th>
+<th>公开市场</th>
+<th>VC/PE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>流动性</td>
+<td>高，可随时交易</td>
+<td>低，锁定7-10年</td>
+</tr>
+<tr>
+<td>分散程度</td>
+<td>可持有数百只股票</td>
+<td>通常15-30个项目</td>
+</tr>
+<tr>
+<td>回报分布</td>
+<td>近似正态分布</td>
+<td>幂律分布（极少数项目贡献大部分回报）</td>
+</tr>
+<tr>
+<td>估值频率</td>
+<td>实时定价</td>
+<td>季度/年度估值</td>
+</tr>
+<tr>
+<td>退出方式</td>
+<td>二级市场卖出</td>
+<td>IPO、并购、回购等</td>
+</tr>
+</tbody>
+</table></div><h3 id="二-基金规模与项目数量关系">二、基金规模与项目数量关系</h3>
+<p>基金规模决定了组合中的项目数量，存在一个最优区间：</p>
+<p><strong>早期基金（Seed/Series A）</strong></p>
+<ul>
+<li>典型规模：5,000万-3亿美元</li>
+<li>项目数量：15-25个</li>
+<li>单笔投资：200万-1,500万美元</li>
+<li>预留后续跟投比例：50-60%</li>
+</ul>
+<p><strong>成长期基金（Series B/C）</strong></p>
+<ul>
+<li>典型规模：3亿-10亿美元</li>
+<li>项目数量：10-20个</li>
+<li>单笔投资：3,000万-8,000万美元</li>
+<li>预留后续跟投比例：40-50%</li>
+</ul>
+<p><strong>PE并购基金</strong></p>
+<ul>
+<li>典型规模：10亿-50亿美元</li>
+<li>项目数量：8-15个</li>
+<li>单笔投资：1亿-5亿美元</li>
+<li>预留后续跟投比例：30-40%</li>
+</ul>
+<p><strong>项目数量的理论依据</strong></p>
+<ul>
+<li>学术研究表明，当组合中项目数量超过20个时，边际分散化效果显著递减</li>
+<li>但项目数量过少（&lt;10个）会导致单一项目失败对整体影响过大</li>
+<li>Cambridge Associates数据显示，优秀基金的项目数量通常在15-25个区间</li>
+</ul>
+<h3 id="三-阶段分散策略">三、阶段分散策略</h3>
+<p><strong>单一阶段专注策略</strong></p>
+<ul>
+<li>优势：专业化程度高，建立深度行业认知</li>
+<li>风险：该阶段市场环境不利时缺乏缓冲</li>
+<li>典型案例：红杉资本早期基金专注Seed/A轮</li>
+</ul>
+<p><strong>多阶段覆盖策略</strong></p>
+<ul>
+<li>优势：可在不同阶段间动态配置，平滑收益</li>
+<li>风险：可能导致精力分散，难以建立深度优势</li>
+<li>典型案例：高瓴资本覆盖从VC到Buyout全阶段</li>
+</ul>
+<p><strong>阶段分散的配置建议</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>阶段</th>
+<th>配置比例</th>
+<th>预期IRR</th>
+<th>预期DPI</th>
+<th>投资周期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seed/天使</td>
+<td>15-25%</td>
+<td>25-40%</td>
+<td>2-4x</td>
+<td>7-10年</td>
+</tr>
+<tr>
+<td>Early VC (A/B轮)</td>
+<td>30-40%</td>
+<td>20-30%</td>
+<td>3-5x</td>
+<td>5-8年</td>
+</tr>
+<tr>
+<td>Growth (C轮及以后)</td>
+<td>20-30%</td>
+<td>15-25%</td>
+<td>2-3x</td>
+<td>3-5年</td>
+</tr>
+<tr>
+<td>PE/Buyout</td>
+<td>10-20%</td>
+<td>15-20%</td>
+<td>2-2.5x</td>
+<td>3-5年</td>
+</tr>
+</tbody>
+</table></div><h3 id="四-行业分散策略">四、行业分散策略</h3>
+<p><strong>行业集中策略</strong></p>
+<ul>
+<li>适合对特定行业有深度认知的GP</li>
+<li>风险：行业周期性波动可能导致系统性损失</li>
+<li>案例：a16z专注科技赛道，取得优异回报</li>
+</ul>
+<p><strong>行业分散策略</strong></p>
+<ul>
+<li>降低单一行业周期性风险</li>
+<li>需要建立多行业团队，管理成本较高</li>
+<li>案例：KKR、黑石等大型PE跨行业配置</li>
+</ul>
+<p><strong>推荐行业配置</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>行业板块</th>
+<th>配置比例</th>
+<th>波动性</th>
+<th>长期增长潜力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>企业服务/SaaS</td>
+<td>20-30%</td>
+<td>中</td>
+<td>高</td>
+</tr>
+<tr>
+<td>消费/零售</td>
+<td>15-25%</td>
+<td>中高</td>
+<td>中</td>
+</tr>
+<tr>
+<td>医疗健康</td>
+<td>15-25%</td>
+<td>中</td>
+<td>高</td>
+</tr>
+<tr>
+<td>金融科技</td>
+<td>10-20%</td>
+<td>高</td>
+<td>高</td>
+</tr>
+<tr>
+<td>硬科技/芯片</td>
+<td>10-15%</td>
+<td>中</td>
+<td>高</td>
+</tr>
+<tr>
+<td>其他（新能源、教育等）</td>
+<td>5-15%</td>
+<td>不一</td>
+<td>不一</td>
+</tr>
+</tbody>
+</table></div><h3 id="五-地理分散策略">五、地理分散策略</h3>
+<p><strong>单一市场专注</strong></p>
+<ul>
+<li>优势：深入了解本地市场、监管环境、文化</li>
+<li>风险：受单一经济体宏观环境影响大</li>
+<li>案例：早期的中国本土VC专注国内市场</li>
+</ul>
+<p><strong>跨境多元配置</strong></p>
+<ul>
+<li>优势：分散地缘政治风险，捕捉全球创新机会</li>
+<li>风险：跨境管理难度大，信息不对称</li>
+<li>案例：红杉、经纬等设立全球多区域基金</li>
+</ul>
+<p><strong>地理配置建议</strong></p>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>地区</th>
+<th>配置比例</th>
+<th>市场特点</th>
+<th>风险因素</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中国大陆</td>
+<td>40-60%</td>
+<td>规模大、增长快</td>
+<td>政策不确定性</td>
+</tr>
+<tr>
+<td>东南亚</td>
+<td>10-20%</td>
+<td>人口红利、数字化加速</td>
+<td>市场碎片化</td>
+</tr>
+<tr>
+<td>北美</td>
+<td>10-20%</td>
+<td>创新生态成熟</td>
+<td>估值较高</td>
+</tr>
+<tr>
+<td>欧洲</td>
+<td>5-10%</td>
+<td>技术积累深厚</td>
+<td>增长较慢</td>
+</tr>
+<tr>
+<td>其他新兴市场</td>
+<td>5-10%</td>
+<td>高增长潜力</td>
+<td>风险较高</td>
+</tr>
+</tbody>
+</table></div><h3 id="六-power-law分布特点">六、Power Law分布特点</h3>
+<p>VC/PE回报遵循典型的幂律分布：</p>
+<p><strong>核心特征</strong></p>
+<ul>
+<li>少数项目（通常1-3个）贡献基金大部分回报</li>
+<li>超过50%的投资可能无法回本</li>
+<li>顶级项目的回报可达10-100倍甚至更高</li>
+<li>基金整体回报由&quot;全垒打&quot;项目决定</li>
+</ul>
+<p><strong>数据佐证</strong></p>
+<ul>
+<li>Correlation Ventures研究显示：65%的投资亏损或勉强回本，25%获得1-5倍回报，10%获得5倍以上回报</li>
+<li>顶级VC基金中，前3个项目通常贡献60-80%的基金总回报</li>
+<li>Sequoia早期投资Apple、Google、YouTube等&quot;超级项目&quot;奠定了其行业地位</li>
+</ul>
+<p><strong>对组合构建的启示</strong></p>
+<ul>
+<li>必须为&quot;全垒打&quot;项目预留足够的后续跟投资金</li>
+<li>不能因为早期项目失败而改变整体策略</li>
+<li>需要建立&quot;反共识&quot;思维，敢于在不确定性中下注</li>
+</ul>
+<h2 id="关键术语">关键术语</h2>
+<div class="table-wrapper"><table><thead>
+<tr>
+<th>术语</th>
+<th>英文</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>组合构建</td>
+<td>Portfolio Construction</td>
+<td>将基金资金系统性分配到不同项目的过程</td>
+</tr>
+<tr>
+<td>幂律分布</td>
+<td>Power Law Distribution</td>
+<td>少数项目贡献绝大部分回报的分布特征</td>
+</tr>
+<tr>
+<td>分散化</td>
+<td>Diversification</td>
+<td>通过投资多个项目降低非系统性风险</td>
+</tr>
+<tr>
+<td>集中度</td>
+<td>Concentration</td>
+<td>单一项目或行业在组合中的占比</td>
+</tr>
+<tr>
+<td>跟投权</td>
+<td>Pro Rata Rights</td>
+<td>投资人在后续轮次按比例追加投资的权利</td>
+</tr>
+<tr>
+<td>基金容量</td>
+<td>Fund Capacity</td>
+<td>基金规模与策略适配性的评估</td>
+</tr>
+</tbody>
+</table></div><h2 id="实务要点">实务要点</h2>
+<ul>
+<li><strong>规模匹配策略</strong>：基金规模必须与投资策略相匹配，过大的基金难以在早期阶段保持高回报倍数</li>
+<li><strong>预留跟投资金</strong>：至少预留40-50%的基金规模用于对优秀项目的后续跟投</li>
+<li><strong>建立投资纪律</strong>：制定明确的投资标准和决策流程，避免&quot;FOMO&quot;导致的冲动投资</li>
+<li><strong>动态调整配置</strong>：根据市场环境变化适时调整阶段、行业配置比例</li>
+<li><strong>保持投资节奏</strong>：避免在市场高点集中投资，保持3-4年的均匀投资节奏</li>
+</ul>
+<h2 id="常见误区">常见误区</h2>
+<ul>
+<li><strong>项目数量越多越好</strong>：过度分散会导致管理精力稀释，对每个项目的关注度不足，反而降低整体回报</li>
+<li><strong>追求短期账面回报</strong>：早期高估值项目可能带来好看的账面IRR，但DPI才是衡量真实回报的标准</li>
+<li><strong>忽视跟投策略</strong>：很多GP没有为超级项目预留足够的跟投资金，错失最大化收益的机会</li>
+</ul>
+<h2 id="参考来源">参考来源</h2>
+<ul>
+<li>Cambridge Associates, “Venture Capital Performance Benchmark”</li>
+<li>Correlation Ventures, “Venture Capital Outcome Report”</li>
+<li>Horsley Bridge, “VC Portfolio Construction Analysis”</li>
+<li>Kauffman Foundation, “VC Portfolio Construction Study”</li>
+</ul>
+<h2 id="相关主题">相关主题</h2>
+<ul>
+<li><a href="/vcpe-knowledge-base/articles/%E5%88%86%E6%95%A3%E5%8C%96%E7%AD%96%E7%95%A5/">分散化策略</a> 深入了解分散化维度与实施方法</li>
+<li><a href="/vcpe-knowledge-base/articles/dpi%E4%B8%8Eirr%E8%A7%A3%E8%AF%BB/">DPI与IRR解读</a> 理解衡量组合表现的核心指标</li>
+<li><a href="/vcpe-knowledge-base/articles/%E5%B8%B8%E8%A7%81%E9%A3%8E%E9%99%A9%E7%B1%BB%E5%9E%8B/">常见风险类型</a> 识别和管理组合中的各类风险</li>
+<li><a href="/vcpe-knowledge-base/search/?q=%E5%9F%BA%E9%87%91%E8%AE%BE%E7%AB%8B%E4%B8%8E%E6%9E%B6%E6%9E%84">基金设立与架构</a> 了解基金结构对组合构建的影响</li>
+<li><a href="/vcpe-knowledge-base/articles/%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96%E6%B5%81%E7%A8%8B/">投资决策流程</a> 项目筛选与投资决策的系统方法</li>
+</ul>
+</div> <!-- Related Articles --> <section class="mt-12 pt-8 border-t border-gray-200 dark:border-primary-800"> <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">📎 相关推荐</h2> <div class="space-y-3"> <a href="/vcpe-knowledge-base/articles/dpi与irr解读/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">风险与组合</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> DPI与IRR解读 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">定义：基金已分配给投资人的现金与投资人已缴入资本的比率</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/分散化策略/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">风险与组合</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 分散化策略 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">不同投资阶段的风险收益特征差异显著：</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/常见风险类型/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">风险与组合</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 常见风险类型 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">定义：由宏观经济环境、市场周期、行业趋势变化导致的投资损失风险</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/投资决策流程/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">投资流程</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 投资决策流程 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">IC 的规模：
+- 早期 VC：通常 3-5 人
+- 成长期 VC/PE：通常 5-7 人
+- 大型 PE：通常 7-10 人，可能设多个分委员会</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a><a href="/vcpe-knowledge-base/articles/失败案例-ofo押金危机/" class="group flex items-start gap-3 bg-white dark:bg-primary-900 rounded-lg p-3 border border-gray-200 dark:border-primary-800 hover:border-accent-300 dark:hover:border-accent-600 transition-all"> <div class="flex-1 min-w-0"> <div class="text-xs text-gray-400 dark:text-gray-500 mb-1">案例库</div> <h3 class="font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors text-sm"> 失败案例-OFO押金危机 </h3> <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">注意：OFO在2018年后未再获得新融资，2020年后实质上已停止运营。</p> </div> <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> </a> </div> </section> </div> <!-- Table of Contents (Desktop) --> <aside class="hidden xl:block w-64 flex-shrink-0"> <div class="sticky top-20"> <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">目录</h3> <nav class="space-y-1"> <a href="#概述" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="概述"> 概述 </a><a href="#核心内容" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="核心内容"> 核心内容 </a><a href="#一-组合理论在vc-pe中的应用" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="一-组合理论在vc-pe中的应用"> 一、组合理论在VC/PE中的应用 </a><a href="#二-基金规模与项目数量关系" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="二-基金规模与项目数量关系"> 二、基金规模与项目数量关系 </a><a href="#三-阶段分散策略" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="三-阶段分散策略"> 三、阶段分散策略 </a><a href="#四-行业分散策略" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="四-行业分散策略"> 四、行业分散策略 </a><a href="#五-地理分散策略" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="五-地理分散策略"> 五、地理分散策略 </a><a href="#六-power-law分布特点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link ml-3" data-heading="六-power-law分布特点"> 六、Power Law分布特点 </a><a href="#关键术语" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="关键术语"> 关键术语 </a><a href="#实务要点" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="实务要点"> 实务要点 </a><a href="#常见误区" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="常见误区"> 常见误区 </a><a href="#参考来源" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="参考来源"> 参考来源 </a><a href="#相关主题" class="block text-sm text-gray-500 dark:text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors truncate toc-link font-medium" data-heading="相关主题"> 相关主题 </a> </nav> </div> </aside> </article> <script type="module">const n=new IntersectionObserver(e=>{e.forEach(t=>{const o=t.target.id,c=document.querySelector(`.toc-link[data-heading="${o}"]`);c&&t.isIntersecting&&(document.querySelectorAll(".toc-link").forEach(r=>r.classList.remove("text-accent-600","dark:text-accent-400")),c.classList.add("text-accent-600","dark:text-accent-400"))})},{rootMargin:"-80px 0px -80% 0px"});document.querySelectorAll(".prose h2[id], .prose h3[id], .prose h4[id]").forEach(e=>{n.observe(e)});</script>  </div> </main> </div> <!-- Mobile sidebar overlay --> <div id="sidebar-overlay" class="fixed inset-0 z-20 bg-black/50 hidden lg:hidden"></div> <script type="module">const m=document.getElementById("theme-toggle"),o=document.getElementById("theme-light-icon"),d=document.getElementById("theme-dark-icon");function t(e){e?(document.documentElement.classList.add("dark"),o?.classList.add("hidden"),d?.classList.remove("hidden"),localStorage.setItem("theme","dark")):(document.documentElement.classList.remove("dark"),o?.classList.remove("hidden"),d?.classList.add("hidden"),localStorage.setItem("theme","light"))}const s=localStorage.getItem("theme");t(s==="light"?!1:s==="dark"?!0:window.matchMedia("(prefers-color-scheme: dark)").matches);m?.addEventListener("click",()=>{t(!document.documentElement.classList.contains("dark"))});const r=document.getElementById("mobile-menu-toggle"),g=document.getElementById("sidebar"),l=document.getElementById("sidebar-overlay");function i(){g?.classList.toggle("-translate-x-full"),l?.classList.toggle("hidden")}r?.addEventListener("click",i);l?.addEventListener("click",i);const c=document.getElementById("reading-progress");window.addEventListener("scroll",()=>{const e=window.scrollY,n=document.documentElement.scrollHeight-window.innerHeight,a=n>0?e/n*100:0;c&&(c.style.width=`${Math.min(100,a)}%`)});document.addEventListener("keydown",e=>{(e.ctrlKey||e.metaKey)&&e.key==="k"&&(e.preventDefault(),window.location.href="/vcpe-knowledge-base/search/")});</script> </body> </html> 
