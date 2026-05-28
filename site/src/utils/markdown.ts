@@ -63,7 +63,7 @@ export function markdownToHtml(content: string): string {
   };
 
   md.renderer.rules.table_open = function(tokens, idx, options, env, self) {
-    return '<div class="table-wrapper"><table';
+    return '<div class="table-wrapper"><table>';
   };
   md.renderer.rules.table_close = function(tokens, idx, options, env, self) {
     return '</table></div>';
